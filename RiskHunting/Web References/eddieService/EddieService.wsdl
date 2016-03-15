@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">A web service that performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. Query matching is in 2 steps: (i) XQuery text-searching functions to discover an initial set of case descriptions that satisfy global search constraints (CoarseGrainedMatching); (ii) traditional vector-space model IR, enhanced with WordNet, to further refine and assess the quality of the candidate case set (FineGrainedMatching).</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CheckExistCase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="facetType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckExistCaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckExistCaseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveCase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="facetType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveCaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveCaseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="contentXml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facetType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateCaseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCaseComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="newCommentText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="caseID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCaseCommentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddCaseCommentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveTerms">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveTermsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveTermsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateRequestXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateRequestXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateRequestXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateResponseXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateResponseXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateResponseXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveRequestXmlSchema">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveRequestXmlSchemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveRequestXmlSchemaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveResponseXmlSchema">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveResponseXmlSchemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveResponseXmlSchemaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveAllSources">
+        <s:complexType />
+      </s:element>
+      <s:element name="RetrieveAllSourcesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveAllSourcesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveAllSourcesDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveAllSourcesDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveAllSourcesDomainResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformEddieDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eddieRequestXml" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformEddieDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerformEddieDomainResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformEddie">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="eddieRequestXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformEddieResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerformEddieResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformEddieSample">
+        <s:complexType />
+      </s:element>
+      <s:element name="PerformEddieSampleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerformEddieSampleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformEddieDomainSample">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PerformEddieDomainSampleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PerformEddieDomainSampleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreXmlDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xmlContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="facetType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sourceId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreXmlDocumentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckExistCaseSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckExistCase" />
+  </wsdl:message>
+  <wsdl:message name="CheckExistCaseSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckExistCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCaseSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveCase" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCaseSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCaseSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCase" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCaseSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCaseCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCaseComment" />
+  </wsdl:message>
+  <wsdl:message name="AddCaseCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCaseCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveTermsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveTerms" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveTermsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveTermsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateRequestXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateRequestXml" />
+  </wsdl:message>
+  <wsdl:message name="ValidateRequestXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateRequestXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponseXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateResponseXml" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponseXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateResponseXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveRequestXmlSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveRequestXmlSchema" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveRequestXmlSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveRequestXmlSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveResponseXmlSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveResponseXmlSchema" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveResponseXmlSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveResponseXmlSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveAllSources" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveAllSourcesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveAllSourcesDomain" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveAllSourcesDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:PerformEddieDomain" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:PerformEddieDomainResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieSoapIn">
+    <wsdl:part name="parameters" element="tns:PerformEddie" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieSoapOut">
+    <wsdl:part name="parameters" element="tns:PerformEddieResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieSampleSoapIn">
+    <wsdl:part name="parameters" element="tns:PerformEddieSample" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieSampleSoapOut">
+    <wsdl:part name="parameters" element="tns:PerformEddieSampleResponse" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSampleSoapIn">
+    <wsdl:part name="parameters" element="tns:PerformEddieDomainSample" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSampleSoapOut">
+    <wsdl:part name="parameters" element="tns:PerformEddieDomainSampleResponse" />
+  </wsdl:message>
+  <wsdl:message name="StoreXmlDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:StoreXmlDocument" />
+  </wsdl:message>
+  <wsdl:message name="StoreXmlDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:StoreXmlDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckExistCaseHttpGetIn">
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckExistCaseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCaseHttpGetIn">
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCaseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCaseHttpGetIn">
+    <wsdl:part name="contentXml" type="s:string" />
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCaseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddCaseCommentHttpGetIn">
+    <wsdl:part name="newCommentText" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddCaseCommentHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveTermsHttpGetIn" />
+  <wsdl:message name="RetrieveTermsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateRequestXmlHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateRequestXmlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponseXmlHttpGetIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponseXmlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveRequestXmlSchemaHttpGetIn" />
+  <wsdl:message name="RetrieveRequestXmlSchemaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveResponseXmlSchemaHttpGetIn" />
+  <wsdl:message name="RetrieveResponseXmlSchemaHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesHttpGetIn" />
+  <wsdl:message name="RetrieveAllSourcesHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesDomainHttpGetIn">
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesDomainHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainHttpGetIn">
+    <wsdl:part name="eddieRequestXml" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieHttpGetIn">
+    <wsdl:part name="eddieRequestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieSampleHttpGetIn" />
+  <wsdl:message name="PerformEddieSampleHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSampleHttpGetIn">
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSampleHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="StoreXmlDocumentHttpGetIn">
+    <wsdl:part name="xmlContent" type="s:string" />
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="sourceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StoreXmlDocumentHttpGetOut" />
+  <wsdl:message name="CheckExistCaseHttpPostIn">
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CheckExistCaseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCaseHttpPostIn">
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RemoveCaseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCaseHttpPostIn">
+    <wsdl:part name="contentXml" type="s:string" />
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCaseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddCaseCommentHttpPostIn">
+    <wsdl:part name="newCommentText" type="s:string" />
+    <wsdl:part name="caseID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddCaseCommentHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveTermsHttpPostIn" />
+  <wsdl:message name="RetrieveTermsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateRequestXmlHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateRequestXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponseXmlHttpPostIn">
+    <wsdl:part name="xml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponseXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveRequestXmlSchemaHttpPostIn" />
+  <wsdl:message name="RetrieveRequestXmlSchemaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveResponseXmlSchemaHttpPostIn" />
+  <wsdl:message name="RetrieveResponseXmlSchemaHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesHttpPostIn" />
+  <wsdl:message name="RetrieveAllSourcesHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesDomainHttpPostIn">
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAllSourcesDomainHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainHttpPostIn">
+    <wsdl:part name="eddieRequestXml" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieHttpPostIn">
+    <wsdl:part name="eddieRequestXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieSampleHttpPostIn" />
+  <wsdl:message name="PerformEddieSampleHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSampleHttpPostIn">
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PerformEddieDomainSampleHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="StoreXmlDocumentHttpPostIn">
+    <wsdl:part name="xmlContent" type="s:string" />
+    <wsdl:part name="facetType" type="s:string" />
+    <wsdl:part name="sourceId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StoreXmlDocumentHttpPostOut" />
+  <wsdl:portType name="EDDiE_x0020_Web_x0020_ServiceSoap">
+    <wsdl:operation name="CheckExistCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the type of facet AND the case id that should be checked in the database if it exists&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  string that is either true or false </wsdl:documentation>
+      <wsdl:input message="tns:CheckExistCaseSoapIn" />
+      <wsdl:output message="tns:CheckExistCaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the type of facet AND the case id that should be removed from the database&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:RemoveCaseSoapIn" />
+      <wsdl:output message="tns:RemoveCaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the xml content, the type of facet AND the case id that the comment should be associated with&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:UpdateCaseSoapIn" />
+      <wsdl:output message="tns:UpdateCaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCaseComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the new comment to be added AND the case id that the comment should be associated with&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:AddCaseCommentSoapIn" />
+      <wsdl:output message="tns:AddCaseCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTerms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: none&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The list of terms currently in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveTermsSoapIn" />
+      <wsdl:output message="tns:RetrieveTermsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRequestXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate a XML Document against the Request XML Schema by taking the actual content of the XML Document</wsdl:documentation>
+      <wsdl:input message="tns:ValidateRequestXmlSoapIn" />
+      <wsdl:output message="tns:ValidateRequestXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResponseXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate a XML Document against the Response XML Schema by taking the actual content of the XML Document</wsdl:documentation>
+      <wsdl:input message="tns:ValidateResponseXmlSoapIn" />
+      <wsdl:output message="tns:ValidateResponseXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveRequestXmlSchema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Request XML Schema currently used for constructing EddieRequest Xml documents</wsdl:documentation>
+      <wsdl:input message="tns:RetrieveRequestXmlSchemaSoapIn" />
+      <wsdl:output message="tns:RetrieveRequestXmlSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveResponseXmlSchema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Response XML Schema currently used for constructing EddieResponse Xml documents</wsdl:documentation>
+      <wsdl:input message="tns:RetrieveResponseXmlSchemaSoapIn" />
+      <wsdl:output message="tns:RetrieveResponseXmlSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSources">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  Retrieve all sources that exists in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveAllSourcesSoapIn" />
+      <wsdl:output message="tns:RetrieveAllSourcesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSourcesDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  Retrieve all sources that exists in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveAllSourcesDomainSoapIn" />
+      <wsdl:output message="tns:RetrieveAllSourcesDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The content of a Request xml that is based on the Request XML schema (available using &lt;i&gt;RetrieveRequestXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service that performs natural languge discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieDomainSoapIn" />
+      <wsdl:output message="tns:PerformEddieDomainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The content of a Request xml that is based on the Request XML schema (available using &lt;i&gt;RetrieveRequestXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service that performs natural languge discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieSoapIn" />
+      <wsdl:output message="tns:PerformEddieSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieSample">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service which performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm using a sample request. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieSampleSoapIn" />
+      <wsdl:output message="tns:PerformEddieSampleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomainSample">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The domain name that results should only search for, e.g. 'Healthcare' or 'Risk'&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service which performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm using a sample request. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieDomainSampleSoapIn" />
+      <wsdl:output message="tns:PerformEddieDomainSampleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreXmlDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  &lt;i&gt;xmlContent()&lt;/i&gt;the content of a XML document&lt;br&gt;&lt;i&gt;facetType()&lt;/i&gt;the facet type&lt;br&gt;&lt;i&gt;sourceId()&lt;/i&gt;the source ID&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: Store the content of a XML document to the eXist database. </wsdl:documentation>
+      <wsdl:input message="tns:StoreXmlDocumentSoapIn" />
+      <wsdl:output message="tns:StoreXmlDocumentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="EDDiE_x0020_Web_x0020_ServiceHttpGet">
+    <wsdl:operation name="CheckExistCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the type of facet AND the case id that should be checked in the database if it exists&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  string that is either true or false </wsdl:documentation>
+      <wsdl:input message="tns:CheckExistCaseHttpGetIn" />
+      <wsdl:output message="tns:CheckExistCaseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the type of facet AND the case id that should be removed from the database&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:RemoveCaseHttpGetIn" />
+      <wsdl:output message="tns:RemoveCaseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the xml content, the type of facet AND the case id that the comment should be associated with&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:UpdateCaseHttpGetIn" />
+      <wsdl:output message="tns:UpdateCaseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCaseComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the new comment to be added AND the case id that the comment should be associated with&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:AddCaseCommentHttpGetIn" />
+      <wsdl:output message="tns:AddCaseCommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTerms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: none&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The list of terms currently in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveTermsHttpGetIn" />
+      <wsdl:output message="tns:RetrieveTermsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRequestXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate a XML Document against the Request XML Schema by taking the actual content of the XML Document</wsdl:documentation>
+      <wsdl:input message="tns:ValidateRequestXmlHttpGetIn" />
+      <wsdl:output message="tns:ValidateRequestXmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResponseXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate a XML Document against the Response XML Schema by taking the actual content of the XML Document</wsdl:documentation>
+      <wsdl:input message="tns:ValidateResponseXmlHttpGetIn" />
+      <wsdl:output message="tns:ValidateResponseXmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveRequestXmlSchema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Request XML Schema currently used for constructing EddieRequest Xml documents</wsdl:documentation>
+      <wsdl:input message="tns:RetrieveRequestXmlSchemaHttpGetIn" />
+      <wsdl:output message="tns:RetrieveRequestXmlSchemaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveResponseXmlSchema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Response XML Schema currently used for constructing EddieResponse Xml documents</wsdl:documentation>
+      <wsdl:input message="tns:RetrieveResponseXmlSchemaHttpGetIn" />
+      <wsdl:output message="tns:RetrieveResponseXmlSchemaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSources">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  Retrieve all sources that exists in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveAllSourcesHttpGetIn" />
+      <wsdl:output message="tns:RetrieveAllSourcesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSourcesDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  Retrieve all sources that exists in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveAllSourcesDomainHttpGetIn" />
+      <wsdl:output message="tns:RetrieveAllSourcesDomainHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The content of a Request xml that is based on the Request XML schema (available using &lt;i&gt;RetrieveRequestXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service that performs natural languge discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieDomainHttpGetIn" />
+      <wsdl:output message="tns:PerformEddieDomainHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The content of a Request xml that is based on the Request XML schema (available using &lt;i&gt;RetrieveRequestXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service that performs natural languge discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieHttpGetIn" />
+      <wsdl:output message="tns:PerformEddieHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieSample">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service which performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm using a sample request. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieSampleHttpGetIn" />
+      <wsdl:output message="tns:PerformEddieSampleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomainSample">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The domain name that results should only search for, e.g. 'Healthcare' or 'Risk'&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service which performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm using a sample request. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieDomainSampleHttpGetIn" />
+      <wsdl:output message="tns:PerformEddieDomainSampleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreXmlDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  &lt;i&gt;xmlContent()&lt;/i&gt;the content of a XML document&lt;br&gt;&lt;i&gt;facetType()&lt;/i&gt;the facet type&lt;br&gt;&lt;i&gt;sourceId()&lt;/i&gt;the source ID&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: Store the content of a XML document to the eXist database. </wsdl:documentation>
+      <wsdl:input message="tns:StoreXmlDocumentHttpGetIn" />
+      <wsdl:output message="tns:StoreXmlDocumentHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="EDDiE_x0020_Web_x0020_ServiceHttpPost">
+    <wsdl:operation name="CheckExistCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the type of facet AND the case id that should be checked in the database if it exists&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  string that is either true or false </wsdl:documentation>
+      <wsdl:input message="tns:CheckExistCaseHttpPostIn" />
+      <wsdl:output message="tns:CheckExistCaseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the type of facet AND the case id that should be removed from the database&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:RemoveCaseHttpPostIn" />
+      <wsdl:output message="tns:RemoveCaseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCase">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the xml content, the type of facet AND the case id that the comment should be associated with&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:UpdateCaseHttpPostIn" />
+      <wsdl:output message="tns:UpdateCaseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCaseComment">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: the new comment to be added AND the case id that the comment should be associated with&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  none </wsdl:documentation>
+      <wsdl:input message="tns:AddCaseCommentHttpPostIn" />
+      <wsdl:output message="tns:AddCaseCommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTerms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;: none&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The list of terms currently in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveTermsHttpPostIn" />
+      <wsdl:output message="tns:RetrieveTermsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRequestXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate a XML Document against the Request XML Schema by taking the actual content of the XML Document</wsdl:documentation>
+      <wsdl:input message="tns:ValidateRequestXmlHttpPostIn" />
+      <wsdl:output message="tns:ValidateRequestXmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResponseXml">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Validate a XML Document against the Response XML Schema by taking the actual content of the XML Document</wsdl:documentation>
+      <wsdl:input message="tns:ValidateResponseXmlHttpPostIn" />
+      <wsdl:output message="tns:ValidateResponseXmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveRequestXmlSchema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Request XML Schema currently used for constructing EddieRequest Xml documents</wsdl:documentation>
+      <wsdl:input message="tns:RetrieveRequestXmlSchemaHttpPostIn" />
+      <wsdl:output message="tns:RetrieveRequestXmlSchemaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveResponseXmlSchema">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve the Response XML Schema currently used for constructing EddieResponse Xml documents</wsdl:documentation>
+      <wsdl:input message="tns:RetrieveResponseXmlSchemaHttpPostIn" />
+      <wsdl:output message="tns:RetrieveResponseXmlSchemaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSources">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  Retrieve all sources that exists in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveAllSourcesHttpPostIn" />
+      <wsdl:output message="tns:RetrieveAllSourcesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSourcesDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  Retrieve all sources that exists in the database. </wsdl:documentation>
+      <wsdl:input message="tns:RetrieveAllSourcesDomainHttpPostIn" />
+      <wsdl:output message="tns:RetrieveAllSourcesDomainHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomain">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The content of a Request xml that is based on the Request XML schema (available using &lt;i&gt;RetrieveRequestXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service that performs natural languge discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieDomainHttpPostIn" />
+      <wsdl:output message="tns:PerformEddieDomainHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddie">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The content of a Request xml that is based on the Request XML schema (available using &lt;i&gt;RetrieveRequestXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service that performs natural languge discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieHttpPostIn" />
+      <wsdl:output message="tns:PerformEddieHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieSample">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service which performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm using a sample request. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieSampleHttpPostIn" />
+      <wsdl:output message="tns:PerformEddieSampleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomainSample">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  The domain name that results should only search for, e.g. 'Healthcare' or 'Risk'&lt;br&gt;&lt;b&gt;Output&lt;/b&gt;:  The content of the resulting ordered Response XML that contains ONLY the basic information - based on the Response XML schema (available using &lt;i&gt;RetrieveResponseXmlSchema()&lt;/i&gt; method).&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: A web service which performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm using a sample request. </wsdl:documentation>
+      <wsdl:input message="tns:PerformEddieDomainSampleHttpPostIn" />
+      <wsdl:output message="tns:PerformEddieDomainSampleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StoreXmlDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">&lt;b&gt;Input&lt;/b&gt;:  &lt;i&gt;xmlContent()&lt;/i&gt;the content of a XML document&lt;br&gt;&lt;i&gt;facetType()&lt;/i&gt;the facet type&lt;br&gt;&lt;i&gt;sourceId()&lt;/i&gt;the source ID&lt;br&gt;&lt;b&gt;Description&lt;/b&gt;: Store the content of a XML document to the eXist database. </wsdl:documentation>
+      <wsdl:input message="tns:StoreXmlDocumentHttpPostIn" />
+      <wsdl:output message="tns:StoreXmlDocumentHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EDDiE_x0020_Web_x0020_ServiceSoap" type="tns:EDDiE_x0020_Web_x0020_ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckExistCase">
+      <soap:operation soapAction="http://tempuri.org/CheckExistCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCase">
+      <soap:operation soapAction="http://tempuri.org/RemoveCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCase">
+      <soap:operation soapAction="http://tempuri.org/UpdateCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCaseComment">
+      <soap:operation soapAction="http://tempuri.org/AddCaseComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTerms">
+      <soap:operation soapAction="http://tempuri.org/RetrieveTerms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRequestXml">
+      <soap:operation soapAction="http://tempuri.org/ValidateRequestXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResponseXml">
+      <soap:operation soapAction="http://tempuri.org/ValidateResponseXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveRequestXmlSchema">
+      <soap:operation soapAction="http://tempuri.org/RetrieveRequestXmlSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveResponseXmlSchema">
+      <soap:operation soapAction="http://tempuri.org/RetrieveResponseXmlSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSources">
+      <soap:operation soapAction="http://tempuri.org/RetrieveAllSources" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSourcesDomain">
+      <soap:operation soapAction="http://tempuri.org/RetrieveAllSourcesDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomain">
+      <soap:operation soapAction="http://tempuri.org/PerformEddieDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddie">
+      <soap:operation soapAction="http://tempuri.org/PerformEddie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieSample">
+      <soap:operation soapAction="http://tempuri.org/PerformEddieSample" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomainSample">
+      <soap:operation soapAction="http://tempuri.org/PerformEddieDomainSample" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreXmlDocument">
+      <soap:operation soapAction="http://tempuri.org/StoreXmlDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EDDiE_x0020_Web_x0020_ServiceSoap12" type="tns:EDDiE_x0020_Web_x0020_ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckExistCase">
+      <soap12:operation soapAction="http://tempuri.org/CheckExistCase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCase">
+      <soap12:operation soapAction="http://tempuri.org/RemoveCase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCase">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCaseComment">
+      <soap12:operation soapAction="http://tempuri.org/AddCaseComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTerms">
+      <soap12:operation soapAction="http://tempuri.org/RetrieveTerms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRequestXml">
+      <soap12:operation soapAction="http://tempuri.org/ValidateRequestXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResponseXml">
+      <soap12:operation soapAction="http://tempuri.org/ValidateResponseXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveRequestXmlSchema">
+      <soap12:operation soapAction="http://tempuri.org/RetrieveRequestXmlSchema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveResponseXmlSchema">
+      <soap12:operation soapAction="http://tempuri.org/RetrieveResponseXmlSchema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSources">
+      <soap12:operation soapAction="http://tempuri.org/RetrieveAllSources" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSourcesDomain">
+      <soap12:operation soapAction="http://tempuri.org/RetrieveAllSourcesDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomain">
+      <soap12:operation soapAction="http://tempuri.org/PerformEddieDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddie">
+      <soap12:operation soapAction="http://tempuri.org/PerformEddie" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieSample">
+      <soap12:operation soapAction="http://tempuri.org/PerformEddieSample" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomainSample">
+      <soap12:operation soapAction="http://tempuri.org/PerformEddieDomainSample" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreXmlDocument">
+      <soap12:operation soapAction="http://tempuri.org/StoreXmlDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EDDiE_x0020_Web_x0020_ServiceHttpGet" type="tns:EDDiE_x0020_Web_x0020_ServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CheckExistCase">
+      <http:operation location="/CheckExistCase" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCase">
+      <http:operation location="/RemoveCase" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCase">
+      <http:operation location="/UpdateCase" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCaseComment">
+      <http:operation location="/AddCaseComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTerms">
+      <http:operation location="/RetrieveTerms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRequestXml">
+      <http:operation location="/ValidateRequestXml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResponseXml">
+      <http:operation location="/ValidateResponseXml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveRequestXmlSchema">
+      <http:operation location="/RetrieveRequestXmlSchema" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveResponseXmlSchema">
+      <http:operation location="/RetrieveResponseXmlSchema" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSources">
+      <http:operation location="/RetrieveAllSources" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSourcesDomain">
+      <http:operation location="/RetrieveAllSourcesDomain" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomain">
+      <http:operation location="/PerformEddieDomain" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddie">
+      <http:operation location="/PerformEddie" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieSample">
+      <http:operation location="/PerformEddieSample" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomainSample">
+      <http:operation location="/PerformEddieDomainSample" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreXmlDocument">
+      <http:operation location="/StoreXmlDocument" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EDDiE_x0020_Web_x0020_ServiceHttpPost" type="tns:EDDiE_x0020_Web_x0020_ServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CheckExistCase">
+      <http:operation location="/CheckExistCase" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCase">
+      <http:operation location="/RemoveCase" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCase">
+      <http:operation location="/UpdateCase" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCaseComment">
+      <http:operation location="/AddCaseComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTerms">
+      <http:operation location="/RetrieveTerms" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateRequestXml">
+      <http:operation location="/ValidateRequestXml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateResponseXml">
+      <http:operation location="/ValidateResponseXml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveRequestXmlSchema">
+      <http:operation location="/RetrieveRequestXmlSchema" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveResponseXmlSchema">
+      <http:operation location="/RetrieveResponseXmlSchema" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSources">
+      <http:operation location="/RetrieveAllSources" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAllSourcesDomain">
+      <http:operation location="/RetrieveAllSourcesDomain" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomain">
+      <http:operation location="/PerformEddieDomain" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddie">
+      <http:operation location="/PerformEddie" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieSample">
+      <http:operation location="/PerformEddieSample" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PerformEddieDomainSample">
+      <http:operation location="/PerformEddieDomainSample" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StoreXmlDocument">
+      <http:operation location="/StoreXmlDocument" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EDDiE_x0020_Web_x0020_Service">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">A web service that performs natural language discovery based on the Expansion and Disambiguation Discovery Engine (EDDiE) Algorithm. Query matching is in 2 steps: (i) XQuery text-searching functions to discover an initial set of case descriptions that satisfy global search constraints (CoarseGrainedMatching); (ii) traditional vector-space model IR, enhanced with WordNet, to further refine and assess the quality of the candidate case set (FineGrainedMatching).</wsdl:documentation>
+    <wsdl:port name="EDDiE_x0020_Web_x0020_ServiceSoap" binding="tns:EDDiE_x0020_Web_x0020_ServiceSoap">
+      <soap:address location="http://achernar.soi.city.ac.uk/ESD/WebServices/EDDiE_WS/EddieService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EDDiE_x0020_Web_x0020_ServiceSoap12" binding="tns:EDDiE_x0020_Web_x0020_ServiceSoap12">
+      <soap12:address location="http://achernar.soi.city.ac.uk/ESD/WebServices/EDDiE_WS/EddieService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EDDiE_x0020_Web_x0020_ServiceHttpGet" binding="tns:EDDiE_x0020_Web_x0020_ServiceHttpGet">
+      <http:address location="http://achernar.soi.city.ac.uk/ESD/WebServices/EDDiE_WS/EddieService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EDDiE_x0020_Web_x0020_ServiceHttpPost" binding="tns:EDDiE_x0020_Web_x0020_ServiceHttpPost">
+      <http:address location="http://achernar.soi.city.ac.uk/ESD/WebServices/EDDiE_WS/EddieService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

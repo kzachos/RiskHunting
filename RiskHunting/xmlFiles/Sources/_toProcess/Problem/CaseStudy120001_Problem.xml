@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FacetType>Problem</FacetType>
+  <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
+  <Author>John Smith|123456</Author>
+  <LaunchDate>15/03/2016 17:14:12</LaunchDate>
+  <SourceSpecificationLastEdited>09/11/2015</SourceSpecificationLastEdited>
+  <FacetSpecificationData>
+    <Content>The worker lay down on a duckboard in order to move under a tractor to check for possible oil leaks, but the duckboard shifted as the worker sat down and the worker fell and received a superficial cut to the head</Content>
+    <InjuryNature>Contusion/Crush/Concussion</InjuryNature>
+    <LocationDetail>After Paint (APM or Medical Line)|00</LocationDetail>
+    <BodyPart>Whole body</BodyPart>
+    <InjuryCause />
+    <IncidentPriority />
+    <IncidentStatus>use liquid or air with the hit - hot liquid investigated;even out the environmental forces that affect the point</IncidentStatus>
+    <RootCause />
+    <RoutineWork />
+    <ShiftType />
+    <Title />
+    <ClosedByOperator />
+    <ContractorName>Peter Maffay</ContractorName>
+    <DateClosed />
+    <DateIncidentOccurred>09/11/2015 00:00:00</DateIncidentOccurred>
+    <Miscellaneous>xmlFiles/Sources/Risk/Images/120001/120001.jpg</Miscellaneous>
+    <MatchingDetails />
+  </FacetSpecificationData>
+</LanguageSpecificSpecification>

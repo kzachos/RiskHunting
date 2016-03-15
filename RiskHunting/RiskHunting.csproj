@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{A4AB2A0E-6AD4-42EF-A294-82CF3F7884BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RiskHunting</RootNamespace>
+    <AssemblyName>RiskHunting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>bin\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <HintPath>bin\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="WaterMarkTextBox">
+      <HintPath>bin\WaterMarkTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="NLP">
+      <HintPath>bin\NLP.dll</HintPath>
+    </Reference>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>bin\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WordNet">
+      <HintPath>bin\WordNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="web.config" />
+    <Content Include="Default.aspx" />
+    <Content Include="ErrorHandling\404.html" />
+    <Content Include="ErrorHandling\503.html" />
+    <Content Include="ErrorHandling\DefaultRedirectErrorPage.aspx" />
+    <Content Include="ErrorHandling\GenericErrorPage.aspx" />
+    <Content Include="ErrorHandling\Http404ErrorPage.aspx" />
+    <Content Include="ErrorHandling\HttpErrorPage.aspx" />
+    <Content Include="ErrorHandling\maintenance.html" />
+    <Content Include="AddAction.aspx" />
+    <Content Include="AddResolutionIdea.aspx" />
+    <Content Include="CreateIdeas_PastRisk.aspx" />
+    <Content Include="CreateIdeas_PastRisks.aspx" />
+    <Content Include="CreateIdeas_SameRisk.aspx" />
+    <Content Include="CreateIdeas_Superheroes.aspx" />
+    <Content Include="CreateRisk.aspx" />
+    <Content Include="DescribeRisk.aspx" />
+    <Content Include="EditResolutionIdea.aspx" />
+    <Content Include="Feedback.ascx" />
+    <Content Include="FileUploadControl.aspx" />
+    <Content Include="MarkAsResolvedRisk.aspx" />
+    <Content Include="PinEntry.aspx" />
+    <Content Include="QueryHistory.aspx" />
+    <Content Include="ResolveRisk.aspx" />
+    <Content Include="Settings.aspx" />
+    <Content Include="Summary.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\EnumLabel.cs" />
+    <Compile Include="Classes\GenericCreativityPrompts.cs" />
+    <Compile Include="Classes\GoogleGeocodingDataContracts.cs" />
+    <Compile Include="Classes\GoogleReverseGeocoder.cs" />
+    <Compile Include="Classes\NLPData.cs" />
+    <Compile Include="Classes\PDFCreator.cs" />
+    <Compile Include="Classes\Persona.cs" />
+    <Compile Include="Classes\ProcessGuidance.cs" />
+    <Compile Include="Classes\Randomize.cs" />
+    <Compile Include="Classes\Risk.cs" />
+    <Compile Include="Classes\Sessions.cs" />
+    <Compile Include="Classes\Util.cs" />
+    <Compile Include="ErrorHandling\DefaultRedirectErrorPage.aspx.cs">
+      <DependentUpon>DefaultRedirectErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorHandling\DefaultRedirectErrorPage.aspx.designer.cs">
+      <DependentUpon>DefaultRedirectErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorHandling\ExceptionUtility.cs" />
+    <Compile Include="AddAction.aspx.cs">
+      <DependentUpon>AddAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddAction.aspx.designer.cs">
+      <DependentUpon>AddAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddResolutionIdea.aspx.cs">
+      <DependentUpon>AddResolutionIdea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddResolutionIdea.aspx.designer.cs">
+      <DependentUpon>AddResolutionIdea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_PastRisk.aspx.cs">
+      <DependentUpon>CreateIdeas_PastRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_PastRisk.aspx.designer.cs">
+      <DependentUpon>CreateIdeas_PastRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_PastRisks.aspx.cs">
+      <DependentUpon>CreateIdeas_PastRisks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_PastRisks.aspx.designer.cs">
+      <DependentUpon>CreateIdeas_PastRisks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_SameRisk.aspx.cs">
+      <DependentUpon>CreateIdeas_SameRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_SameRisk.aspx.designer.cs">
+      <DependentUpon>CreateIdeas_SameRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_Superheroes.aspx.cs">
+      <DependentUpon>CreateIdeas_Superheroes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateIdeas_Superheroes.aspx.designer.cs">
+      <DependentUpon>CreateIdeas_Superheroes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateRisk.aspx.cs">
+      <DependentUpon>CreateRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateRisk.aspx.designer.cs">
+      <DependentUpon>CreateRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DescribeRisk.aspx.cs">
+      <DependentUpon>DescribeRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DescribeRisk.aspx.designer.cs">
+      <DependentUpon>DescribeRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditResolutionIdea.aspx.cs">
+      <DependentUpon>EditResolutionIdea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditResolutionIdea.aspx.designer.cs">
+      <DependentUpon>EditResolutionIdea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.ascx.cs">
+      <DependentUpon>Feedback.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback.ascx.designer.cs">
+      <DependentUpon>Feedback.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FileUploadControl.aspx.cs">
+      <DependentUpon>FileUploadControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileUploadControl.aspx.designer.cs">
+      <DependentUpon>FileUploadControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarkAsResolvedRisk.aspx.cs">
+      <DependentUpon>MarkAsResolvedRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MarkAsResolvedRisk.aspx.designer.cs">
+      <DependentUpon>MarkAsResolvedRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PinEntry.aspx.cs">
+      <DependentUpon>PinEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PinEntry.aspx.designer.cs">
+      <DependentUpon>PinEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryHistory.aspx.cs">
+      <DependentUpon>QueryHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryHistory.aspx.designer.cs">
+      <DependentUpon>QueryHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResolveRisk.aspx.cs">
+      <DependentUpon>ResolveRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResolveRisk.aspx.designer.cs">
+      <DependentUpon>ResolveRisk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsTool.cs" />
+    <Compile Include="Summary.aspx.cs">
+      <DependentUpon>Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Summary.aspx.designer.cs">
+      <DependentUpon>Summary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\eddieService\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\hofService\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\antiqueService\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parameters.xml" />
+    <None Include="Web References\eddieService\EddieService.disco" />
+    <None Include="Web References\eddieService\EddieService.wsdl" />
+    <None Include="Web References\eddieService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\hofService\Service1.wsdl" />
+    <None Include="Web References\hofService\Service1.disco" />
+    <None Include="Web References\hofService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\antiqueService\AntiqueService.disco" />
+    <None Include="Web References\antiqueService\AntiqueService.wsdl" />
+    <None Include="Web References\antiqueService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://achernar.soi.city.ac.uk/ESD/WebServices/EDDiE_WS/EddieService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\eddieService</RelPath>
+      <UpdateFromURL>http://achernar.soi.city.ac.uk/ESD/WebServices/EDDiE_WS/EddieService.asmx</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://achernar.soi.city.ac.uk/HallOfFame/HallOfFameService/Service1.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\hofService</RelPath>
+      <UpdateFromURL>http://achernar.soi.city.ac.uk/HallOfFame/HallOfFameService/Service1.asmx</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://achernar.soi.city.ac.uk/ESD/ClassLibraries/Antique/Antique.AntiqueService/AntiqueService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\antiqueService</RelPath>
+      <UpdateFromURL>http://achernar.soi.city.ac.uk/ESD/ClassLibraries/Antique/Antique.AntiqueService/AntiqueService.asmx</UpdateFromURL>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraries\XmlProc\XmlProc.csproj">
+      <Project>{B738FE28-3D47-4750-8006-BE39F1AE8119}</Project>
+      <Name>XmlProc</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
