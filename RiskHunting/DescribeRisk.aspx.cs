@@ -38,13 +38,10 @@ namespace RiskHunting
 		protected string sourceId;
 		protected Risk currentRisk;
 
-		protected const string DESC_WATERMARK = "[Enter a description of the risk using two or three sentences]";
-		protected const string NAME_WATERMARK = "[Enter a name for the risk]";
-		protected const string AUTHOR_WATERMARK = "[Enter the name of person reporting the risk]";
-		protected const string AUTHORFIN_WATERMARK = "[Enter the FIN number of person reporting the risk]";
-		protected const string LOCATION_WATERMARK = "[Enter the risk location]";
-		protected const string BODYPARTS_WATERMARK = "[Enter the body parts that are at risk, e.g. feet]";
-		protected const string PERSONINVOLVED_WATERMARK = "[Enter the name of the person involved]";
+		protected string DESC_WATERMARK = AppResources.DescWatermark; 
+		protected string AUTHOR_WATERMARK = AppResources.AuthorWatermark; 
+		protected string AUTHORFIN_WATERMARK = AppResources.AuthorFinWatermark; 
+		protected string PERSONINVOLVED_WATERMARK = AppResources.PersonInvolvedWatermark; 
 
 		protected const string ERROR_MESSAGE_REQUIRED = "One or more fields are empty - please fill out the required fields to continue.";
 
@@ -54,8 +51,7 @@ namespace RiskHunting
 		//		const string EndTagNav = "</div>";
 
 		protected void Page_Init(object sender, EventArgs e)
-		{
-			
+		{			
 			if (!DetermineFrom ().Equals (String.Empty)) { // coming from summary so reset form for a new risk
 				ResetForm ();
 				if (DetermineFrom ().Equals ("success")) {
@@ -212,7 +208,6 @@ namespace RiskHunting
 
 		private void InitTextElements()
 		{
-//			RiskName.WatermarkText = NAME_WATERMARK;
 			RiskDescription.WatermarkText = DESC_WATERMARK;
 			RiskAuthor.WatermarkText = AUTHOR_WATERMARK;
 			RiskAuthorFIN.WatermarkText = AUTHORFIN_WATERMARK;
@@ -364,27 +359,11 @@ namespace RiskHunting
 				return true;
 			}
 		}
-
-		//		private string CheckTextBoxContent(WatermarkedTextBox tb, string watermarkText)
-		//		{
-		//			Console.WriteLine (watermarkText + ": " + tb.Text);
-		//			if (tb.Text.Equals(watermarkText))
-		//				if (!watermarkText.Equals (NAME_WATERMARK))
-		//					return String.Empty;
-		//				else
-		//					return RiskDescription.Text.ExtractKeywords ().TruncateAtWord (10);
-		//			else
-		//				return tb.Text;
-		//		}
-
+			
 		private string CheckTextBoxContent(WatermarkedTextBox tb, string watermarkText)
 		{
-			if (tb.Text.Equals (String.Empty)) {
-				if (!watermarkText.Equals (NAME_WATERMARK))
-					return String.Empty;
-				else
-					return RiskDescription.Text.ExtractKeywords ().TruncateAtWord (10);
-			}
+			if (tb.Text.Equals (String.Empty))
+				return RiskDescription.Text.ExtractKeywords ().TruncateAtWord (10);
 			else
 				return tb.Text;
 		}
@@ -551,7 +530,6 @@ namespace RiskHunting
 			risk.Content = CheckTextBoxContent(RiskDescription, DESC_WATERMARK);
 			risk.Author = CheckTextBoxContent (RiskAuthor, AUTHOR_WATERMARK);
 			risk.AuthorFIN = CheckTextBoxContent (RiskAuthorFIN, AUTHORFIN_WATERMARK);
-//			risk.Name = CheckTextBoxContent(RiskName, NAME_WATERMARK);
 			risk.Name = RiskName.Value;
 			//			risk.InjuryNature = CheckTextBoxContent(RiskDanger, DANGER_WATERMARK);
 			risk.InjuryNature = String.Empty;
@@ -591,7 +569,6 @@ namespace RiskHunting
 					Session.Remove (Sessions.creativityPromptsState);
 			}
 			this.currentRisk.Content = CheckTextBoxContent(RiskDescription, DESC_WATERMARK);
-//			this.currentRisk.Name = CheckTextBoxContent(RiskName, NAME_WATERMARK);
 			this.currentRisk.Name = RiskName.Value;
 			this.currentRisk.Author = CheckTextBoxContent(RiskAuthor, AUTHOR_WATERMARK);
 			this.currentRisk.AuthorFIN = CheckTextBoxContent(RiskAuthorFIN, AUTHORFIN_WATERMARK);
@@ -731,7 +708,6 @@ namespace RiskHunting
 		{
 			Session.RemoveAll ();
 //			RiskName.Text = String.Empty;
-//			RiskName.WatermarkText = NAME_WATERMARK;
 			RiskDescription.Text = String.Empty;
 			RiskDescription.WatermarkText = DESC_WATERMARK;
 			RiskAuthor.Text = String.Empty;

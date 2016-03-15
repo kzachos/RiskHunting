@@ -235,6 +235,9 @@
     <Compile Include="Web References\antiqueService\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Localization\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -246,6 +249,7 @@
   </ProjectExtensions>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="Localization\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Parameters.xml" />
@@ -293,5 +297,12 @@
       <Project>{B738FE28-3D47-4750-8006-BE39F1AE8119}</Project>
       <Name>XmlProc</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\AppResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\AppResources.it.resx" />
   </ItemGroup>
 </Project>

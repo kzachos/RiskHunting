@@ -13,3 +13,13 @@
 /Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.dll.mdb
 /Users/koszachos/Projects/RiskHunting/RiskHunting/bin/AntiXSSLibrary.dll
 /Users/koszachos/Projects/RiskHunting/RiskHunting/bin/WordNet.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Sample.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Localization.AppResources_en.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Localization.AppResourcesEn.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.AppResources_en.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.AppResources.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.AppResources.it.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/it/RiskHunting.resources.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin//it/RiskHunting.resources.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Localization.AppResources.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Localization.AppResources.it.resources

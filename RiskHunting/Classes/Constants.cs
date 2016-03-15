@@ -35,6 +35,7 @@ namespace RiskHunting
 
 		public const string PDF_TEMPLATE = "CNH_RiskTemplate_v2.0.pdf";
 		public const string PDF_OUTPUT = "Risk.pdf";
+
 	}
 }
 

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+
+	<data name="DescWatermark" xml:space="preserve">
+    	<value>[IT Enter a description of the risk using two or three sentences]</value>
+    	<comment></comment>
+	</data>
+	<data name="AuthorWatermark" xml:space="preserve">
+    	<value>[IT Enter the name of person reporting the risk]</value>
+    	<comment></comment>
+	</data>
+	<data name="AuthorFinWatermark" xml:space="preserve">
+    	<value>[IT Enter the FIN number of person reporting the risk]</value>
+    	<comment></comment>
+	</data>
+	<data name="PersonInvolvedWatermark" xml:space="preserve">
+    	<value>[IT Enter the name of the person involved]</value>
+    	<comment></comment>
+	</data>
+
+</root>
