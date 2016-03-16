@@ -235,7 +235,7 @@
     <Compile Include="Web References\antiqueService\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="Localization\AppResources.Designer.cs">
+    <Compile Include="AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -249,7 +249,6 @@
   </ProjectExtensions>
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="Localization\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Parameters.xml" />
@@ -271,6 +270,7 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Resources\Parameters.it.xml" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References" />
@@ -299,10 +299,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Localization\AppResources.resx">
+    <EmbeddedResource Include="AppResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Localization\AppResources.it.resx" />
+    <EmbeddedResource Include="AppResources.it.resx" />
   </ItemGroup>
 </Project>

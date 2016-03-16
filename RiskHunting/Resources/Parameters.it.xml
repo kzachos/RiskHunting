@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<Parameters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IncidentCategory>
+    <n>Atto non sicuro</n>
+  </IncidentCategory>
+  <IncidentCategory>
+    <n>Condizione insicura</n>
+  </IncidentCategory>
+  <IncidentCategory>
+    <n>Quasi mancato</n>
+  </IncidentCategory>
+  <rl>
+    <n>Linea dei pedoni</n>
+    <name>Sam Gibson</name>
+    <email>sam.gibson@cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Linea dei taxi ????</n>
+    <name>Steve Young</name>
+    <email>stephen.young@cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Dopo Vernice (APM or Linea medica)</n>
+    <name>Kevin Passingham</name>
+    <email>kevin.passingham@cnhind.com</email>
+    <email>michael.george@cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Prima della vernice</n>
+    <name>John Williams</name>
+    <email>john.williams@cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Piano di vernice</n>
+    <name>JW</name>
+  </rl>
+  <rl>
+    <n>AGV</n>
+    <name>JW</name>
+  </rl>
+  <rl>
+    <n>Magazzino</n>
+    <name>Lee Victory</name>
+    <email>lee.victory@cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Manutenzione</n>
+    <name>Dave Cox</name>
+    <email>david.cox@cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Centro prova su strada</n>
+    <name>Andy Plom</name>
+    <email>andy.plom@external.cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Montaggio</n>
+    <name>Paul Cumming</name>
+    <email>paul.cumming@cnhind.com</email>
+  </rl>
+  <rl>
+    <n>Altri (Uffici, etc.)</n>
+  </rl>
+  <bp>
+    <n>Whole body</n>
+  </bp>
+  <bp>
+    <n>Head</n>
+  </bp>
+  <bp>
+    <n>Eye</n>
+  </bp>
+  <bp>
+    <n>Arm</n>
+  </bp>
+  <bp>
+    <n>Hands</n>
+  </bp>
+  <bp>
+    <n>Trunk</n>
+  </bp>
+  <bp>
+    <n>Leg</n>
+  </bp>
+  <bp>
+    <n>Foot</n>
+  </bp>
+  <bp>
+    <n>None</n>
+  </bp>
+  <TypeOfIncident>
+    <n>Abrasioni/Tagli/Lacerazione</n>
+  </TypeOfIncident>
+  <TypeOfIncident>
+    <n>Ustioni/Scottature</n>
+  </TypeOfIncident>
+  <TypeOfIncident>
+    <n>Contusioni/Commozione cerebralession</n>
+  </TypeOfIncident>
+  <TypeOfIncident>
+    <n>Corpo estraneo</n>
+  </TypeOfIncident>
+  <TypeOfIncident>
+    <n>Fratture/lussazioni</n>
+  </TypeOfIncident>
+  <TypeOfIncident>
+    <n>Ematoma/livido</n>
+  </TypeOfIncident>
+  <TypeOfIncident>
+    <n>Abrasioni/Tagli/Lacerazioni</n>
+  </TypeOfIncident>
+  <TypeOfIncident>
+    <n>Nessuna</n>
+  </TypeOfIncident>
+</Parameters>

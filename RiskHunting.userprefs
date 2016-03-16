@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="RiskHunting/Localization/AppResources.resx">
     <Files>
       <File FileName="RiskHunting/Summary.aspx.cs" Line="475" Column="4" />
-      <File FileName="RiskHunting/DescribeRisk.aspx.cs" Line="22" Column="16" />
+      <File FileName="RiskHunting/DescribeRisk.aspx.cs" Line="1" Column="1" />
       <File FileName="RiskHunting/Localization/AppResources.resx" Line="12" Column="25" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

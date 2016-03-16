@@ -66,6 +66,47 @@ namespace RiskHunting
 		protected System.Web.UI.HtmlControls.HtmlSelect DateIncidentOccurredYear;
 
 		protected System.Web.UI.HtmlControls.HtmlGenericControl PINcodeDiv;
+
+		protected System.Web.UI.WebControls.Label LabelAuthor;
+
+		protected System.Web.UI.WebControls.Label LabelAuthorFIN;
+
+		protected System.Web.UI.WebControls.Label LabelDescription;
+
+		protected System.Web.UI.WebControls.Label LabelIncidentCategory;
+
+		protected System.Web.UI.WebControls.Label LabelPersonInvolved;
+
+		protected System.Web.UI.WebControls.Label LabelDepartment;
+
+		protected System.Web.UI.WebControls.Label LabelLocation;
+
+		protected System.Web.UI.WebControls.Label LabelInjuryType;
+
+		protected System.Web.UI.WebControls.Label LabelDateOfIncident;
+
+		protected System.Web.UI.WebControls.Label LabelUploadPicture;
+
+		protected System.Web.UI.WebControls.Label LabelRequired1;
+
+		protected System.Web.UI.WebControls.Label LabelRequired2;
+
+		protected System.Web.UI.WebControls.Label LabelRequired3;
+
+		protected System.Web.UI.WebControls.Button imageButton;
+
+		protected System.Web.UI.WebControls.Button reset;
+
+		protected System.Web.UI.WebControls.Button delete;
+
+		protected System.Web.UI.WebControls.Button createIdeasButton;
+
+		protected System.Web.UI.WebControls.Label LabelNavigationBarLeft;
+
+		protected System.Web.UI.WebControls.Label LabelNavigationBarRight;
+
+		protected System.Web.UI.WebControls.Label LabelNavigationBarTitle;
+
 	}
 }
 

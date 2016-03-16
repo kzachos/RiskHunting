@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="General.AppName" xml:space="preserve">
+    <value>Caccia Al rischio App</value>
+  </data>
+  <data name="DescribeRisk.NavigationBar.Title" xml:space="preserve">
+    <value>Descrizione del rischio</value>
+  </data>
+  <data name="DescribeRisk.NavigationBar.Left" xml:space="preserve">
+    <value>I rischi precedenti</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.Author" xml:space="preserve">
+    <value>Riportato da</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.AuthorFIN" xml:space="preserve">
+    <value>FIN</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.Required" xml:space="preserve">
+    <value>obbligatorio</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.Description" xml:space="preserve">
+    <value>Descrizione</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.IncidentCatagory" xml:space="preserve">
+    <value>Categoria incidente</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.PersonInvolved" xml:space="preserve">
+    <value>Nome della persona coinvolta</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.Department" xml:space="preserve">
+    <value>Dipartimento</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.Location" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.InjuryType" xml:space="preserve">
+    <value>Tipo di (eventuale) lesione</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.DateOfIncident" xml:space="preserve">
+    <value>Dala dell &apos;incidente</value>
+  </data>
+  <data name="DescribeRisk.Form.Label.UploadPicture" xml:space="preserve">
+    <value>Carica una fotografia</value>
+  </data>
+  <data name="DescribeRisk.Form.Button.UploadPicture" xml:space="preserve">
+    <value>Premi qui per aggiungere, aggiornare o cancellare un &apos; immagine</value>
+  </data>
+  <data name="DescribeRisk.Form.Button.CreateIdeas" xml:space="preserve">
+    <value>Genera idee</value>
+  </data>
+  <data name="DescribeRisk.Form.Button.ClearForm" xml:space="preserve">
+    <value>Cancella questo rischio e inserisci un nuovo rischio</value>
+  </data>
+  <data name="DescribeRisk.Form.Button.DeleteRisk" xml:space="preserve">
+    <value>Cancella il rischio</value>
+  </data>
+  <data name="DescribeRisk.NavigationBar.Right" xml:space="preserve">
+    <value>Genera idee</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.IncidentCategory.UnsafeAct" xml:space="preserve">
+    <value>Atto non sicuro</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.IncidentCategory.UnsafeCondition" xml:space="preserve">
+    <value>Condizione insicura</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.IncidentCategory.NearMiss" xml:space="preserve">
+    <value>Quasi mancato</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.PedestalLine" xml:space="preserve">
+    <value>Linea dei pedoni</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.CabLine" xml:space="preserve">
+    <value>Linea dei taxi ????</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.AfterPaint" xml:space="preserve">
+    <value>Dopo Vernice (APM or Linea medica)</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.PrePaint" xml:space="preserve">
+    <value>Prima della vernice</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.PaintFloor" xml:space="preserve">
+    <value>Piano di vernice</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.Agv" xml:space="preserve">
+    <value>AGV</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.Warehouse" xml:space="preserve">
+    <value>Magazzino</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.Maintenance" xml:space="preserve">
+    <value>Manutenzione</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.RoadTestCentre" xml:space="preserve">
+    <value>Centro prova su strada</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.SubAssembly" xml:space="preserve">
+    <value>Montaggio</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.Department.Other" xml:space="preserve">
+    <value>Altri (Uffici, etc.)</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.Abrasions" xml:space="preserve">
+    <value>Abrasioni/Tagli/Lacerazione</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.Burns" xml:space="preserve">
+    <value>Ustioni/Scottature</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.Contusion" xml:space="preserve">
+    <value>Contusioni/Commozione cerebrale</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.ForeignBodies" xml:space="preserve">
+    <value>Corpo estraneo</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.Fractures" xml:space="preserve">
+    <value>Fratture/lussazioni</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.Hematoma" xml:space="preserve">
+    <value>Ematoma/livido</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.Sprains" xml:space="preserve">
+    <value>Abrasioni/Tagli/Lacerazioni</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.InjuryType.None" xml:space="preserve">
+    <value>Nessuna</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Jan" xml:space="preserve">
+    <value>Gennaio</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Feb" xml:space="preserve">
+    <value>Febbraio</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Mar" xml:space="preserve">
+    <value>Marzo</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Apr" xml:space="preserve">
+    <value>Aprile</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.May" xml:space="preserve">
+    <value>Maggio</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Jun" xml:space="preserve">
+    <value>Giugno</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Jul" xml:space="preserve">
+    <value>Luglio</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Aug" xml:space="preserve">
+    <value>Agosto</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Sep" xml:space="preserve">
+    <value>Settembre</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Oct" xml:space="preserve">
+    <value>Ottobre</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Nov" xml:space="preserve">
+    <value>Novembre</value>
+  </data>
+  <data name="DescribeRisk.Form.DropDown.DateOfIncident.Dec" xml:space="preserve">
+    <value>Dicembre</value>
+  </data>
+  <data name="DescribeRisk.Notification.Empty" xml:space="preserve">
+    <value>Uno o più campi sono vuoti - si prega di compilare i campi richiesti per continuare.</value>
+  </data>
+  <data name="DescribeRisk.Notification.SuccessSubmit" xml:space="preserve">
+    <value>Grazie per aver salvato il rischio nuovo.. Il rischio è stato salvato nel database . Per rivedere i dettagli del rischio usa il pulsante &apos;I rischi precedenti&apos;.</value>
+  </data>
+  <data name="DescribeRisk.Notification.FailedSubmit" xml:space="preserve">
+    <value>Il rischio non può essere caricato nel database. Per favore riprova più tardi.</value>
+  </data>
+  <data name="DescribeRisk.Notification.FailedDelete" xml:space="preserve">
+    <value>Il rischio non può essere rimosso dal database . Per favore riprova più tardi.</value>
+  </data>
+  <data name="DescribeRisk.Notification.SuccessDelete" xml:space="preserve">
+    <value>Il rischio è stato eliminato e rimosso dal database con successo.</value>
+  </data>
+  <data name="DescribeRisk.Notification.EnterDescription" xml:space="preserve">
+    <value>Si prega di inserire una descrizione del rischio incontrato.</value>
+  </data>
+  <data name="DescribeRisk.Form.Watermark.Author" xml:space="preserve">
+    <value>Inserisci il nome della persona che riporta il rischio</value>
+  </data>
+  <data name="DescribeRisk.Form.Watermark.AuthorFIN" xml:space="preserve">
+    <value>Inserisci il FIN della persona che riporta il rischio</value>
+  </data>
+  <data name="DescribeRisk.Form.Watermark.Description" xml:space="preserve">
+    <value>Inserisci la descrizione del rischio utilizzando due o tre frasi</value>
+  </data>
+  <data name="DescribeRisk.Form.Watermark.PersonInvolved" xml:space="preserve">
+    <value>Inserisci il nome della persona coinvolta</value>
+  </data>
+
+</root>

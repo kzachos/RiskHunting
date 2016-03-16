@@ -14,6 +14,7 @@ using System.Xml.Linq;
 //using ActivityTrackingLog.Utils;
 using System.Collections.Specialized;
 using System.Globalization;
+using System.Threading;
 
 namespace RiskHunting
 {
@@ -38,12 +39,12 @@ namespace RiskHunting
 		protected string sourceId;
 		protected Risk currentRisk;
 
-		protected string DESC_WATERMARK = AppResources.DescWatermark; 
-		protected string AUTHOR_WATERMARK = AppResources.AuthorWatermark; 
-		protected string AUTHORFIN_WATERMARK = AppResources.AuthorFinWatermark; 
-		protected string PERSONINVOLVED_WATERMARK = AppResources.PersonInvolvedWatermark; 
+		protected string DESC_WATERMARK = AppResources.DescribeRisk_Form_Watermark_Description; 
+		protected string AUTHOR_WATERMARK = AppResources.DescribeRisk_Form_Watermark_Author; 
+		protected string AUTHORFIN_WATERMARK = AppResources.DescribeRisk_Form_Watermark_AuthorFIN; 
+		protected string PERSONINVOLVED_WATERMARK = AppResources.DescribeRisk_Form_Watermark_PersonInvolved; 
 
-		protected const string ERROR_MESSAGE_REQUIRED = "One or more fields are empty - please fill out the required fields to continue.";
+		protected string ERROR_MESSAGE_REQUIRED = AppResources.DescribeRisk_Notification_Empty;
 
 		//		const string StartTagNav = "<div id=duobutton>";
 		//		const string Mid1TagNav = "<div class=links>";
@@ -56,22 +57,22 @@ namespace RiskHunting
 				ResetForm ();
 				if (DetermineFrom ().Equals ("success")) {
 					alert_message_success.Visible = true;
-					successMessage.InnerText = "Thank you for your safty imput. Your risk has been successfully submitted and uploaded to the database. To review the risk use the \"Our Previous Risks\" button.";
+					successMessage.InnerText = AppResources.DescribeRisk_Notification_SuccessSubmit;
 					alert_message_error.Visible = false;
 				} 
 				else if (DetermineFrom ().Equals ("nosuccess")) {
 					alert_message_success.Visible = false;
-					errorMessage.InnerText = "Your risk could not be uploaded to the database. Please try again later.";
+					errorMessage.InnerText = AppResources.DescribeRisk_Notification_FailedSubmit;
 					alert_message_error.Visible = true;
 				}
 				else if (DetermineFrom ().Equals ("deleted")) {
 					alert_message_success.Visible = true;
-					successMessage.InnerText = "Your risk has been successfully deleted and removed from the database";
+					successMessage.InnerText = AppResources.DescribeRisk_Notification_SuccessDelete;
 					alert_message_error.Visible = false;
 				}
 				else if (DetermineFrom ().Equals ("notdeleted")) {
 					alert_message_success.Visible = false;
-					errorMessage.InnerText = "Your risk could not be removed from the database. Please try again later.";
+					errorMessage.InnerText = AppResources.DescribeRisk_Notification_FailedDelete;
 					alert_message_error.Visible = true;
 				}
 				else if (DetermineFrom ().Equals (Constants.SESSION_EXPIRED_LABEL)) {
@@ -91,6 +92,7 @@ namespace RiskHunting
 					Session.Remove (Sessions.personasState);
 				//			Session.Remove ("CREATIVITY_PROMPTS");
 
+				InitLabels ();
 				InitTextElements ();
 				InitParametersDropDown ();
 				PopulateDateDropDown ();
@@ -200,6 +202,30 @@ namespace RiskHunting
 
 		#region Initializing
 
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.DescribeRisk_NavigationBar_Left;
+			LabelNavigationBarRight.Text = AppResources.DescribeRisk_NavigationBar_Right;
+			LabelNavigationBarTitle.Text = AppResources.DescribeRisk_NavigationBar_Title;
+			LabelAuthor.Text = AppResources.DescribeRisk_Form_Label_Author;
+			LabelAuthorFIN.Text = AppResources.DescribeRisk_Form_Label_AuthorFIN;
+			LabelDescription.Text = AppResources.DescribeRisk_Form_Label_Description;
+			LabelIncidentCategory.Text = AppResources.DescribeRisk_Form_Label_IncidentCategory;
+			LabelPersonInvolved.Text = AppResources.DescribeRisk_Form_Label_PersonInvolved;
+			LabelDepartment.Text = AppResources.DescribeRisk_Form_Label_Department;
+			LabelLocation.Text = AppResources.DescribeRisk_Form_Label_Location;
+			LabelInjuryType.Text = AppResources.DescribeRisk_Form_Label_InjuryType;
+			LabelDateOfIncident.Text = AppResources.DescribeRisk_Form_Label_DateOfIncident;
+			LabelUploadPicture.Text = AppResources.DescribeRisk_Form_Label_UploadPicture;
+			LabelRequired1.Text = "(" + AppResources.DescribeRisk_Form_Label_Required + ")";
+			LabelRequired2.Text = "(" + AppResources.DescribeRisk_Form_Label_Required + ")";
+			LabelRequired3.Text = "(" + AppResources.DescribeRisk_Form_Label_Required + ")";
+			imageButton.Text = AppResources.DescribeRisk_Form_Button_UploadPicture.ToUpper();
+			reset.Text = AppResources.DescribeRisk_Form_Button_ClearForm.ToUpper();
+			delete.Text = AppResources.DescribeRisk_Form_Button_DeleteRisk.ToUpper();
+			createIdeasButton.Text = AppResources.DescribeRisk_Form_Button_CreateIdeas.ToUpper();
+		}
+
 		private void InitCreativeGuidance()
 		{
 			var processGuidanceText = Util.GenerateProcessGuidance ("problemDescription");
@@ -256,7 +282,11 @@ namespace RiskHunting
 
 		private void InitParametersDropDown()
 		{
-			var doc = XDocument.Load(Path.Combine (resourcesPath, "Parameters.xml"), LoadOptions.None); 
+			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+			var xmlDocument = "Parameters.xml";
+			if (currentCulture.ToString().Contains("it"))
+				xmlDocument = "Parameters.it.xml";
+			var doc = XDocument.Load(Path.Combine (resourcesPath, xmlDocument), LoadOptions.None); 
 			RiskName.Items.Clear();
 			RiskDepartment.Items.Clear();
 			RiskBodyParts.Items.Clear();
@@ -338,7 +368,7 @@ namespace RiskHunting
 		{
 			if (RiskDescription.Text.Equals(String.Empty) || RiskDescription.Text.Equals(DESC_WATERMARK))
 			{
-				errorMsg.InnerHtml = "<span class=\"redtitle\">please enter a descriptoin of the risk encountered</span>";
+				errorMsg.InnerHtml = "<span class=\"redtitle\">" + AppResources.DescribeRisk_Notification_EnterDescription + "</span>";
 				return false;
 			}
 			else

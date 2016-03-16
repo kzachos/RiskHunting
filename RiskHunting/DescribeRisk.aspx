@@ -75,31 +75,30 @@ window.setTimeout(function() {
 <![endif]-->
 </head>
 <body onload="AutoExpand(RiskDescription)">
-
+	<form id="form1" runat="server">
 	<div id="topbar2">
 		<div id="leftnav">
     		<a href="javascript:doLoad('Default.aspx');" ><img alt="home" src="Theme/images/home.png" />
     		</a>
 			<a style="position:relative; TOP:2px;" href="javascript:doLoad('QueryHistory.aspx');" >
-				&nbsp;&nbsp;&nbsp; Our Previous Risks
+				&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="rightbutton" runat="server">
 			<a href="javascript:doLoad('CreateIdeas_PastRisks.aspx');">
 				<img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-2-icon.png" />
-				Create Ideas
+				<asp:Label ID="LabelNavigationBarRight" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
 			<img alt="home" style="position:relative; TOP:2px;  height: 45%" src="Theme/images/numbers-1-filled-icon.png" /> 
-			Describe Risk
+			<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 
 
 	<span id="loading"></span>
 	<div id="content">
-	<form id="form1" runat="server">
 
 
 		<asp:ScriptManager ID="ScriptManager1" runat="server">
@@ -129,28 +128,28 @@ window.setTimeout(function() {
 
 
 		<div id="errorMsg" runat="server"></div>	
-		<span class="maintitle">Reported by</span>
-		<span class="maintitlesmall">(required)</span>
+		<span class="maintitle"><asp:Label ID="LabelAuthor" Runat="server"></asp:Label></span>
+		<span class="maintitlesmall"><asp:Label ID="LabelRequired1" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="label">
 				<cc1:WatermarkedTextBox id="RiskAuthor" Font-Size="Larger" runat="server" TextMode="MultiLine" Width="100%" Height="30" cssclass="txtbox" ></cc1:WatermarkedTextBox>
 			</li>
 		</ul>
-		<span class="maintitle">FIN</span>
-		<span class="maintitlesmall">(required)</span>
+		<span class="maintitle"><asp:Label ID="LabelAuthorFIN" Runat="server"></asp:Label></span>
+		<span class="maintitlesmall"><asp:Label ID="LabelRequired2" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="label">
 				<cc1:WatermarkedTextBox id="RiskAuthorFIN" Font-Size="Larger" runat="server" TextMode="MultiLine" Width="100%" Height="30" cssclass="txtbox" ></cc1:WatermarkedTextBox>
 			</li>
 		</ul>
-		<span class="maintitle">Description</span>
-		<span class="maintitlesmall">(required)</span>
+		<span class="maintitle"><asp:Label ID="LabelDescription" Runat="server"></asp:Label></span>
+		<span class="maintitlesmall"><asp:Label ID="LabelRequired3" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="label">
 				<cc1:WatermarkedTextBox ID="RiskDescription" Font-Size="Larger" runat="server" TextMode="Multiline" Width="100%" cssclass="txtbox" onkeyup="AutoExpand(this)" Rows="3"></cc1:WatermarkedTextBox>
 			</li>
 		</ul>
-		<span class="maintitle">Incident category</span>
+		<span class="maintitle"><asp:Label ID="LabelIncidentCategory" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="select">
 			    <select id="RiskName" name="RiskName" runat="server">
@@ -158,13 +157,13 @@ window.setTimeout(function() {
 			    <span class="arrow"></span> 
 			</li>
 		</ul>
-		<span class="maintitle">Name of the person involved</span>
+		<span class="maintitle"><asp:Label ID="LabelPersonInvolved" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="label">
 				<cc1:WatermarkedTextBox id="RiskPersonInvolved" Font-Size="Larger" runat="server" TextMode="MultiLine" Width="100%" Height="30" cssclass="txtbox" ></cc1:WatermarkedTextBox>
 			</li>
 		</ul>
-		<span class="maintitle">Department</span>
+		<span class="maintitle"><asp:Label ID="LabelDepartment" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="select">
 			    <select id="RiskDepartment" name="RiskDepartment" runat="server">
@@ -172,7 +171,7 @@ window.setTimeout(function() {
 			    <span class="arrow"></span> 
 			</li>
 		</ul>
-		<span class="maintitle">Location</span>
+		<span class="maintitle"><asp:Label ID="LabelLocation" Runat="server"></asp:Label></span>
 		<UL class="pageitem">
 			<LI class="select">
 				<SELECT name="LocationLetter" id="LocationLetter" size="1" runat="server">
@@ -193,7 +192,7 @@ window.setTimeout(function() {
 			    <span class="arrow"></span> 
 			</li>
 		</ul>-->
-		<span class="maintitle">Type of (potential) injury</span>
+		<span class="maintitle"><asp:Label ID="LabelInjuryType" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="select">
 			    <select id="RiskInjury" name="RiskInjury" runat="server">
@@ -201,7 +200,7 @@ window.setTimeout(function() {
 			    <span class="arrow"></span> 
 			</li>
 		</ul> 
-		<span class="maintitle">Date of incident</span>
+		<span class="maintitle"><asp:Label ID="LabelDateOfIncident" Runat="server"></asp:Label></span>
 		<UL class="pageitem">
 			<LI class="select">
 				<SELECT name="DateIncidentOccurredDay" id="DateIncidentOccurredDay" size="1" runat="server">
@@ -220,10 +219,10 @@ window.setTimeout(function() {
 				<SPAN class="arrow"></SPAN>
 			</LI>
 		</UL>
-		<span class="maintitle">Upload a picture</span>
+		<span class="maintitle"><asp:Label ID="LabelUploadPicture" Runat="server"></asp:Label></span>
 		<ul class="pageitembutton">
 			<li class="buttonLightGrey">
-				<asp:button id="imageButton" runat="server" text="PRESS HERE TO ADD, UPDATE OR DELETE AN IMAGE" onclick="imageClicked"></asp:button>
+				<asp:button id="imageButton" runat="server" onclick="imageClicked"></asp:button>
 			</li>
 				
 		</ul>
@@ -238,21 +237,21 @@ window.setTimeout(function() {
 
 		<ul class="pageitembutton">
 			<li class="button">
-				<asp:button id="createIdeasButton" runat="server" text="CREATE IDEAS" onclick="ideasClicked"></asp:button>
+				<asp:button id="createIdeasButton" runat="server" onclick="ideasClicked"></asp:button>
 			</li>
 				
 		</ul>
 			
 		<ul class="pageitembutton">
 			<li class="buttonGrey">
-				<asp:button id="reset" runat="server" text="CLEAR FORM &amp; DESCRIBE NEW RISK" onclick="resetClicked"></asp:button>
+				<asp:button id="reset" runat="server" onclick="resetClicked"></asp:button>
 			</li>
 		</ul>
 
 		<ul class="pageitembutton">
 			<div id="deleteRiskDiv" runat="server">
 				<li class="button2">
-					<asp:Button id="delete" runat="server" text="DELETE RISK" onclick="deleteClicked"></asp:Button>
+					<asp:Button id="delete" runat="server" onclick="deleteClicked"></asp:Button>
 				</li>
 			</div>	
 		</ul>
