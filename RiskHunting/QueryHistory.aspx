@@ -45,11 +45,11 @@ window.setTimeout(function() {
 	<div id="topbar2">
 		<div id="leftbutton">
 			<a href="javascript:doLoad('DescribeRisk.aspx');" >
-				back
+				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
-				Our Previous Risks
+				<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 
 	</div>
@@ -66,14 +66,10 @@ window.setTimeout(function() {
 	</div>
 
 	<div id="SortDiv" runat="server">
-		<span class="maintitle">Sort by: </span>
+		<span class="maintitle"><asp:Label ID="LabelSortBy" Runat="server"></asp:Label></span>
 		<ul class="pageitem">
 			<li class="select" >
 				<asp:DropDownList ID="SortDropDown" EnableViewState="true" AutoPostBack="true" OnSelectedIndexChanged="itemSelected" runat="Server">
-	                <asp:ListItem Text="Date" Value="0" />
-	                <asp:ListItem Text="Status" Value="1" />
-	                <asp:ListItem Text="Category" Value="2" />
-	                <asp:ListItem Text="Author" Value="3" />
 	   			</asp:DropDownList>
 				<span class="arrow"></span>
 			</li>

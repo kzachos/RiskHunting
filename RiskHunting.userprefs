@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="RiskHunting/RiskHunting.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RiskHunting/Localization/AppResources.resx">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RiskHunting/DescribeRisk.aspx.cs">
     <Files>
-      <File FileName="RiskHunting/Summary.aspx.cs" Line="475" Column="4" />
-      <File FileName="RiskHunting/DescribeRisk.aspx.cs" Line="1" Column="1" />
-      <File FileName="RiskHunting/Localization/AppResources.resx" Line="12" Column="25" NotebookId="1" />
+      <File FileName="RiskHunting/Summary.aspx.cs" Line="493" Column="89" />
+      <File FileName="RiskHunting/DescribeRisk.aspx" Line="85" Column="20" />
+      <File FileName="RiskHunting/DescribeRisk.aspx.cs" Line="122" Column="9" />
+      <File FileName="RiskHunting/DescribeRisk.aspx.designer.cs" Line="112" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

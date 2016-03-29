@@ -45,18 +45,18 @@ window.setTimeout(function () {
     		</a>
 			<a href="javascript:doLoad('CreateIdeas_PastRisks.aspx');" >
 				&nbsp;&nbsp;&nbsp; <img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-2-icon.png" />
-				Create Risk
+				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="rightbutton">
 			<a href="javascript:doLoad('Summary.aspx');">
 				<img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-4-icon.png" />
-				Preview and Submit
+				<asp:Label ID="LabelNavigationBarRight" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
 			<img alt="home" style="position:relative; TOP:2px;  height: 45%" src="Theme/images/numbers-3-filled-icon.png" /> 
-			Resolve Risk
+			<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 
@@ -88,7 +88,7 @@ window.setTimeout(function () {
 			<div id="AddNewIdeaDiv" runat="server">
 				<ul class="pageitembutton">
 					<li class="button">
-						<asp:Button id="AddNewIdea" runat="server" text="ADD NEW IDEA" onclick="addNewIdeaClicked"></asp:Button>
+						<asp:Button id="AddNewIdea" runat="server" onclick="addNewIdeaClicked"></asp:Button>
 					</li>
 				</ul>
 			</div>

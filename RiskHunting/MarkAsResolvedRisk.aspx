@@ -48,11 +48,11 @@ window.setTimeout(function () {
 	<div id="topbar2">
 		<div id="leftbutton">
 			<a href="javascript:doLoad('Summary.aspx');" >
-				Return to Summary
+				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
-			Mark Case As Resolved
+			<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 
@@ -89,12 +89,12 @@ window.setTimeout(function () {
 			</ul>
 			<ul class="pageitembutton">
 				<li class="button">
-					<asp:Button id="Resolved" runat="server" text="SUBMIT SELECTION" onclick="resolvedClicked"></asp:Button>
+					<asp:Button id="Resolved" runat="server" onclick="resolvedClicked"></asp:Button>
 				</li>
 			</ul>
 			<ul class="pageitembutton">
 				<li class="button2">
-					<asp:Button id="UnResolved" runat="server" text="MARK AS NOT RESOLVED" onclick="unresolvedClicked"></asp:Button>
+					<asp:Button id="UnResolved" runat="server" onclick="unresolvedClicked"></asp:Button>
 				</li>
 			</ul>
 

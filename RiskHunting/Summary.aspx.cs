@@ -15,7 +15,7 @@ using System.Collections.Specialized;
 namespace RiskHunting
 {
 	
-	public partial class Summary : System.Web.UI.Page
+	public partial class Summary : BasePage
 	{
 		// Set up the fonts to be used on the pages
 		private iTextSharp.text.Font _largeFont = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 18, iTextSharp.text.Font.BOLD, iTextSharp.text.BaseColor.BLACK);
@@ -52,7 +52,7 @@ namespace RiskHunting
 		const string aEndTag = "</a>";
 
 
-		const string defaultProcessGuidance = "Define all elements of the danger in the web form. Ask a colleague to check these elements.";
+	    string defaultProcessGuidance =  AppResources.ProcessGuidance_Summary_Default;
 
 		protected string xmlFilesPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles");
 		protected string requestPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", "Requests");
@@ -72,12 +72,12 @@ namespace RiskHunting
 		{
 			if (DetermineFrom ().Equals ("resolved")) {
 				alert_message_success.Visible = true;
-				successMessage.InnerText = "The risk has been marked as RESOLVED";
+				successMessage.InnerText = AppResources.Summary_Notification_MarkedAsResolved;
 				alert_message_error.Visible = false;
 			} 
 			else if (DetermineFrom ().Equals ("unresolved")) {
 				alert_message_success.Visible = true;
-				successMessage.InnerText = "The risk has been marked as NOT RESOLVED";
+				successMessage.InnerText = AppResources.Summary_Notification_MarkedAsNotResolved;
 				alert_message_error.Visible = false;
 			} 
 			else {
@@ -128,23 +128,23 @@ namespace RiskHunting
 
 			sourceDiv.InnerHtml = String.Empty;
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Reported by", this.currentRisk.Author) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_Author, this.currentRisk.Author) +
 				LiEndTag;
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("FIN", this.currentRisk.AuthorFIN) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_AuthorFIN, this.currentRisk.AuthorFIN) +
 				LiEndTag;
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Description", this.currentRisk.Content) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_Description, this.currentRisk.Content) +
 				LiEndTag;
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Incident Category", this.currentRisk.Name) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_IncidentCategory, this.currentRisk.Name) +
 				LiEndTag;
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Name of the person involved", this.currentRisk.ContractorName) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_PersonInvolved, this.currentRisk.ContractorName) +
 				LiEndTag;
 
 			var locationDetail = this.currentRisk.LocationDetail.Split('|');
@@ -156,29 +156,38 @@ namespace RiskHunting
 			}
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Department", dept) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_Department, dept) +
 				LiEndTag;
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Location", loc) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_Location, loc) +
 				LiEndTag;
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Type of (potential) injury", this.currentRisk.InjuryNature) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_InjuryType, this.currentRisk.InjuryNature) +
 				LiEndTag;
 
 			sourceDiv.InnerHtml += LiStartTagLabel +
-				GenerateContentHtml ("Date of incident", this.currentRisk.DateIncidentOccurred.ToShortDateString()) +
+				GenerateContentHtml (AppResources.Summary_Form_Table_Label_DateOfIncident, this.currentRisk.DateIncidentOccurred.ToShortDateString()) +
 				LiEndTag;
 
 			if (!this.currentRisk.IncidentStatus.Equals (String.Empty)) {
-				resolvedCaseLabel.Text = "Case Marked as Resolved";
-				Resolved.Text = "PRESS HERE TO SEE THE IDEAS THAT RESOLVED THIS RISK";
+				resolvedCaseLabel.Text = AppResources.Summary_Form_Label_CaseMarkedAsResolved;
+				Resolved.Text = AppResources.Summary_Form_Button_SeeResolutionIdeas.ToUpper ();
 			}
 			else {
-				resolvedCaseLabel.Text = "Has it been Resolved?";
-				Resolved.Text = "PRESS HERE TO MARK CASE AS RESOLVED BY SELECTING ONE OR MORE IDEAS";
+				resolvedCaseLabel.Text = AppResources.Summary_Form_Label_HasItBeenResolved;
+				Resolved.Text = AppResources.Summary_Form_Button_MarkAsResolved.ToUpper();
 			}
+
+			LabelNavigationBarLeft.Text = AppResources.Summary_NavigationBar_Left;
+			LabelNavigationBarTitle.Text = AppResources.Summary_NavigationBar_Title;
+			LabelRiskProblem.Text = AppResources.Summary_Form_Label_RiskProblem;
+			LabelResolutionIdeas.Text = AppResources.Summary_Form_Label_ResolutionIdeas;
+
+			submit.Text = AppResources.Summary_Form_Button_SubmitCase.ToUpper();
+			Export.Text = AppResources.Summary_Form_Button_GenerateReport.ToUpper();
+			NewRisk.Text = AppResources.Summary_Form_Button_CreateNewRisk.ToUpper();
 
 //			RiskName.Text = this.currentRisk.Name;
 //			RiskDescription.Text = this.currentRisk.Content;
@@ -233,7 +242,7 @@ namespace RiskHunting
 			}
 			else
 				divIdeas.InnerHtml += LiStartTagLabel +
-					GenerateContentHtml ("No ideas available") +
+					GenerateContentHtml (AppResources.Summary_Form_Label_NoIdeasAvailable) +
 					LiEndTag;
 		}
 
@@ -415,7 +424,7 @@ namespace RiskHunting
 
 						pb = "success";
 						alert_message_success.Visible = true;
-						successMessage.InnerText = "Thank you for your safty imput. Your risk has been successfully submitted and uploaded to the database.";
+						successMessage.InnerText = AppResources.DescribeRisk_Notification_SuccessSubmit;
 						alert_message_error.Visible = false;
 						GeneratePDF (false);
 						if (sendEmail)
@@ -423,7 +432,7 @@ namespace RiskHunting
 					} else {
 						pb = "nosuccess";
 						alert_message_success.Visible = false;
-						errorMessage.InnerText = "Your risk could not be uploaded to the database. Please try again later.";
+						errorMessage.InnerText = AppResources.DescribeRisk_Notification_FailedSubmit;
 						alert_message_error.Visible = true;
 					}
 	//				pb = "success";
@@ -433,7 +442,7 @@ namespace RiskHunting
 				{
 					alert_message_success.Visible = false;
 					alert_message_error.Visible = true;
-					errorMessage.InnerText = "Your risk could not be uploaded as the database is currently not accessible. Please try again later.";
+					errorMessage.InnerText = AppResources.Summary_Notification_FailedUpload;
 				}
 
 			}
@@ -481,9 +490,9 @@ namespace RiskHunting
 			MailMessage mail = new MailMessage();
 			mail.To.Add(to);
 			mail.From = new MailAddress(from, "RiskHunting", System.Text.Encoding.UTF8);
-			mail.Subject = submission?"new risk submitted":"risk report generated";
+			mail.Subject = submission?AppResources.Summary_Email_Label_NewRiskSubmittedShort:AppResources.Summary_Email_Label_RiskReportGeneratedShort;
 			mail.SubjectEncoding = System.Text.Encoding.UTF8;
-			var initialText = submission ? "A new risk has been submitted: <p>" : "A risk report has been generated: <p>";
+			var initialText = submission ? AppResources.Summary_Email_Label_NewRiskSubmittedLong + ": <p>" : AppResources.Summary_Email_Label_RiskReportGeneratedLong + ": <p>";
 			var locationDetail = this.currentRisk.LocationDetail.Split('|');
 			var dept = String.Empty;
 			var loc = String.Empty;
@@ -491,16 +500,16 @@ namespace RiskHunting
 				dept = locationDetail[0];
 				loc = locationDetail[1];
 			}
-			mail.Body = "Reported by: " + this.currentRisk.Author + "<p>"
-				+ "FIN: " + this.currentRisk.AuthorFIN + "<p>"
-				+ "Description: " + this.currentRisk.Content + "<p>"
-				+ "Incident Category: " + this.currentRisk.Name + "<p>"
-				+ "Name of the person involved: " + this.currentRisk.ContractorName + "<p>"
-				+ "Department: " + dept + "<p>"
-				+ "Location: " + loc + "<p>"
-				+ "Type of (potential) injury: " + this.currentRisk.InjuryNature + "<p>"
-				+ "Date of incident: " + this.currentRisk.DateIncidentOccurred.ToShortDateString() + "<p>"
-				+ "Recommendation(s): ";
+			mail.Body = AppResources.Summary_Form_Table_Label_Author + ": " + this.currentRisk.Author + "<p>"
+				+ AppResources.Summary_Form_Table_Label_AuthorFIN + ": " + this.currentRisk.AuthorFIN + "<p>"
+				+ AppResources.Summary_Form_Table_Label_Description + ": " + this.currentRisk.Content + "<p>"
+				+ AppResources.Summary_Form_Table_Label_IncidentCategory + ": " + this.currentRisk.Name + "<p>"
+				+ AppResources.Summary_Form_Table_Label_PersonInvolved + ": " + this.currentRisk.ContractorName + "<p>"
+				+ AppResources.Summary_Form_Table_Label_Department + ": " + dept + "<p>"
+				+ AppResources.Summary_Form_Table_Label_Location + ": " + loc + "<p>"
+				+ AppResources.Summary_Form_Table_Label_InjuryType + ": " + this.currentRisk.InjuryNature + "<p>"
+				+ AppResources.Summary_Form_Table_Label_DateOfIncident + ": " + this.currentRisk.DateIncidentOccurred.ToShortDateString() + "<p>"
+				+ AppResources.Summary_Email_Label_Recommendations + " ";
 			if (this.currentRisk.Recommendations.Count > 0) {
 				for (int i = 0; i < this.currentRisk.Recommendations.Count; i++) {
 					mail.Body += this.currentRisk.Recommendations [i].ToString () + "; ";
@@ -508,9 +517,9 @@ namespace RiskHunting
 			} else
 				mail.Body += "n/A";
 			mail.Body += "<p>";
-			mail.Body += "Risk Resolved?: ";
+			mail.Body +=  AppResources.Summary_Email_Label_RiskResolved + ": ";
 			if (!this.currentRisk.IncidentStatus.Equals (String.Empty)) {
-				mail.Body += "Yes, with the following resolution(s): ";
+				mail.Body += AppResources.Summary_Email_Label_ResolvedWithResolutions + " ";
 				mail.Body += this.currentRisk.IncidentStatus;						
 			}
 			else

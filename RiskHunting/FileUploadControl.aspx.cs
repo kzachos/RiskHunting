@@ -8,7 +8,7 @@ using System.IO;
 
 namespace RiskHunting
 {
-    public partial class FileUploadControl : System.Web.UI.Page
+	public partial class FileUploadControl : BasePage
     {
 		protected string sourceId;
 		protected string filePath;
@@ -24,6 +24,8 @@ namespace RiskHunting
 			alert_message_error.Visible = false;
 			previewDiv.Visible = false;
 			ButtonsDiv.Visible = false;
+
+			InitLabels ();
 
 			if (Sessions.RiskState != String.Empty) {
 				this.sourceId = Sessions.RiskState;
@@ -49,13 +51,22 @@ namespace RiskHunting
 				}
 			} else {
 				alert_message_success.Visible = false;
-				errorMessage.InnerText = "Before you can upload an image, please complete the required fields for your risk.";
+				errorMessage.InnerText = AppResources.UploadImage_Notification_RequiredFields;
 				alert_message_error.Visible = true;
 				FileUpload1.Visible = false;
 				UploadImage.Visible = false;
 			}
 
         }
+
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.UploadImage_NavigationBar_Left;
+			LabelNavigationBarTitle.Text = AppResources.UploadImage_NavigationBar_Title;
+			LabelImagePreview.Text = AppResources.UploadImage_Form_Label_ImagePreview;
+			UploadImage.Text = AppResources.UploadImage_Button_UploadImage.ToUpper();
+			Cancel.Text = AppResources.UploadImage_Form_Button_DeleteImage.ToUpper();
+		}
 
 		void RetrieveCurrentRisk ()
 		{
@@ -165,14 +176,14 @@ namespace RiskHunting
 				GenerateXml (Constants.SOLUTION);
 
 				alert_message_success.Visible = true;
-				successMessage.InnerText = "File uploaded successfully.";
+				successMessage.InnerText = AppResources.UploadImage_Notification_SuccessUpload;
 				alert_message_error.Visible = false;
 
 			}
 			else
 			{
 				alert_message_success.Visible = false;
-				errorMessage.InnerText = "Please select a file.";
+				errorMessage.InnerText = AppResources.UploadImage_Notification_SelectFile;
 				alert_message_error.Visible = true;
 			}
 		}
@@ -196,12 +207,12 @@ namespace RiskHunting
 					Response.Redirect ("DescribeRisk.aspx");
 				} else {
 					alert_message_success.Visible = false;
-					errorMessage.InnerText = "The image has an incorrect format.";
+					errorMessage.InnerText = AppResources.UploadImage_Notification_IncorrectFormat;
 					alert_message_error.Visible = true;
 				}
 			} else {
 				alert_message_success.Visible = false;
-				errorMessage.InnerText = "There was a problem saving the image. Please try again later.";
+				errorMessage.InnerText = AppResources.UploadImage_Notification_FailedUpload;
 				alert_message_error.Visible = true;
 			}
 
@@ -238,14 +249,14 @@ namespace RiskHunting
 					GenerateXml (Constants.SOLUTION);
 
 					alert_message_success.Visible = true;
-					successMessage.InnerText = "File deleted successfully.";
+					successMessage.InnerText = AppResources.UploadImage_Notification_SuccessDelete;
 					alert_message_error.Visible = false;
 					ButtonsDiv.Visible = false;
 					previewDiv.Visible = false;
 				}
 				else {
 					alert_message_success.Visible = false;
-					errorMessage.InnerText = "There was a problem deleting the image.";
+					errorMessage.InnerText = AppResources.UploadImage_Notification_FailedDelete;
 					alert_message_error.Visible = true;
 				}
 			} 

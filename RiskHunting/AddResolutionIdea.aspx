@@ -59,7 +59,7 @@
 		</ul>
 		<ul class="pageitembutton">
 			<li class="button">
-				<asp:Button id="AddNewIdea" runat="server" text="ADD IDEA" onclick="addClicked"></asp:Button>
+				<asp:Button id="AddNewIdea" runat="server" onclick="addClicked"></asp:Button>
 			</li>
 		</ul>
 	</form>

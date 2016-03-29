@@ -107,6 +107,9 @@ namespace RiskHunting
 
 		protected System.Web.UI.WebControls.Label LabelNavigationBarTitle;
 
-	}
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor linkEnglishLang;
+
+		protected global::System.Web.UI.HtmlControls.HtmlAnchor linkItalianLang;
+		}
 }
 

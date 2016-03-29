@@ -15,6 +15,10 @@ namespace RiskHunting {
 		
 		protected System.Web.UI.HtmlControls.HtmlHead Head1;
 		
+		protected System.Web.UI.WebControls.Label LabelNavigationBarLeft;
+		
+		protected System.Web.UI.WebControls.Label LabelNavigationBarTitle;
+		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
 		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl alert_message_success;
@@ -26,6 +30,8 @@ namespace RiskHunting {
 		protected System.Web.UI.HtmlControls.HtmlGenericControl errorMessage;
 		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl previewDiv;
+		
+		protected System.Web.UI.WebControls.Label LabelImagePreview;
 		
 		protected System.Web.UI.WebControls.Image Image1;
 		

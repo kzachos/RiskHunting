@@ -29,7 +29,11 @@ namespace RiskHunting {
 		
 		protected System.Web.UI.WebControls.Label resolvedCaseLabel;
 
+		protected System.Web.UI.WebControls.Button submit;
+
 		protected System.Web.UI.WebControls.Button Export;
+
+		protected System.Web.UI.WebControls.Button NewRisk;
 
 		protected System.Web.UI.WebControls.Button Resolved;
 
@@ -40,5 +44,15 @@ namespace RiskHunting {
 		protected System.Web.UI.HtmlControls.HtmlGenericControl successMessage;
 
 		protected System.Web.UI.HtmlControls.HtmlGenericControl errorMessage;
+	
+		protected System.Web.UI.WebControls.Label LabelNavigationBarLeft;
+
+		protected System.Web.UI.WebControls.Label LabelNavigationBarTitle;
+
+		protected System.Web.UI.WebControls.Label LabelRiskProblem;
+
+		protected System.Web.UI.WebControls.Label LabelResolutionIdeas;
+
+	
 	}
 }

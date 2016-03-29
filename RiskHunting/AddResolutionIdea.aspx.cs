@@ -9,7 +9,7 @@ using System.Globalization;
 namespace RiskHunting
 {
 	
-	public partial class AddResolutionIdea : System.Web.UI.Page
+	public partial class AddResolutionIdea : BasePage
 	{
 
 		const string Tag1a = "<div id=\"topbar2\">";
@@ -17,11 +17,11 @@ namespace RiskHunting
 		const string Tag3a = "<a href=\"javascript:doLoad('";
 		const string Tag3b = "";
 		const string Tag3c = "');\" >";
-		const string Tag4a = "cancel";
+		string Tag4a = AppResources.AddIdea_NavigationBar_Left;
 		const string Tag5a = "</a>";
 		const string Tag6a = "</div>";
 		const string Tag7a = "<div id=\"multiselectionbuttons\">";
-		const string Tag8a = "Add Idea";
+		string Tag8a = AppResources.AddIdea_NavigationBar_Title;
 		const string Tag9a = "</div>";
 		const string Tag10a = "</div>";
 
@@ -41,7 +41,6 @@ namespace RiskHunting
 
 		protected Risk currentRisk;
 
-		protected const string ADDIDEA_WATERMARK = "[Enter your new idea]";
 
 		protected void Page_Init(object sender, EventArgs e)
 		{
@@ -51,11 +50,12 @@ namespace RiskHunting
 				this.sourceId = Sessions.RiskState;
 			RetrieveCurrentRisk ();
 
+			AddNewIdea.Text = AppResources.AddIdea_Form_Button_AddIdea.ToUpper();
 			this.requestContent = DetermineContent ();
 			if (!this.requestContent.Equals (String.Empty)) {
 				PopulateIdea ();
 			} else
-				AddIdeaDescription.WatermarkText = ADDIDEA_WATERMARK;
+				AddIdeaDescription.WatermarkText = AppResources.AddIdea_Form_Watermark_EnterIdea;
 			this.requestFrom = DetermineFrom ();
 			TopbarProblemIdeas.InnerHtml = GenerateHtml (this.requestFrom);
 		}
@@ -82,8 +82,8 @@ namespace RiskHunting
 
 		void PopulateIdea ()
 		{
-			if (this.requestContent.Contains ("Think about"))
-				AddIdeaDescription.Text = Util.GenerateAdaptedIdeaFromCreativityPrompt (this.requestContent.Replace ("Think about ", String.Empty));
+			if (this.requestContent.Contains (AppResources.CreativityPrompts_BaseForm))
+				AddIdeaDescription.Text = Util.GenerateAdaptedIdeaFromCreativityPrompt (this.requestContent.Replace (AppResources.CreativityPrompts_BaseForm + " ", String.Empty));
 			else
 				AddIdeaDescription.Text = this.requestContent;
 		}
@@ -93,9 +93,9 @@ namespace RiskHunting
 			if (Page.IsValid)
 			{
 				if (AddIdeaDescription.Text.Equals (String.Empty) ||
-					AddIdeaDescription.Text.Equals (ADDIDEA_WATERMARK)) {
+					AddIdeaDescription.Text.Equals (AppResources.AddIdea_Form_Watermark_EnterIdea)) {
 
-					errorMessage.InnerHtml = "Please add your idea below.";
+					errorMessage.InnerHtml = AppResources.AddIdea_Notification_AddIdea;
 					alert_message_error.Visible = true;
 
 				} else {

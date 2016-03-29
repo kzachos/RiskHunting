@@ -11,7 +11,7 @@ using System.Drawing;
 namespace RiskHunting
 {
 	
-	public partial class PinEntry : System.Web.UI.Page
+	public partial class PinEntry : BasePage
 	{
 		protected const string INCORRECTPIN_MESSAGE = "Incorrect PIN. Try again";
 		protected string sourceId;

@@ -23,3 +23,5 @@
 /Users/koszachos/Projects/RiskHunting/RiskHunting/bin//it/RiskHunting.resources.dll
 /Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Localization.AppResources.resources
 /Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Localization.AppResources.it.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.App_GlobalResources.AppResources.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.App_GlobalResources.AppResources.it.resources

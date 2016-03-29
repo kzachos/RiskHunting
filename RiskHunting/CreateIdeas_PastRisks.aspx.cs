@@ -11,7 +11,7 @@ using System.Diagnostics;
 namespace RiskHunting
 {
 	
-	public partial class CreateIdeas_PastRisks : System.Web.UI.Page
+	public partial class CreateIdeas_PastRisks : BasePage
 	{
 		const string Tag1 = "<li class=\"store\">";
 		const string Tag2 = "<a class=\"noeffect\" href=\"javascript:doLoad('CreateIdeas_PastRisk.aspx?id=";
@@ -25,9 +25,8 @@ namespace RiskHunting
 		const string Tag10 = "<span class=\"arrow\"></span>";
 		const string Tag11 = "</a>";
 		const string Tag12 = "</li>";
-		const string DATEANDLOCATION = "March 15th 2013, Basilldon (UK)";
 
-		const string defaultProcessGuidance = "Select a risk resolution similar to your risk. Browse each short description below";
+		string defaultProcessGuidance = AppResources.ProcessGuidance_PastRisks_Default;
 
 		protected string xmlFilesPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles");
 		protected string requestPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", "Requests");
@@ -56,6 +55,8 @@ namespace RiskHunting
 				alert_message_success.Visible = false;
 				alert_message_error.Visible = false;
 				describeRiskDiv.Visible = false;
+
+				InitLabels ();
 
 				this.sourceId = DetermineID ();
 				this.responseUri = DetermineResponseUri ();
@@ -93,6 +94,15 @@ namespace RiskHunting
 			creativeGuidance.InnerText = processGuidanceText.Equals(String.Empty)?defaultProcessGuidance:processGuidanceText;
 
 		}
+
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.CreateIdeas_NavigationBar_Left;
+			LabelNavigationBarRight.Text = AppResources.CreateIdeas_NavigationBar_Right;
+			LabelNavigationBarTitle.Text = AppResources.CreateIdeas_NavigationBar_Title;
+			submit.Text = AppResources.CreateIdeas_Form_Button_FindSimilarRisks;
+		}
+
 
 		private string DetermineID()
 		{
@@ -174,7 +184,7 @@ namespace RiskHunting
 			{
 				submitDiv.Visible = false;
 				alert_message_success.Visible = false;
-				errorMessage.InnerText = "Currently unable to find past risks. Please try again later.";
+				errorMessage.InnerText = AppResources.CreateIdeas_Notification_FailedSearch;
 				alert_message_error.Visible = true;
 				return String.Empty;
 			}
@@ -338,7 +348,7 @@ namespace RiskHunting
 				if (responses.InnerHtml.Trim ().Equals (String.Empty)) {
 					if (fromSearch) {
 						alert_message_guidance.Visible = true;
-						creativeGuidance.InnerText = "No cases have been found. Have you tried to extend the risk description to increase the likelihood of a match?";
+						creativeGuidance.InnerText = AppResources.CreateIdeas_Notification_NoResults;
 						alert_message_success.Visible = false;
 						alert_message_error.Visible = false;
 						describeRiskDiv.Visible = true;
@@ -347,13 +357,13 @@ namespace RiskHunting
 						alert_message_guidance.Visible = false;
 				} else {
 					alert_message_guidance.Visible = true;
-					submit.Text = "FIND MORE RISKS";
+					submit.Text = AppResources.CreateIdeas_Form_Button_FindMoreRisks.ToUpper();
 				}
 
 			} else {
 				if (fromSearch) {
 					alert_message_guidance.Visible = true;
-					creativeGuidance.InnerText = "No cases have been found. Have you tried to extend the risk description to increase the likelihood of a match?";
+					creativeGuidance.InnerText = AppResources.CreateIdeas_Notification_NoResults;
 					alert_message_success.Visible = false;
 					alert_message_error.Visible = false;
 					describeRiskDiv.Visible = true;
@@ -399,7 +409,7 @@ namespace RiskHunting
 				{
 					alert_message_success.Visible = false;
 					alert_message_error.Visible = true;
-					errorMessage.InnerText = "Sorry but the search service is currently not available, please try again later.";
+					errorMessage.InnerText =AppResources.CreateIdeas_Notification_ServiceUnavailable;
 				}
 			}
 

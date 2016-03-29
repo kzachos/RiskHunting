@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 namespace RiskHunting
 {
 
-	public partial class MarkAsResolvedRisk : System.Web.UI.Page
+	public partial class MarkAsResolvedRisk : BasePage
 	{
 		const string Tag1 = "<li class=\"checkbox\">";
 		const string Tag2 = "<span class=\"name\">";
@@ -40,7 +40,6 @@ namespace RiskHunting
 		protected const string SOLUTION = "Solution";
 		protected const string ADDITIONAL = "Additional";
 		protected const string PROCESSFOLDER = "_toProcess";
-		protected const string GUIDANCE = "Select the resolution ideas that contributed towards resolving the risk case.";
 
 		protected const string SOURCE_TYPE = Constants.CASEREF;
 		protected const string CASE_TYPE = "Risk";
@@ -60,6 +59,8 @@ namespace RiskHunting
 				Console.WriteLine ("Page_Init - NOT Page.IsPostBack");
 				Util.AccessLog(Util.ScreenType.MarkRiskAsResolved);
 
+				InitLabels ();
+
 				if (!this.sourceId.Equals (String.Empty)) {
 					InitCreativeGuidance ();
 					RetrieveCurrentRisk ();
@@ -75,7 +76,15 @@ namespace RiskHunting
 			
 		private void InitCreativeGuidance()
 		{
-			creativeGuidance.InnerText = GUIDANCE;
+			creativeGuidance.InnerText = AppResources.ProcessGuidance_CaseResolved_1;
+		}
+
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.MarkCaseAsResolved_NavigationBar_Left;
+			LabelNavigationBarTitle.Text = AppResources.MarkCaseAsResolved_NavigationBar_Title;
+			Resolved.Text = AppResources.MarkCaseAsResolved_Form_Button_SubmitSelection.ToUpper();
+			UnResolved.Text = AppResources.MarkCaseAsResolved_Form_Button_MarkAsNotResolved.ToUpper();
 		}
 
 		void GenerateIdeaList ()
@@ -94,7 +103,7 @@ namespace RiskHunting
 
 				}
 			} else {
-				statusLabel.Text = "No ideas available.";
+				statusLabel.Text = AppResources.Summary_Form_Label_NoIdeasAvailable;
 			}
 
 		}

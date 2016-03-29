@@ -54,12 +54,12 @@
     		</a>
 			<a href="javascript:doLoad('ResolveRisk.aspx');" >
 				&nbsp;&nbsp;&nbsp; <img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-3-icon.png" />
-				Resolve Risk
+				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
 			<img alt="home" style="position:relative; TOP:2px;  height: 45%" src="Theme/images/numbers-4-filled-icon.png" /> 
-			Preview and Submit
+			<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 
@@ -85,7 +85,7 @@
 	</div>
 	<br>
 
-	<span class="maintitle">Risk Problem Description</span>
+	<span class="maintitle"><asp:Label ID="LabelRiskProblem" Runat="server"></asp:Label></span>
 	<br><br>
 	<ul class="pageitemborder">
 		<div id="sourceDiv" runat="server">
@@ -95,7 +95,7 @@
 
 	<br><br>
 
-	<span class="maintitle">Resolution Ideas</span>
+	<span class="maintitle"><asp:Label ID="LabelResolutionIdeas" Runat="server"></asp:Label></span>
 	<br><br>
 	<ul class="pageitemborder">
 		<div id="divIdeas" runat="server">
@@ -119,19 +119,19 @@
 	</ul>
 	<ul class="pageitembutton">
 		<li class="button">
-			<asp:button id="submit" runat="server" text="SUBMIT CASE" onclick="submitClicked" onClientclick="needToConfirm = false;"></asp:button>
+			<asp:button id="submit" runat="server" onclick="submitClicked" onClientclick="needToConfirm = false;"></asp:button>
 		</li>
 	</ul>
 
 	<ul class="pageitembutton">
 		<li class="button3">
-			<asp:Button id="Export" runat="server" text="GENERATE REPORT TO PRINT" onclick="exportClicked" onClientclick="ignore = false;"></asp:Button>
+			<asp:Button id="Export" runat="server" onclick="exportClicked" onClientclick="ignore = false;"></asp:Button>
 		</li>
 	</ul>
 
 	<ul class="pageitembutton">
 		<li class="buttonGrey">
-			<asp:Button id="NewRisk" runat="server" text="CREATE NEW RISK" onclick="createNewClicked"></asp:Button>
+			<asp:Button id="NewRisk" runat="server" onclick="createNewClicked"></asp:Button>
 		</li>
 	</ul>
 </form>

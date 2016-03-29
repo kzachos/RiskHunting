@@ -15,6 +15,8 @@ using System.Xml.Linq;
 using System.Data;
 using System.Net;
 using System.Web;
+using System.Globalization;
+using System.Threading;
 
 namespace RiskHunting
 {
@@ -585,59 +587,69 @@ namespace RiskHunting
 		public static string GenerateAdaptedIdeaFromCreativityPrompt(string text)
 		{
 			string formattedText = String.Empty;
-			if (text.StartsWith("how to"))
-				formattedText = text.Replace ("how to ", String.Empty);
-				
-			if (text.StartsWith("if you can"))
-				formattedText = text.Replace ("if you can ", String.Empty);
-				
-			if (text.StartsWith("if it is possible to"))
-				formattedText = text.Replace ("if it is possible to ", String.Empty);
-				
-			if (text.StartsWith("how you"))
-				formattedText = text.Replace ("how you ", String.Empty);
-				
-			if (text.StartsWith("whether you can"))
-				formattedText = text.Replace ("whether you can ", String.Empty);
-				
-			if (text.StartsWith("how you might"))
-				formattedText = text.Replace ("how you might ", String.Empty);
-				
-			if (text.StartsWith("if you could"))
-				formattedText = text.Replace ("if you could ", String.Empty);
-				
-			if (text.StartsWith("whether it is possible to"))
-				formattedText = text.Replace ("whether it is possible to ", String.Empty);
-				
-			if (text.StartsWith("trying to"))
-				formattedText = text.Replace ("trying to ", String.Empty);
-				
-			if (text.StartsWith("either trying to"))
-				formattedText = text.Replace ("either trying to ", String.Empty);
-				
-			if (text.StartsWith("doing"))
-				formattedText = text.Replace ("doing", "do");
-				
-			if (text.StartsWith("making"))
-				formattedText = text.Replace ("making", "make");
-				
-			if (text.StartsWith("dividing"))
-				formattedText = text.Replace ("dividing", "divide");
-				
-			if (text.StartsWith("putting"))
-				formattedText = text.Replace ("putting", "put");
-				
-			if (text.StartsWith("deactivating"))
-				formattedText = text.Replace ("deactivating", "deactivate");
-				
-			if (text.StartsWith("using"))
-				formattedText = text.Replace ("using", "use");
-				
-			if (text.StartsWith("having"))
-				formattedText = text.Replace ("having", "have");
-				
-			if (text.StartsWith("evening out"))
-				formattedText = text.Replace ("evening out", "even out");
+
+			CultureInfo currentCulture = Thread.CurrentThread.CurrentUICulture;
+			switch (currentCulture.ToString ()) 
+			{
+			case "en":
+				if (text.StartsWith ("how to"))
+					formattedText = text.Replace ("how to ", String.Empty);
+
+				if (text.StartsWith ("if you can"))
+					formattedText = text.Replace ("if you can ", String.Empty);
+
+				if (text.StartsWith ("if it is possible to"))
+					formattedText = text.Replace ("if it is possible to ", String.Empty);
+
+				if (text.StartsWith ("how you"))
+					formattedText = text.Replace ("how you ", String.Empty);
+
+				if (text.StartsWith ("whether you can"))
+					formattedText = text.Replace ("whether you can ", String.Empty);
+
+				if (text.StartsWith ("how you might"))
+					formattedText = text.Replace ("how you might ", String.Empty);
+
+				if (text.StartsWith ("if you could"))
+					formattedText = text.Replace ("if you could ", String.Empty);
+
+				if (text.StartsWith ("whether it is possible to"))
+					formattedText = text.Replace ("whether it is possible to ", String.Empty);
+
+				if (text.StartsWith ("trying to"))
+					formattedText = text.Replace ("trying to ", String.Empty);
+
+				if (text.StartsWith ("either trying to"))
+					formattedText = text.Replace ("either trying to ", String.Empty);
+
+				if (text.StartsWith ("doing"))
+					formattedText = text.Replace ("doing", "do");
+
+				if (text.StartsWith ("making"))
+					formattedText = text.Replace ("making", "make");
+
+				if (text.StartsWith ("dividing"))
+					formattedText = text.Replace ("dividing", "divide");
+
+				if (text.StartsWith ("putting"))
+					formattedText = text.Replace ("putting", "put");
+
+				if (text.StartsWith ("deactivating"))
+					formattedText = text.Replace ("deactivating", "deactivate");
+
+				if (text.StartsWith ("using"))
+					formattedText = text.Replace ("using", "use");
+
+				if (text.StartsWith ("having"))
+					formattedText = text.Replace ("having", "have");
+
+				if (text.StartsWith ("evening out"))
+					formattedText = text.Replace ("evening out", "even out");
+				break;
+			case "it":
+				formattedText = text;
+				break;
+			}
 
 			return formattedText;
 		}
@@ -694,8 +706,13 @@ namespace RiskHunting
 
 		public static string GenerateProcessGuidance(string elementName)
 		{
+			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+			var xmlDocument = "ProcessGuidance.xml";
+			if (currentCulture.ToString().Contains("it"))
+				xmlDocument = "ProcessGuidance.it.xml";
+
 			List<string> problemDescriptions = new List<string> ();
-				var doc = XDocument.Load(Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", "ProcessGuidance.xml"), LoadOptions.None); 
+			var doc = XDocument.Load(Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", xmlDocument), LoadOptions.None); 
 			if (doc.Descendants(elementName).Count() > 0)
 				foreach (XElement xe in doc.Descendants(elementName))
 					problemDescriptions.Add(xe.Element("n").Value);    

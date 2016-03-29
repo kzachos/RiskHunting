@@ -15,7 +15,7 @@ using System.Linq;
 
 namespace RiskHunting
 {
-    public partial class QueryHistory : System.Web.UI.Page
+	public partial class QueryHistory : BasePage
     {
 		protected string xmlFilesPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles");
 		protected string requestPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", "Requests");
@@ -55,7 +55,6 @@ namespace RiskHunting
 		const string Tag10 = "<span class=\"arrow\"></span>";
 		const string Tag11 = "</a>";
 		const string Tag12 = "</li>";
-		const string RISKSTATE = "Problem Described";
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -77,6 +76,8 @@ namespace RiskHunting
 			Session.Remove (Sessions.pastRiskState);
 			Session.Remove (Sessions.personasState);
 			Session.Remove (Sessions.personaState);
+
+			InitLabels ();
 
 			this.maxId = 1000;
 			if (!Page.IsPostBack) {
@@ -101,6 +102,13 @@ namespace RiskHunting
 
 		}
 
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.QueryHistory_NavigationBar_Left;
+			LabelNavigationBarTitle.Text = AppResources.QueryHistory_NavigationBar_Title;
+			LabelSortBy.Text = AppResources.QueryHistory_Form_Label_SortBy.ToUpper() + ": ";
+		}
+
 		protected void Page_PreRender (object sender, EventArgs e)
 		{
 			if (Page.IsPostBack) {
@@ -120,10 +128,10 @@ namespace RiskHunting
 
 		private void PopulateSortDropDown()
 		{
-//			SortDropDown.Items.Add (new ListItem("Date"));
-//			SortDropDown.Items.Add (new ListItem("Status"));
-//			SortDropDown.Items.Add (new ListItem("Name"));
-//			SortDropDown.Items.Add (new ListItem("Author"));
+			SortDropDown.Items.Add (new ListItem(AppResources.QueryHistory_Form_DropDown_Date));
+			SortDropDown.Items.Add (new ListItem(AppResources.QueryHistory_Form_DropDown_Status));
+			SortDropDown.Items.Add (new ListItem(AppResources.QueryHistory_Form_DropDown_Category));
+			SortDropDown.Items.Add (new ListItem(AppResources.QueryHistory_Form_DropDown_Author));
 			SortDropDown.SelectedValue = "0";
 		}
 
@@ -154,23 +162,18 @@ namespace RiskHunting
 				}
 
 				List<Risk> sortedRisks = new List<Risk> ();
-				switch (this.sortBy) {
-				case "Status":
+				if (this.sortBy == AppResources.QueryHistory_Form_DropDown_Status) {
 					sortedRisks = risks.OrderBy (q => q.State).ToList ();
-					break;
-				case "Category":
+				} else if (this.sortBy == AppResources.QueryHistory_Form_DropDown_Category) {
 					sortedRisks = risks.OrderBy (q => q.Name).ToList ();
-					break;
-				case "Date":
+				} else if (this.sortBy == AppResources.QueryHistory_Form_DropDown_Date) {
 					sortedRisks = risks;
-					break;
-				case "Author":
+				} else if (this.sortBy == AppResources.QueryHistory_Form_DropDown_Author) {
 					sortedRisks = risks.OrderBy (q => q.Author).ToList ();
-					break;
-				default:
+				} else {
 					sortedRisks = risks;
-					break;
 				}
+					
 
 				queries.InnerHtml = String.Empty;
 				foreach (var r in sortedRisks) {
@@ -182,7 +185,7 @@ namespace RiskHunting
 			} else {
 				SortDiv.Visible = false;
 				alert_message_notice.Visible = true;
-				noticeMessage.InnerText = "No previous risk cases available";
+				noticeMessage.InnerText = AppResources.QueryHistory_Notification_NoPreviousRisks;
 			}
 
 			if (Sessions.ResponseUriState != String.Empty) 
@@ -211,9 +214,9 @@ namespace RiskHunting
 			string search = risk.SimilarCasesFound?path:String.Empty;
 			return Tag1 + Tag2 + risk.Id + search + Tag3 + Tag4 + risk.Content + Tag5 + 
 				Tag6 + risk.Name + Tag7 + 
-				Tag8 + "<b>Status</b>: " + Util.GetEnumDescription(risk.State) + 
-				"&nbsp;&nbsp;&nbsp;" + "<b>Author</b>: " + risk.Author + 
-				"&nbsp;&nbsp;&nbsp;" + " <b>Last Modified</b>: " + Util.FormatDate (risk.LastEdited) + 
+				Tag8 + "<b>" + AppResources.QueryHistory_Form_DropDown_Status + "</b>: " + Util.GetEnumDescription(risk.State) + 
+				"&nbsp;&nbsp;&nbsp;" + "<b>" + AppResources.QueryHistory_Form_DropDown_Author + "</b>: " + risk.Author + 
+				"&nbsp;&nbsp;&nbsp;" + " <b>" + AppResources.QueryHistory_Form_Label_LastModified + "</b>: " + Util.FormatDate (risk.LastEdited) + 
 				Tag9 + Tag10 + Tag11 + Tag12;
 		}
 
@@ -265,7 +268,7 @@ namespace RiskHunting
 				}
 			else {
 				alert_message_notice.Visible = true;
-				noticeMessage.InnerText = "No previous risk cases available";
+				noticeMessage.InnerText = AppResources.QueryHistory_Notification_NoPreviousRisks;
 			}
         }
 

@@ -139,7 +139,7 @@
   <data name="DescribeRisk.Form.Label.Description" xml:space="preserve">
     <value>Description</value>
   </data>
-  <data name="DescribeRisk.Form.Label.IncidentCategory" xml:space="preserve">
+  <data name="DescribeRisk.Form.Label.IncidentCatagory" xml:space="preserve">
     <value>Incident category</value>
   </data>
   <data name="DescribeRisk.Form.Label.PersonInvolved" xml:space="preserve">
@@ -167,7 +167,7 @@
     <value>Create Ideas</value>
   </data>
   <data name="DescribeRisk.Form.Button.ClearForm" xml:space="preserve">
-    <value>Clear form &amp; describe new risk</value>
+    <value>Clear form and describe new risk</value>
   </data>
   <data name="DescribeRisk.Form.Button.DeleteRisk" xml:space="preserve">
     <value>Delete risk</value>
@@ -281,7 +281,7 @@
     <value>One or more fields are empty - please fill out the required fields to continue.</value>
   </data>
   <data name="DescribeRisk.Notification.SuccessSubmit" xml:space="preserve">
-    <value>Thank you for your safty imput. Your risk has been successfully submitted and uploaded to the database. To review the risk use the Our Previous Risks button.</value>
+    <value>Thank you for your safty imput. Your risk has been successfully submitted and uploaded to the database. To review the risk use the \&quot;Our Previous Risks\&quot; button.</value>
   </data>
   <data name="DescribeRisk.Notification.FailedSubmit" xml:space="preserve">
     <value>Your risk could not be uploaded to the database. Please try again later.</value>
@@ -306,6 +306,303 @@
   </data>
   <data name="DescribeRisk.Form.Watermark.PersonInvolved" xml:space="preserve">
     <value>Enter the name of the person involved</value>
+  </data>
+  <data name="UploadImage.NavigationBar.Title" xml:space="preserve">
+    <value>Upload Image</value>
+  </data>
+  <data name="UploadImage.NavigationBar.Left" xml:space="preserve">
+    <value>Return to Risk</value>
+  </data>
+  <data name="UploadImage.Button.UploadImage" xml:space="preserve">
+    <value>Upload Image</value>
+  </data>
+  <data name="UploadImage.Form.Button.ChooseFile" xml:space="preserve">
+    <value>Choose File</value>
+  </data>
+  <data name="UploadImage.Form.Label.NoFileSelected" xml:space="preserve">
+    <value>no file selected</value>
+  </data>
+  <data name="UploadImage.Notification.SuccessUpload" xml:space="preserve">
+    <value>File uploaded successfully</value>
+  </data>
+  <data name="UploadImage.Form.Label.ImagePreview" xml:space="preserve">
+    <value>Image Preview</value>
+  </data>
+  <data name="UploadImage.Form.Button.DeleteImage" xml:space="preserve">
+    <value>Delete Image</value>
+  </data>
+  <data name="UploadImage.Notification.RequiredFields" xml:space="preserve">
+    <value>Before you can upload an image, please complete the required fields for your risk.</value>
+  </data>
+  <data name="UploadImage.Notification.SelectFile" xml:space="preserve">
+    <value>Please select a file.</value>
+  </data>
+  <data name="UploadImage.Notification.IncorrectFormat" xml:space="preserve">
+    <value>The image has an incorrect format.</value>
+  </data>
+  <data name="UploadImage.Notification.FailedUpload" xml:space="preserve">
+    <value>There was a problem saving the image. Please try again later.</value>
+  </data>
+  <data name="UploadImage.Notification.SuccessDelete" xml:space="preserve">
+    <value>File deleted successfully.</value>
+  </data>
+  <data name="UploadImage.Notification.FailedDelete" xml:space="preserve">
+    <value>There was a problem deleting the image.</value>
+  </data>
+  <data name="CreateIdeas.NavigationBar.Title" xml:space="preserve">
+    <value>Create Ideas from Previous Risks</value>
+  </data>
+  <data name="CreateIdeas.NavigationBar.Left" xml:space="preserve">
+    <value>Describe Risk</value>
+  </data>
+  <data name="CreateIdeas.NavigationBar.Right" xml:space="preserve">
+    <value>Resolve Risk</value>
+  </data>
+  <data name="CreateIdeas.Form.Button.FindSimilarRisks" xml:space="preserve">
+    <value>Find similar risks</value>
+  </data>
+  <data name="CreateIdeas.Form.Button.FindMoreRisks" xml:space="preserve">
+    <value>Find more risks</value>
+  </data>
+  <data name="CreateIdeas.Notification.FailedSearch" xml:space="preserve">
+    <value>Currently unable to find past risks. Please try again later.</value>
+  </data>
+  <data name="CreateIdeas.Notification.NoResults" xml:space="preserve">
+    <value>No cases have been found. Have you tried to extend the risk description to increase the likelihood of a match?</value>
+  </data>
+  <data name="CreateIdeas.Notification.ServiceUnavailable" xml:space="preserve">
+    <value>Sorry but the search service is currently not available, please try again later.</value>
+  </data>
+  <data name="PastRisk.NavigationBar.Title" xml:space="preserve">
+    <value>Past Risk</value>
+  </data>
+  <data name="PastRisk.NavigationBar.Left" xml:space="preserve">
+    <value>Return to list</value>
+  </data>
+  <data name="PastRisk.Form.Button.NewPrompts" xml:space="preserve">
+    <value>Generate new creativity prompts</value>
+  </data>
+  <data name="PastRisk.Form.Label.PreviousResolutions" xml:space="preserve">
+    <value>Previous risk resolutions applied</value>
+  </data>
+  <data name="PastRisk.Form.Label.CreativeGuidance" xml:space="preserve">
+    <value>Creative guidance from previous risk</value>
+  </data>
+  <data name="PastRisk.Notification.SuccessAdd" xml:space="preserve">
+    <value>The idea has been added successfully</value>
+  </data>
+  <data name="PastRisk.Notification.FailedGeneratePrompts" xml:space="preserve">
+    <value>Currently unable to generate creativity prompts. Please try again later.</value>
+  </data>
+  <data name="AddIdea.NavigationBar.Title" xml:space="preserve">
+    <value>Add Idea</value>
+  </data>
+  <data name="AddIdea.NavigationBar.Left" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="AddIdea.Form.Button.AddIdea" xml:space="preserve">
+    <value>Add Idea</value>
+  </data>
+  <data name="AddIdea.Form.Watermark.EnterIdea" xml:space="preserve">
+    <value>Enter your new idea</value>
+  </data>
+  <data name="AddIdea.Notification.AddIdea" xml:space="preserve">
+    <value>Please add your idea below.</value>
+  </data>
+  <data name="EditIdea.NavigationBar.Title" xml:space="preserve">
+    <value>Edit Idea</value>
+  </data>
+  <data name="EditIdea.NavigationBar.Left" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="EditIdea.Form.Button.UpdateIdea" xml:space="preserve">
+    <value>Update idea</value>
+  </data>
+  <data name="EditIdea.Form.Button.DeleteIdea" xml:space="preserve">
+    <value>Detele idea</value>
+  </data>
+  <data name="EditIdea.Form.Watermark.EnterIdea" xml:space="preserve">
+    <value>Enter the idea description</value>
+  </data>
+  <data name="EditIdea.Notification.AddIdea" xml:space="preserve">
+    <value>Please add your idea below.</value>
+  </data>
+  <data name="ResolveRisk.NavigationBar.Title" xml:space="preserve">
+    <value>Resolve Risk</value>
+  </data>
+  <data name="ResolveRisk.NavigationBar.Left" xml:space="preserve">
+    <value>Create Risk</value>
+  </data>
+  <data name="ResolveRisk.NavigationBar.Right" xml:space="preserve">
+    <value>Preview and Submit</value>
+  </data>
+  <data name="ResolveRisk.Form.Button.AddNewIdea" xml:space="preserve">
+    <value>Add new idea</value>
+  </data>
+  <data name="Summary.NavigationBar.Title" xml:space="preserve">
+    <value>Preview and Submit</value>
+  </data>
+  <data name="Summary.NavigationBar.Left" xml:space="preserve">
+    <value>Resolve Risk</value>
+  </data>
+  <data name="Summary.Form.Label.RiskProblem" xml:space="preserve">
+    <value>Risk Problem Description</value>
+  </data>
+  <data name="Summary.Form.Label.ResolutionIdeas" xml:space="preserve">
+    <value>Resolution Ideas</value>
+  </data>
+  <data name="Summary.Form.Label.HasItBeenResolved" xml:space="preserve">
+    <value>Has it been Resolved?</value>
+  </data>
+  <data name="Summary.Form.Label.CaseMarkedAsResolved" xml:space="preserve">
+    <value>Case Marked As Resolved</value>
+  </data>
+  <data name="Summary.Form.Table.Label.Author" xml:space="preserve">
+    <value>Reported by</value>
+  </data>
+  <data name="Summary.Form.Table.Label.AuthorFIN" xml:space="preserve">
+    <value>FIN</value>
+  </data>
+  <data name="Summary.Form.Table.Label.Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Summary.Form.Table.Label.IncidentCategory" xml:space="preserve">
+    <value>Incident Category</value>
+  </data>
+  <data name="Summary.Form.Table.Label.PersonInvolved" xml:space="preserve">
+    <value>Name of the person involved</value>
+  </data>
+  <data name="Summary.Form.Table.Label.Department" xml:space="preserve">
+    <value>Department</value>
+  </data>
+  <data name="Summary.Form.Table.Label.Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Summary.Form.Table.Label.InjuryType" xml:space="preserve">
+    <value>Type of (potential) injury</value>
+  </data>
+  <data name="Summary.Form.Table.Label.DateOfIncident" xml:space="preserve">
+    <value>Date of incident</value>
+  </data>
+  <data name="Summary.Form.Button.SeeResolutionIdeas" xml:space="preserve">
+    <value>Press here to see the ideas that resolved this risk</value>
+  </data>
+  <data name="Summary.Form.Button.MarkAsResolved" xml:space="preserve">
+    <value>Press here to mark case as resolved by selecting one or more ideas</value>
+  </data>
+  <data name="Summary.Form.Button.SubmitCase" xml:space="preserve">
+    <value>Submit case</value>
+  </data>
+  <data name="Summary.Form.Button.GenerateReport" xml:space="preserve">
+    <value>Generate report to print</value>
+  </data>
+  <data name="Summary.Form.Button.CreateNewRisk" xml:space="preserve">
+    <value>Create new risk</value>
+  </data>
+  <data name="Summary.Notification.MarkedAsResolved" xml:space="preserve">
+    <value>The risk has been marked as RESOLVED</value>
+  </data>
+  <data name="Summary.Notification.MarkedAsNotResolved" xml:space="preserve">
+    <value>The risk has been marked as NOT RESOLVED</value>
+  </data>
+  <data name="Summary.Form.Label.NoIdeasAvailable" xml:space="preserve">
+    <value>No ideas available</value>
+  </data>
+  <data name="Summary.Notification.FailedUpload" xml:space="preserve">
+    <value>Your risk could not be uploaded as the database is currently not accessible. Please try again later.</value>
+  </data>
+  <data name="Summary.Email.Label.RiskResolved" xml:space="preserve">
+    <value>Risk Resolved?</value>
+  </data>
+  <data name="Summary.Email.Label.ResolvedWithResolutions" xml:space="preserve">
+    <value>Yes, with the following resolution(s):</value>
+  </data>
+  <data name="Summary.Email.Label.Recommendations" xml:space="preserve">
+    <value>Recommendation(s):</value>
+  </data>
+  <data name="MarkCaseAsResolved.NavigationBar.Title" xml:space="preserve">
+    <value>Mark Case as Resolved</value>
+  </data>
+  <data name="MarkCaseAsResolved.NavigationBar.Left" xml:space="preserve">
+    <value>Return to Summary</value>
+  </data>
+  <data name="MarkCaseAsResolved.Form.Button.SubmitSelection" xml:space="preserve">
+    <value>Submit selection</value>
+  </data>
+  <data name="MarkCaseAsResolved.Form.Button.MarkAsNotResolved" xml:space="preserve">
+    <value>Mark as not resolved</value>
+  </data>
+  <data name="General.Notification.SomethingWentWrong" xml:space="preserve">
+    <value>Oops, something went wrong</value>
+  </data>
+  <data name="General.Notification.Problems" xml:space="preserve">
+    <value>We are currently having problems on the site. An email has been sent to the site owner to report the problem.</value>
+  </data>
+  <data name="General.Notification.ReturnToHome" xml:space="preserve">
+    <value>Return to the Home Page</value>
+  </data>
+  <data name="General.Notification.Loading" xml:space="preserve">
+    <value>Loading. Please wait.</value>
+  </data>
+  <data name="ProcessGuidance.CaseResolved.1" xml:space="preserve">
+    <value>Select the resolution ideas that contributed towards resolving the risk case.</value>
+  </data>
+  <data name="CreativityPrompts.BaseForm" xml:space="preserve">
+    <value>Think about</value>
+  </data>
+  <data name="ProcessGuidance.PastRisk.Default" xml:space="preserve">
+    <value>Create new resolutions for your risk. Select from the guidance below</value>
+  </data>
+  <data name="ProcessGuidance.PastRisks.Default" xml:space="preserve">
+    <value>Select a risk resolution similar to your risk. Browse each short description below</value>
+  </data>
+  <data name="ProcessGuidance.DescribeRisk.Default" xml:space="preserve">
+    <value>Define all elements of the danger in the web form. Ask a colleague to check these elements.</value>
+  </data>
+  <data name="ProcessGuidance.Summary.Default" xml:space="preserve">
+    <value>Define all elements of the danger in the web form. Ask a colleague to check these elements.</value>
+  </data>
+  <data name="QueryHistory.NavigationBar.Left" xml:space="preserve">
+    <value>back</value>
+  </data>
+  <data name="QueryHistory.NavigationBar.Title" xml:space="preserve">
+    <value>Our Previous Risks</value>
+  </data>
+  <data name="QueryHistory.Form.Label.SortBy" xml:space="preserve">
+    <value>Sort by</value>
+  </data>
+  <data name="QueryHistory.Form.DropDown.Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="QueryHistory.Form.DropDown.Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="QueryHistory.Form.DropDown.Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="QueryHistory.Form.DropDown.Author" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="QueryHistory.Form.Label.LastModified" xml:space="preserve">
+    <value>Last Modified</value>
+  </data>
+  <data name="QueryHistory.Notification.NoPreviousRisks" xml:space="preserve">
+    <value>No previous risk cases available</value>
+  </data>
+  <data name="PinEntry.Notification.IncorrectPin" xml:space="preserve">
+    <value>Incorrect PIN. Try again</value>
+  </data>
+  <data name="Summary.Email.Label.NewRiskSubmittedShort" xml:space="preserve">
+    <value>new risk submitted</value>
+  </data>
+  <data name="Summary.Email.Label.RiskReportGeneratedShort" xml:space="preserve">
+    <value>risk report generated</value>
+  </data>
+  <data name="Summary.Email.Label.NewRiskSubmittedLong" xml:space="preserve">
+    <value>A new risk has been submitted</value>
+  </data>
+  <data name="Summary.Email.Label.RiskReportGeneratedLong" xml:space="preserve">
+    <value>A risk report has been generated</value>
   </data>
 
 </root>

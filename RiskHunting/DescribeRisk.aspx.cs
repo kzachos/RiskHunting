@@ -20,10 +20,10 @@ namespace RiskHunting
 {
 
 
-	public partial class DescribeRisk : Page
+	public partial class DescribeRisk : BasePage
 	{
 
-		const string defaultProcessGuidance = "Define all elements of the danger in the web form. Ask a colleague to check these elements.";
+		string defaultProcessGuidance = AppResources.ProcessGuidance_DescribeRisk_Default;
 
 		protected string xmlFilesPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles");
 		protected string resourcesPath = Path.Combine (SettingsTool.GetApplicationPath(), "Resources");
@@ -39,12 +39,6 @@ namespace RiskHunting
 		protected string sourceId;
 		protected Risk currentRisk;
 
-		protected string DESC_WATERMARK = AppResources.DescribeRisk_Form_Watermark_Description; 
-		protected string AUTHOR_WATERMARK = AppResources.DescribeRisk_Form_Watermark_Author; 
-		protected string AUTHORFIN_WATERMARK = AppResources.DescribeRisk_Form_Watermark_AuthorFIN; 
-		protected string PERSONINVOLVED_WATERMARK = AppResources.DescribeRisk_Form_Watermark_PersonInvolved; 
-
-		protected string ERROR_MESSAGE_REQUIRED = AppResources.DescribeRisk_Notification_Empty;
 
 		//		const string StartTagNav = "<div id=duobutton>";
 		//		const string Mid1TagNav = "<div class=links>";
@@ -93,7 +87,6 @@ namespace RiskHunting
 				//			Session.Remove ("CREATIVITY_PROMPTS");
 
 				InitLabels ();
-				InitTextElements ();
 				InitParametersDropDown ();
 				PopulateDateDropDown ();
 				alert_message_success.Visible = false;
@@ -126,11 +119,27 @@ namespace RiskHunting
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			//			string username = CASP.Authenticate("https://login.case.edu/cas/", this.Page);
-			//do whatever with username
-			//			Console.WriteLine (username);
-//			int zero = 0;
-//			int result = 100 / zero;
+			#region--Show/hide language link
+			if (!string.IsNullOrEmpty(Convert.ToString(Session["lang"])))
+			{
+				if (Convert.ToString(Session["lang"]) == "en")
+				{
+					linkItalianLang.Visible = true;
+					linkEnglishLang.Visible = false;
+				}
+				else
+				{
+					linkEnglishLang.Visible = true;
+					linkItalianLang.Visible = false;
+				}
+			}
+			else
+			{
+				linkItalianLang.Visible = false;
+				linkEnglishLang.Visible = true;
+			}
+			#endregion--
+
 
 			if (!Page.IsPostBack) {
 				Console.WriteLine ("Page_Load - NOT Page.IsPostBack");
@@ -210,7 +219,7 @@ namespace RiskHunting
 			LabelAuthor.Text = AppResources.DescribeRisk_Form_Label_Author;
 			LabelAuthorFIN.Text = AppResources.DescribeRisk_Form_Label_AuthorFIN;
 			LabelDescription.Text = AppResources.DescribeRisk_Form_Label_Description;
-			LabelIncidentCategory.Text = AppResources.DescribeRisk_Form_Label_IncidentCategory;
+			LabelIncidentCategory.Text = AppResources.DescribeRisk_Form_Label_IncidentCatagory;
 			LabelPersonInvolved.Text = AppResources.DescribeRisk_Form_Label_PersonInvolved;
 			LabelDepartment.Text = AppResources.DescribeRisk_Form_Label_Department;
 			LabelLocation.Text = AppResources.DescribeRisk_Form_Label_Location;
@@ -224,6 +233,10 @@ namespace RiskHunting
 			reset.Text = AppResources.DescribeRisk_Form_Button_ClearForm.ToUpper();
 			delete.Text = AppResources.DescribeRisk_Form_Button_DeleteRisk.ToUpper();
 			createIdeasButton.Text = AppResources.DescribeRisk_Form_Button_CreateIdeas.ToUpper();
+			RiskDescription.WatermarkText = AppResources.DescribeRisk_Form_Watermark_Description;
+			RiskAuthor.WatermarkText = AppResources.DescribeRisk_Form_Watermark_Author; 
+			RiskAuthorFIN.WatermarkText = AppResources.DescribeRisk_Form_Watermark_AuthorFIN; 
+			RiskPersonInvolved.WatermarkText = AppResources.DescribeRisk_Form_Watermark_PersonInvolved;
 		}
 
 		private void InitCreativeGuidance()
@@ -231,16 +244,7 @@ namespace RiskHunting
 			var processGuidanceText = Util.GenerateProcessGuidance ("problemDescription");
 			creativeGuidance.InnerText = processGuidanceText.Equals(String.Empty)?defaultProcessGuidance:processGuidanceText;
 		}
-
-		private void InitTextElements()
-		{
-			RiskDescription.WatermarkText = DESC_WATERMARK;
-			RiskAuthor.WatermarkText = AUTHOR_WATERMARK;
-			RiskAuthorFIN.WatermarkText = AUTHORFIN_WATERMARK;
-			RiskPersonInvolved.WatermarkText = PERSONINVOLVED_WATERMARK;
-			//			RiskLocation.WatermarkText = LOCATION_WATERMARK;
-			//			RiskBodyParts.WatermarkText = BODYPARTS_WATERMARK;
-		}
+			
 			
 		private ArrayList _Alphabet;
 		protected ArrayList Alphabet
@@ -366,7 +370,7 @@ namespace RiskHunting
 
 		private bool CheckTextBox()
 		{
-			if (RiskDescription.Text.Equals(String.Empty) || RiskDescription.Text.Equals(DESC_WATERMARK))
+			if (RiskDescription.Text.Equals(String.Empty) || RiskDescription.Text.Equals(AppResources.DescribeRisk_Form_Watermark_Description))
 			{
 				errorMsg.InnerHtml = "<span class=\"redtitle\">" + AppResources.DescribeRisk_Notification_EnterDescription + "</span>";
 				return false;
@@ -557,16 +561,16 @@ namespace RiskHunting
 			Risk risk = new Risk ();
 			risk.Id = Convert.ToInt32 (this.sourceId);
 
-			risk.Content = CheckTextBoxContent(RiskDescription, DESC_WATERMARK);
-			risk.Author = CheckTextBoxContent (RiskAuthor, AUTHOR_WATERMARK);
-			risk.AuthorFIN = CheckTextBoxContent (RiskAuthorFIN, AUTHORFIN_WATERMARK);
+			risk.Content = CheckTextBoxContent(RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description);
+			risk.Author = CheckTextBoxContent (RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author);
+			risk.AuthorFIN = CheckTextBoxContent (RiskAuthorFIN, AppResources.DescribeRisk_Form_Watermark_AuthorFIN);
 			risk.Name = RiskName.Value;
 			//			risk.InjuryNature = CheckTextBoxContent(RiskDanger, DANGER_WATERMARK);
 			risk.InjuryNature = String.Empty;
 			risk.LocationDetail = RiskDepartment.Value + "|" + LocationLetter.Value + LocationNumber.Value; 
 			risk.BodyPart = RiskBodyParts.Value;
 			risk.InjuryNature = RiskInjury.Value;
-			risk.ContractorName = CheckTextBoxContent (RiskPersonInvolved, PERSONINVOLVED_WATERMARK);
+			risk.ContractorName = CheckTextBoxContent (RiskPersonInvolved, AppResources.DescribeRisk_Form_Watermark_PersonInvolved);
 			risk.ImageUri = String.Empty;
 			risk.IncidentStatus = String.Empty;
 
@@ -598,16 +602,16 @@ namespace RiskHunting
 				if (Sessions.CreativityPromptsState != null)
 					Session.Remove (Sessions.creativityPromptsState);
 			}
-			this.currentRisk.Content = CheckTextBoxContent(RiskDescription, DESC_WATERMARK);
+			this.currentRisk.Content = CheckTextBoxContent(RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description);
 			this.currentRisk.Name = RiskName.Value;
-			this.currentRisk.Author = CheckTextBoxContent(RiskAuthor, AUTHOR_WATERMARK);
-			this.currentRisk.AuthorFIN = CheckTextBoxContent(RiskAuthorFIN, AUTHORFIN_WATERMARK);
+			this.currentRisk.Author = CheckTextBoxContent(RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author);
+			this.currentRisk.AuthorFIN = CheckTextBoxContent(RiskAuthorFIN, AppResources.DescribeRisk_Form_Watermark_AuthorFIN);
 			//			risk.InjuryNature = CheckTextBoxContent(RiskDanger, DANGER_WATERMARK);
 			this.currentRisk.InjuryNature = String.Empty;
 			this.currentRisk.LocationDetail = RiskDepartment.Value + "|" + LocationLetter.Value + LocationNumber.Value; 
 			this.currentRisk.BodyPart = RiskBodyParts.Value;
 			this.currentRisk.InjuryNature = RiskInjury.Value;
-			this.currentRisk.ContractorName = CheckTextBoxContent (RiskPersonInvolved, PERSONINVOLVED_WATERMARK);
+			this.currentRisk.ContractorName = CheckTextBoxContent (RiskPersonInvolved, AppResources.DescribeRisk_Form_Watermark_PersonInvolved);
 			if (search)
 				this.currentRisk.SimilarCasesFound = true;
 			else
@@ -710,7 +714,7 @@ namespace RiskHunting
 		{
 			if (Sessions.RiskState != String.Empty)
 			{
-				if (CheckTextBox (RiskDescription, DESC_WATERMARK) && CheckTextBox (RiskAuthor, AUTHOR_WATERMARK)) {
+				if (CheckTextBox (RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description) && CheckTextBox (RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author)) {
 					Save ();
 				}
 			}
@@ -739,13 +743,13 @@ namespace RiskHunting
 			Session.RemoveAll ();
 //			RiskName.Text = String.Empty;
 			RiskDescription.Text = String.Empty;
-			RiskDescription.WatermarkText = DESC_WATERMARK;
+			RiskDescription.WatermarkText = AppResources.DescribeRisk_Form_Watermark_Description;
 			RiskAuthor.Text = String.Empty;
-			RiskAuthor.WatermarkText = AUTHOR_WATERMARK;
+			RiskAuthor.WatermarkText = AppResources.DescribeRisk_Form_Watermark_Author;
 			RiskAuthorFIN.Text = String.Empty;
-			RiskAuthorFIN.WatermarkText = AUTHORFIN_WATERMARK;
+			RiskAuthorFIN.WatermarkText = AppResources.DescribeRisk_Form_Watermark_AuthorFIN;
 			RiskPersonInvolved.Text = String.Empty;
-			RiskPersonInvolved.WatermarkText = PERSONINVOLVED_WATERMARK;
+			RiskPersonInvolved.WatermarkText = AppResources.DescribeRisk_Form_Watermark_PersonInvolved;
 			InitParametersDropDown ();
 			PopulateDateDropDown ();
 			RiskName.SelectedIndex = -1;
@@ -758,7 +762,7 @@ namespace RiskHunting
 
 		public virtual void ideasClicked(object sender, EventArgs args)
 		{
-			if (CheckTextBox (RiskDescription, DESC_WATERMARK) && CheckTextBox (RiskAuthor, AUTHOR_WATERMARK)) {
+			if (CheckTextBox (RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description) && CheckTextBox (RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author)) {
 				Save ();
 				Util.AccessLog(Util.ScreenType.DescribeRisk, Util.FeatureType.DescribeRisk_CreateIdeasButton);
 
@@ -767,7 +771,7 @@ namespace RiskHunting
 
 				Response.Redirect ("CreateIdeas_PastRisks.aspx");
 			} else {
-				errorMessage.InnerHtml = ERROR_MESSAGE_REQUIRED;
+				errorMessage.InnerHtml = AppResources.DescribeRisk_Notification_Empty;
 				alert_message_error.Visible = true;
 				alert_message_success.Visible = false;
 			}
@@ -784,12 +788,12 @@ namespace RiskHunting
 
 		public virtual void imageClicked(object sender, EventArgs args)
 		{
-			if (CheckTextBox (RiskDescription, DESC_WATERMARK) && CheckTextBox (RiskAuthor, AUTHOR_WATERMARK)) {
+			if (CheckTextBox (RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description) && CheckTextBox (RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author)) {
 				Save ();
 				Response.Redirect("FileUploadControl.aspx");
 
 			} else {
-				errorMessage.InnerHtml = ERROR_MESSAGE_REQUIRED;
+				errorMessage.InnerHtml = AppResources.DescribeRisk_Notification_Empty;
 				alert_message_error.Visible = true;
 				alert_message_success.Visible = false;
 			}
@@ -798,14 +802,14 @@ namespace RiskHunting
 
 		public virtual void saveClicked(object sender, EventArgs args)
 		{
-			if (CheckTextBox (RiskDescription, DESC_WATERMARK) && CheckTextBox (RiskAuthor, AUTHOR_WATERMARK)) {
+			if (CheckTextBox (RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description) && CheckTextBox (RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author)) {
 				Save ();
 				successMessage.InnerHtml = "Saved successfully!";
 				alert_message_error.Visible = false;
 				alert_message_success.Visible = true;
 				deleteRiskDiv.Visible = true;
 			} else {
-				errorMessage.InnerHtml = ERROR_MESSAGE_REQUIRED;
+				errorMessage.InnerHtml = AppResources.DescribeRisk_Notification_Empty;
 				alert_message_error.Visible = true;
 				alert_message_success.Visible = false;
 			}

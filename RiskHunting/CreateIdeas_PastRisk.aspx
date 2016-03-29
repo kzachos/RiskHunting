@@ -47,11 +47,11 @@
 	<div id="topbar2">
 		<div id="leftbutton">
 			<a href="javascript:doLoad('CreateIdeas_PastRisks.aspx');" >
-				Return to list
+				 <asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
-			Past Risk
+			 <asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 		
@@ -89,7 +89,7 @@
 			<ul class="pageitembutton">
 				<div id="generatePrompts" runat="server">
 					<li class="button3">
-						<asp:Button id="GenerateAgain" runat="server" text="GENERATE NEW CREATIVE PROMPTS" onclick="morePromptsClicked"></asp:Button>
+						<asp:Button id="GenerateAgain" runat="server" onclick="morePromptsClicked"></asp:Button>
 					</li>
 				</div>
 			</ul>

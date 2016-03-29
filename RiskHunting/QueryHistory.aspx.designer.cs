@@ -17,6 +17,10 @@ namespace RiskHunting {
 		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl TopbarProblemIdeas;
 		
+		protected System.Web.UI.WebControls.Label LabelNavigationBarLeft;
+		
+		protected System.Web.UI.WebControls.Label LabelNavigationBarTitle;
+		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;
 		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl alert_message_notice;
@@ -24,6 +28,8 @@ namespace RiskHunting {
 		protected System.Web.UI.HtmlControls.HtmlGenericControl noticeMessage;
 		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl SortDiv;
+		
+		protected System.Web.UI.WebControls.Label LabelSortBy;
 		
 		protected System.Web.UI.WebControls.DropDownList SortDropDown;
 		

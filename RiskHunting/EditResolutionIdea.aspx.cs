@@ -10,17 +10,17 @@ using System.Globalization;
 namespace RiskHunting
 {
 	
-	public partial class EditResolutionIdea : System.Web.UI.Page
+	public partial class EditResolutionIdea : BasePage
 	{
 		const string Tag1a = "<div id=\"topbar2\">";
 		const string Tag2a = "<div id=\"leftbutton\">";
 		const string Tag3a = "<a href=\"javascript:doLoad('";
 		const string Tag3b = ".aspx');\" >";
-		const string Tag4a = "cancel";
+		string Tag4a = AppResources.EditIdea_NavigationBar_Left;
 		const string Tag5a = "</a>";
 		const string Tag6a = "</div>";
 		const string Tag7a = "<div id=\"multiselectionbuttons\">";
-		const string Tag8a = "Edit Idea";
+		string Tag8a = AppResources.EditIdea_NavigationBar_Title;
 		const string Tag9a = "</div>";
 		const string Tag10a = "</div>";
 
@@ -34,7 +34,6 @@ namespace RiskHunting
 		protected Risk currentRisk;
 		protected Action selectedAction;
 
-		protected const string EDITIDEA_WATERMARK = "[Enter the idea description]";
 
 		protected void Page_Init(object sender, EventArgs e)
 		{
@@ -44,6 +43,8 @@ namespace RiskHunting
 				this.sourceId = Sessions.RiskState;
 			RetrieveCurrentRisk ();
 
+			UpdateIdea.Text = AppResources.EditIdea_Form_Button_UpdateIdea.ToUpper();
+			DeleteIdea.Text = AppResources.EditIdea_Form_Button_DeleteIdea.ToUpper();
 			TopbarProblemIdeas.InnerHtml = GenerateHtml (DetermineFrom ());
 
 			//			if (!Page.IsPostBack) {
@@ -124,9 +125,9 @@ namespace RiskHunting
 			if (Page.IsValid)
 			{
 				if (EditIdeaDescription.Text.Equals(String.Empty) ||
-					EditIdeaDescription.Text.Equals(EDITIDEA_WATERMARK))
+					EditIdeaDescription.Text.Equals(AppResources.EditIdea_Form_Watermark_EnterIdea))
 				{
-					errorMessage.InnerHtml = "Please add your idea below.";
+					errorMessage.InnerHtml = AppResources.EditIdea_Notification_AddIdea;
 					alert_message_error.Visible = true;
 
 				}

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<ProcessGuidance xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <problemDescription>
+    <n>Descrivi il rischio che hai trovato. Prova a descriverlo il piu' possibile.</n>
+  </problemDescription>
+   <problemDescription>
+    <n>Riporta il nuovo rischio. Pensa a ciò che è importante, e scrivilo</n>
+  </problemDescription>
+  <problemDescription>
+    <n>Segnala il rischio nei seguenti campi . Scrivi lunghe descrizioni invece di corte descrizioni.</n>
+  </problemDescription>
+  <problemDescription>
+    <n>Inserisci tutti i dettagli di un rischio nuovo. Cerca di essere il più completo possibile.</n>
+  </problemDescription>
+  <problemDescription>
+    <n>Illustra il nuovo pericolo. Concentrati sulla descrizione dettagliata del rischio.</n>
+  </problemDescription>
+  <problemDescription>
+    <n>Pensa al rischio . Pensa prima di entrare l'essenza del rischio.</n>
+  </problemDescription>
+  <problemDescription>
+    <n>Prendi nota sul nuovo rischio. Leggile di nuovo, e inseriscile nell'applicazione</n>
+  </problemDescription>
+  <problemDescription>
+    <n>Scrivi il nuovo rischio. Scatta una foto, utilizza questa foto per descriverlo il piu' possibile in dettagli.</n>
+  </problemDescription>
+  <problemDescription>
+    <n>Scrivi tutti gli elementi del pericolo nel modulo web . Chiedi ad un collega di verificare questi informazioni.</n>
+  </problemDescription>
+   <riskResolutions>
+    <n>Seleziona una soluzione del rischio simile al tuo rischio. Guarda ogni descrizione breve qui di seguito.</n>
+  </riskResolutions>
+   <riskResolutions>
+    <n>Scegli una soluzione. Utilizza le descrizioni brevi per scegliere uno simile al tuo</n>
+  </riskResolutions>
+   <riskResolutions>
+    <n>Scegli la risoluzione migliore. Esplora con un collega perché è simile al tuo rischio.</n>
+  </riskResolutions>
+   <riskResolutions>
+    <n>Migliora la descrizione del rischio. Utilizza le informazioni qui sotto per arricchire la descrizione del rischio.</n>
+  </riskResolutions>
+   <riskResolutions>
+    <n>Ripensa a come hai descritto il rischio. Puoi usare i termini qui sotto per migliorare la tua descrizione del rischio?</n>
+  </riskResolutions>
+   <riskResolutions>
+    <n>Arricchisci la tua descrizione del rischio. Aggiungi dei termini rilevanti alla descrizione del rischio, e cercare di nuovo.</n>
+  </riskResolutions>
+   <riskDescription>
+    <n>Read this previous risk description. If relevant to your risk, view how it was resolved</n>
+  </riskDescription>
+   <riskDescription>
+    <n>Reimagine this risk. Similar to your risk? If so, view its resolutions</n>
+  </riskDescription>
+   <riskDescription>
+    <n>Make sense of this previous risk. If not relevant, view another previous risk</n>
+  </riskDescription>
+   <riskDescription>
+    <n>Understand this earlier risk. If not comparable to your risk, consider another</n>
+  </riskDescription>
+   <riskDescription>
+    <n>Grasp the essence of this previous risk. If related, think about reusing its resolutions</n>
+  </riskDescription>
+   <riskDescription>
+    <n>Try to interpret this previous risk in terms of your risk. Is it related? Think about creating new resolutions</n>
+  </riskDescription>
+   <riskDescription>
+    <n>Figure out what is important about this risk. If related, create similar new resolutions</n>
+  </riskDescription>
+   <riskResolutionsApplied>
+    <n>Select any of the following that apply to your risk. Be open-minded</n>
+  </riskResolutionsApplied>
+   <riskResolutionsApplied>
+    <n>Choose which of the following best solves your risk. Exploit these established good practices</n>
+  </riskResolutionsApplied>
+   <riskResolutionsApplied>
+    <n>Pick one of these resolutions. You can edit it later</n>
+  </riskResolutionsApplied>
+   <riskResolutionsApplied>
+    <n>Review the resolutions below. If none resolve your risk, see creative guidance</n>
+  </riskResolutionsApplied>
+   <riskResolutionsApplied>
+    <n>Is this previous risk similar to yours? No, then use creative guidance</n>
+  </riskResolutionsApplied>
+   <riskResolutionsApplied>
+    <n>Someone has already solved a similar risk. Try to reuse what they did</n>
+  </riskResolutionsApplied>
+   <creativeGuidance>
+    <n>Crea una soluzione nuova per il rischio. Seleziona una soluzione dalla lista qui sotto</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Inventa uno o più modi nuovi per risolvere il rischio. Utilizza la guida creativa generata. </n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Progetta modi nuovi per risolvere il rischio. Pensa fuori dalla scatola utilizzando i seguenti suggerimenti creativi.</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Scopri un mezzo nuovo per risolvere il rischio. Ricerca attraverso la guida qui di seguito, e scegline uno.</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Elaborare una soluzione nuova per il rischio. Utilizza le istruzioni creative di seguito per aiutarti.</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Pensa a come risolvere il rischio in diversi modi. Discuti alcune delle seguenti soluzioni con i tuoi colleghi.</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Leggi piu' volte ad alta voce una o più di queste idee creative. Ti vengono in mente idee nuove per risolvere il rischio?</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Pensa fuori dalla scatola. Genera una nuova soluzione per il rischio che nessuno ha pensato prima</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Sii creativo nel risolvere il rischio. Scegli una delle seguenti. Pensaci per un po'. Quali idee nuove ti vengono in mente?</n>
+  </creativeGuidance>
+   <creativeGuidance>
+    <n>Chiedi ad un collega di essere creativo. Discutete insieme la risoluzione.</n>
+  </creativeGuidance>
+   <summary>
+    <n>Rileggere le azioni. Leggile ad alta voce.</n>
+  </summary>
+   <summary>
+    <n>Dai un senso ad ogni azione separata. Assicurati che ogni azione è completa. </n>
+  </summary>
+   <summary>
+    <n>Capisci le azioni quando sono messe insieme. Assicurati che le azioni siano coerenti.</n>
+  </summary>
+   <summary>
+    <n>Decidi si è pronto a rivedere le idee. Hai bisogno di crearne di piu'?</n>
+  </summary>
+   <summary>
+    <n>Valuta le tue idee. Pensale nella mente. Assicurati che risolvino il rischio.</n>
+  </summary>
+   <summary>
+    <n>Chiediti perche' ogni idea e' un'idea buona. Conferma con te stesso che ogni idea è buona.</n>
+  </summary>
+   <summary>
+    <n>Testa la risoluzione. Guardala da diverse angolazioni. Rimuovi eventuali difetti evidenti.</n>
+  </summary>
+   <summary>
+    <n>Discuti la risoluzione con un collega. Assicurati che ha senso per lui/lei.</n>
+  </summary>
+   <summary>
+    <n>Ritorna al luogo originario del rischio. Immagina come la soluzione funzionerà. Effettua le modifiche se necessarie. </n>
+  </summary>
+   <summary>
+    <n>Fai una fotografia del rischio originale. Ripensa alla soluzione utilizzando le informazioni che vedi nella fotografia. Effettua i cambiamenti se necessario.</n>
+  </summary>
+   <summary>
+    <n>Prova ad essere critico. Quali sono i difetti della tua soluzione? Pensa a come rimuoverli o ridurrli.</n>
+  </summary>
+</ProcessGuidance>

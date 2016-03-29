@@ -7,7 +7,7 @@ using System.Collections.Specialized;
 namespace RiskHunting
 {
 
-	public partial class ResolveRisk : System.Web.UI.Page
+	public partial class ResolveRisk : BasePage
 	{
 		const string SpanStartTagMenu = "<span class=menu>";
 		const string SpanStartTagName = "<span class=name>";
@@ -33,7 +33,7 @@ namespace RiskHunting
 
 			if (DetermineFrom ().Equals ("sameAddedIdeaSuccess")) { // coming from add idea to confirm that a new idea was added successfully
 				alert_message_success.Visible = true;
-				successMessage.InnerText = "The idea has been added successfully!";
+				successMessage.InnerText = AppResources.PastRisk_Notification_SuccessAdd;
 				alert_message_error.Visible = false;
 			}
 			if (Sessions.PersonaState != String.Empty) 
@@ -47,6 +47,8 @@ namespace RiskHunting
 			if (!Page.IsPostBack) {
 				Console.WriteLine ("Page_Init - NOT Page.IsPostBack");
 				Util.AccessLog(Util.ScreenType.ResolveRisk);
+
+				InitLabels ();
 
 				if (!this.sourceId.Equals (String.Empty)) {
 					RetrieveCurrentRisk ();
@@ -63,6 +65,14 @@ namespace RiskHunting
 
 		}
 			
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.ResolveRisk_NavigationBar_Left;
+			LabelNavigationBarRight.Text = AppResources.ResolveRisk_NavigationBar_Right;
+			LabelNavigationBarTitle.Text = AppResources.ResolveRisk_NavigationBar_Title;
+			AddNewIdea.Text = AppResources.ResolveRisk_Form_Button_AddNewIdea.ToUpper();
+		}
+
 		private string DetermineFrom()
 		{
 			string c = String.Empty;
@@ -84,7 +94,7 @@ namespace RiskHunting
 					divIdeas.InnerHtml += GenerateHtml (this.currentRisk.Recommendations [i].ToString ());
 				}
 			} else {
-				statusLabel.Text = "No ideas available.";
+				statusLabel.Text = AppResources.Summary_Form_Label_NoIdeasAvailable;
 			}
 
 		}

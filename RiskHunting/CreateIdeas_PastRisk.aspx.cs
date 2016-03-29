@@ -9,9 +9,8 @@ using System.Collections.Specialized;
 namespace RiskHunting
 {
 	
-	public partial class CreateIdeas_PastRisk : System.Web.UI.Page
+	public partial class CreateIdeas_PastRisk : BasePage
 	{
-		const string defaultProcessGuidance = "Create new resolutions for your risk. Select from the guidance below";
 
 		const string Tag1 = "<li class=\"checkbox\">";
 		const string Tag2 = "<span class=\"name\">";
@@ -40,7 +39,7 @@ namespace RiskHunting
 
 		List<NLResponseToken> NLResponse;
 
-		protected string Expression = "Think about ";
+		protected string Expression = AppResources.CreativityPrompts_BaseForm + " ";
 
 		protected string processPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", "Sources", "_toProcess");
 
@@ -58,6 +57,7 @@ namespace RiskHunting
 			if (Sessions.RiskState != String.Empty)
 				sourceId = Sessions.RiskState;
 
+			InitLabels ();
 			GenerateContent ();
 
 			if (Sessions.CreativityPromptsPastRiskState != null) {
@@ -68,7 +68,7 @@ namespace RiskHunting
 					CreativityPromptsFeed.Shuffle ();
 				else if (DetermineFrom ().Equals ("sameAddedIdeaSuccess")) {
 					alert_message_success.Visible = true;
-					successMessage.InnerText = "The idea has been added successfully!";
+					successMessage.InnerText = AppResources.PastRisk_Notification_SuccessAdd;
 					alert_message_error.Visible = false;
 				} 
 				PopulateData ();
@@ -83,7 +83,7 @@ namespace RiskHunting
 			}
 
 			var processGuidanceText = Util.GenerateProcessGuidance ("creativeGuidance");
-			creativeGuidance.InnerText = processGuidanceText.Equals(String.Empty)?defaultProcessGuidance:processGuidanceText;
+			creativeGuidance.InnerText = processGuidanceText.Equals(String.Empty)?AppResources.ProcessGuidance_PastRisk_Default:processGuidanceText;
 
 			if (Page.IsPostBack) {
 				Console.WriteLine ("Page_Init - Page.IsPostBack");
@@ -118,6 +118,12 @@ namespace RiskHunting
 			return c;
 		}
 
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.PastRisk_NavigationBar_Left;
+			LabelNavigationBarTitle.Text = AppResources.PastRisk_NavigationBar_Title;
+			GenerateAgain.Text = AppResources.PastRisk_Form_Button_NewPrompts.ToUpper();
+		}
 
 		#region Creativity Prompts
 
@@ -149,7 +155,7 @@ namespace RiskHunting
 				generatePrompts.Visible = false;
 				hint_box.Visible = false;
 				alert_message_success.Visible = false;
-				errorMessage.InnerText = "Currently unable to generate creativity prompts. Please try again later.";
+				errorMessage.InnerText = AppResources.PastRisk_Notification_FailedGeneratePrompts;
 				alert_message_error.Visible = true;
 			}
 		}
@@ -268,7 +274,7 @@ namespace RiskHunting
 				int counter = 0;
 				if (this.total > 0)
 				{
-					content2.InnerHtml += "<br><br><span class=\"maintitle\">Creative guidance from previous risk</span>";
+					content2.InnerHtml += "<br><br><span class=\"maintitle\">" + AppResources.PastRisk_Form_Label_PreviousResolutions + "</span>";
 					for (int i = 0; i < this.total; i++) {
 						content2.InnerHtml += GenerateHtml (CreativityPromptsFeed [i]);
 //						GenerateHtml3 (CreativityPromptsFeed [i], String.Empty, counter++);
@@ -283,7 +289,7 @@ namespace RiskHunting
 				if (Sessions.CreativityPromptsPastRiskState != null) {
 					this.total = CreativityPromptsFeed.Count < Constants.MaxPromptsAtATime ? CreativityPromptsFeed.Count : Constants.MaxPromptsAtATime;
 					int counter = 0;
-					content2.InnerHtml += "<br><br><span class=\"maintitle\">Creative guidance from previous risk</span>";
+					content2.InnerHtml += "<br><br><span class=\"maintitle\">" + AppResources.PastRisk_Form_Label_CreativeGuidance + "</span>";
 					for (int i = 0; i < this.total; i++) {
 						content2.InnerHtml += GenerateHtml (CreativityPromptsFeed [i]);
 //						GenerateHtml3 (CreativityPromptsFeed [i], String.Empty, counter++);
@@ -387,7 +393,7 @@ namespace RiskHunting
 						//							c.CheckedChanged += new EventHandler (CheckBox1_CheckedChanged);
 
 						if (!resText.Equals(String.Empty))
-							content2.InnerHtml += "<br><span class=\"maintitle\">Previous risk resolutions applied</span>";
+							content2.InnerHtml += "<br><span class=\"maintitle\">" + AppResources.PastRisk_Form_Label_PreviousResolutions + "</span>";
 						content2.InnerHtml += resText;
 						break;
 
@@ -524,12 +530,12 @@ namespace RiskHunting
 
 			GenerateXml ();
 			if (entryAdded) {
-				successMessage.InnerHtml = "Selected ideas were saved successfully.";
+				successMessage.InnerHtml = AppResources.PastRisk_Notification_SuccessAdd;
 				alert_message_success.Visible = true;
 				alert_message_error.Visible = false;
 
 			} else {
-				errorMessage.InnerHtml = "Selected ideas already exist.";
+				errorMessage.InnerHtml = AppResources.PastRisk_Notification_FailedGeneratePrompts;
 				alert_message_success.Visible = false;
 				alert_message_error.Visible = true;
 

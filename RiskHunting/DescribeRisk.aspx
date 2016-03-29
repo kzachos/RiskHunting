@@ -78,9 +78,13 @@ window.setTimeout(function() {
 	<form id="form1" runat="server">
 	<div id="topbar2">
 		<div id="leftnav">
-    		<a href="javascript:doLoad('Default.aspx');" ><img alt="home" src="Theme/images/home.png" />
+    		<a href="?lang=en" runat="server" id="linkEnglishLang">
+    			<img alt="en" src="Theme/images/GB.png" />
     		</a>
-			<a style="position:relative; TOP:2px;" href="javascript:doLoad('QueryHistory.aspx');" >
+    		<a href="?lang=it" runat="server" id="linkItalianLang">
+    			<img alt="it" src="Theme/images/IT.png" />
+    		</a>
+   			<a style="position:relative; TOP:2px;" href="javascript:doLoad('QueryHistory.aspx');" >
 				&nbsp;&nbsp;&nbsp; <asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>

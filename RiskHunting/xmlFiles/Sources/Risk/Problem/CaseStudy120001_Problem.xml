@@ -3,16 +3,16 @@
   <FacetType>Problem</FacetType>
   <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
   <Author>John Smith|123456</Author>
-  <LaunchDate>16/03/2016 18:13:33</LaunchDate>
-  <SourceSpecificationLastEdited>09/11/2015</SourceSpecificationLastEdited>
+  <LaunchDate>24/03/2016 17:32:56</LaunchDate>
+  <SourceSpecificationLastEdited>09/01/2015</SourceSpecificationLastEdited>
   <FacetSpecificationData>
     <Content>The worker lay down on a duckboard in order to move under a tractor to check for possible oil leaks, but the duckboard shifted as the worker sat down and the worker fell and received a superficial cut to the head</Content>
-    <InjuryNature>Contusion/Crush/Concussion</InjuryNature>
-    <LocationDetail>After Paint (APM or Medical Line)|00</LocationDetail>
+    <InjuryNature>Abrasioni/Tagli/Lacerazione</InjuryNature>
+    <LocationDetail>Linea dei pedoni|00</LocationDetail>
     <BodyPart>Whole body</BodyPart>
     <InjuryCause />
     <IncidentPriority />
-    <IncidentStatus>use liquid or air with the hit - hot liquid investigated;even out the environmental forces that affect the point</IncidentStatus>
+    <IncidentStatus>even out the environmental forces that affect the point</IncidentStatus>
     <RootCause />
     <RoutineWork />
     <ShiftType />
@@ -20,7 +20,7 @@
     <ClosedByOperator />
     <ContractorName>Peter Maffay</ContractorName>
     <DateClosed />
-    <DateIncidentOccurred>09/11/2015 00:00:00</DateIncidentOccurred>
+    <DateIncidentOccurred>09/01/2015 00:00:00</DateIncidentOccurred>
     <Miscellaneous>xmlFiles/Sources/Risk/Images/120001/120001.jpg</Miscellaneous>
     <MatchingDetails />
   </FacetSpecificationData>

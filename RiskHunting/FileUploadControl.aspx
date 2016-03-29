@@ -52,11 +52,11 @@
 	<div id="topbar2">
 		<div id="leftbutton">
 			<a href="javascript:doLoad('DescribeRisk.aspx');" >
-				Return to Risk
+				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
-			Upload Image
+			<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 
@@ -76,7 +76,7 @@
 			</div>
 		    
 			<div id="previewDiv" runat="server">
-			    <span class="maintitle">Image Preview</span><br>
+			    <span class="maintitle"><asp:Label ID="LabelImagePreview" Runat="server"></asp:Label></span><br>
 			    <p>
 			        <asp:Image ID="Image1" runat="server" Height="40%"  />
 			    </p>
@@ -88,13 +88,13 @@
 			</ul>
 			<ul class="pageitembutton">
 				<li class="button">
-					<asp:Button id="UploadImage" runat="server" text="UPLOAD IMAGE" onclick="uploadClicked"></asp:Button>
+					<asp:Button id="UploadImage" runat="server" onclick="uploadClicked"></asp:Button>
 				</li>
 			</ul>
 			<div id="ButtonsDiv" runat="server">
 				<ul class="pageitembutton">
 					<li class="button2">
-						<asp:Button id="Cancel" runat="server" text="DELETE IMAGE" onclick="cancelClicked"></asp:Button>
+						<asp:Button id="Cancel" runat="server" onclick="cancelClicked"></asp:Button>
 					</li>
 				</ul>
 		    </div>

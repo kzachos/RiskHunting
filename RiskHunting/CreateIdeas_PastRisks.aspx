@@ -51,18 +51,18 @@
     		</a>
    			<a href="javascript:doLoad('DescribeRisk.aspx');" >
 				&nbsp;&nbsp;&nbsp; <img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-1-icon.png" />
-				Describe Risk
+				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="rightbutton">
 			<a href="javascript:doLoad('ResolveRisk.aspx');">
 				<img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-3-icon.png" />
-				Resolve Risk
+				<asp:Label ID="LabelNavigationBarRight" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
 			<img alt="home" style="position:relative; TOP:2px;  height: 45%" src="Theme/images/numbers-2-filled-icon.png" /> 
-			Create Ideas from Previous Risks
+			<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 
@@ -108,7 +108,7 @@
 			<div id="submitDiv" runat="server">
 				<ul class="pageitembutton">
 					<li class="button3">
-						<asp:Button id="submit" runat="server" text="FIND SIMILAR RISKS" onclick="submitClicked"></asp:Button>
+						<asp:Button id="submit" runat="server" onclick="submitClicked"></asp:Button>
 					</li>
 				</ul>
 			</div>

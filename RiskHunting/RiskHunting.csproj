@@ -75,13 +75,11 @@
     <Content Include="ErrorHandling\Http404ErrorPage.aspx" />
     <Content Include="ErrorHandling\HttpErrorPage.aspx" />
     <Content Include="ErrorHandling\maintenance.html" />
-    <Content Include="AddAction.aspx" />
     <Content Include="AddResolutionIdea.aspx" />
     <Content Include="CreateIdeas_PastRisk.aspx" />
     <Content Include="CreateIdeas_PastRisks.aspx" />
     <Content Include="CreateIdeas_SameRisk.aspx" />
     <Content Include="CreateIdeas_Superheroes.aspx" />
-    <Content Include="CreateRisk.aspx" />
     <Content Include="DescribeRisk.aspx" />
     <Content Include="EditResolutionIdea.aspx" />
     <Content Include="Feedback.ascx" />
@@ -105,7 +103,6 @@
     </Compile>
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\EnumLabel.cs" />
-    <Compile Include="Classes\GenericCreativityPrompts.cs" />
     <Compile Include="Classes\GoogleGeocodingDataContracts.cs" />
     <Compile Include="Classes\GoogleReverseGeocoder.cs" />
     <Compile Include="Classes\NLPData.cs" />
@@ -123,12 +120,6 @@
       <DependentUpon>DefaultRedirectErrorPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ErrorHandling\ExceptionUtility.cs" />
-    <Compile Include="AddAction.aspx.cs">
-      <DependentUpon>AddAction.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AddAction.aspx.designer.cs">
-      <DependentUpon>AddAction.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AddResolutionIdea.aspx.cs">
       <DependentUpon>AddResolutionIdea.aspx</DependentUpon>
     </Compile>
@@ -158,12 +149,6 @@
     </Compile>
     <Compile Include="CreateIdeas_Superheroes.aspx.designer.cs">
       <DependentUpon>CreateIdeas_Superheroes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CreateRisk.aspx.cs">
-      <DependentUpon>CreateRisk.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CreateRisk.aspx.designer.cs">
-      <DependentUpon>CreateRisk.aspx</DependentUpon>
     </Compile>
     <Compile Include="DescribeRisk.aspx.cs">
       <DependentUpon>DescribeRisk.aspx</DependentUpon>
@@ -235,9 +220,11 @@
     <Compile Include="Web References\antiqueService\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
-    <Compile Include="AppResources.Designer.cs">
+    <Compile Include="Classes\GenericCreativityPrompts.cs" />
+    <Compile Include="App_GlobalResources\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="BasePage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -249,6 +236,7 @@
   </ProjectExtensions>
   <ItemGroup>
     <Folder Include="Images\" />
+    <Folder Include="App_GlobalResources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Parameters.xml" />
@@ -299,10 +287,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AppResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
+    <EmbeddedResource Include="App_GlobalResources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppResources.it.resx" />
+    <EmbeddedResource Include="App_GlobalResources\AppResources.it.resx" />
   </ItemGroup>
 </Project>
