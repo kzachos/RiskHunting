@@ -25,3 +25,6 @@
 /Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.Localization.AppResources.it.resources
 /Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.App_GlobalResources.AppResources.resources
 /Users/koszachos/Projects/RiskHunting/RiskHunting/obj/Debug/RiskHunting.App_GlobalResources.AppResources.it.resources
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/System.Net.Http.Primitives.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/System.Net.Http.Extensions.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/RestSharp.dll

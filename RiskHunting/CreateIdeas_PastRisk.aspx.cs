@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Web.UI.WebControls;
 using System.Collections.Specialized;
+using System.Globalization;
+using System.Threading;
 
 namespace RiskHunting
 {
@@ -39,7 +41,7 @@ namespace RiskHunting
 
 		List<NLResponseToken> NLResponse;
 
-		protected string Expression = AppResources.CreativityPrompts_BaseForm + " ";
+//		protected string Expression = AppResources.CreativityPrompts_BaseForm + " ";
 
 		protected string processPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", "Sources", "_toProcess");
 
@@ -174,15 +176,17 @@ namespace RiskHunting
 			List<string> ps = new List<string> ();
 			NLResponseTrimmed.Shuffle ();
 
+			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+
 			if (NLResponseTrimmed.Count > 5)
 				for (int i = 0; i < 4; i++) {
 					//			foreach (var item in NLResponseTrimmed) {
 					var item = NLResponseTrimmed [i];
 					if (!item.TermValue.Equals (String.Empty)) {
-						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos);
+						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos, currentCulture);
 						foreach (string s in  g.genericCPs) {
 							//							Console.WriteLine (s);
-							ps.Add (Expression + s);
+							ps.Add (s);
 							count++;
 						}
 					}
@@ -190,10 +194,10 @@ namespace RiskHunting
 			else
 				foreach (var item in NLResponseTrimmed) {
 					if (!item.TermValue.Equals (String.Empty)) {
-						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos);
+						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos, currentCulture);
 						foreach (string s in  g.genericCPs) {
 							//							Console.WriteLine (s);
-							ps.Add (Expression + s);
+							ps.Add (s);
 							count++;
 						}
 					}
@@ -215,15 +219,17 @@ namespace RiskHunting
 			List<string> ps = new List<string> ();
 			NLResponseTrimmed.Shuffle ();
 
+			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+
 			string[] valuesNP = new string[2] {"floor", "slippery"};
 			string[] valuesVP = new string[1] {"is wet"};
 
 			foreach (var item in valuesNP) {
 				if (!item.Equals (String.Empty)) {
-					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "NP");
+					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "NP", currentCulture);
 					foreach (string s in  g.genericCPs) {
 						//							Console.WriteLine (s);
-						ps.Add (Expression + s);
+						ps.Add (s);
 						count++;
 					}
 				}
@@ -231,10 +237,10 @@ namespace RiskHunting
 
 			foreach (var item in valuesVP) {
 				if (!item.Equals (String.Empty)) {
-					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "VP");
+					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "VP", currentCulture);
 					foreach (string s in  g.genericCPs) {
 						//							Console.WriteLine (s);
-						ps.Add (Expression + s);
+						ps.Add (s);
 						count++;
 					}
 				}

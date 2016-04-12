@@ -350,7 +350,7 @@
     <value>There was a problem deleting the image.</value>
   </data>
   <data name="CreateIdeas.NavigationBar.Title" xml:space="preserve">
-    <value>Create Ideas from Previous Risks</value>
+    <value>Create Ideas</value>
   </data>
   <data name="CreateIdeas.NavigationBar.Left" xml:space="preserve">
     <value>Describe Risk</value>
@@ -603,6 +603,24 @@
   </data>
   <data name="Summary.Email.Label.RiskReportGeneratedLong" xml:space="preserve">
     <value>A risk report has been generated</value>
+  </data>
+  <data name="CreateIdeas.SubNavigationBar.Left" xml:space="preserve">
+    <value>Ideas from previous risks</value>
+  </data>
+  <data name="CreateIdeas.SubNavigationBar.Right" xml:space="preserve">
+    <value>Ideas from Superheroes</value>
+  </data>
+  <data name="CreateIdeas.SubNavigationBar.Middle" xml:space="preserve">
+    <value>Ideas from new risk</value>
+  </data>
+  <data name="CreateIdeas.SameRisk.Button.GenerateAgain" xml:space="preserve">
+    <value>Generate New Creative Prompts</value>
+  </data>
+  <data name="CreateIdeas.SameRisk.Button.ReturnDescribeRisk" xml:space="preserve">
+    <value>Return to your Risk</value>
+  </data>
+  <data name="CreateIdeas.SameRisk.Notification.FailedGeneratePrompts" xml:space="preserve">
+    <value>Could not generate any creativity prompts. Have you tried to extend the risk description?</value>
   </data>
 
 </root>

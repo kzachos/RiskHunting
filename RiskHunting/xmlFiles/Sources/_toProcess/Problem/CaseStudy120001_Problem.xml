@@ -2,26 +2,26 @@
 <LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <FacetType>Problem</FacetType>
   <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
-  <Author>John Smith|123456</Author>
-  <LaunchDate>24/03/2016 17:32:56</LaunchDate>
-  <SourceSpecificationLastEdited>09/01/2015</SourceSpecificationLastEdited>
+  <Author>Kos|1234</Author>
+  <LaunchDate>12/04/2016 12:09:02</LaunchDate>
+  <SourceSpecificationLastEdited>05/01/2016</SourceSpecificationLastEdited>
   <FacetSpecificationData>
-    <Content>The worker lay down on a duckboard in order to move under a tractor to check for possible oil leaks, but the duckboard shifted as the worker sat down and the worker fell and received a superficial cut to the head</Content>
+    <Content>Quando si bloccano i cuscinetti durante l'innesto sul fuso, per estrarli occorre smontare l'intero fuso con il rischio di caduta dello stesso</Content>
     <InjuryNature>Abrasioni/Tagli/Lacerazione</InjuryNature>
-    <LocationDetail>Linea dei pedoni|00</LocationDetail>
+    <LocationDetail>Linea dei pedoni|B4</LocationDetail>
     <BodyPart>Whole body</BodyPart>
     <InjuryCause />
     <IncidentPriority />
-    <IncidentStatus>even out the environmental forces that affect the point</IncidentStatus>
+    <IncidentStatus />
     <RootCause />
     <RoutineWork />
     <ShiftType />
     <Title />
     <ClosedByOperator />
-    <ContractorName>Peter Maffay</ContractorName>
+    <ContractorName>Kos</ContractorName>
     <DateClosed />
-    <DateIncidentOccurred>09/01/2015 00:00:00</DateIncidentOccurred>
-    <Miscellaneous>xmlFiles/Sources/Risk/Images/120001/120001.jpg</Miscellaneous>
+    <DateIncidentOccurred>05/01/2016 00:00:00</DateIncidentOccurred>
+    <Miscellaneous />
     <MatchingDetails />
   </FacetSpecificationData>
 </LanguageSpecificSpecification>

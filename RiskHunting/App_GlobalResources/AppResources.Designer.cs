@@ -29,7 +29,7 @@ namespace RiskHunting {
         internal static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-					System.Resources.ResourceManager temp = new System.Resources.ResourceManager("RiskHunting.App_GlobalResources.AppResources", typeof(AppResources).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("RiskHunting.App_GlobalResources.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -1015,6 +1015,42 @@ namespace RiskHunting {
         internal static string Summary_Email_Label_RiskReportGeneratedLong {
             get {
                 return ResourceManager.GetString("Summary.Email.Label.RiskReportGeneratedLong", resourceCulture);
+            }
+        }
+        
+        internal static string CreateIdeas_SubNavigationBar_Left {
+            get {
+                return ResourceManager.GetString("CreateIdeas.SubNavigationBar.Left", resourceCulture);
+            }
+        }
+        
+        internal static string CreateIdeas_SubNavigationBar_Right {
+            get {
+                return ResourceManager.GetString("CreateIdeas.SubNavigationBar.Right", resourceCulture);
+            }
+        }
+        
+        internal static string CreateIdeas_SubNavigationBar_Middle {
+            get {
+                return ResourceManager.GetString("CreateIdeas.SubNavigationBar.Middle", resourceCulture);
+            }
+        }
+        
+        internal static string CreateIdeas_SameRisk_Button_GenerateAgain {
+            get {
+                return ResourceManager.GetString("CreateIdeas.SameRisk.Button.GenerateAgain", resourceCulture);
+            }
+        }
+        
+        internal static string CreateIdeas_SameRisk_Button_ReturnDescribeRisk {
+            get {
+                return ResourceManager.GetString("CreateIdeas.SameRisk.Button.ReturnDescribeRisk", resourceCulture);
+            }
+        }
+        
+        internal static string CreateIdeas_SameRisk_Notification_FailedGeneratePrompts {
+            get {
+                return ResourceManager.GetString("CreateIdeas.SameRisk.Notification.FailedGeneratePrompts", resourceCulture);
             }
         }
     }

@@ -63,6 +63,18 @@
     <Reference Include="WordNet">
       <HintPath>bin\WordNet.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -90,6 +102,7 @@
     <Content Include="ResolveRisk.aspx" />
     <Content Include="Settings.aspx" />
     <Content Include="Summary.aspx" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -225,6 +238,8 @@
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
     <Compile Include="BasePage.cs" />
+    <Compile Include="Classes\Translator.cs" />
+    <Compile Include="Classes\LanguageDetection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>

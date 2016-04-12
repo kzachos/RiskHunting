@@ -100,6 +100,8 @@ namespace RiskHunting
 			LabelNavigationBarLeft.Text = AppResources.CreateIdeas_NavigationBar_Left;
 			LabelNavigationBarRight.Text = AppResources.CreateIdeas_NavigationBar_Right;
 			LabelNavigationBarTitle.Text = AppResources.CreateIdeas_NavigationBar_Title;
+			LabelSubNavigationBarLeft.Text = AppResources.CreateIdeas_SubNavigationBar_Left;
+			LabelSubNavigationBarMiddle.Text = AppResources.CreateIdeas_SubNavigationBar_Middle;
 			submit.Text = AppResources.CreateIdeas_Form_Button_FindSimilarRisks;
 		}
 
@@ -270,11 +272,13 @@ namespace RiskHunting
 			for (int i = 0; i <= FileList.Length-1; i++)
 			{
 				FileInfo FI = FileList[i];
-				//string file = files[i];
-				fileNameParts = str.SeperateStringByChar(FI.FullName, deliminator);
-				fileNameParts2 = str.SeperateStringByChar(fileNameParts[1].ToString(), deliminator2);
-				all.Add(fileNameParts2[0].ToString(), FI.FullName);
-				//				Console.WriteLine ("FI.FullName: " + FI.FullName);
+				if (!FI.FullName.Contains(".DS_Store")) {
+					//string file = files[i];
+					fileNameParts = str.SeperateStringByChar(FI.FullName, deliminator);
+					fileNameParts2 = str.SeperateStringByChar(fileNameParts[1].ToString(), deliminator2);
+					all.Add(fileNameParts2[0].ToString(), FI.FullName);
+					//				Console.WriteLine ("FI.FullName: " + FI.FullName);
+				}
 			}
 
 			var keyCollection = all.Keys;

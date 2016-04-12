@@ -10,14 +10,16 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Collections.Specialized;
+using System.Globalization;
+using System.Threading;
+using System.Linq;
 
 
 namespace RiskHunting
 {
 	
-	public partial class CreateIdeas_SameRisk : System.Web.UI.Page
+	public partial class CreateIdeas_SameRisk : BasePage
 	{
-		const string defaultProcessGuidance = "Create new resolutions for your risk. Select from the guidance below";
 
 		const string Tag1 = "<li class=\"checkbox\">";
 		const string Tag2 = "<span class=\"name\">";
@@ -44,7 +46,7 @@ namespace RiskHunting
 
 		List<NLResponseToken> NLResponse;
 
-		protected string Expression = "Think about ";
+//		protected string Expression = AppResources.CreativityPrompts_BaseForm + " ";
 
 		protected string processPath = Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", "Sources", "_toProcess");
 
@@ -109,7 +111,7 @@ namespace RiskHunting
 //
 //		}
 
-		protected void Page_Init(object sender, EventArgs e)
+		protected async void Page_Init(object sender, EventArgs e)
 		{
 			if (Sessions.PersonaState != String.Empty) 
 				Session.Remove (Sessions.personaState);
@@ -123,7 +125,9 @@ namespace RiskHunting
 				this.sourceId = Sessions.RiskState;
 
 			var processGuidanceText = Util.GenerateProcessGuidance ("creativeGuidance");
-			creativeGuidance.InnerText = processGuidanceText.Equals(String.Empty)?defaultProcessGuidance:processGuidanceText;
+			creativeGuidance.InnerText = processGuidanceText.Equals(String.Empty)?AppResources.ProcessGuidance_PastRisk_Default:processGuidanceText;
+
+			InitLabels ();
 
 
 			if (Sessions.CreativityPromptsState != null) {
@@ -138,9 +142,21 @@ namespace RiskHunting
 //					NLResponse = (List<NLResponseToken>)Session ["CURRENT_PROBLEM_DESC"];
 //				else {
 //					NLResponse = new List<NLResponseToken> ();
-					RetrieveCurrentRisk ();
-					RetrieveNLData ();
-//				}
+				RetrieveCurrentRisk ();
+
+				CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+
+				var query = this.currentRisk.Content;
+				var lang = LanguageDetection.DetectLanguage (query);
+				if (!lang.language.Equals("en")) 
+				{
+					Translator tr = new Translator();	
+					var task = tr.TranslateString (query, "en");
+					RetrieveNLData (task.Result, lang.language, currentCulture);
+				}
+				else 
+					RetrieveNLData (query, lang.language, currentCulture);
+				
 
 			}
 
@@ -205,6 +221,18 @@ namespace RiskHunting
 			}
 			return c;
 		}
+
+		private void InitLabels ()
+		{
+			LabelNavigationBarLeft.Text = AppResources.CreateIdeas_NavigationBar_Left;
+			LabelNavigationBarRight.Text = AppResources.CreateIdeas_NavigationBar_Right;
+			LabelNavigationBarTitle.Text = AppResources.CreateIdeas_NavigationBar_Title;
+			LabelSubNavigationBarLeft.Text = AppResources.CreateIdeas_SubNavigationBar_Left;
+			LabelSubNavigationBarMiddle.Text = AppResources.CreateIdeas_SubNavigationBar_Middle;
+			GenerateAgain.Text = AppResources.CreateIdeas_SameRisk_Button_GenerateAgain.ToUpper();
+			ReturnDescribeRisk.Text = AppResources.CreateIdeas_SameRisk_Button_ReturnDescribeRisk.ToUpper();
+		}
+
 			
 		#region Service Call
 
@@ -244,16 +272,19 @@ namespace RiskHunting
 //
 //		}
 
-		void RetrieveNLData ()
+
+		void RetrieveNLData (string query, string lang, CultureInfo currentCulture)
 		{
 			string errorMsg;
 			if(Util.ServiceExists(Constants.ANTIQUE_URI, false, out errorMsg)) {
 				RiskHunting.antiqueService.AntiqueService antique = new RiskHunting.antiqueService.AntiqueService ();
 				try
 				{
+
 					System.Net.ServicePointManager.Expect100Continue = false;
-					var output = antique.NLParser (this.currentRisk.Content);
+					var output = antique.NLParser (query);
 					this.NLResponse = Util.DeserializeNLResponse (output);
+
 					if (Sessions.CreativityPromptsState != null)
 						Session.Remove(Sessions.creativityPromptsState);
 					//			Session ["CURRENT_PAST_RISK_DESC"] = NLResponse;
@@ -262,7 +293,7 @@ namespace RiskHunting
 				{
 				}
 				finally {
-					PrepareData ();
+					PrepareData (lang, currentCulture);
 					PopulateData ();
 				}
 			}
@@ -271,20 +302,55 @@ namespace RiskHunting
 				generatePrompts.Visible = false;
 				hint_box.Visible = false;
 				alert_message_success.Visible = false;
-				errorMessage.InnerText = "Currently unable to generate creativity prompts. Please try again later.";
+				errorMessage.InnerText = AppResources.PastRisk_Notification_FailedGeneratePrompts;
 				alert_message_error.Visible = true;
 			}
 		}
 
 		#endregion
 
-		List<string> GenerateGenericCreativityPrompts()
+		async Task<List<string>> GenerateGenericCreativityPrompts(string lang, CultureInfo currentCulture)
 		{
 			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
 			foreach(var item in NLResponse)
 			{
 				if (!item.TermValue.Equals (String.Empty))
 					NLResponseTrimmed.Add (item);
+			}
+
+			if (!currentCulture.ToString ().Contains ("en"))
+			{
+				var ids = NLResponseTrimmed.Select(c => c.ID).ToArray();
+				var pos = NLResponseTrimmed.Select(c => c.Pos).ToArray();
+				var termValues = NLResponseTrimmed.Select(c => c.TermValue).ToArray();
+
+				var termValuesString = string.Empty;
+				for (int i = 0; i < termValues.Length; i ++)
+				{						
+					termValuesString += termValues[i] + ". ";
+				}
+				if (!termValuesString.Equals(String.Empty)) {
+					var NLResponseNew = new List<NLResponseToken>();
+					Translator tr = new Translator();	
+
+					var task = await tr.TranslateString (termValuesString, lang);
+					var res = task.Trim().Split(new char[] {'.'});
+					var c = 0;
+					for (int j = 0; j < res.Length; j++)
+					{
+						if (!res[j].Trim().Equals (String.Empty)) {
+							NLResponseToken itemNew = new NLResponseToken ();
+							itemNew.TermValue = res[j].Trim();
+							itemNew.ID = ids[j];
+							itemNew.Pos = pos[j];
+							NLResponseNew.Add (itemNew);
+						}
+					}
+					NLResponseTrimmed.Clear();
+					NLResponseTrimmed = NLResponseNew;
+
+				}
+
 			}
 
 			int count = 0;
@@ -296,10 +362,10 @@ namespace RiskHunting
 					//			foreach (var item in NLResponseTrimmed) {
 					var item = NLResponseTrimmed [i];
 					if (!item.TermValue.Equals (String.Empty)) {
-						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos);
+						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos, currentCulture);
 						foreach (string s in  g.genericCPs) {
 							//							Console.WriteLine (s);
-							ps.Add (Expression + s);
+							ps.Add (s);
 							count++;
 						}
 					}
@@ -307,10 +373,10 @@ namespace RiskHunting
 			else
 				foreach (var item in NLResponseTrimmed) {
 					if (!item.TermValue.Equals (String.Empty)) {
-						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos);
+						GenericCreativityPrompts g = new GenericCreativityPrompts (item.TermValue, item.Pos, currentCulture);
 						foreach (string s in  g.genericCPs) {
 							//							Console.WriteLine (s);
-							ps.Add (Expression + s);
+							ps.Add (s);
 							count++;
 						}
 					}
@@ -332,15 +398,18 @@ namespace RiskHunting
 			List<string> ps = new List<string> ();
 			NLResponseTrimmed.Shuffle ();
 
+			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+
+
 			string[] valuesNP = new string[2] {"floor", "slippery"};
 			string[] valuesVP = new string[1] {"is wet"};
 
 			foreach (var item in valuesNP) {
 				if (!item.Equals (String.Empty)) {
-					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "NP");
+					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "NP", currentCulture);
 					foreach (string s in  g.genericCPs) {
 						//							Console.WriteLine (s);
-						ps.Add (Expression + s);
+						ps.Add (s);
 						count++;
 					}
 				}
@@ -348,10 +417,10 @@ namespace RiskHunting
 
 			foreach (var item in valuesVP) {
 				if (!item.Equals (String.Empty)) {
-					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "VP");
+					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "VP", currentCulture);
 					foreach (string s in  g.genericCPs) {
 						//							Console.WriteLine (s);
-						ps.Add (Expression + s);
+						ps.Add (s);
 						count++;
 					}
 				}
@@ -360,10 +429,10 @@ namespace RiskHunting
 			return ps;
 		}
 
-		void PrepareData ()
+		void PrepareData (string lang, CultureInfo currentCulture)
 		{
 			if (!Page.IsPostBack) {
-				CreativityPromptsFeed = GenerateGenericCreativityPrompts ();
+				CreativityPromptsFeed = GenerateGenericCreativityPrompts (lang, currentCulture).Result;
 				//				CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
 				CreativityPromptsFeed.Shuffle ();
 
@@ -400,7 +469,7 @@ namespace RiskHunting
 					generatePrompts.Visible = false;
 					hint_box.Visible = true;
 					alert_message_success.Visible = false;
-					creativeGuidance.InnerText = "Could not generate any creativity prompts. Have you tried to extend the risk description?";
+					creativeGuidance.InnerText = AppResources.CreateIdeas_SameRisk_Notification_FailedGeneratePrompts;
 					alert_message_error.Visible = false;
 					describeRiskDiv.Visible = true;
 //					GenerateHtml3 ("No prompts available", String.Empty);
@@ -535,12 +604,12 @@ namespace RiskHunting
 
 			GenerateXml ();
 			if (entryAdded) {
-				successMessage.InnerHtml = "Selected ideas were saved successfully.";
+				successMessage.InnerHtml = AppResources.PastRisk_Notification_SuccessAdd;
 				alert_message_success.Visible = true;
 				alert_message_error.Visible = false;
 
 			} else {
-				errorMessage.InnerHtml = "Selected ideas already exist.";
+				errorMessage.InnerHtml = AppResources.PastRisk_Notification_FailedGeneratePrompts;
 				alert_message_success.Visible = false;
 				alert_message_error.Visible = true;
 

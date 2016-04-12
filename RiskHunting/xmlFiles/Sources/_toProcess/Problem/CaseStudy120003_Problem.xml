@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FacetType>Problem</FacetType>
+  <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
+  <Author>Kos|123213</Author>
+  <LaunchDate>12/04/2016 18:04:26</LaunchDate>
+  <SourceSpecificationLastEdited>12/01/2016</SourceSpecificationLastEdited>
+  <FacetSpecificationData>
+    <Content>Quando si bloccano i cuscinetti durante l'innesto sul fuso, per estrarli occorre smontare l'intero fuso con il rischio di caduta dello stesso</Content>
+    <InjuryNature>Abrasioni/Tagli/Lacerazione</InjuryNature>
+    <LocationDetail>Linea dei pedoni|00</LocationDetail>
+    <BodyPart>Whole body</BodyPart>
+    <InjuryCause />
+    <IncidentPriority />
+    <IncidentStatus />
+    <RootCause />
+    <RoutineWork />
+    <ShiftType />
+    <Title />
+    <ClosedByOperator />
+    <ContractorName>test</ContractorName>
+    <DateClosed />
+    <DateIncidentOccurred>12/01/2016 00:00:00</DateIncidentOccurred>
+    <Miscellaneous />
+    <MatchingDetails />
+  </FacetSpecificationData>
+</LanguageSpecificSpecification>

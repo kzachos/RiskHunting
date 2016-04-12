@@ -201,3 +201,93 @@ Stack Trace:
   at System.Web.HttpApplication+<Pipeline>c__Iterator1.MoveNext () [0x00dd7] in /private/tmp/source-mono-mac-4.2.0-branch-c6sr1/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.2/mcs/class/System.Web/System.Web/HttpApplication.cs:1338 
   at System.Web.HttpApplication.Tick () [0x00000] in /private/tmp/source-mono-mac-4.2.0-branch-c6sr1/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.2/mcs/class/System.Web/System.Web/HttpApplication.cs:927 
 
+********** 06/04/2016 13:18:12 **********
+Inner Exception Type: System.DivideByZeroException
+Inner Exception: Attempted to divide by zero.
+Inner Source: RiskHunting
+Inner Stack Trace: 
+  at RiskHunting.QueryHistory.Page_Load (System.Object sender, System.EventArgs e) [0x0001c] in /Users/koszachos/Projects/RiskHunting/RiskHunting/QueryHistory.aspx.cs:99 
+  at System.Web.UI.Control.OnLoad (System.EventArgs e) [0x00029] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Control.cs:1179 
+  at System.Web.UI.Control.LoadRecursive () [0x00031] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Control.cs:1578 
+  at System.Web.UI.Page.ProcessLoad () [0x0004a] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1379 
+  at System.Web.UI.Page.ProcessPostData () [0x0004d] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1364 
+  at System.Web.UI.Page.InternalProcessRequest () [0x001bf] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1337 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00062] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1190 
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+  at System.Web.UI.Page.ProcessException (System.Exception e) [0x0004b] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1211 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00090] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1197 
+  at System.Web.HttpApplication+<Pipeline>c__Iterator1.MoveNext () [0x00dd7] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:1338 
+  at System.Web.HttpApplication.Tick () [0x00000] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:927 
+
+********** 06/04/2016 13:19:16 **********
+Inner Exception Type: System.DivideByZeroException
+Inner Exception: Attempted to divide by zero.
+Inner Source: RiskHunting
+Inner Stack Trace: 
+  at RiskHunting.QueryHistory.Page_Load (System.Object sender, System.EventArgs e) [0x0001c] in /Users/koszachos/Projects/RiskHunting/RiskHunting/QueryHistory.aspx.cs:99 
+  at System.Web.UI.Control.OnLoad (System.EventArgs e) [0x00029] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Control.cs:1179 
+  at System.Web.UI.Control.LoadRecursive () [0x00031] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Control.cs:1578 
+  at System.Web.UI.Page.ProcessLoad () [0x0004a] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1379 
+  at System.Web.UI.Page.ProcessPostData () [0x0004d] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1364 
+  at System.Web.UI.Page.InternalProcessRequest () [0x001bf] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1337 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00062] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1190 
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+  at System.Web.UI.Page.ProcessException (System.Exception e) [0x0004b] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1211 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00090] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1197 
+  at System.Web.HttpApplication+<Pipeline>c__Iterator1.MoveNext () [0x00dd7] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:1338 
+  at System.Web.HttpApplication.Tick () [0x00000] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:927 
+
+********** 06/04/2016 14:03:38 **********
+Inner Exception Type: System.DivideByZeroException
+Inner Exception: Attempted to divide by zero.
+Inner Source: RiskHunting
+Inner Stack Trace: 
+  at RiskHunting.QueryHistory.Page_Load (System.Object sender, System.EventArgs e) [0x0001c] in /Users/koszachos/Projects/RiskHunting/RiskHunting/QueryHistory.aspx.cs:99 
+  at System.Web.UI.Control.OnLoad (System.EventArgs e) [0x00029] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Control.cs:1179 
+  at System.Web.UI.Control.LoadRecursive () [0x00031] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Control.cs:1578 
+  at System.Web.UI.Page.ProcessLoad () [0x0004a] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1379 
+  at System.Web.UI.Page.ProcessPostData () [0x0004d] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1364 
+  at System.Web.UI.Page.InternalProcessRequest () [0x001bf] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1337 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00062] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1190 
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+  at System.Web.UI.Page.ProcessException (System.Exception e) [0x0004b] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1211 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00090] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1197 
+  at System.Web.HttpApplication+<Pipeline>c__Iterator1.MoveNext () [0x00dd7] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:1338 
+  at System.Web.HttpApplication.Tick () [0x00000] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:927 
+
+********** 06/04/2016 14:06:42 **********
+Inner Exception Type: System.IndexOutOfRangeException
+Inner Exception: Index was outside the bounds of the array.
+Inner Source: RiskHunting
+Inner Stack Trace: 
+  at RiskHunting.DescribeRisk.GetFilesFromDirectorySortedList4 (System.String dirPath) [0x000e5] in /Users/koszachos/Projects/RiskHunting/RiskHunting/DescribeRisk.aspx.cs:1223 
+  at RiskHunting.DescribeRisk.GetNewSourceId () [0x00019] in /Users/koszachos/Projects/RiskHunting/RiskHunting/DescribeRisk.aspx.cs:1158 
+  at RiskHunting.DescribeRisk.CreateRisk (Boolean initiateNewSearch, Boolean searchResults) [0x00064] in /Users/koszachos/Projects/RiskHunting/RiskHunting/DescribeRisk.aspx.cs:501 
+  at RiskHunting.DescribeRisk.Save () [0x00073] in /Users/koszachos/Projects/RiskHunting/RiskHunting/DescribeRisk.aspx.cs:735 
+  at RiskHunting.DescribeRisk.ideasClicked (System.Object sender, System.EventArgs args) [0x0002f] in /Users/koszachos/Projects/RiskHunting/RiskHunting/DescribeRisk.aspx.cs:766 
+  at System.Web.UI.WebControls.Button.OnClick (System.EventArgs e) [0x00027] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI.WebControls/Button.cs:175 
+  at System.Web.UI.WebControls.Button.RaisePostBackEvent (System.String eventArgument) [0x00031] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI.WebControls/Button.cs:199 
+  at System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent (System.String eventArgument) [0x00000] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI.WebControls/Button.cs:167 
+  at System.Web.UI.Page.RaisePostBackEvent (IPostBackEventHandler sourceControl, System.String eventArgument) [0x00000] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1525 
+  at System.Web.UI.Page.RaisePostBackEvents () [0x00024] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1479 
+  at System.Web.UI.Page.ProcessRaiseEvents () [0x0005b] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1390 
+  at System.Web.UI.Page.InternalProcessRequest () [0x001c5] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1338 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00062] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1190 
+Exception Type: System.Web.HttpUnhandledException
+Exception: Exception of type 'System.Web.HttpUnhandledException' was thrown.
+Source: DefaultPage
+Stack Trace: 
+  at System.Web.UI.Page.ProcessException (System.Exception e) [0x0004b] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1211 
+  at System.Web.UI.Page.ProcessRequest (System.Web.HttpContext context) [0x00090] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web.UI/Page.cs:1197 
+  at System.Web.HttpApplication+<Pipeline>c__Iterator1.MoveNext () [0x00dd7] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:1338 
+  at System.Web.HttpApplication.Tick () [0x00000] in /private/tmp/source-mono-4.2.3/bockbuild-mono-4.2.0-branch/profiles/mono-mac-xamarin/build-root/mono-4.2.3/mcs/class/System.Web/System.Web/HttpApplication.cs:927 
+

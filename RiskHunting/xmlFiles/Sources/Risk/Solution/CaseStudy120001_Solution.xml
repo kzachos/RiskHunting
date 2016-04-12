@@ -2,10 +2,10 @@
 <LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <FacetType>Solution</FacetType>
   <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
-  <Author>John Smith|123456</Author>
-  <LaunchDate>24/03/2016 17:32:56</LaunchDate>
-  <SourceSpecificationLastEdited>09/01/2015</SourceSpecificationLastEdited>
+  <Author>Kos|1234</Author>
+  <LaunchDate>12/04/2016 12:09:02</LaunchDate>
+  <SourceSpecificationLastEdited>05/01/2016</SourceSpecificationLastEdited>
   <FacetSpecificationData>
-    <Content>[Recommendation:provide a shell or cover for the issue like cover for the employee working under the tractor; quality department checked parts to spec and found that floor ducting measurements were out of spec. the company are dealing with this and we are waiting for good parts. That will prevent any force having to be used to fit lower hood.;use liquid or air with the hit - hot liquid investigated;even out the environmental forces that affect the point;avoid stress in the point , and/or the situation, before it happens];[Corrective Actions:];[Countermeasures:]</Content>
+    <Content>[Recommendation:];[Corrective Actions:];[Countermeasures:]</Content>
   </FacetSpecificationData>
 </LanguageSpecificSpecification>

@@ -2,14 +2,14 @@
 <SourceSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceId>120001</SourceId>
   <SourceName>Quasi mancato</SourceName>
-  <SourceType>RiskResolved</SourceType>
+  <SourceType>ProblemDescribed</SourceType>
   <Domain>Risk</Domain>
   <Filename />
-  <LaunchDate>24/03/2016 17:32:56</LaunchDate>
-  <SourceSpecificationLastEdited>09/01/2015</SourceSpecificationLastEdited>
+  <LaunchDate>12/04/2016 12:09:02</LaunchDate>
+  <SourceSpecificationLastEdited>05/01/2016</SourceSpecificationLastEdited>
   <Facet>
     <FacetType>Problem</FacetType>
-    <Author>John Smith|123456</Author>
+    <Author>Kos|1234</Author>
     <FacetSpecification>
       <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
       <FacetSpecificationLink>CaseStudy120001_Problem.xml</FacetSpecificationLink>
@@ -17,7 +17,7 @@
   </Facet>
   <Facet>
     <FacetType>Solution</FacetType>
-    <Author>John Smith</Author>
+    <Author>Kos</Author>
     <FacetSpecification>
       <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
       <FacetSpecificationLink>CaseStudy120001_Solution.xml</FacetSpecificationLink>

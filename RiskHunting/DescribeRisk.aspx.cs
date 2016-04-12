@@ -784,9 +784,10 @@ namespace RiskHunting
 			ResetForm ();
 			Response.Redirect("DescribeRisk.aspx");
 
+
 		}
 
-		public virtual void imageClicked(object sender, EventArgs args)
+		public async virtual void imageClicked(object sender, EventArgs args)
 		{
 			if (CheckTextBox (RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description) && CheckTextBox (RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author)) {
 				Save ();
@@ -797,6 +798,7 @@ namespace RiskHunting
 				alert_message_error.Visible = true;
 				alert_message_success.Visible = false;
 			}
+
 
 		}
 
@@ -1193,7 +1195,7 @@ namespace RiskHunting
 			SortedList all = new SortedList ();
 			DirectoryInfo dir = new DirectoryInfo(dirPath);
 			//			FileInfo[] FileList = dir.GetFiles("*.*", SearchOption.AllDirectories);
-			FileInfo[] FileList = dir.GetFiles().OrderByDescending(p => p.CreationTime).ToArray();
+			FileInfo[] FileList = dir.GetFiles().Where(n => !n.FullName.EndsWith(".DS_Store")).OrderByDescending(p => p.CreationTime).ToArray();
 			//Array.Reverse(FileList);
 			NLP.StringProc str = new NLP.StringProc();
 			char[] deliminator = new char[] { 'y' };

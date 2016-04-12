@@ -66,14 +66,13 @@
 		</div>
 	</div>
 
-	<!--<div id="topbar2Sub">
+	<div id="topbar2Sub">
 		<div id="multiselectionbuttonsSub">
-			<a id="pressed" href="">Ideas from previous risks</a>
-			<a href="javascript:doLoad('CreateIdeas_SameRisk.aspx');">Ideas from new risk</a>
-			<a href="javascript:doLoad('CreateIdeas_Superheroes.aspx');">Ideas from Superheroes</a>
-
+			<a id="pressed" href=""><asp:Label ID="LabelSubNavigationBarLeft" Runat="server"></asp:Label></a>
+			<a href="javascript:doLoad('CreateIdeas_SameRisk.aspx');"><asp:Label ID="LabelSubNavigationBarMiddle" Runat="server"></asp:Label></a>
+			<!--<a href="javascript:doLoad('CreateIdeas_Superheroes.aspx');"><asp:Label ID="LabelSubNavigationBarRight" Runat="server"></asp:Label></a>-->
 		</div>
-	</div>-->
+	</div>
 		
 	<span id="loading"></span>
 

@@ -23,7 +23,7 @@ namespace RiskHunting
 
 			if (lang.ToLower().CompareTo("en") == 0 )
 			{
-				culture = "en-US";
+				culture = "en-GB";
 			}
 			if (lang.ToLower().CompareTo("it") == 0 || string.IsNullOrEmpty(culture))
 			{

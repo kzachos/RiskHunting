@@ -50,26 +50,26 @@
     		</a>
    			<a href="javascript:doLoad('DescribeRisk.aspx');" >
 				&nbsp;&nbsp;&nbsp; <img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-1-icon.png" />
-				Describe Risk
+				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="rightbutton">
 			<a href="javascript:doLoad('ResolveRisk.aspx');">
 				<img alt="home" style="position:relative; TOP:2px;  height: 65%" src="Theme/images/numbers-3-icon.png" />
-				Resolve Risk
+				<asp:Label ID="LabelNavigationBarRight" Runat="server"></asp:Label>
 			</a> 
 		</div>
 		<div id="multiselectionbuttons">
 			<img alt="home" style="position:relative; TOP:2px;  height: 45%" src="Theme/images/numbers-2-filled-icon.png" /> 
-			Create Ideas
+			<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>
 	</div>
 
 	<div id="topbar2Sub">
 		<div id="multiselectionbuttonsSub">
-			<a href="javascript:doLoad('CreateIdeas_PastRisks.aspx');">Ideas from previous risks</a>
-			<a id="pressed" href="">Ideas from new risk</a>
-			<a href="javascript:doLoad('CreateIdeas_Superheroes.aspx');">Ideas from Superheroes</a>
+			<a href="javascript:doLoad('CreateIdeas_PastRisks.aspx');"><asp:Label ID="LabelSubNavigationBarLeft" Runat="server"></asp:Label></a>
+			<a id="pressed" href=""><asp:Label ID="LabelSubNavigationBarMiddle" Runat="server"></asp:Label></a>
+			<!--<a href="javascript:doLoad('CreateIdeas_Superheroes.aspx');"><asp:Label ID="LabelSubNavigationBarRight" Runat="server"></asp:Label></a>-->
 		</div>
 	</div>
 		
@@ -109,7 +109,7 @@
 			<ul class="pageitembutton">
 				<div id="generatePrompts" runat="server">
 					<li class="button3">
-						<asp:Button id="GenerateAgain" runat="server" text="GENERATE NEW CREATIVE PROMPTS" onclick="morePromptsClicked"></asp:Button>
+						<asp:Button id="GenerateAgain" runat="server" onclick="morePromptsClicked"></asp:Button>
 					</li>
 				</div>
 			</ul>
@@ -117,7 +117,7 @@
 			<ul class="pageitembutton">
 				<div id="describeRiskDiv" runat="server">
 					<li class="buttonGrey">
-						<asp:Button id="ReturnDescribeRisk" runat="server" text="RETURN TO YOUR RISK" onclick="returnClicked"></asp:Button>
+						<asp:Button id="ReturnDescribeRisk" runat="server" onclick="returnClicked"></asp:Button>
 					</li>
 				</div>
 			</ul>

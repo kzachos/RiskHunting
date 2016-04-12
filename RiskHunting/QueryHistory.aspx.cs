@@ -93,6 +93,7 @@ namespace RiskHunting
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
+
 			if (!Page.IsPostBack) {
 				Console.WriteLine ("Page_Load - NOT Page.IsPostBack");
 				GenerateQueryHistory();
@@ -287,7 +288,8 @@ namespace RiskHunting
 			for (int i = 0; i <= max; i++)
 			{
 				FileInfo FI = FileList[i];
-				all.Add(FI.FullName);
+				if (!FI.FullName.Contains(".DS_Store"))
+					all.Add(FI.FullName);
 			}
 			return all;
 		}

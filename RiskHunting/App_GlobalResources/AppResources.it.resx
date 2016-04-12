@@ -154,7 +154,7 @@
     <value>Tipo di (eventuale) lesione</value>
   </data>
   <data name="DescribeRisk.Form.Label.DateOfIncident" xml:space="preserve">
-    <value>Dala dell&apos;incidente</value>
+    <value>Data dell&apos;incidente</value>
   </data>
   <data name="DescribeRisk.Form.Label.UploadPicture" xml:space="preserve">
     <value>Carica una fotografia</value>
@@ -349,7 +349,7 @@
     <value>C&apos;è stato un problema eliminando l&apos;immagine.</value>
   </data>
   <data name="CreateIdeas.NavigationBar.Title" xml:space="preserve">
-    <value>Crea Idee dai Rischi Precedenti</value>
+    <value>Crea Idee</value>
   </data>
   <data name="CreateIdeas.NavigationBar.Left" xml:space="preserve">
     <value>Descrivi il Rischio</value>
@@ -602,6 +602,24 @@
   </data>
   <data name="Summary.Email.Label.RiskReportGeneratedLong" xml:space="preserve">
     <value>Un rapporto è stato generato per il rischio</value>
+  </data>
+  <data name="CreateIdeas.SubNavigationBar.Left" xml:space="preserve">
+    <value>Idee dai Rischi Precedenti</value>
+  </data>
+  <data name="CreateIdeas.SubNavigationBar.Right" xml:space="preserve">
+    <value>Idee da Supereroi</value>
+  </data>
+  <data name="CreateIdeas.SubNavigationBar.Middle" xml:space="preserve">
+    <value>Idee da nuovo rischio</value>
+  </data>
+  <data name="CreateIdeas.SameRisk.Button.GenerateAgain" xml:space="preserve">
+    <value>Generare nuove richieste creative</value>
+  </data>
+  <data name="CreateIdeas.SameRisk.Button.ReturnDescribeRisk" xml:space="preserve">
+    <value>Torna il vostro rischio</value>
+  </data>
+  <data name="CreateIdeas.SameRisk.Notification.FailedGeneratePrompts" xml:space="preserve">
+    <value>Impossibile generare alcuna richiesta di creatività . Hai cercato di estendere la descrizione del rischio?</value>
   </data>
 
 </root>
