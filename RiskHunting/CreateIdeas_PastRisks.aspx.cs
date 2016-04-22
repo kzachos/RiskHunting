@@ -7,6 +7,9 @@ using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
+using System.Threading.Tasks;
+using System.Globalization;
+using System.Threading;
 
 namespace RiskHunting
 {
@@ -48,6 +51,9 @@ namespace RiskHunting
 				Session.Remove (Sessions.personasState);
 			if (Sessions.CreativityPromptsPastRiskState != null) 
 				Session.Remove (Sessions.creativityPromptsPastRiskState);
+
+			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+
 			if (!Page.IsPostBack) {
 				Console.WriteLine ("Page_Load - NOT Page.IsPostBack");
 				Util.AccessLog(Util.ScreenType.CreateIdea_PastRisks);
@@ -58,12 +64,13 @@ namespace RiskHunting
 
 				InitLabels ();
 
+
 				this.sourceId = DetermineID ();
 				this.responseUri = DetermineResponseUri ();
 				if (!responseUri.Equals (String.Empty)) {
 					//				Session.Remove ("CURRENT_RISK_DESC");
 					//				Session.Remove ("CREATIVITY_PROMPTS");
-					GenerateMatchedSources (responseUri, 0, Constants.MaxPastRisksAtATime - 1, false);
+					GenerateMatchedSources (responseUri, 0, Constants.MaxPastRisksAtATime - 1, false, currentCulture);
 				}
 				else
 					alert_message_guidance.Visible = false;
@@ -77,7 +84,7 @@ namespace RiskHunting
 				if (!responseUri.Equals (String.Empty)) {
 					//				Session.Remove ("CURRENT_RISK_DESC");
 					//				Session.Remove ("CREATIVITY_PROMPTS");
-					GenerateMatchedSources (responseUri, 0, Constants.MaxPastRisksAtATime - 1, false);
+					GenerateMatchedSources (responseUri, 0, Constants.MaxPastRisksAtATime - 1, false, currentCulture);
 				}
 				else
 					alert_message_guidance.Visible = false;
@@ -168,7 +175,7 @@ namespace RiskHunting
 
 				RiskHunting.eddieService.EDDiEWebService eddie = new RiskHunting.eddieService.EDDiEWebService();
 				eddie.Timeout = 3000000;
-				string eddieResponseXml = eddie.PerformEddieDomain(requestXml, "Risk");
+				string eddieResponseXml = eddie.PerformEddieDomain(requestXml, "RiskMultilanguage");
 
 				watch.Stop();
 				// Get the elapsed time as a TimeSpan value.
@@ -210,7 +217,7 @@ namespace RiskHunting
 			XmlProc.RequestSerialized.SimilarityType similarityType = request.SimilarityType;
 			XmlProc.RequestSerialized.RequestDataSource dst = request.DataSource[0];
 			XmlProc.RequestSerialized.RequestTarget target = (XmlProc.RequestSerialized.RequestTarget)request.Target[0];
-			target.TargetDescription = GenerateTargetDescription();
+			target.TargetDescription = GenerateTargetDescription().Result;
 
 			DateTime now = DateTime.Now;
 			requestNew.DateTime = now.ToString();
@@ -225,12 +232,21 @@ namespace RiskHunting
 			return requestNew;
 		}
 
-		private string GenerateTargetDescription ()
+		async Task<string> GenerateTargetDescription ()
 		{
 			string content = String.Empty;
 			content += "[InjuryNature]: " + String.Empty;
 			content += " [LocationDetail]: " + this.currentRisk.LocationDetail;
-			content += " [Content]: " + this.currentRisk.Content;
+
+			var lang = LanguageDetection.DetectLanguage (this.currentRisk.Content);
+			if (!lang.language.Equals("en")) 
+			{
+				Translator tr = new Translator();	
+				var task = await tr.TranslateString (this.currentRisk.Content, "en");
+				content += " [Content]: " + task;
+			}
+			else
+				content += " [Content]: " + this.currentRisk.Content;
 			content += " [BodyPart]: " + this.currentRisk.BodyPart;
 			return content;
 
@@ -332,7 +348,7 @@ namespace RiskHunting
 			return responseUri; 
 		}
 
-		private void GenerateMatchedSources(string responseUri, int startIndex, int max, bool fromSearch)
+		private void GenerateMatchedSources(string responseUri, int startIndex, int max, bool fromSearch, CultureInfo currentCulture)
 		{
 			responses.InnerHtml = String.Empty;
 			XmlProc.ResponseSerialized.MatchedSources response = XmlProc.ObjectXMLSerializer<XmlProc.ResponseSerialized.MatchedSources>.Load(responseUri);
@@ -346,7 +362,7 @@ namespace RiskHunting
 					XmlProc.ResponseSerialized.MatchedSourcesMatchedSource matchedSource = matchedSources [i];
 					if (!matchedSource.OverallMatchValue.Trim().Equals(String.Empty))
 						if (Convert.ToDouble (matchedSource.OverallMatchValue) >= Constants.THRESHOLD)
-							responses.InnerHtml += GenerateMatchedSourceHtml (matchedSource);
+							responses.InnerHtml += GenerateMatchedSourceHtml (matchedSource, currentCulture);
 				}
 				Console.WriteLine (responses.InnerHtml);
 				if (responses.InnerHtml.Trim ().Equals (String.Empty)) {
@@ -378,17 +394,23 @@ namespace RiskHunting
 			}
 		}
 
-		private string GenerateMatchedSourceHtml(XmlProc.ResponseSerialized.MatchedSourcesMatchedSource matchedSource)
+		private string GenerateMatchedSourceHtml(XmlProc.ResponseSerialized.MatchedSourcesMatchedSource matchedSource, CultureInfo currentCulture)
 		{
+			string descr;
+			if (!currentCulture.ToString ().Contains ("en")) {
+				descr = Util.ExtractAttributeContentFromString (matchedSource.Content, "Title");
+			} else
+				descr = Util.ExtractAttributeContentFromString (matchedSource.Content, "Content");
 			int n;
 			bool isNumeric = int.TryParse(matchedSource.SourceName, out n);
 			string riskName = isNumeric ? Util.ExtractAttributeContentFromString (matchedSource.Content, "Content").ExtractKeywords ().TruncateAtWord (10): matchedSource.SourceName;
 			var bodyPart = Util.ExtractAttributeContentFromString (matchedSource.Content, "BodyPart").Equals (String.Empty) ? "Not specified" : Util.ExtractAttributeContentFromString (matchedSource.Content, "BodyPart");
 			return Tag1 + Tag2 + matchedSource.SourceId + Tag3 + Tag4 + riskName + Tag5 + Tag6 +
-				Util.ExtractAttributeContentFromString (matchedSource.Content, "Content") + Tag7 + 
+				descr + Tag7 + 
 				Tag8 + "<b>Location</b>: " + Util.ExtractAttributeContentFromString (matchedSource.Content, "LocationDetail") + 
-				"&nbsp;&nbsp;&nbsp;" + "<b>Body Part</b>: " + bodyPart + 
 				"&nbsp;&nbsp;&nbsp;" + 
+//				"<b>Body Part</b>: " + bodyPart + 
+//				"&nbsp;&nbsp;&nbsp;" + 
 //				" <b>Created</b>: " + Util.FormatDate () + 
 				Tag9 + Tag10 + Tag11 + Tag12;
 		}
@@ -402,11 +424,12 @@ namespace RiskHunting
 				this.sourceId = this.requestId;
 				RetrieveCurrentRisk ();
 				try {
+					CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 					var ok = FindRisks ();
 //					if (ok) {
 					var processGuidanceText = Util.GenerateProcessGuidance ("riskResolutions");
 					creativeGuidance.InnerText = processGuidanceText.Equals (String.Empty) ? defaultProcessGuidance : processGuidanceText;
-					GenerateMatchedSources (responseUri, 0, Constants.MaxPastRisksAtATime - 1, true);
+					GenerateMatchedSources (responseUri, 0, Constants.MaxPastRisksAtATime - 1, true, currentCulture);
 //					}
 				}
 				catch (System.Web.Services.Protocols.SoapException e)
@@ -414,6 +437,7 @@ namespace RiskHunting
 					alert_message_success.Visible = false;
 					alert_message_error.Visible = true;
 					errorMessage.InnerText =AppResources.CreateIdeas_Notification_ServiceUnavailable;
+//					errorMessage.InnerText = e.ToString();
 				}
 			}
 

@@ -3,12 +3,12 @@
   <FacetType>Problem</FacetType>
   <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
   <Author>Kos|123213</Author>
-  <LaunchDate>12/04/2016 18:04:26</LaunchDate>
+  <LaunchDate>22/04/2016 23:43:16</LaunchDate>
   <SourceSpecificationLastEdited>12/01/2016</SourceSpecificationLastEdited>
   <FacetSpecificationData>
-    <Content>Quando si bloccano i cuscinetti durante l'innesto sul fuso, per estrarli occorre smontare l'intero fuso con il rischio di caduta dello stesso</Content>
-    <InjuryNature>Abrasioni/Tagli/Lacerazione</InjuryNature>
-    <LocationDetail>Linea dei pedoni|00</LocationDetail>
+    <Content>La molla di ritenuta su porta per uscita dal reparto lato sinistro verso la palazzina bianca, si sta staccando, con il rischio di caduta del pezzo con conseguenze dannose per il passaggio di persone</Content>
+    <InjuryNature>Abrasions/Cuts/Laceration</InjuryNature>
+    <LocationDetail>Pedestal Line|00</LocationDetail>
     <BodyPart>Whole body</BodyPart>
     <InjuryCause />
     <IncidentPriority />

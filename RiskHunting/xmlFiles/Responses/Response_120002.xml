@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<MatchedSources responseId="" similarityType="" dataSourceType="">
+    <MatchedSource>
+        <SourceId>200897</SourceId>
+        <SourceName>36716</SourceName>
+        <Content>[Domain]: Risk[Content]: The placement of the wiring loom operator services risked hitting the head against a bracket and was not wearing the protective cap [InjuryNature]: Nel posizionamento del cablaggio telaio servizi l'operatore rischiava di urtare il capo contro una staffa e non indossava il berretto protettivo [LocationDetail]: Postazione 38, Montaggio veicoli civili [BodyPart]:  [InjuryCause]: Omesso impiego DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Nel posizionamento del cablaggio telaio servizi l'operatore rischiava di urtare il capo contro una staffa e non indossava il berretto protettivo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-04-30 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|25];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>100</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201395</SourceId>
+        <SourceName>14184</SourceName>
+        <Content>[Domain]: Risk[Content]: Plastic cable ties and fat residue on the ground with risk of slipping [InjuryNature]: Residuo di fascette di plastica e grasso per terra con rischio di scivolamento [LocationDetail]: Postazione 53, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Residuo di fascette di plastica e grasso per terra con rischio di scivolamento [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-02-17 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|23];[Action Plan: Sensibilizzare operatore sulla necessit? di eseguire cicli di pulizia];[Notes: ];[Dates: 2014-02-27 00:00:00.000|2014-02-27 00:00:00.000]</Content>
+        <OverallMatchValue>71</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200908</SourceId>
+        <SourceName>35844</SourceName>
+        <Content>[Domain]: Risk[Content]: Wet booths with risk slipping [InjuryNature]: Cabine bagnate internamente con rischio scivolamento [LocationDetail]: Reparto sellatura cabine civili [BodyPart]:  [InjuryCause]: Cabine non protette da agenti atmosferici||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Cabine bagnate internamente con rischio scivolamento [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-04-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|39];[Action Plan: Stoccare cabine in area coperta];[Notes: Inserimento cabine con sufficiente anticipo per evitare l'entrata di cabine bagnate in linea, attualmente non abbiamo zone coperte per poter stoccare al coperto tutte le cabine];[Dates: |]</Content>
+        <OverallMatchValue>71</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200759</SourceId>
+        <SourceName>42800</SourceName>
+        <Content>[Domain]: Risk[Content]: Not cleaning oil ashore with risk slipping [InjuryNature]: Mancata pulizia olio a terra con rischio scivolamento [LocationDetail]: Postazione 48, Montaggio veicoli civili [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Mancata pulizia olio a terra con rischio scivolamento [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-13 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>71</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200593</SourceId>
+        <SourceName>65911</SourceName>
+        <Content>[Domain]: Risk[Content]: Inside the holding area of the rep, the material is stored in booths upholstered over badly, it could slip, fall and invest someone, if close [InjuryNature]: All?interno della holding area del rep sellatura cabine, il materiale ? stoccato in malo modo, che potrebbe scivolare, cadere e investire qualcuno, se nelle vicinanza [LocationDetail]: reparto sellatura cabine - in corrispondenza TR2 - postaz. 5 [BodyPart]:  [InjuryCause]: atteggiamento / comportamento ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre |00:00:00 [ShiftType]: reparto sellatura cabine (qualit?)  [Title]: All?interno della holding area del rep sellatura cabine, il materiale ? stoccato in malo modo, che potrebbe scivolare, cadere e investire qualcuno, se nelle vicinanza [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|21];[Action Plan: Sistemare in modo ordinato e sicuro il materiale presente  all?interno della holding area del rep sellatura cabine (da valutare la possibilit?  assicurarsi una holding area segregata)];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>71</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200580</SourceId>
+        <SourceName>65798</SourceName>
+        <Content>[Domain]: Risk[Content]: The rear shock crossbow (left and right) of the second axis, after it has been mounted in the socket, is placed in a vertical position, no strings attached so after a bump accentale could turn "and hit the operators that are in that range" [InjuryNature]: L?ammortizzatore posteriore balestra  (destro e sinistro) del secondo asse,  dopo che ? stato montato sul supporto, viene messo in posizione verticale, senza alcun vincolo pertanto, a seguito di un urto accentale potrebbe ?ruotare? e colpire  gli operator [LocationDetail]: montaggio civili - Q1 postazione 33 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: montaggio civili  [Title]: L?ammortizzatore posteriore balestra  (destro e sinistro) del secondo asse,  dopo che ? stato montato sul supporto, viene messo in posizione verticale, senza alcun vincolo pertanto, a seguito di un urto accentale potrebbe ?ruotare? e colpire  gli operatori che si trovano in quel raggio d?azione      [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|76];[Action Plan: Valutare la possibilit? di utilizzare  un vincolo / bloccaggio che possa impedire agli ammortizzatori posteriori balestra  di ruotare,  pertanto di colpire  gli operatori che si trovano in quel raggio d?azione  ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>71</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200565</SourceId>
+        <SourceName>61451</SourceName>
+        <Content>[Domain]: Risk[Content]: During the winter, whenever is opening the gates Assembly Department military vehicles, it generates a current of cold air hitting neighbouring stations operators. [InjuryNature]: Nel periodo invernale, ogni qualvolta avviene l?apertura del portone automatico reparto montaggio veicoli militari, si genera una corrente d?aria gelida che colpisce gli operatori delle postazioni limitrofe. [LocationDetail]: reparto Montaggio Militari postzione 4/5 [BodyPart]:  [InjuryCause]: debolezza di progetto ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: addetto Montaggio Militari  [Title]: Nel periodo invernale, ogni qualvolta avviene l?apertura del portone automatico reparto montaggio veicoli militari, si genera una corrente d?aria gelida che colpisce gli operatori delle postazioni limitrofe. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Sarebbe opportuno installare un doppio portone / tunnel, o getto d?aria, o altra soluzione equivalente ];[Notes: Soluzione al momento non percorribile. Verr? valutata al momento di sostituire l'impianto di riscaldamento (attivit? prevista a budget 2016)];[Dates: |]</Content>
+        <OverallMatchValue>71</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200412</SourceId>
+        <SourceName>36500</SourceName>
+        <Content>[Domain]: Risk[Content]: the manhole in cement in the passageway that connects the warehouse carts cumbersome to spare despite packing area has already been repaired is crumbling again. The crumbling produces stones that the rubber contact trolley/soil may splash out and hit an operator to work, for this as you can see from the picture I attached the are separated with some pins to prevent that from happening.  [InjuryNature]: il chiusino in cemento nella zona di passaggio carrelli che collega il magazzino ingombrante al magazzino ricambi area imballaggio nonostante sia gi? stato riparato si sta sgretolando di nuovo. Lo sgretolamento produce sassi che al passaggio del carrello  [LocationDetail]: zona di passaggio carrelli che collega il magazzino ingombrante al magazzino ricambi area imballaggio  [BodyPart]:  [InjuryCause]: chiusino usurato dal tempo||||| [IncidentPriority]: sostituzione chiusino in cemento con chiusino in ghisa/ferro [IncidentStatus]: transito carrello [RootCause]:  [RoutineWork]: centrale| [ShiftType]: passaggio carrello [Title]: il chiusino in cemento nella zona di passaggio carrelli che collega il magazzino ingombrante al magazzino ricambi area imballaggio nonostante sia gi? stato riparato si sta sgretolando di nuovo. Lo sgretolamento produce sassi che al passaggio del carrello a contatto gomma/suolo potrebbero schizzare e colpire un operatore al lavoro, per questo come si vede dalla foto in allegato ho delimitato l'are con dei birilli per evitare che accada. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-04-29 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: sostituzione chiusino in cemento con chiusino in ghisa/ferro];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>71</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201386</SourceId>
+        <SourceName>14225</SourceName>
+        <Content>[Domain]: Risk[Content]: DPI does not readily identified by card worker in your station [InjuryNature]: Scheda DPI non prontamente individuata dal lavoratore nella sua postazione [LocationDetail]: Postazione 37, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Scheda DPI non prontamente individuata dal lavoratore nella sua postazione [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-02-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 1|11];[Action Plan: Formare il lavoratore su deve recepire prontamnete le informazioni sui DPI relativi alla sua postazione];[Notes: ];[Dates: 2014-02-28 00:00:00.000|2014-02-26 00:00:00.000]</Content>
+        <OverallMatchValue>68</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200910</SourceId>
+        <SourceName>34304</SourceName>
+        <Content>[Domain]: Risk[Content]: the worker does not remember the location of SDS in rerparto and don't know the adapter DPI   [InjuryNature]: il lavoratore non ricorda l'ubicazione delle SDS in rerparto e non conosce la scheda DPI [LocationDetail]: Q3 post 63 [BodyPart]:  [InjuryCause]: formazione no adeguata||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: pomeriggio| [ShiftType]: montaggio  motore cambio  [Title]: il lavoratore non ricorda l'ubicazione delle SDS in rerparto e non conosce la scheda DPI   [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-25 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 1|11];[Action Plan: sensibilizzare / informare  l?operatore ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>68</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200786</SourceId>
+        <SourceName>42136</SourceName>
+        <Content>[Domain]: Risk[Content]: In the case of contractor administered and/or worker, there is no evidence of formal training and coaching of the employee making the Astra [InjuryNature]: Nel caso di lavoratore a contratto somministrato  e/o lavoratore distaccato, non vi ? evidenza formale  del lavoratore Astra che effettua l?affiancamento e addestramento  [LocationDetail]: Montaggio Civili [BodyPart]:  [InjuryCause]:  gestione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: Montaggio Civili [Title]: Nel caso di lavoratore a contratto somministrato  e/o lavoratore distaccato, non vi ? evidenza formale  del lavoratore Astra che effettua l?affiancamento e addestramento  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-09 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|40];[Action Plan: Valutare la possibilit? di installare un braccio antropomorfo  per la presa e il  posizionamento sul veicolo  dello  pneumatico (o soluzione tecnica equivalente) ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>68</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200781</SourceId>
+        <SourceName>42145</SourceName>
+        <Content>[Domain]: Risk[Content]: In the case of contractor administered and/or worker, there is no evidence of formal training and coaching of the employee making the Astra [InjuryNature]: Nel caso di lavoratore a contratto somministrato  e/o lavoratore distaccato, non vi ? evidenza formale  del lavoratore Astra che effettua l?affiancamento e addestramento  [LocationDetail]: Montaggio Militari - tutte le postazioni [BodyPart]:  [InjuryCause]: gestione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: /| [ShiftType]: Montaggio Militari  [Title]: Nel caso di lavoratore a contratto somministrato  e/o lavoratore distaccato, non vi ? evidenza formale  del lavoratore Astra che effettua l?affiancamento e addestramento  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-10 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|40];[Action Plan: Formalizzare   sul diario prevenzionale l?avvenuto l?affiancamento e addestramento (nel caso di lavoratore a contratto somministrato  e/o lavoratore distaccato)];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>68</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200388</SourceId>
+        <SourceName>34307</SourceName>
+        <Content>[Domain]: Risk[Content]: does the worker use of PPE ear protectors are not provided by the company (with arches) [InjuryNature]: procurare al lavoratore occhiali antinfortunistici con lenti graduate [LocationDetail]: carpenteria telai, postazione 1 [BodyPart]:  [InjuryCause]: mezzo protettivo non previsto ( inteso come versione con archetto)||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: pomeriggio |00:00:00 [ShiftType]: montaggio telai [Title]: il lavoratore utilizza dei DPI otoprotettori non forniti dall'azienda (modello con archetti) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-25 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|76];[Action Plan: valutare livello di protezione del DPI e, se del caso introdurne l?uso in azienda];[Notes: Sensibilizzato lavoratore all'uso dei DPI aziendali];[Dates: |]</Content>
+        <OverallMatchValue>68</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201418</SourceId>
+        <SourceName>13980</SourceName>
+        <Content>[Domain]: Risk[Content]: Failure to use PPE (Cap) head protection [InjuryNature]: Mancato utilizzo DPI (berretto) di protezione del capo [LocationDetail]: Postazione 31, Montaggio veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|10:00:00 [ShiftType]:  [Title]: Mancato utilizzo DPI (berretto) di protezione del capo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-01-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|25];[Action Plan: Sensibilizzare operatore su utilizzo dei DPI];[Notes: ];[Dates: 2014-02-24 00:00:00.000|2014-02-24 00:00:00.000]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201359</SourceId>
+        <SourceName>15349</SourceName>
+        <Content>[Domain]: Risk[Content]: Risk of bumping the head when you enter inside the frame for fitting pipe brackets compressor [InjuryNature]: Rischio di urtare il capo quando si entra all'interno del telaio per il montaggio delle staffe tubi compressore [LocationDetail]: Postazione 36, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]: Montaggio staffe tubi compressore [Title]: Rischio di urtare il capo quando si entra all'interno del telaio per il montaggio delle staffe tubi compressore [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-03-06 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|71];[Action Plan: Esporre OPL per l'uso del berretto antiurto quando si lavora all'interno del telaio];[Notes: OPL specifica esposta];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201125</SourceId>
+        <SourceName>25966</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: postazione 35, reparto montaggio civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-10-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201081</SourceId>
+        <SourceName>25985</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: Postazione 9, reparto sellatura civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-10-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201025</SourceId>
+        <SourceName>28178</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: / [LocationDetail]: / [BodyPart]:  [InjuryCause]: /|/|/|/|/| [IncidentPriority]: / [IncidentStatus]: / [RootCause]:  [RoutineWork]: /| [ShiftType]: / [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-12-18 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201010</SourceId>
+        <SourceName>28379</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: / [BodyPart]:  [InjuryCause]: /|/|/|/|/| [IncidentPriority]: / [IncidentStatus]: / [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: / [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-11-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200973</SourceId>
+        <SourceName>31803</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]:  [BodyPart]:  [InjuryCause]: non corretto impiego dei DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200965</SourceId>
+        <SourceName>31820</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]:  [BodyPart]:  [InjuryCause]: non corretto impiego DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: primo turno|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-19 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200961</SourceId>
+        <SourceName>31830</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]:  [BodyPart]:  [InjuryCause]: non corretto impiego dei DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: primo turno |00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-19 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Un operatore non indossa correttamente il berretto di protezione del capo ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200957</SourceId>
+        <SourceName>31939</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]:  [BodyPart]:  [InjuryCause]: non corretto impiego dei DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200927</SourceId>
+        <SourceName>35128</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: carp teali postaz 1 [BodyPart]:  [InjuryCause]: disanttenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: assemblaggio telai [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200916</SourceId>
+        <SourceName>35291</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: montaggio dumper RD [BodyPart]:  [InjuryCause]: precauzione - attenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: montaggio dumper RD [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200912</SourceId>
+        <SourceName>35187</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: reparto Montaggio Civili Q2 [BodyPart]:  [InjuryCause]: distattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno| [ShiftType]: Montaggio veicoli Civili [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200886</SourceId>
+        <SourceName>36629</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: Postazione 1, Reparto veicoli militari [BodyPart]:  [InjuryCause]: Non corretto impiego DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-04-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di protezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200884</SourceId>
+        <SourceName>36619</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: Postazione 5, Reparto veicoli militari [BodyPart]:  [InjuryCause]: Non corretto impiego DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]: montaggio ponti e assali [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-04-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200872</SourceId>
+        <SourceName>37669</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: Q4 postazione 45  [BodyPart]:  [InjuryCause]: Non corretto uso DPI ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: montaggio veicoli civili  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-05-15 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di protezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200867</SourceId>
+        <SourceName>37642</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: Q2 postazione 38 [BodyPart]:  [InjuryCause]: non corretto impiego DPI ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: montaggio veicoli civili  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-05-15 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di protezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200851</SourceId>
+        <SourceName>37851</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: sellatura cabine postazione 4 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: sellatura cabine [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-05-19 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200848</SourceId>
+        <SourceName>37868</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: sellatura cabine postazione 10 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: sellatura cabine civile [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-05-19 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200806</SourceId>
+        <SourceName>40824</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo [LocationDetail]: Reparto delibera [BodyPart]:  [InjuryCause]: Non corretto impiego DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|22];[Action Plan: Sensibilizzare operatore al corretto utilizzo del berretto];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200800</SourceId>
+        <SourceName>40742</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: T2, verniciatura [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200776</SourceId>
+        <SourceName>42397</SourceName>
+        <Content>[Domain]: Risk[Content]: A cap of head protection has been deprived of the protective guard [InjuryNature]: Un berretto di protezione del capo ? stato privato della calotta di protezione [LocationDetail]: Magazzino produzione - preparazione kit (ex reparto delibera) [BodyPart]:  [InjuryCause]: atteggiamento / comportamento ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: Magazzino produzione  [Title]: Un berretto di protezione del capo ? stato privato della calotta di protezione [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-10 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|22];[Action Plan: ricordare al lavoratore che  i DPI non devono essere modificati ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200771</SourceId>
+        <SourceName>42485</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: carpenteria macchine [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]: precauzione / attenzione [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno| [ShiftType]: carpenteria macchine [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-15 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200766</SourceId>
+        <SourceName>42466</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: sellatura cabine  - postazione 3  [BodyPart]:  [InjuryCause]: precauzione / attenzione ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizizio turno|00:00:00 [ShiftType]: sellatura cabine [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-15 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200734</SourceId>
+        <SourceName>53195</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: sellatura cabine - TR1 postazione 3 [BodyPart]:  [InjuryCause]: precauzione / attenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno |00:00:00 [ShiftType]: sellatura cabine [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-10-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200716</SourceId>
+        <SourceName>60984</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: Montaggio Civili Q3 postazione 41  [BodyPart]:  [InjuryCause]: attenzione - disattenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: addetto Montaggio Civili Q3 postazione 41  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-12-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200713</SourceId>
+        <SourceName>61018</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap [InjuryNature]: inizio turno [LocationDetail]: sellatura cabine TR1- postazione 2 [BodyPart]:  [InjuryCause]: precauzione attenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: Un operatore non indossa correttamente il berretto di protezione del capo|00:00:00 [ShiftType]: Addetto sellatura cabine TR1- postazione 2 [Title]: Un operatore non indossa correttamente il berretto di protezione del capo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-11-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200702</SourceId>
+        <SourceName>61029</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: repart sellatura cabine TR2- postazione 3 [BodyPart]:  [InjuryCause]: precauzione - attenzione||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno  |00:00:00 [ShiftType]: addetto sellatura cabine TR2- postazione 3 [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-11-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200694</SourceId>
+        <SourceName>61416</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: reparto Montaggio Civili Q2 postaz 38 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]: addetto Montaggio Civili [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: addetto Montaggio Civili [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200626</SourceId>
+        <SourceName>61460</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: pearto Delibera  [BodyPart]:  [InjuryCause]: attenzione / disattenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno |00:00:00 [ShiftType]: addetto Delibera  [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di protezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200618</SourceId>
+        <SourceName>61493</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: reparto sellatura cabine civili TR1 postaz 3 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: addetto sellatura cabine [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|44];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200617</SourceId>
+        <SourceName>61481</SourceName>
+        <Content>[Domain]: Risk[Content]: An operator is not wearing proper head protection Cap  [InjuryNature]: Un operatore non indossa correttamente il berretto di protezione del capo  [LocationDetail]: reparto sellatura cabine militari TR2 postaz. 2 [BodyPart]:  [InjuryCause]: attenzione / disattenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: addetto sellatura cabine [Title]: Un operatore non indossa correttamente il berretto di protezione del capo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al corretto utilizzo del berretto di potezione del capo];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200154</SourceId>
+        <SourceName>20188</SourceName>
+        <Content>[Domain]: Risk[Content]: The banquet of work cutter head should be expanded (Tools) [InjuryNature]: Il banchetto di lavoro porta utensili deve essere ampliato (utensili sovrapposti) [LocationDetail]: Postazione 45, Reparto Montaggio Civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale |10:00:00 [ShiftType]:  [Title]: Il banchetto di lavoro porta utensili deve essere ampliato (utensili sovrapposti) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-06-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>41</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200328</SourceId>
+        <SourceName>29665</SourceName>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: Quality Gate non riscaldato [LocationDetail]: Quality Gate, reparto montaggio civili [BodyPart]:  [InjuryCause]: Debolezza di progetto||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale| [ShiftType]:  [Title]: Quality Gate non riscaldato [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-01-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Fornire l'area di riscaldamento];[Notes: La struttura non ? coibentata e non ? stata progettata per essere riscaldata. I materiali non sono ignufughi e pertanto non risulta possibile l'installazione di impianti di riscaldamento come stufe/lampade a raggi infrarossi];[Dates: |]</Content>
+        <OverallMatchValue>
+        </OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200207</SourceId>
+        <SourceName>23701</SourceName>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: doll system migliorabili [LocationDetail]: Reparto Dumper RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: doll system migliorabili [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-31 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|69];[Action Plan: Valutare modifica doll system];[Notes: Doll system verr? sostituita con attivit? wcm in reparto dumper. Per ora ok.];[Dates: |]</Content>
+        <OverallMatchValue>
+        </OverallMatchValue>
+    </MatchedSource>
+</MatchedSources>

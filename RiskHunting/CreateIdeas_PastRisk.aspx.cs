@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Collections.Specialized;
 using System.Globalization;
 using System.Threading;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace RiskHunting
 {
@@ -60,7 +62,10 @@ namespace RiskHunting
 				sourceId = Sessions.RiskState;
 
 			InitLabels ();
-			GenerateContent ();
+			if (Convert.ToInt32 (DetermineID ()) > 200000)
+				GenerateContentNew ();
+			else
+				GenerateContent ();
 
 			if (Sessions.CreativityPromptsPastRiskState != null) {
 //				if (Session ["CURRENT_PAST_RISK_DESC"] != null) 
@@ -79,8 +84,21 @@ namespace RiskHunting
 //					NLResponse = (List<NLResponseToken>)Session ["CURRENT_PAST_RISK_DESC"];
 //				else {
 //					NLResponse = new List<NLResponseToken> ();
-					RetrieveCurrentRisk ();
-					RetrieveNLData ();
+				RetrieveCurrentRisk ();
+			
+				CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
+
+				var descr = this.currentRiskDescription;
+//				var lang = LanguageDetection.DetectLanguage (descr);
+//				if (!lang.language.Equals("en")) 
+//				{
+//					Translator tr = new Translator();	
+//					var task = tr.TranslateString (descr, "en");
+//					RetrieveNLData (task.Result, lang.language, currentCulture);
+//				}
+//				else 
+					RetrieveNLData (descr, currentCulture);
+				
 //				}
 			}
 
@@ -91,7 +109,10 @@ namespace RiskHunting
 				Console.WriteLine ("Page_Init - Page.IsPostBack");
 				Util.AccessLog(Util.ScreenType.CreateIdea_PastRisk);
 				content2.Controls.Clear ();
-				GenerateContent ();
+				if (Convert.ToInt32 (DetermineID ()) > 200000)
+					GenerateContentNew ();
+				else
+					GenerateContent ();
 //				hint_box.Visible = false;
 			} else {
 				Console.WriteLine ("Page_Init - NOT Page.IsPostBack");
@@ -130,7 +151,7 @@ namespace RiskHunting
 		#region Creativity Prompts
 
 
-		void RetrieveNLData ()
+		void RetrieveNLData (string descr, CultureInfo currentCulture)
 		{
 			string errorMsg;
 			if(Util.ServiceExists(Constants.ANTIQUE_URI, false, out errorMsg)) {
@@ -138,7 +159,7 @@ namespace RiskHunting
 				try
 				{
 					System.Net.ServicePointManager.Expect100Continue = false;
-					var output = antique.NLParser (this.currentRiskDescription);
+					var output = antique.NLParser (descr);
 					this.NLResponse = Util.DeserializeNLResponse (output);
 					if (Sessions.CreativityPromptsPastRiskState != null)
 						Session.Remove(Sessions.creativityPromptsPastRiskState);
@@ -148,7 +169,7 @@ namespace RiskHunting
 				{
 				}
 				finally {
-					PrepareData ();
+					PrepareData (currentCulture);
 					PopulateData ();
 				}
 			}
@@ -163,7 +184,7 @@ namespace RiskHunting
 		}
 
 
-		List<string> GenerateGenericCreativityPrompts()
+		async Task<List<string>> GenerateGenericCreativityPrompts(CultureInfo currentCulture)
 		{
 			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
 			foreach(var item in NLResponse)
@@ -172,11 +193,44 @@ namespace RiskHunting
 					NLResponseTrimmed.Add (item);
 			}
 
+			if (!currentCulture.ToString ().Contains ("en"))
+			{
+				var ids = NLResponseTrimmed.Select(c => c.ID).ToArray();
+				var pos = NLResponseTrimmed.Select(c => c.Pos).ToArray();
+				var termValues = NLResponseTrimmed.Select(c => c.TermValue).ToArray();
+
+				var termValuesString = string.Empty;
+				for (int i = 0; i < termValues.Length; i ++)
+				{						
+					termValuesString += termValues[i] + ". ";
+				}
+				if (!termValuesString.Equals(String.Empty)) {
+					var NLResponseNew = new List<NLResponseToken>();
+					Translator tr = new Translator();	
+
+					var task = await tr.TranslateString (termValuesString, currentCulture.ToString ().Split(new char[] {'-'})[0]);
+					var res = task.Trim().Split(new char[] {'.'});
+					var c = 0;
+					for (int j = 0; j < res.Length; j++)
+					{
+						if (!res[j].Trim().Equals (String.Empty)) {
+							NLResponseToken itemNew = new NLResponseToken ();
+							itemNew.TermValue = res[j].Trim();
+							itemNew.ID = ids[j];
+							itemNew.Pos = pos[j];
+							NLResponseNew.Add (itemNew);
+						}
+					}
+					NLResponseTrimmed.Clear();
+					NLResponseTrimmed = NLResponseNew;
+
+				}
+
+			}
+
 			int count = 0;
 			List<string> ps = new List<string> ();
 			NLResponseTrimmed.Shuffle ();
-
-			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 
 			if (NLResponseTrimmed.Count > 5)
 				for (int i = 0; i < 4; i++) {
@@ -249,10 +303,10 @@ namespace RiskHunting
 			return ps;
 		}
 
-		void PrepareData ()
+		void PrepareData (CultureInfo currentCulture)
 		{
 			if (!Page.IsPostBack) {
-				CreativityPromptsFeed = GenerateGenericCreativityPrompts ();
+				CreativityPromptsFeed = GenerateGenericCreativityPrompts (currentCulture).Result;
 				//				CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
 				CreativityPromptsFeed.Shuffle ();
 
@@ -334,7 +388,10 @@ namespace RiskHunting
 				Util.AccessLog(Util.ScreenType.CreateIdea_PastRisk, Util.FeatureType.CreateIdea_PastRisk_GenerateNewPromptsButton);
 
 				content2.Controls.Clear ();
-				GenerateContent ();
+				if (Convert.ToInt32 (DetermineID ()) > 200000)
+					GenerateContentNew ();
+				else
+					GenerateContent ();
 				CreativityPromptsFeed = Sessions.CreativityPromptsPastRiskState;
 				CreativityPromptsFeed.Shuffle ();
 				PopulateData ();
@@ -409,6 +466,51 @@ namespace RiskHunting
 			}
 //			Console.WriteLine ("content.Controls: " + content.Controls.Count);
 		}
+
+		private void GenerateContentNew ()
+		{
+			string id = DetermineID ();
+			string responseUri = DetermineResponseUri ();
+
+			if (!responseUri.Equals (String.Empty)) {
+				XmlProc.ResponseSerialized.MatchedSources response = XmlProc.ObjectXMLSerializer<XmlProc.ResponseSerialized.MatchedSources>.Load (responseUri);
+
+				List<XmlProc.ResponseSerialized.MatchedSourcesMatchedSource> matchedSources = (List<XmlProc.ResponseSerialized.MatchedSourcesMatchedSource>)response.MatchedSource;
+
+				int counter = 0;
+				foreach (XmlProc.ResponseSerialized.MatchedSourcesMatchedSource matchedSource in matchedSources) {
+					if (matchedSource.SourceId == id) {
+						//                        currentIndex = matchedSourcesIds.IndexOfValue(id);
+						//SortedList elements = SeperateStringByChar(matchedSource.Content);
+
+						//						title.InnerHtml = String.Empty;
+						this.currentRiskDescription = Util.ExtractAttributeContentFromString (matchedSource.Content, "Content");
+						//						RiskDescription.Text = Util.ExtractAttributeContentFromString(matchedSource.Content, "Content");
+						string resText = String.Empty;
+						var recommendation = Util.ExtractAttributeContentFromString2 (matchedSource.Content, "Action Plan").Trim();
+						if (recommendation.Contains (";")) {
+							string[] recommendationArray = recommendation.Split (';');
+							for (int i = 0; i < recommendationArray.Length; i++) {
+								resText += GenerateHtml (recommendationArray [i]);
+							}
+						} else {
+							if (!recommendation.Trim().Equals (String.Empty))
+								resText += GenerateHtml (recommendation);
+						}
+
+
+						if (!resText.Equals(String.Empty))
+							content2.InnerHtml += "<br><span class=\"maintitle\">" + AppResources.PastRisk_Form_Label_PreviousResolutions + "</span>";
+						content2.InnerHtml += resText;
+						break;
+
+					}
+				}
+
+			}
+			//			Console.WriteLine ("content.Controls: " + content.Controls.Count);
+		}
+
 
 		private string DetermineID()
 		{

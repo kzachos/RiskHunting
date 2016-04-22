@@ -352,7 +352,7 @@ namespace RiskHunting
 				}
 
 			}
-
+				
 			int count = 0;
 			List<string> ps = new List<string> ();
 			NLResponseTrimmed.Shuffle ();
@@ -382,6 +382,7 @@ namespace RiskHunting
 					}
 				}
 			Console.WriteLine ("ps.Count: " + ps.Count);
+
 			return ps;
 		}
 
@@ -435,6 +436,15 @@ namespace RiskHunting
 				CreativityPromptsFeed = GenerateGenericCreativityPrompts (lang, currentCulture).Result;
 				//				CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
 				CreativityPromptsFeed.Shuffle ();
+
+//				Random rnd = new Random();
+//				int index = rnd.Next(1, 1000);
+//				string resourcesPath = Path.Combine (SettingsTool.GetApplicationPath(), "Resources");
+//				using (StreamWriter sw = new StreamWriter (Path.Combine (resourcesPath, "CreativityPrompts_" + index + ".csv")))
+//					foreach (var it in CreativityPromptsFeed) {
+//						var newit = it.Replace (',', ' ');
+//						sw.WriteLine (String.Format ("{0}", newit));
+//					}
 
 				Console.WriteLine ("****** PrepareData *******");
 				foreach (var item in CreativityPromptsFeed) {

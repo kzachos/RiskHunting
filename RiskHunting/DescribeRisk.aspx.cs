@@ -799,7 +799,37 @@ namespace RiskHunting
 				alert_message_success.Visible = false;
 			}
 
+//			string resourcesPath = Path.Combine (SettingsTool.GetApplicationPath(), "Resources");
+//			List<RiskDescription> values = File.ReadAllLines(Path.Combine(resourcesPath, "RiskDescriptions.csv"))
+//				.Skip(1)
+//				.Select(v => FromCsv(v))
+//				.ToList();
+//
+//			int min = 1000;
+//			int max = values.Count;
+//			Translator tr = new Translator();	
+//			Console.WriteLine ("*********START*************");
+//			for (int i=min; i < max; i++)
+//			{
+//				var task = await tr.TranslateString (values[i].OriginalText, "en");
+//				values [i].TranslatedText = task;
+////				Console.WriteLine (values[i].OriginalText + "~~~~~" + values[i].TranslatedText);
+//
+//			}
+//			Console.WriteLine ("*********END*************");
+//
+//			using(StreamWriter sw = new StreamWriter(Path.Combine(resourcesPath, "RiskDescriptions_translated.csv")))
+//				for (int i=min; i < max; i++)
+//					sw.WriteLine(String.Format("{0},{1}",values[i].OriginalText, values[i].TranslatedText));
 
+		}
+
+		public RiskDescription FromCsv(string csvLine)
+		{
+			//			string[] values = csvLine.Split(',');
+			RiskDescription rd = new RiskDescription();
+			rd.OriginalText = csvLine;
+			return rd;
 		}
 
 		public virtual void saveClicked(object sender, EventArgs args)
@@ -1225,6 +1255,14 @@ namespace RiskHunting
 			return allValues[all.Count-1].ToString();
 		}
 		#endregion
+
+	}
+
+
+	public class RiskDescription
+	{
+		public string OriginalText;
+		public string TranslatedText;
 
 	}
 }
