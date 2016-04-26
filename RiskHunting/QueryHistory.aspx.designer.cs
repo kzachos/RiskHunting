@@ -19,6 +19,12 @@ namespace RiskHunting {
 		
 		protected System.Web.UI.WebControls.Label LabelNavigationBarLeft;
 		
+		protected System.Web.UI.HtmlControls.HtmlGenericControl rightbutton;
+		
+		protected System.Web.UI.HtmlControls.HtmlAnchor onlineStatus;
+		
+		protected System.Web.UI.HtmlControls.HtmlAnchor offlineStatus;
+		
 		protected System.Web.UI.WebControls.Label LabelNavigationBarTitle;
 		
 		protected System.Web.UI.HtmlControls.HtmlForm form1;

@@ -218,6 +218,7 @@ namespace RiskHunting
 							itemNew.TermValue = res[j].Trim();
 							itemNew.ID = ids[j];
 							itemNew.Pos = pos[j];
+							Console.WriteLine (itemNew.Pos + ": " + itemNew.TermValue);
 							NLResponseNew.Add (itemNew);
 						}
 					}
@@ -275,9 +276,29 @@ namespace RiskHunting
 
 			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 
-			string[] valuesNP = new string[2] {"floor", "slippery"};
-			string[] valuesVP = new string[1] {"is wet"};
+			string[] valuesNP = {};
+			string[] valuesNP1 = {"presenza", "carrello", "ostruzione"};
 
+			string[] valuesNP2 = {"contenitore", "stabilizzatore", "cartone", "contenitore", "peso", "operatore"};
+			string[] valuesVP2 = {"essere in cartone pesante", "aprire si rompe verso il basso per il peso eccessivo del materiale", "essere sempre un rischio di collisione con l'operatore"};
+
+			string[] valuesNP3 = {"sentiero per pedoni", "ponti", "bilanciatore"};
+
+			string[] valuesNP4 = {"sentiero per pedoni"};
+
+			string[] valuesNP5 = {"parte", "ponti", "percorso"};
+
+			if (Convert.ToInt32 (DetermineID ()) == 201297)
+				valuesNP = valuesNP1;
+			else if (Convert.ToInt32 (DetermineID ()) == 200366)
+				valuesNP = valuesNP2;
+			else if (Convert.ToInt32 (DetermineID ()) == 201391)
+				valuesNP = valuesNP3;
+			else if (Convert.ToInt32 (DetermineID ()) == 200807)
+				valuesNP = valuesNP4;
+			else if (Convert.ToInt32 (DetermineID ()) == 200692)
+				valuesNP = valuesNP5;
+			
 			foreach (var item in valuesNP) {
 				if (!item.Equals (String.Empty)) {
 					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "NP", currentCulture);
@@ -289,16 +310,17 @@ namespace RiskHunting
 				}
 			}
 
-			foreach (var item in valuesVP) {
-				if (!item.Equals (String.Empty)) {
-					GenericCreativityPrompts g = new GenericCreativityPrompts (item, "VP", currentCulture);
-					foreach (string s in  g.genericCPs) {
-						//							Console.WriteLine (s);
-						ps.Add (s);
-						count++;
+			if (Convert.ToInt32 (DetermineID ()) == 200366)
+				foreach (var item in valuesVP2) {
+					if (!item.Equals (String.Empty)) {
+						GenericCreativityPrompts g = new GenericCreativityPrompts (item, "VP", currentCulture);
+						foreach (string s in  g.genericCPs) {
+							//							Console.WriteLine (s);
+							ps.Add (s);
+							count++;
+						}
 					}
 				}
-			}
 			Console.WriteLine ("ps.Count: " + ps.Count);
 			return ps;
 		}
@@ -306,8 +328,10 @@ namespace RiskHunting
 		void PrepareData (CultureInfo currentCulture)
 		{
 			if (!Page.IsPostBack) {
-				CreativityPromptsFeed = GenerateGenericCreativityPrompts (currentCulture).Result;
-				//				CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
+				if (Convert.ToString(Session["liveStatus"]) == "on")
+					CreativityPromptsFeed = GenerateGenericCreativityPrompts (currentCulture).Result;
+				else
+					CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
 				CreativityPromptsFeed.Shuffle ();
 
 				Console.WriteLine ("****** PrepareData *******");

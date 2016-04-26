@@ -93,6 +93,26 @@ namespace RiskHunting
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
+			#region--Show/hide offline/online link
+			if (!string.IsNullOrEmpty(Convert.ToString(Session["liveStatus"])))
+			{
+				if (Convert.ToString(Session["liveStatus"]) == "on")
+				{
+					offlineStatus.Visible = true;
+					onlineStatus.Visible = false;
+				}
+				else
+				{
+					onlineStatus.Visible = true;
+					offlineStatus.Visible = false;
+				}
+			}
+			else
+			{
+				onlineStatus.Visible = false;
+				offlineStatus.Visible = true;
+			}
+			#endregion--
 
 			if (!Page.IsPostBack) {
 				Console.WriteLine ("Page_Load - NOT Page.IsPostBack");

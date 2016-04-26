@@ -135,8 +135,11 @@ namespace RiskHunting
 
 		private string GenerateHtml(string idea)
 		{
+			var ideaEncode = System.Web.HttpUtility.UrlEncode(idea);
+			ideaEncode = ideaEncode.Replace("+", " ");
+			var ideaEscape = Uri.EscapeUriString (ideaEncode);
 			return LiStartTagMenu +
-				aStartTag + idea + aMidTag +
+				aStartTag + ideaEscape + aMidTag +
 				SpanStartTagName + idea + SpanEndTag +
 				SpanStartTagArrow + SpanEndTag + aEndTag + LiEndTag;
 		}

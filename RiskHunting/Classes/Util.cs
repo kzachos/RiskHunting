@@ -592,7 +592,7 @@ namespace RiskHunting
 			CultureInfo currentCulture = Thread.CurrentThread.CurrentUICulture;
 			switch (currentCulture.ToString ()) 
 			{
-			case "en":
+			case "en-GB":
 				if (text.StartsWith ("how to"))
 					formattedText = text.Replace ("how to ", String.Empty);
 
@@ -647,8 +647,36 @@ namespace RiskHunting
 				if (text.StartsWith ("evening out"))
 					formattedText = text.Replace ("evening out", "even out");
 				break;
-			case "it":
-				formattedText = text;
+			case "it-IT":
+				if (text.StartsWith ("come"))
+					formattedText = text.Replace ("come ", String.Empty);
+
+				else if (text.StartsWith ("se puoi"))
+					formattedText = text.Replace ("se puoi ", String.Empty);
+
+				else if (text.StartsWith ("se è possibile"))
+					formattedText = text.Replace ("se è possibile ", String.Empty);
+
+				else if (text.StartsWith ("how you"))
+					formattedText = text.Replace ("how you ", String.Empty);
+
+				else if (text.StartsWith ("se è possibile"))
+					formattedText = text.Replace ("se è possibile ", String.Empty);
+
+				else if (text.StartsWith ("come si potrebbe"))
+					formattedText = text.Replace ("come si potrebbe ", String.Empty);
+
+				else if (text.StartsWith ("se potessi"))
+					formattedText = text.Replace ("se potessi ", String.Empty);
+
+				else if (text.StartsWith ("cercar di"))
+					formattedText = text.Replace ("cercar di ", String.Empty);
+
+				else if (text.StartsWith ("cercando di"))
+					formattedText = text.Replace ("cercando di ", String.Empty);
+				
+				else 
+					formattedText = text;
 				break;
 			}
 

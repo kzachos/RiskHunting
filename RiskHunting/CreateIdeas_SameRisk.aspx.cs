@@ -150,9 +150,13 @@ namespace RiskHunting
 				var lang = LanguageDetection.DetectLanguage (query);
 				if (!lang.language.Equals("en")) 
 				{
-					Translator tr = new Translator();	
-					var task = tr.TranslateString (query, "en");
-					RetrieveNLData (task.Result, lang.language, currentCulture);
+					if (Convert.ToString (Session ["liveStatus"]) == "on") {
+						Translator tr = new Translator ();	
+						var task = tr.TranslateString (query, "en");
+						RetrieveNLData (task.Result, lang.language, currentCulture);
+					}
+					else
+						RetrieveNLData (query, lang.language, currentCulture);
 				}
 				else 
 					RetrieveNLData (query, lang.language, currentCulture);
@@ -341,6 +345,7 @@ namespace RiskHunting
 						if (!res[j].Trim().Equals (String.Empty)) {
 							NLResponseToken itemNew = new NLResponseToken ();
 							itemNew.TermValue = res[j].Trim();
+							Console.WriteLine (itemNew.TermValue);
 							itemNew.ID = ids[j];
 							itemNew.Pos = pos[j];
 							NLResponseNew.Add (itemNew);
@@ -402,8 +407,8 @@ namespace RiskHunting
 			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 
 
-			string[] valuesNP = new string[2] {"floor", "slippery"};
-			string[] valuesVP = new string[1] {"is wet"};
+			string[] valuesNP = new string[2] {"scatole", "corridoio"};
+			string[] valuesVP = new string[0] {};
 
 			foreach (var item in valuesNP) {
 				if (!item.Equals (String.Empty)) {
@@ -433,8 +438,10 @@ namespace RiskHunting
 		void PrepareData (string lang, CultureInfo currentCulture)
 		{
 			if (!Page.IsPostBack) {
-				CreativityPromptsFeed = GenerateGenericCreativityPrompts (lang, currentCulture).Result;
-				//				CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
+				if (Convert.ToString(Session["liveStatus"]) == "on")
+					CreativityPromptsFeed = GenerateGenericCreativityPrompts (lang, currentCulture).Result;
+				else
+					CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
 				CreativityPromptsFeed.Shuffle ();
 
 //				Random rnd = new Random();

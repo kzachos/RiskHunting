@@ -140,6 +140,7 @@ namespace RiskHunting
 			}
 			#endregion--
 
+//			Session["liveStatus"] = "on";
 
 			if (!Page.IsPostBack) {
 				Console.WriteLine ("Page_Load - NOT Page.IsPostBack");

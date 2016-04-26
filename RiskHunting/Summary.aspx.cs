@@ -189,6 +189,11 @@ namespace RiskHunting
 			Export.Text = AppResources.Summary_Form_Button_GenerateReport.ToUpper();
 			NewRisk.Text = AppResources.Summary_Form_Button_CreateNewRisk.ToUpper();
 
+			if (Convert.ToString (Session ["liveStatus"]) == "on")
+				submit.Visible = true;
+			else
+				submit.Visible = false;
+
 //			RiskName.Text = this.currentRisk.Name;
 //			RiskDescription.Text = this.currentRisk.Content;
 //			RiskAuthor.Text = this.currentRisk.Author;
@@ -456,7 +461,8 @@ namespace RiskHunting
 //			BuildPdf ();
 
 			GeneratePDF (false);
-			SendEmail (false);
+			if (Convert.ToString (Session ["liveStatus"]) == "on")
+				SendEmail (false);
 			GeneratePDF (true);
 
 //			Response.Redirect ("Summary.aspx");

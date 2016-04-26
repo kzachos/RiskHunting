@@ -14,6 +14,24 @@ namespace RiskHunting
 	{
 		protected override void InitializeCulture()
 		{
+			if (!string.IsNullOrEmpty(Request["liveStatus"]))
+			{
+				Session["liveStatus"] = Request["liveStatus"];
+			}
+			string liveStatus = Convert.ToString(Session["liveStatus"]);
+			string currentStatus = string.Empty;
+
+			if (liveStatus.ToLower().CompareTo("off") == 0 )
+			{
+				Session["liveStatus"] = "off";
+				currentStatus = "off";
+			}
+			if (liveStatus.ToLower().CompareTo("on") == 0 || string.IsNullOrEmpty(currentStatus))
+			{
+				Session["liveStatus"] = "on";
+				currentStatus = "on";
+			}
+
 			if (!string.IsNullOrEmpty(Request["lang"]))
 			{
 				Session["lang"] = Request["lang"];

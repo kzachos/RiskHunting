@@ -48,6 +48,14 @@ window.setTimeout(function() {
 				<asp:Label ID="LabelNavigationBarLeft" Runat="server"></asp:Label>
 			</a> 
 		</div>
+		<div id="rightbutton" runat="server">
+    		<a href="?liveStatus=on" runat="server" id="onlineStatus">
+    			ONLINE mode
+    		</a>
+    		<a href="?liveStatus=off" runat="server" id="offlineStatus">
+    			OFFLINE mode
+    		</a>
+		</div>
 		<div id="multiselectionbuttons">
 				<asp:Label ID="LabelNavigationBarTitle" Runat="server"></asp:Label>
 		</div>

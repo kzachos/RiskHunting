@@ -81,15 +81,15 @@ namespace RiskHunting
 					this.genericCPs.Add ("Pensa a come fornire una conchiglia o copertura per il *" + filler + "*");
 					this.genericCPs.Add ("Pensa a se èossibile fare una copia del *" + filler + "*");
 					this.genericCPs.Add ("Pensa a come si potrebbe combinare il *" + filler + "* con qualcos'altro");
-					this.genericCPs.Add ("Pensa a Se potessi fare di piu' con il *" + filler + "* o di meno con il *" + filler + "*");
+					this.genericCPs.Add ("Pensa a se potessi fare di piu' con il *" + filler + "* o di meno con il *" + filler + "*");
 					this.genericCPs.Add ("Pensa a se èossibile bilanciare il *" + filler + "* con qualcos'altro");
 					this.genericCPs.Add ("Pensa a come far il *" + filler + "* funzionare prima che sia necessario");
 					this.genericCPs.Add ("Pensa a come far il *" + filler + "* fare un sacco di cose diverse");
 					this.genericCPs.Add ("Pensa a come introdurre feedback nel di *" + filler + "*");
 					this.genericCPs.Add ("Pensa a come far il *" + filler + "* autosufficiente , in modo che utilizzi tutti i suoi rifiuti");
-					this.genericCPs.Add ("Pensa a come rimuovere qualcosa dal *" + filler + "* *" + filler + "*");
+					this.genericCPs.Add ("Pensa a come rimuovere qualcosa dal *" + filler + "*");
 					this.genericCPs.Add ("Pensa a come evitare lo stress nel *" + filler + "*, e / o la situazione, prima che accada");
-					this.genericCPs.Add ("Pensa a Come far in modo che parte o tutto il di *" + filler + "* si muovi e si regoli da solo");
+					this.genericCPs.Add ("Pensa a come far in modo che parte o tutto il di *" + filler + "* si muovi e si regoli da solo");
 					this.genericCPs.Add ("Pensa a come fare vibrare il *" + filler + "* *" + filler + "*");
 					this.genericCPs.Add ("Pensa a se è possibile far in modo che il *" + filler + "* si cambi da solo, rilasci o assorbi energia");
 					this.genericCPs.Add ("Pensa a se è possibile fare il *" + filler + "* in una forma irregolare");

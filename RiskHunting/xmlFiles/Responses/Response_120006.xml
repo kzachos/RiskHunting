@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<MatchedSources responseId="" similarityType="" dataSourceType="">
+    <MatchedSource>
+        <SourceId>200231</SourceId>
+        <SourceName>24928</SourceName>
+        <Content>[Domain]: Risk[Content]: Ergonomically improved coatings/pickup carpets [InjuryNature]: Prelievo rivestimenti7tappeti ergonomicamente migliorabile [LocationDetail]: Postazione 1, Reparto sellatura militare Italia [BodyPart]:  [InjuryCause]: Prelievo ergonomicamente migliorabile|Contenitori a terra |Assenza di Kit a lato linea||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]: Prelievo rivestimenti/tappeti [Title]: Prelievo rivestimenti/tappeti ergonomicamente migliorabile [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-09-30 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Eseguire Kit rivestimenti/tappeti];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>80</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200933</SourceId>
+        <SourceName>34768</SourceName>
+        <Content>[Domain]: Risk[Content]: Decide whether to keep the nomination from a security officer to the new HEALTH and SAFETY MANAGER [InjuryNature]: Valutare l'opportunit? di mantenere la nomina da dirigente ai fini della sicurezza al nuovo RSPP [LocationDetail]: Plant [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Audit 18001| [ShiftType]:  [Title]: Valutare l'opportunit? di mantenere la nomina da dirigente ai fini della sicurezza al nuovo RSPP [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-04-01 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|77];[Action Plan: Valutare se mantenere la nomina];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>59</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200233</SourceId>
+        <SourceName>24966</SourceName>
+        <Content>[Domain]: Risk[Content]: The presence of rats inside the warehouse production Office [InjuryNature]: Presenza di topi all'interno dell'ufficio magazzino produzione [LocationDetail]: Ufficio magazzino produzione [BodyPart]:  [InjuryCause]: Presenza di topi|Ingresso da canaline impianto elettrico|Area uffici magazzino non compresa nel piano di profilassi||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Presenza di topi all'interno dell'ufficio magazzino produzione [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-10-13 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|76];[Action Plan: Prevedere Area uffici magazzino nel piano di profilassi da parte di BIOS];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>59</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201299</SourceId>
+        <SourceName>17779</SourceName>
+        <Content>[Domain]: Risk[Content]: Presence of material on walk route [InjuryNature]: Presenza di materiale su percorso pedonale [LocationDetail]: Q4, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Presenza di materiale su percorso pedonale [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-04-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>38</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200666</SourceId>
+        <SourceName>63546</SourceName>
+        <Content>[Domain]: Risk[Content]: Operator leaves cart Kit on route trolleys [InjuryNature]: Operatore lascia carrello Kit su percorso carrelli [LocationDetail]: Postazione 1, sellatura civili [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Operatore lascia carrello Kit su percorso carrelli [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-11-10 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>38</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200253</SourceId>
+        <SourceName>25554</SourceName>
+        <Content>[Domain]: Risk[Content]: Missing sign indicating escape routes within the plant T2 [InjuryNature]: Manca cartello indicante vie di fuga all'interno dell'impianto T2 [LocationDetail]: Verniciatura T2 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Manca cartello indicante vie di fuga all'interno dell'impianto T2 [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-10-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|77];[Action Plan: Installare cartellonistica];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>38</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200252</SourceId>
+        <SourceName>25554</SourceName>
+        <Content>[Domain]: Risk[Content]: Missing sign indicating escape routes within the plant T2 [InjuryNature]: Manca cartello indicante vie di fuga all'interno dell'impianto T2 [LocationDetail]: Verniciatura T2 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Manca cartello indicante vie di fuga all'interno dell'impianto T2 [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-10-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|77];[Action Plan: Installare cartellonistica];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>38</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200328</SourceId>
+        <SourceName>29665</SourceName>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: Quality Gate non riscaldato [LocationDetail]: Quality Gate, reparto montaggio civili [BodyPart]:  [InjuryCause]: Debolezza di progetto||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale| [ShiftType]:  [Title]: Quality Gate non riscaldato [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-01-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Fornire l'area di riscaldamento];[Notes: La struttura non ? coibentata e non ? stata progettata per essere riscaldata. I materiali non sono ignufughi e pertanto non risulta possibile l'installazione di impianti di riscaldamento come stufe/lampade a raggi infrarossi];[Dates: |]</Content>
+        <OverallMatchValue>
+        </OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200207</SourceId>
+        <SourceName>23701</SourceName>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: doll system migliorabili [LocationDetail]: Reparto Dumper RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: doll system migliorabili [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-31 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|69];[Action Plan: Valutare modifica doll system];[Notes: Doll system verr? sostituita con attivit? wcm in reparto dumper. Per ora ok.];[Dates: |]</Content>
+        <OverallMatchValue>
+        </OverallMatchValue>
+    </MatchedSource>
+</MatchedSources>

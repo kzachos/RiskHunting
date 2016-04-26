@@ -110,6 +110,11 @@ namespace RiskHunting
 			LabelSubNavigationBarLeft.Text = AppResources.CreateIdeas_SubNavigationBar_Left;
 			LabelSubNavigationBarMiddle.Text = AppResources.CreateIdeas_SubNavigationBar_Middle;
 			submit.Text = AppResources.CreateIdeas_Form_Button_FindSimilarRisks;
+
+			if (Convert.ToString (Session ["liveStatus"]) == "on")
+				submit.Visible = true;
+			else
+				submit.Visible = false;
 		}
 
 
@@ -241,9 +246,13 @@ namespace RiskHunting
 			var lang = LanguageDetection.DetectLanguage (this.currentRisk.Content);
 			if (!lang.language.Equals("en")) 
 			{
-				Translator tr = new Translator();	
-				var task = await tr.TranslateString (this.currentRisk.Content, "en");
-				content += " [Content]: " + task;
+				if (Convert.ToString (Session ["liveStatus"]) == "on") {
+					Translator tr = new Translator ();	
+					var task = await tr.TranslateString (this.currentRisk.Content, "en");
+					content += " [Content]: " + task;
+				}
+				else
+					content += " [Content]: " + this.currentRisk.Content;
 			}
 			else
 				content += " [Content]: " + this.currentRisk.Content;
@@ -397,13 +406,17 @@ namespace RiskHunting
 		private string GenerateMatchedSourceHtml(XmlProc.ResponseSerialized.MatchedSourcesMatchedSource matchedSource, CultureInfo currentCulture)
 		{
 			string descr;
-			if (!currentCulture.ToString ().Contains ("en")) {
-				descr = Util.ExtractAttributeContentFromString (matchedSource.Content, "Title");
-			} else
-				descr = Util.ExtractAttributeContentFromString (matchedSource.Content, "Content");
+			string riskName;
 			int n;
 			bool isNumeric = int.TryParse(matchedSource.SourceName, out n);
-			string riskName = isNumeric ? Util.ExtractAttributeContentFromString (matchedSource.Content, "Content").ExtractKeywords ().TruncateAtWord (10): matchedSource.SourceName;
+			if (!currentCulture.ToString ().Contains ("en")) {
+				descr = Util.ExtractAttributeContentFromString (matchedSource.Content, "Title");
+				riskName = isNumeric ? Util.ExtractAttributeContentFromString (matchedSource.Content, "Title").ExtractKeywords ().TruncateAtWord (10) : matchedSource.SourceName;
+			} else {
+				descr = Util.ExtractAttributeContentFromString (matchedSource.Content, "Content");
+				riskName = isNumeric ? Util.ExtractAttributeContentFromString (matchedSource.Content, "Content").ExtractKeywords ().TruncateAtWord (10) : matchedSource.SourceName;
+			}
+
 			var bodyPart = Util.ExtractAttributeContentFromString (matchedSource.Content, "BodyPart").Equals (String.Empty) ? "Not specified" : Util.ExtractAttributeContentFromString (matchedSource.Content, "BodyPart");
 			return Tag1 + Tag2 + matchedSource.SourceId + Tag3 + Tag4 + riskName + Tag5 + Tag6 +
 				descr + Tag7 + 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FacetType>Problem</FacetType>
+  <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
+  <Author>Monica|12345</Author>
+  <LaunchDate>25/04/2016 16:31:14</LaunchDate>
+  <SourceSpecificationLastEdited>25/01/2016</SourceSpecificationLastEdited>
+  <FacetSpecificationData>
+    <Content>Il pulitore a vapore non sta lavorando e perde d'acqua</Content>
+    <InjuryNature>Abrasioni/Tagli/Lacerazione</InjuryNature>
+    <LocationDetail>Linea dei pedoni|00</LocationDetail>
+    <BodyPart>Whole body</BodyPart>
+    <InjuryCause />
+    <IncidentPriority />
+    <IncidentStatus />
+    <RootCause />
+    <RoutineWork />
+    <ShiftType />
+    <Title />
+    <ClosedByOperator />
+    <ContractorName>Jerry</ContractorName>
+    <DateClosed />
+    <DateIncidentOccurred>25/01/2016 00:00:00</DateIncidentOccurred>
+    <Miscellaneous />
+    <MatchingDetails />
+  </FacetSpecificationData>
+</LanguageSpecificSpecification>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FacetType>Problem</FacetType>
+  <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
+  <Author>Monica|12345</Author>
+  <LaunchDate>26/04/2016 17:06:17</LaunchDate>
+  <SourceSpecificationLastEdited>25/01/2016</SourceSpecificationLastEdited>
+  <FacetSpecificationData>
+    <Content> Ci sono scatole di cartone nel corridorio ostruendo il passaggio</Content>
+    <InjuryNature>Abrasioni/Tagli/Lacerazione</InjuryNature>
+    <LocationDetail>Linea dei pedoni|00</LocationDetail>
+    <BodyPart>Whole body</BodyPart>
+    <InjuryCause />
+    <IncidentPriority />
+    <IncidentStatus>fare il *ponti* in una forma irregolare</IncidentStatus>
+    <RootCause />
+    <RoutineWork />
+    <ShiftType />
+    <Title />
+    <ClosedByOperator />
+    <ContractorName>Luigi</ContractorName>
+    <DateClosed />
+    <DateIncidentOccurred>25/01/2016 00:00:00</DateIncidentOccurred>
+    <Miscellaneous />
+    <MatchingDetails />
+  </FacetSpecificationData>
+</LanguageSpecificSpecification>

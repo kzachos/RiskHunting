@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FacetType>Solution</FacetType>
+  <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
+  <Author>Monica|12345</Author>
+  <LaunchDate>25/04/2016 16:31:14</LaunchDate>
+  <SourceSpecificationLastEdited>25/01/2016</SourceSpecificationLastEdited>
+  <FacetSpecificationData>
+    <Content>[Recommendation:];[Corrective Actions:];[Countermeasures:]</Content>
+  </FacetSpecificationData>
+</LanguageSpecificSpecification>

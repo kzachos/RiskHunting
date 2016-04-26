@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageSpecificSpecification xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <FacetType>Solution</FacetType>
+  <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
+  <Author>Monica|12345</Author>
+  <LaunchDate>26/04/2016 17:06:17</LaunchDate>
+  <SourceSpecificationLastEdited>25/01/2016</SourceSpecificationLastEdited>
+  <FacetSpecificationData>
+    <Content>[Recommendation:si potrebbe combinare il *ponti* con qualcos'altro;se èossibile bilanciare il *bilanciatore* con qualcos'altro;fare il *ponti* in una forma irregolare];[Corrective Actions:];[Countermeasures:]</Content>
+  </FacetSpecificationData>
+</LanguageSpecificSpecification>
