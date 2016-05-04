@@ -31,6 +31,8 @@ namespace RiskHunting {
 
 		protected System.Web.UI.WebControls.Button submit;
 
+		protected System.Web.UI.WebControls.Label LabelHint;
+
 		protected System.Web.UI.WebControls.Button Export;
 
 		protected System.Web.UI.WebControls.Button NewRisk;

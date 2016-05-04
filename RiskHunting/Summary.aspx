@@ -79,7 +79,7 @@
 	</div>
 
 	<div class="alert-box notice">
-		<span>hint: </span>
+		<span><asp:Label ID="LabelHint" Runat="server"></asp:Label>:</span>
 		<div id="creativeGuidance" style="display: inline" runat="server"></div>
 		<div class="close">&times;</div>
 	</div>

@@ -154,7 +154,7 @@
     <value>Tipo di (eventuale) lesione</value>
   </data>
   <data name="DescribeRisk.Form.Label.DateOfIncident" xml:space="preserve">
-    <value>Data dell&apos;incidente</value>
+    <value>Dala dell&apos;incidente</value>
   </data>
   <data name="DescribeRisk.Form.Label.UploadPicture" xml:space="preserve">
     <value>Carica una fotografia</value>
@@ -620,6 +620,9 @@
   </data>
   <data name="CreateIdeas.SameRisk.Notification.FailedGeneratePrompts" xml:space="preserve">
     <value>Impossibile generare alcuna richiesta di creatività . Hai cercato di estendere la descrizione del rischio?</value>
+  </data>
+  <data name="ProcessGuidance.Hint" xml:space="preserve">
+    <value>Suggerimento</value>
   </data>
 
 </root>

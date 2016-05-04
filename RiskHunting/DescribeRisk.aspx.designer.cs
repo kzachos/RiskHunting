@@ -11,6 +11,8 @@ namespace RiskHunting
 
 		protected System.Web.UI.ScriptManager ScriptManager1;
 
+		protected System.Web.UI.WebControls.Label LabelHint;
+
 		protected System.Web.UI.Timer Timer1;
 
 		protected System.Web.UI.UpdatePanel UpdatePanel1;

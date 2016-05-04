@@ -81,6 +81,7 @@ namespace RiskHunting
 
 		private void InitLabels ()
 		{
+			LabelHint.Text = AppResources.ProcessGuidance_Hint;
 			LabelNavigationBarLeft.Text = AppResources.MarkCaseAsResolved_NavigationBar_Left;
 			LabelNavigationBarTitle.Text = AppResources.MarkCaseAsResolved_NavigationBar_Title;
 			Resolved.Text = AppResources.MarkCaseAsResolved_Form_Button_SubmitSelection.ToUpper();

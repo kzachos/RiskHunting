@@ -44,7 +44,7 @@ namespace RiskHunting
 				ss.Language = targetlan;
 
 				// GetLanguageCode
-				string googlekey = "AIzaSyDS40FTKbIZW3XE5wk3M-2ePTFSa_mu1Og";
+				string googlekey = "AIzaSyDyv6EMiTbVnpqWfj0qCu-IHEizkUhudmA";
 
 				var service = new TranslateService(new BaseClientService.Initializer()
 					{
@@ -63,7 +63,9 @@ namespace RiskHunting
 				{
 					translations.Add(translation.TranslatedText);
 				}
-				return translations[0];
+				var result = translations[0];
+				process_translation(ref result);
+				return result;
 			}
 			catch (Exception ex)
 			{
@@ -114,59 +116,61 @@ namespace RiskHunting
 		}
 
 
-//		static void process_quotationmarks(ref String s)
-//		{
-//			int no_qm = 0;
-//			for (int i = 0; i < s.Length; i++)
-//			{
-//				if (s[i] == '\"') no_qm++;
-//				if (s[i] == '“') no_qm++;
-//				if (s[i] == '”') no_qm++;
-//				if (s[i] == '«') no_qm++;
-//				if (s[i] == '»') no_qm++;
-//
-//			}
-//			if (no_qm % 2 == 0) // process quotation mark only if there is an even number of them in the description
-//			{
-//				s = s.Replace(" \"", "\""); s = s.Replace("\" ", "\"");
-//				int left_or_right = -1;
-//				for (int i = 0; i < s.Length; i++)
-//				{
-//					if (s[i] == '\"')
-//					{
-//						if (left_or_right == -1) // put a space to the left
-//						{
-//							if (i > 0) // the description does not begin with "
-//							{
+		static void process_quotationmarks(ref String s)
+		{
+			int no_qm = 0;
+			for (int i = 0; i < s.Length; i++)
+			{
+				if (s[i] == '\"') no_qm++;
+				if (s[i] == '“') no_qm++;
+				if (s[i] == '”') no_qm++;
+				if (s[i] == '«') no_qm++;
+				if (s[i] == '»') no_qm++;
+
+			}
+			if (no_qm % 2 == 0) // process quotation mark only if there is an even number of them in the description
+			{
+				s = s.Replace(" \"", "\""); s = s.Replace("\" ", "\"");
+				int left_or_right = -1;
+				for (int i = 0; i < s.Length; i++)
+				{
+					if (s[i] == '\"')
+					{
+						if (left_or_right == -1) // put a space to the left
+						{
+							if (i > 0) // the description does not begin with "
+							{
 //								if ((is_newline_char(s[i - 1]) == false) && (s[i - 1] != ' ')) // the line does not begin with "
-//								{
-//									s = s.Insert(i, " ");
-//									i++;
-//								}
-//							}
-//						}
-//						else // put a space to the right
-//						{
-//							if (i < s.Length - 1) // if the document the not end with "
-//							{
+								if (!s[i - 1].Equals('\n') && (s[i - 1] != ' '))
+								{
+									s = s.Insert(i, " ");
+									i++;
+								}
+							}
+						}
+						else // put a space to the right
+						{
+							if (i < s.Length - 1) // if the document the not end with "
+							{
 //								if (is_newline_char(s[i + 1]) == false) // if the line does not end with "
-//								{
-//									if (Char.IsLetter(s[i + 1]) || Char.IsDigit(s[i + 1])) // if the next character is a letter or digit
-//									{
-//										s = s.Insert(i + 1, " ");
-//									}
-//								}
-//							}
-//						}
-//						left_or_right = left_or_right * -1;
-//					}
-//					if ((s[i] == '«') || (s[i] == '»')) left_or_right = left_or_right * -1;
-//				}
-//				s = s.Replace("\"( ", "\" (");
-//				s = s.Replace("( \"", "(\"");
-//				s = s.Replace("\"(", "\" (");
-//			}
-//		}
+								if (!s[i + 1].Equals('\n'))
+								{
+									if (Char.IsLetter(s[i + 1]) || Char.IsDigit(s[i + 1])) // if the next character is a letter or digit
+									{
+										s = s.Insert(i + 1, " ");
+									}
+								}
+							}
+						}
+						left_or_right = left_or_right * -1;
+					}
+					if ((s[i] == '«') || (s[i] == '»')) left_or_right = left_or_right * -1;
+				}
+				s = s.Replace("\"( ", "\" (");
+				s = s.Replace("( \"", "(\"");
+				s = s.Replace("\"(", "\" (");
+			}
+		}
 
 		static void process_dash(ref String s)
 		{

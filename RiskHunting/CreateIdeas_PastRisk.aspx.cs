@@ -144,6 +144,7 @@ namespace RiskHunting
 
 		private void InitLabels ()
 		{
+			LabelHint.Text = AppResources.ProcessGuidance_Hint;
 			LabelNavigationBarLeft.Text = AppResources.PastRisk_NavigationBar_Left;
 			LabelNavigationBarTitle.Text = AppResources.PastRisk_NavigationBar_Title;
 			GenerateAgain.Text = AppResources.PastRisk_Form_Button_NewPrompts.ToUpper();
@@ -195,8 +196,8 @@ namespace RiskHunting
 			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
 			foreach(var item in NLResponse)
 			{
-				var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
-				if (!item.TermValue.Equals (String.Empty) && regexItem.IsMatch(item.TermValue)) {
+				var regexItem = new Regex("^[a-zA-Z]*$");
+				if (!item.TermValue.Equals (String.Empty) && !regexItem.IsMatch(item.TermValue)) {
 					NLResponseToken itemNew = item;
 					if (item.Pos == "NP")
 						itemNew.TermValue = "the " + item.TermValue.Trim ();

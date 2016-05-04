@@ -259,7 +259,6 @@
     <Compile Include="Classes\Translator.cs" />
     <Compile Include="Classes\LanguageDetection.cs" />
     <Compile Include="Classes\TranslatorGoogle.cs" />
-    <Compile Include="Classes\GoogleTranslate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
@@ -294,6 +293,8 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Resources\Parameters.it.xml" />
+    <None Include="Resources\ProcessGuidance.it.xml" />
+    <None Include="Resources\ProcessGuidance.xml" />
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References" />

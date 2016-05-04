@@ -35,6 +35,8 @@ namespace RiskHunting {
 		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl alert_message_guidance;
 		
+		protected System.Web.UI.WebControls.Label LabelHint;
+		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl creativeGuidance;
 		
 		protected System.Web.UI.HtmlControls.HtmlGenericControl responses;

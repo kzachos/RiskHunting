@@ -214,6 +214,7 @@ namespace RiskHunting
 
 		private void InitLabels ()
 		{
+			LabelHint.Text = AppResources.ProcessGuidance_Hint;
 			LabelNavigationBarLeft.Text = AppResources.DescribeRisk_NavigationBar_Left;
 			LabelNavigationBarRight.Text = AppResources.DescribeRisk_NavigationBar_Right;
 			LabelNavigationBarTitle.Text = AppResources.DescribeRisk_NavigationBar_Title;

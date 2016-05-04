@@ -1053,5 +1053,11 @@ namespace RiskHunting {
                 return ResourceManager.GetString("CreateIdeas.SameRisk.Notification.FailedGeneratePrompts", resourceCulture);
             }
         }
+        
+        internal static string ProcessGuidance_Hint {
+            get {
+                return ResourceManager.GetString("ProcessGuidance.Hint", resourceCulture);
+            }
+        }
     }
 }

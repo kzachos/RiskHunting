@@ -8,13 +8,13 @@
     <TermExpansion synonym="0" hypernym="0" gloss="0" />
     <MaxResults>100</MaxResults>
   </Properties>
-  <DateTime>28/04/2016 11:12:14</DateTime>
+  <DateTime>04/05/2016 21:50:49</DateTime>
   <SimilarityType>Eddie</SimilarityType>
   <DataSource>
     <Type>Document</Type>
     <Uri>n/a</Uri>
   </DataSource>
   <Target>
-    <TargetDescription>[InjuryNature]:  [LocationDetail]: Linea dei pedoni|00 [Content]: Hole in the floor with a risk of falling and tripping [BodyPart]: Whole body</TargetDescription>
+    <TargetDescription>[InjuryNature]:  [LocationDetail]: Linea dei pedoni|00 [Content]: Hole in the floor with the risk of falling and stumbling [BodyPart]: Whole body</TargetDescription>
   </Target>
 </Request>

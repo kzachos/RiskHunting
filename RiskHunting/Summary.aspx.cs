@@ -180,6 +180,7 @@ namespace RiskHunting
 				Resolved.Text = AppResources.Summary_Form_Button_MarkAsResolved.ToUpper();
 			}
 
+			LabelHint.Text = AppResources.ProcessGuidance_Hint;
 			LabelNavigationBarLeft.Text = AppResources.Summary_NavigationBar_Left;
 			LabelNavigationBarTitle.Text = AppResources.Summary_NavigationBar_Title;
 			LabelRiskProblem.Text = AppResources.Summary_Form_Label_RiskProblem;

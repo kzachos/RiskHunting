@@ -741,7 +741,7 @@ namespace RiskHunting
 				xmlDocument = "ProcessGuidance.it.xml";
 
 			List<string> problemDescriptions = new List<string> ();
-			var doc = XDocument.Load(Path.Combine (SettingsTool.GetApplicationPath(), "xmlFiles", xmlDocument), LoadOptions.None); 
+			var doc = XDocument.Load(Path.Combine (resourcesPath, xmlDocument), LoadOptions.None); 
 			if (doc.Descendants(elementName).Count() > 0)
 				foreach (XElement xe in doc.Descendants(elementName))
 					problemDescriptions.Add(xe.Element("n").Value);    

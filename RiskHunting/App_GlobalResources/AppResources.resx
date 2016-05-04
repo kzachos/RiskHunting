@@ -622,5 +622,8 @@
   <data name="CreateIdeas.SameRisk.Notification.FailedGeneratePrompts" xml:space="preserve">
     <value>Could not generate any creativity prompts. Have you tried to extend the risk description?</value>
   </data>
+  <data name="ProcessGuidance.Hint" xml:space="preserve">
+    <value>Hint</value>
+  </data>
 
 </root>
