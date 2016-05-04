@@ -222,7 +222,7 @@ namespace RiskHunting
 			XmlProc.RequestSerialized.SimilarityType similarityType = request.SimilarityType;
 			XmlProc.RequestSerialized.RequestDataSource dst = request.DataSource[0];
 			XmlProc.RequestSerialized.RequestTarget target = (XmlProc.RequestSerialized.RequestTarget)request.Target[0];
-			target.TargetDescription = GenerateTargetDescription().Result;
+			target.TargetDescription = GenerateTargetDescription();
 
 			DateTime now = DateTime.Now;
 			requestNew.DateTime = now.ToString();
@@ -237,7 +237,7 @@ namespace RiskHunting
 			return requestNew;
 		}
 
-		async Task<string> GenerateTargetDescription ()
+		string GenerateTargetDescription ()
 		{
 			string content = String.Empty;
 			content += "[InjuryNature]: " + String.Empty;
@@ -247,9 +247,10 @@ namespace RiskHunting
 			if (!lang.language.Equals("en")) 
 			{
 				if (Convert.ToString (Session ["liveStatus"]) == "on") {
-					Translator tr = new Translator ();	
-					var task = await tr.TranslateString (this.currentRisk.Content, "en");
-					content += " [Content]: " + task;
+					var t = TranslatorGoogle.TranslateText (this.currentRisk.Content, "en");
+//					Translator tr = new Translator ();	
+//					var task = await tr.TranslateString (this.currentRisk.Content, "en");
+					content += " [Content]: " + t;
 				}
 				else
 					content += " [Content]: " + this.currentRisk.Content;

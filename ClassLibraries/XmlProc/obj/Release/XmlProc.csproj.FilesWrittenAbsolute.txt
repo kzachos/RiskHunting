@@ -1,0 +1,2 @@
+/Users/koszachos/Projects/RiskHunting/ClassLibraries/XmlProc/bin/Release/XmlProc.dll
+/Users/koszachos/Projects/RiskHunting/ClassLibraries/XmlProc/obj/Release/XmlProc.dll

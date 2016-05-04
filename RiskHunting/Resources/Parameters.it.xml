@@ -15,7 +15,7 @@
     <email>sam.gibson@cnhind.com</email>
   </rl>
   <rl>
-    <n>Linea dei taxi ????</n>
+    <n>Linea dei taxi</n>
     <name>Steve Young</name>
     <email>stephen.young@cnhind.com</email>
   </rl>
@@ -105,9 +105,6 @@
   </TypeOfIncident>
   <TypeOfIncident>
     <n>Ematoma/livido</n>
-  </TypeOfIncident>
-  <TypeOfIncident>
-    <n>Abrasioni/Tagli/Lacerazioni</n>
   </TypeOfIncident>
   <TypeOfIncident>
     <n>Nessuna</n>

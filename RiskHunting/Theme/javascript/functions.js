@@ -10,7 +10,7 @@ document.getElementById("loading").innerHTML = "<div id=\'progress\'>Loading. Pl
 }
 
 function ShowProgressSearch() {
-document.getElementById("loading").innerHTML = "<div id=\'progress2\'>Searching. Please wait... <br><br> The Risk Hunting App is searching over 8000 risks and their resolutions documented in the plant. Generate new resolutions for your risk by: <br><br> 1. Reusing one or more previous resolutions, editing it as needed, or <br> 2. Using the creative prompts to generate new resolutions. <br> <img src=\'loader.gif\' /></div>";
+document.getElementById("loading").innerHTML = "<div id=\'progress2\'>Searching. Please wait... <br><br> The Risk Hunting App is searching over 1500 risks and their resolutions documented in the ASTRA plant. Generate new resolutions for your risk by: <br><br> 1. Reusing one or more previous resolutions, editing it as needed, or <br> 2. Using the creative prompts to generate new resolutions. <br> <img src=\'loader.gif\' /></div>";
 }
 
 function ShowProgressOLD() {

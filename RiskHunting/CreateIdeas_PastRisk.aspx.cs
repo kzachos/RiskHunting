@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace RiskHunting
 {
@@ -153,44 +154,56 @@ namespace RiskHunting
 
 		void RetrieveNLData (string descr, CultureInfo currentCulture)
 		{
-			string errorMsg;
-			if(Util.ServiceExists(Constants.ANTIQUE_URI, false, out errorMsg)) {
-				RiskHunting.antiqueService.AntiqueService antique = new RiskHunting.antiqueService.AntiqueService ();
-				try
+			if (Convert.ToString (Session ["liveStatus"]) == "on") {
+				string errorMsg;
+				if(Util.ServiceExists(Constants.ANTIQUE_URI, false, out errorMsg)) {
+					RiskHunting.antiqueService.AntiqueService antique = new RiskHunting.antiqueService.AntiqueService ();
+					try
+					{
+						System.Net.ServicePointManager.Expect100Continue = false;
+						var output = antique.NLParser (descr);
+						this.NLResponse = Util.DeserializeNLResponse (output);
+						if (Sessions.CreativityPromptsPastRiskState != null)
+							Session.Remove(Sessions.creativityPromptsPastRiskState);
+						//			Session ["CURRENT_PAST_RISK_DESC"] = NLResponse;
+					}
+					catch (Exception ex)
+					{
+					}
+					finally {
+						PrepareData (currentCulture);
+						PopulateData ();
+					}
+				}
+				else
 				{
-					System.Net.ServicePointManager.Expect100Continue = false;
-					var output = antique.NLParser (descr);
-					this.NLResponse = Util.DeserializeNLResponse (output);
-					if (Sessions.CreativityPromptsPastRiskState != null)
-						Session.Remove(Sessions.creativityPromptsPastRiskState);
-					//			Session ["CURRENT_PAST_RISK_DESC"] = NLResponse;
+					generatePrompts.Visible = false;
+					hint_box.Visible = false;
+					alert_message_success.Visible = false;
+					errorMessage.InnerText = AppResources.PastRisk_Notification_FailedGeneratePrompts;
+					alert_message_error.Visible = true;
 				}
-				catch (Exception ex)
-				{
-				}
-				finally {
-					PrepareData (currentCulture);
-					PopulateData ();
-				}
-			}
-			else
-			{
-				generatePrompts.Visible = false;
-				hint_box.Visible = false;
-				alert_message_success.Visible = false;
-				errorMessage.InnerText = AppResources.PastRisk_Notification_FailedGeneratePrompts;
-				alert_message_error.Visible = true;
+			} else {
+				PrepareData (currentCulture);
+				PopulateData ();
 			}
 		}
 
 
-		async Task<List<string>> GenerateGenericCreativityPrompts(CultureInfo currentCulture)
+		List<string> GenerateGenericCreativityPrompts(CultureInfo currentCulture)
 		{
 			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
 			foreach(var item in NLResponse)
 			{
-				if (!item.TermValue.Equals (String.Empty))
-					NLResponseTrimmed.Add (item);
+				var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
+				if (!item.TermValue.Equals (String.Empty) && regexItem.IsMatch(item.TermValue)) {
+					NLResponseToken itemNew = item;
+					if (item.Pos == "NP")
+						itemNew.TermValue = "the " + item.TermValue.Trim ();
+					else
+						itemNew.TermValue = item.TermValue.Trim ();
+					NLResponseTrimmed.Add (itemNew);
+				}
 			}
 
 			if (!currentCulture.ToString ().Contains ("en"))
@@ -206,19 +219,19 @@ namespace RiskHunting
 				}
 				if (!termValuesString.Equals(String.Empty)) {
 					var NLResponseNew = new List<NLResponseToken>();
-					Translator tr = new Translator();	
 
-					var task = await tr.TranslateString (termValuesString, currentCulture.ToString ().Split(new char[] {'-'})[0]);
-					var res = task.Trim().Split(new char[] {'.'});
+					var t = TranslatorGoogle.TranslateText (termValuesString, currentCulture.ToString ().Split(new char[] {'-'})[0]);
+//					Translator tr = new Translator();	
+//					var task = await tr.TranslateString (termValuesString, currentCulture.ToString ().Split(new char[] {'-'})[0]);
+					var res = t.Trim().Split(new char[] {'.'});
 					var c = 0;
 					for (int j = 0; j < res.Length; j++)
 					{
 						if (!res[j].Trim().Equals (String.Empty)) {
 							NLResponseToken itemNew = new NLResponseToken ();
-							itemNew.TermValue = res[j].Trim();
 							itemNew.ID = ids[j];
 							itemNew.Pos = pos[j];
-							Console.WriteLine (itemNew.Pos + ": " + itemNew.TermValue);
+							itemNew.TermValue = res [j].Trim ();
 							NLResponseNew.Add (itemNew);
 						}
 					}
@@ -263,17 +276,17 @@ namespace RiskHunting
 
 		List<string> GenerateGenericCreativityPromptsStatic()
 		{
-			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
-			foreach(var item in NLResponse)
-			{
-				if (!item.TermValue.Equals (String.Empty))
-					NLResponseTrimmed.Add (item);
-			}
+			//			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
+			//			foreach(var item in NLResponse)
+			//			{
+			//				if (!item.TermValue.Equals (String.Empty))
+			//					NLResponseTrimmed.Add (item);
+			//			}
+			//
+			//			NLResponseTrimmed.Shuffle ();
 
 			int count = 0;
 			List<string> ps = new List<string> ();
-			NLResponseTrimmed.Shuffle ();
-
 			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 
 			string[] valuesNP = {};
@@ -288,6 +301,8 @@ namespace RiskHunting
 
 			string[] valuesNP5 = {"parte", "ponti", "percorso"};
 
+			string[] valuesNPGeneric = {"oggetto", "materiale"};
+
 			if (Convert.ToInt32 (DetermineID ()) == 201297)
 				valuesNP = valuesNP1;
 			else if (Convert.ToInt32 (DetermineID ()) == 200366)
@@ -298,6 +313,8 @@ namespace RiskHunting
 				valuesNP = valuesNP4;
 			else if (Convert.ToInt32 (DetermineID ()) == 200692)
 				valuesNP = valuesNP5;
+			else
+				valuesNP = valuesNPGeneric;
 			
 			foreach (var item in valuesNP) {
 				if (!item.Equals (String.Empty)) {
@@ -329,7 +346,7 @@ namespace RiskHunting
 		{
 			if (!Page.IsPostBack) {
 				if (Convert.ToString(Session["liveStatus"]) == "on")
-					CreativityPromptsFeed = GenerateGenericCreativityPrompts (currentCulture).Result;
+					CreativityPromptsFeed = GenerateGenericCreativityPrompts (currentCulture);
 				else
 					CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
 				CreativityPromptsFeed.Shuffle ();

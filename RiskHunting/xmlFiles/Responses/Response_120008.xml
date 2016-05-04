@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<MatchedSources responseId="" similarityType="" dataSourceType="">
+    <MatchedSource>
+        <SourceId>200514</SourceId>
+        <SourceName>53209</SourceName>
+        <Content>[Domain]: Risk[Content]: The nonslip mats of the tool/machine DC scale (first), when they are closed are not lined up on the floor, so may create conditions of tripping the operator [InjuryNature]: Le pedane antiscivolo dell?attrezzo / macchina DC scala (prima postazione), quando sono chiuse non sono allineate sul piano, pertanto possono creare condizioni di inciampo all?operatore  [LocationDetail]: sellatura cabine TR1 postazione 1 [BodyPart]:  [InjuryCause]: carenza di manutenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno |00:00:00 [ShiftType]: sellatura cabine  [Title]: Le pedane antiscivolo dell?attrezzo / macchina DC scala (prima postazione), quando sono chiuse non sono allineate sul piano, pertanto possono creare condizioni di inciampo all?operatore  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-10-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Effettuare i necessari intervento d manutenzione all?attrezzo / macchina DC scala];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>98</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200594</SourceId>
+        <SourceName>65883</SourceName>
+        <Content>[Domain]: Risk[Content]: Upholstering Department operators for all cars must military fiberglass booths, to re-drilling of holes in the cabin floor to fix the seat support (because the holes in the cabin are fully blocked with fiberglass)-10 holes per cabin, carried out by the operator inside the cab, with pneumatic drill bit ??? [InjuryNature]: Gli operatori del reparto sellatura cabine devono,  per tutte le cabine militari in vetroresina,  effettuare la                    ri-foratura dei fori presenti sul pianale cabina per il fissaggio del supporto sedile  (poich? i fori presenti nella cabina  [LocationDetail]: sellatura cabine militari - TR2 - postaz. 4 [BodyPart]:  [InjuryCause]: gestione||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: sellatura cabine militari  [Title]: Gli operatori del reparto sellatura cabine devono,  per tutte le cabine militari in vetroresina,  effettuare la                    ri-foratura dei fori presenti sul pianale cabina per il fissaggio del supporto sedile  (poich? i fori presenti nella cabina sono completamente ostruiti dalla vetroresina)  - 10 fori per cabina, effettuati  dall?operatore che si trova dentro alla cabina, con alesatore pneumatico ?  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|40];[Action Plan: Chiedere al fornitore delle cabine militari in vetroresina che I fori per il fissaggio del supporto sedile  siano ?puliti?];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>88</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200553</SourceId>
+        <SourceName>61019</SourceName>
+        <Content>[Domain]: Risk[Content]: Broken Pavement in the area Holding spare parts warehouse (detachment with tiles and the crumbling of the cement created a deep hole about 10 cm diameter of 30 cm) fixed temporarily with iron plate in may 2015, other holes have been created in recent months because of crumbling concrete flooring, it is an area of passing carts and pedestrians with lifter the risk of dropping or losing control of the media is high.  [InjuryNature]: Pavimentazione rotta nell'area Holding magazzino ricambi  [LocationDetail]: Holding magazzino ricambi  [BodyPart]:  [InjuryCause]: pavimentazione usurata dal tempo||||| [IncidentPriority]:  [IncidentStatus]: durante il passaggio [RootCause]:  [RoutineWork]: turno centrale|00:00:00 [ShiftType]: transito per spostamento pallet [Title]: Pavimentazione rotta nell'area Holding magazzino ricambi (il distaccamento delle piastrelle e lo sgretolamento del cemento hanno generato un buco profondo circa 10 cm del diametro di 30 cm)sistemato temporaneamente con piastra di ferro a maggio 2015,negli ultimi mesi si sono create altre buche a causa dello sgretolamento della pavimentazione in cemento, si tratta di una zona di passaggio carrelli e pedoni con trans pallet, il rischio di cadere o di perdere il controllo dei mezzi ? alto. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: RIPRISTINARE PAVIMENTAZIONE];[Notes: RIPRISTINARE PRIMA POSSIBILE];[Dates: |]</Content>
+        <OverallMatchValue>88</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200524</SourceId>
+        <SourceName>60820</SourceName>
+        <Content>[Domain]: Risk[Content]: This hole in the floor [InjuryNature]: Buca presente a pavimento [LocationDetail]: Postazione 4, sellatura militare [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Buca presente a pavimento [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-12-10 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Sistemare buca a pavimento];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>88</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200397</SourceId>
+        <SourceName>35175</SourceName>
+        <Content>[Domain]: Risk[Content]: the presence of the hole on the floor  [InjuryNature]: presenza di buca sul pavimento  [LocationDetail]: reparto sellatura cabine veicoli militari  [BodyPart]:  [InjuryCause]: carenza di manutenzione ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: sellatura cabine veicoli militari  [Title]: presenza di buca sul pavimento  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: ripristianre il pavimento ammalorato];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>88</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200273</SourceId>
+        <SourceName>26024</SourceName>
+        <Content>[Domain]: Risk[Content]: the presence of the hole on the floor  [InjuryNature]: presenza di buca sul pavimento  [LocationDetail]: Postazione 2, linea telai [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: presenza di buca sul pavimento  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-10-10 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: ripristianre il pavimento ammalorato];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>88</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201394</SourceId>
+        <SourceName>14183</SourceName>
+        <Content>[Domain]: Risk[Content]: Air hoses not in coils with risk of tripping [InjuryNature]: Tubi aria non arrotolati con rischio di inciampo [LocationDetail]: Postazione 36, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Tubi aria non arrotolati con rischio di inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-02-17 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore sulla necessit? di avvolgere la canna dell'aria per evitare inciampo];[Notes: ];[Dates: 2014-02-27 00:00:00.000|2014-02-27 00:00:00.000]</Content>
+        <OverallMatchValue>58</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201392</SourceId>
+        <SourceName>14181</SourceName>
+        <Content>[Domain]: Risk[Content]: Air barrel left ashore with risk of tripping [InjuryNature]: Canna dell'aria lasciata a terra con rischio di inciampo [LocationDetail]: Postazione 32, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Canna dell'aria lasciata a terra con rischio di inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-02-17 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore sulla necessit? di avvolgere la canna dell'aria per evitare inciampo];[Notes: ];[Dates: 2014-02-27 00:00:00.000|2014-02-27 00:00:00.000]</Content>
+        <OverallMatchValue>58</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201290</SourceId>
+        <SourceName>18136</SourceName>
+        <Content>[Domain]: Risk[Content]: Compressed air hose left on the ground when not in use with risk of tripping [InjuryNature]: Tubo aria compressa lasciato a terra quando non in uso con rischio di inciampo [LocationDetail]: Postazione 33, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|09:00:00 [ShiftType]:  [Title]: Tubo aria compressa lasciato a terra quando non in uso con rischio di inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-05-14 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>58</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201263</SourceId>
+        <SourceName>19958</SourceName>
+        <Content>[Domain]: Risk[Content]: Air hose left on the ground to reischi tripping [InjuryNature]: Tubo aria lasciato a a terra a reischi inciampo [LocationDetail]: Postazione 9, Reparto montaggio militari [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Tubo aria lasciato a a terra a reischi inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-06-11 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>58</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200829</SourceId>
+        <SourceName>40376</SourceName>
+        <Content>[Domain]: Risk[Content]: Stool improperly seated with possibility of tripping [InjuryNature]: Sgabello non posizionato correttamente con possibilt? di inciampo [LocationDetail]: Postazione 47, montaggio veicoli civili [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Sgabello non posizionato correttamente con possibilt? di inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-16 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>58</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200815</SourceId>
+        <SourceName>40386</SourceName>
+        <Content>[Domain]: Risk[Content]: Failure to wear safety glasses and gloves during Threading holes beacons [InjuryNature]: Mancato uso occhiali e guanti durante filettatura fori fari rotanti [LocationDetail]: postazione 1, sellatura militare [BodyPart]:  [InjuryCause]: Omesso impiego DPI||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]: Filettatura [Title]: Mancato uso occhiali e guanti durante filettatura fori fari rotanti [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-17 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|25];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200570</SourceId>
+        <SourceName>64775</SourceName>
+        <Content>[Domain]: Risk[Content]: on the footpath outside the reception area/carpentry, sheet metal was a smooth "with the probable function of leg hole on the pedestrian path" [InjuryNature]: sul percorso pedonale esterno in corrispondenza dell?area ricezione / carpenteria, ? stata messa una lamiera ?liscia? con la probabile funzione di tappa buca presente sul percorso pedonale  [LocationDetail]: percorso pedonale esterno in corrispondenza dell?area ricezione / carpenteria [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]: magazzino produzione [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: magazzino produzione [Title]: sul percorso pedonale esterno in corrispondenza dell?area ricezione / carpenteria, ? stata messa una lamiera ?liscia? con la probabile funzione di tappa buca presente sul percorso pedonale  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-15 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: ripristinare l?asfalto ammalorato. Nel frattempo, sostituire lamiera liscia con lamiera antiscivolo];[Notes: Eliminata lamiera che a sua volta copriva un'altra buca gi? ripristinato.];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200484</SourceId>
+        <SourceName>43363</SourceName>
+        <Content>[Domain]: Risk[Content]: The presence of the hole near the exit ramp from the Assembly Department [InjuryNature]: Presenza di buca in prossimit? della rampa di uscita dal reparto montaggio [LocationDetail]: Area esterna reparto montaggio veicoli civili [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Presenza di buca in prossimit? della rampa di uscita dal reparto montaggio [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-29 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Ripristinare pavimentazione];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200483</SourceId>
+        <SourceName>43362</SourceName>
+        <Content>[Domain]: Risk[Content]: The presence of the hole near the green gate near the new caretaker at risk stumbling [InjuryNature]: Presenza di buca in prossimit? del cancello verde vicino alla nuova portineria a rischio inciampo [LocationDetail]: Nuova portineria entrata merci [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Presenza di buca in prossimit? del cancello verde vicino alla nuova portineria a rischio inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-29 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Ripristinare pavimentazione];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200456</SourceId>
+        <SourceName>40648</SourceName>
+        <Content>[Domain]: Risk[Content]: Uneven pavement with presence of holes [InjuryNature]: Pavimentazione irregolare con presenza di buche [LocationDetail]: Reparto montaggio veicoli militari [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Pavimentazione irregolare con presenza di buche [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-18 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Sistemare pavimentazione];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200389</SourceId>
+        <SourceName>34477</SourceName>
+        <Content>[Domain]: Risk[Content]: Broken pavement in the area Holding spare parts warehouse (detachment with tiles and the crumbling of the cement created a deep hole about 10 cm diameter of 30 cm) this is a zone of passage. [InjuryNature]: Pavimentazione rotta nell'area Holding magazzino ricambi  [LocationDetail]: area Holding magazzino ricambi  [BodyPart]:  [InjuryCause]: la pavimentazione ? da rifare||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale|00:00:00 [ShiftType]: passaggio carrelli [Title]: Pavimentazione rotta nell'area Holding magazzino ricambi (il distaccamento delle piastrelle e lo sgretolamento del cemento hanno generato un buco profondo circa 10 cm del diametro di 30 cm)si tratta di una zona di passaggio carrelli. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200326</SourceId>
+        <SourceName>29638</SourceName>
+        <Content>[Domain]: Risk[Content]: Hole present in emplacement at risk stumbling [InjuryNature]: Buca presente in postazione a rischio inciampo [LocationDetail]: Postazione 1, reparto montaggio militari [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Buca presente in postazione a rischio inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-02 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Livellare buca];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200321</SourceId>
+        <SourceName>29621</SourceName>
+        <Content>[Domain]: Risk[Content]: Hole on this side rails at risk stumbling resin  [InjuryNature]: Buca su resinatura presente fianco binari a rischio inciampo  [LocationDetail]: Postazione 6, reparto montaggio civili [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Buca su resinatura presente fianco binari a rischio inciampo  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-02 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Livellare buca ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200248</SourceId>
+        <SourceName>25126</SourceName>
+        <Content>[Domain]: Risk[Content]: Hole present on the grid right side line at risk stumbling [InjuryNature]: Buca presente su griglia lato dx linea a rischio inciampo [LocationDetail]: Postazione 4, sellatura militare Italia [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Buca presente su griglia lato dx linea a rischio inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-09-30 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Coprire buca];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200149</SourceId>
+        <SourceName>20160</SourceName>
+        <Content>[Domain]: Risk[Content]: Piazzale receiving dock has many holes that are derived from the latest rains that have raised the asphalt. "there is a risk of damage to the trucks in transit in that area.  [InjuryNature]: piazzale ricezione merci presenta numerose buche derivate dalle ultime piogge che hanno sollevato l'asfalto. c'? il rischio di danneggiare i carrelli durante il transito in detta area.  [LocationDetail]: AREA RICEVIMENTO MERCI [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]: RIPRISTINARE LA SUPERFICIE [IncidentStatus]: EVENTI ATMOSFERICI [RootCause]:  [RoutineWork]: TURNO CENTRALE|00:00:00 [ShiftType]: CARICO/SCARICO MERCI [Title]: piazzale ricezione merci presenta numerose buche derivate dalle ultime piogge che hanno sollevato l'asfalto.c'? il rischio di danneggiare i carrelli durante il transito in detta area.  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-06-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201253</SourceId>
+        <SourceName>20169</SourceName>
+        <Content>[Domain]: Risk[Content]: Material on the floor [InjuryNature]: Materiale presente sul pavimento [LocationDetail]: Postazione 7, Reparto sellatura civili [BodyPart]:  [InjuryCause]: Materiale presente a terra|Caduto da banco|Urtato da operatore|Disattenzione|| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Materiale presente sul pavimento [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-06-19 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201168</SourceId>
+        <SourceName>23373</SourceName>
+        <Content>[Domain]: Risk[Content]: Rubber floor mats for heavy eronomicamente dx7sx cabin (18 Kg) [InjuryNature]: Tappeto gomma per abitacolo dx7sx (18 Kg) eronomicamente gravoso [LocationDetail]: Postazione 1, Reparto sellatura militare [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Tappeto gomma per abitacolo dx7sx (18 Kg) eronomicamente gravoso [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-08 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201102</SourceId>
+        <SourceName>25913</SourceName>
+        <Content>[Domain]: Risk[Content]: The absorbent mat placed on the floor worn T3 system [InjuryNature]: Il tappeto assorbente posto sul pavimento impianto T3 usurato [LocationDetail]: Verniciatura T3 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Il tappeto assorbente posto sul pavimento impianto T3 usurato [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-10-13 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|40];[Action Plan: Richiedere intervento sostituzione tappeto];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200874</SourceId>
+        <SourceName>37786</SourceName>
+        <Content>[Domain]: Risk[Content]: The removable filter for exhaust gas d vehicles, when not in use, in some cases are deposited on the ground, on the floor, because there is no proper SAG/Banquet on which to place them. [InjuryNature]: Il filtri amovibili per i gas d scarico veicoli, quando non utilizzati, in alcuni casi vengono depositati a terra, sul pavimento, poich? non ? disponibile apposita SAG/ banchetto su cui depositarli. [LocationDetail]: reparto delibera  [BodyPart]:  [InjuryCause]: gestione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: delibera veicoli [Title]: Il filtri amovibili per i gas d scarico veicoli, quando non utilizzati, in alcuni casi vengono depositati a terra, sul pavimento, poich? non ? disponibile apposita SAG/ banchetto su cui depositarli. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-05-18 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|40];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200765</SourceId>
+        <SourceName>43361</SourceName>
+        <Content>[Domain]: Risk[Content]: Protective railing outside military installation eradicated from probable cause impact flooring [InjuryNature]: Ringhiera di protezione area esterna montaggio militare sradicata da pavimentazione causa probabile urto [LocationDetail]: Area esterna Montaggio veicoli militari [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Ringhiera di protezione area esterna montaggio militare sradicata da pavimentazione causa probabile urto [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-07-29 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Ripristinare Ringhiera];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200748</SourceId>
+        <SourceName>52736</SourceName>
+        <Content>[Domain]: Risk[Content]: Floor left with ground clamps  [InjuryNature]: Pavimento lasciato con fascette a terra  [LocationDetail]: Postazione 47, montaggio veicoli civili [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Pavimento lasciato con fascette a terra  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-10-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200698</SourceId>
+        <SourceName>61423</SourceName>
+        <Content>[Domain]: Risk[Content]: Some milk containing painting products are flat on the floor rather than on the specific container antipollution  [InjuryNature]: Alcune latte contenenti prodotti vernicianti sono appoggiati sul pavimento anzich? sull?apposito contenitore anti sversamento  [LocationDetail]: reparto verniciatura T10 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]: attegiamento / comportamento  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno |00:00:00 [ShiftType]: addetto verniciatura [Title]: Alcune latte contenenti prodotti vernicianti sono appoggiati sul pavimento anzich? sull?apposito contenitore anti sversamento  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|21];[Action Plan: Sensibilizzare l'operatore ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200578</SourceId>
+        <SourceName>65632</SourceName>
+        <Content>[Domain]: Risk[Content]: all the plates that are put on the floor and they work for the operators, are made with sheets [InjuryNature]: tutte le lamiere che vengono messe a protezione del  pavimento e sui cui lavorano gli operatori, sono realizzate con lamiera liscia [LocationDetail]: Montaggio militari - preparazione sottogrupoi ponti e assali  [BodyPart]:  [InjuryCause]: impianti attrezzi ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: Montaggio militari - preparazione sottogrupoi ponti e assali  [Title]: tutte le lamiere che vengono messe a protezione del  pavimento e sui cui lavorano gli operatori, sono realizzate con lamiera liscia [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: valutare se sostituire le lamiera lisce con lamiere bugnate antiscivolo (o altra soluzione) ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200563</SourceId>
+        <SourceName>62384</SourceName>
+        <Content>[Domain]: Risk[Content]: In holding area there is a shelf that needs maintenance and possible suitability for use warehousing. Some dice used to maintain the shelf fixed to the ground are loose, one leg is slightly bent shelf. The plates under the legs of the shelf are not firmly rooted to the floor but moving at first touch, creating a potential danger of instabilities that are.  [InjuryNature]: In holding area ? presente uno scaffale che necessita manutezione ed eventuale idoneit? per l'utilizzo stoccaggio merce. [LocationDetail]: holding area [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]: manutenzione scaffale [IncidentStatus]: Immagazzinamento materiale [RootCause]:  [RoutineWork]: turno centrale| [ShiftType]: Immagazzinamento materiale [Title]: In holding area ? presente uno scaffale che necessita manutezione ed eventuale idoneit? per l'utilizzo stoccaggio merce.Alcuni dadi utilizzati per mantere lo scaffale fissatto a terra sono allentati, una gamba dello scaffale ? leggermente piegata.Le piastre poste sotto le gambe dello scaffale non sono salde alla pavimentazione ma si spostano al primo tocco creando un potenziale pericolo d?istabilit?.  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-02 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: manutenzione scaffale];[Notes: Scaffale obsoleto non certificabile];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200558</SourceId>
+        <SourceName>61407</SourceName>
+        <Content>[Domain]: Risk[Content]: The floor line tract Q4 (ordered seats if Subscriber. 48, 47, 46, 45) civil Assembly, at the area where the tires are in contact with the same, it's very slippery  [InjuryNature]: Il pavimento del tratto di linea Q4 (postaz. 48, 47, 46, 45) montaggio civili, in corrispondenza del settore in cui gli pneumatici vengono a contatto con lo stesso, ? molto scivoloso [LocationDetail]: addetto Montaggio Civili Q4 post 48 [BodyPart]:  [InjuryCause]: impiati attrezzature||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: addetto Montaggio Civili [Title]: Il pavimento del tratto di linea Q4 (postaz. 48, 47, 46, 45) montaggio civili, in corrispondenza del settore in cui gli pneumatici vengono a contatto con lo stesso, ? molto scivoloso [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|65];[Action Plan: Se del caso, (e ci? dopo avere effettuato alcune prove) prevedere accurata e sistematica pulizia / sgrassaggio del settore del pavimento che va a contatto con gli pneumatici, o altra soluzione tecnica ];[Notes: attesa offerta];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200556</SourceId>
+        <SourceName>61027</SourceName>
+        <Content>[Domain]: Risk[Content]: Floor pit to fix [InjuryNature]: Buca a pavimento da sistemare [LocationDetail]: Postazione 4, carpenteria telai [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Buca a pavimento da sistemare [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-11-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Sistemare buca];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200541</SourceId>
+        <SourceName>60952</SourceName>
+        <Content>[Domain]: Risk[Content]: Floor pit to fix [InjuryNature]: Buca a pavimento da sistemare [LocationDetail]: Postazione 7, montaggio civili [BodyPart]:  [InjuryCause]: Carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale| [ShiftType]:  [Title]: Buca a pavimento da sistemare [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-12-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Sistemare buca];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200489</SourceId>
+        <SourceName>46208</SourceName>
+        <Content>[Domain]: Risk[Content]: On the floor of the Assembly Department civilian vehicles, near pedestrian path beside the warehouse production, height of sudden Q1, 33, a station battery charger (electric pallet truck manual). [InjuryNature]: Sul pavimento del reparto montaggio veicoli civili, in prossimit? de percorso pedonale a fianco del magazzino produzione, altezza della tratto Q1, postazione 33, ? presente un carica batteria (transpallet elettrico manuale). [LocationDetail]: Montaggio Civili - Q1 postaz 33 [BodyPart]:  [InjuryCause]: gestione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: sempre |00:00:00 [ShiftType]: Montaggio Civili [Title]: Sul pavimento del reparto montaggio veicoli civili, in prossimit? de percorso pedonale a fianco del magazzino produzione, altezza della tratto Q1, postazione 33, ? presente un carica batteria (transpallet elettrico manuale). [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-09-18 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|40];[Action Plan: Valutare se quello ? effettivamente il posto un cui deve essere ubicato il carica batteria. Se s?, realizzare idoneo attrezzo su cui posizionare  il carica batteria, relativa segnaletica di sicurezza e se del caso, aggiornare la planimetria ubicazione carica batteria];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200458</SourceId>
+        <SourceName>40688</SourceName>
+        <Content>[Domain]: Risk[Content]: There is no floor signage that identifies where to place the cabin trolley [InjuryNature]: Non ? presente la segnaletica a pavimento che identifica dove posizionare il carrello porta cabina [LocationDetail]: Postazione 1, sellatura militare [BodyPart]:  [InjuryCause]: Debolezza di progetto||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Non ? presente la segnaletica a pavimento che identifica dove posizionare il carrello porta cabina [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Realizzare la segnaletica a pavimento che identifica dove posizionare il carrello porta cabina (con urgenza particolare, nella  Prima postazione) ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200409</SourceId>
+        <SourceName>36036</SourceName>
+        <Content>[Domain]: Risk[Content]: Resin flooring cracked and Causeway [InjuryNature]: Resinatura pavimentazione crepata e rialzata [LocationDetail]: 036 [BodyPart]:  [InjuryCause]: cedimento pavimantazione|lavorazioni eseguite correttamente ?|fondo sotto resina non pulito|lavori in economia ?|Prodotti chimici sul fondo ?| [IncidentPriority]: ripristino pavimantazione [IncidentStatus]: La resina si ? inarcata e scrostata [RootCause]:  [RoutineWork]: centrale|00:00:00 [ShiftType]: Montaggio marmitte e tubazioni idroguida [Title]: Resinatura pavimentazione crepata e rialzata [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-04-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|69];[Action Plan: ripristino pavimantazione];[Notes: attesa rilascio rda 1860974 del 06/07/2015];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200380</SourceId>
+        <SourceName>33649</SourceName>
+        <Content>[Domain]: Risk[Content]: When it rains, the roof of the Department there are infiltrations of rainwater that falls on the floor of the ward, [InjuryNature]: Quando piove, dal tetto del reparto ci sono delle infiltrazioni di acqua piovana che cadono dul pavimento del reparto,  [LocationDetail]:  [BodyPart]:  [InjuryCause]: impianti / attrezzi - carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: |00:00:00 [ShiftType]:  [Title]: Quando piove, dal tetto del reparto ci sono delle infiltrazioni di acqua piovana che cadono dul pavimento del reparto,  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-18 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Riparare tetto ];[Notes: attesa rilascio rda n?1860333 del 30/05/2015];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200370</SourceId>
+        <SourceName>33006</SourceName>
+        <Content>[Domain]: Risk[Content]: Presence of a pit on the floor/manhole  [InjuryNature]: Presenza di una buca sul pavimento / tombino  [LocationDetail]:  [BodyPart]:  [InjuryCause]: impianti / attrezzi ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: |00:00:00 [ShiftType]:  [Title]: Presenza di una buca sul pavimento / tombino  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: ripristinare il tombino di chiusura (eliminare buca) sul pavimento / tombino ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200369</SourceId>
+        <SourceName>33006</SourceName>
+        <Content>[Domain]: Risk[Content]: Presence of a pit on the floor/manhole  [InjuryNature]: Presenza di una buca sul pavimento / tombino  [LocationDetail]:  [BodyPart]:  [InjuryCause]: impianti / attrezzi ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: |00:00:00 [ShiftType]:  [Title]: Presenza di una buca sul pavimento / tombino  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: ripristinare il tombino di chiusura (eliminare buca) sul pavimento / tombino ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200353</SourceId>
+        <SourceName>31835</SourceName>
+        <Content>[Domain]: Risk[Content]: an electric cable Hoist power coming out of the floor may be protected [InjuryNature]: un cavo elettrico alimentazione paranco che esce dal pavimento potrebbe essere protetto [LocationDetail]:  [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]:  [Title]: un cavo elettrico alimentazione paranco che esce dal pavimento potrebbe essere protetto [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: applicare protezione  al cavo elettrico alimentazione paranco  che esce dal pavimento ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200274</SourceId>
+        <SourceName>26224</SourceName>
+        <Content>[Domain]: Risk[Content]: Floor outlet air intake located at risk stumbling [InjuryNature]: Presa aspirazione aria che si trova a pavimento a rischio inciampo [LocationDetail]: Postazione 31, montaggio veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Presa aspirazione aria che si trova a pavimento a rischio inciampo [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-11-13 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|69];[Action Plan: Coprire buca];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200216</SourceId>
+        <SourceName>23973</SourceName>
+        <Content>[Domain]: Risk[Content]: Floor can be improved (presence of imperfections) [InjuryNature]: Pavimento migliorabile (presenza di imperfezioni) [LocationDetail]: Preparazione valvole, reparto montaggio militari [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|08:00:00 [ShiftType]:  [Title]: Pavimento migliorabile (presenza di imperfezioni) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-09-15 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200190</SourceId>
+        <SourceName>23376</SourceName>
+        <Content>[Domain]: Risk[Content]: Rubber floor mats for tunnel (9 Kg) ergonomically burdensome for certain categories of operators [InjuryNature]: Tappeto gomma per tunnel (9 Kg) ergonomicamente gravoso per alcune categorie di operatori [LocationDetail]: Postazione 1, Reparto sellatura militare [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Tappeto gomma per tunnel (9 Kg) ergonomicamente gravoso per alcune categorie di operatori [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-08 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 7|77];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200177</SourceId>
+        <SourceName>23103</SourceName>
+        <Content>[Domain]: Risk[Content]: The Rails furniture present on the floor of 40 are not colored, therefore not very visible, so they can create stumbling operators [InjuryNature]: I binari mobili presenti sul pavimento della postazione 40 / 41 non sono colorati, pertanto poco visibili, pertanto possono creare inciampo agli operatori  [LocationDetail]: / [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]: / [IncidentStatus]: / [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: / [Title]: I binari mobili presenti sul pavimento della postazione 40 non sono colorati, pertanto poco visibili, pertanto possono creare inciampo agli operatori  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-28 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200170</SourceId>
+        <SourceName>22990</SourceName>
+        <Content>[Domain]: Risk[Content]: The warehouse oils, the small ramp on the floor create discomfort to truck operators during withdrawal/deposit oils [InjuryNature]: Nel magazzino oli, la piccola rampa presente sul pavimento crea disagio ai carrellisti durante la fase di prelievo / deposito oli [LocationDetail]: / [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: /| [ShiftType]: / [Title]: Nel magazzino oli, la piccola rampa presente sul pavimento crea disagio ai carrellisti durante la fase di prelievo / deposito oli [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200152</SourceId>
+        <SourceName>19049</SourceName>
+        <Content>[Domain]: Risk[Content]: In some spots there are authoritative asperity flooring [InjuryNature]: In alcuni punti della pavimentazione vi sono delle asperit? rilevanti [LocationDetail]: Reparto montaggio Dumper ADT [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|09:00:00 [ShiftType]:  [Title]: In alcuni punti della pavimentazione vi sono delle asperit? rilevanti [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-05-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: Ripristinare pavimentazione];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>40</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200328</SourceId>
+        <SourceName>29665</SourceName>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: Quality Gate non riscaldato [LocationDetail]: Quality Gate, reparto montaggio civili [BodyPart]:  [InjuryCause]: Debolezza di progetto||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale| [ShiftType]:  [Title]: Quality Gate non riscaldato [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-01-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Fornire l'area di riscaldamento];[Notes: La struttura non ? coibentata e non ? stata progettata per essere riscaldata. I materiali non sono ignufughi e pertanto non risulta possibile l'installazione di impianti di riscaldamento come stufe/lampade a raggi infrarossi];[Dates: |]</Content>
+        <OverallMatchValue>
+        </OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200207</SourceId>
+        <SourceName>23701</SourceName>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: doll system migliorabili [LocationDetail]: Reparto Dumper RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: doll system migliorabili [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-31 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|69];[Action Plan: Valutare modifica doll system];[Notes: Doll system verr? sostituita con attivit? wcm in reparto dumper. Per ora ok.];[Dates: |]</Content>
+        <OverallMatchValue>
+        </OverallMatchValue>
+    </MatchedSource>
+</MatchedSources>

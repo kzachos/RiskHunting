@@ -430,7 +430,7 @@
     <value>Risolvi il Rischio</value>
   </data>
   <data name="ResolveRisk.NavigationBar.Left" xml:space="preserve">
-    <value>Crea il Rischio</value>
+    <value>Crea Idee</value>
   </data>
   <data name="ResolveRisk.NavigationBar.Right" xml:space="preserve">
     <value>Controlla e Conferma</value>

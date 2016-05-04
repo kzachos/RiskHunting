@@ -788,7 +788,7 @@ namespace RiskHunting
 
 		}
 
-		public async virtual void imageClicked(object sender, EventArgs args)
+		public virtual void imageClicked(object sender, EventArgs args)
 		{
 			if (CheckTextBox (RiskDescription, AppResources.DescribeRisk_Form_Watermark_Description) && CheckTextBox (RiskAuthor, AppResources.DescribeRisk_Form_Watermark_Author)) {
 				Save ();
@@ -799,6 +799,9 @@ namespace RiskHunting
 				alert_message_error.Visible = true;
 				alert_message_success.Visible = false;
 			}
+
+//			var t = TranslatorGoogle.TranslateText ("how are you", "it");
+//			Console.WriteLine ("google: " + t);
 
 //			string resourcesPath = Path.Combine (SettingsTool.GetApplicationPath(), "Resources");
 //			List<RiskDescription> values = File.ReadAllLines(Path.Combine(resourcesPath, "RiskDescriptions.csv"))

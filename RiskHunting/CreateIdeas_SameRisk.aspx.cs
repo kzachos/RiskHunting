@@ -111,7 +111,7 @@ namespace RiskHunting
 //
 //		}
 
-		protected async void Page_Init(object sender, EventArgs e)
+		protected void Page_Init(object sender, EventArgs e)
 		{
 			if (Sessions.PersonaState != String.Empty) 
 				Session.Remove (Sessions.personaState);
@@ -147,19 +147,23 @@ namespace RiskHunting
 				CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 
 				var query = this.currentRisk.Content;
-				var lang = LanguageDetection.DetectLanguage (query);
-				if (!lang.language.Equals("en")) 
-				{
-					if (Convert.ToString (Session ["liveStatus"]) == "on") {
-						Translator tr = new Translator ();	
-						var task = tr.TranslateString (query, "en");
-						RetrieveNLData (task.Result, lang.language, currentCulture);
+				if (Convert.ToString (Session ["liveStatus"]) == "on") {
+					var lang = LanguageDetection.DetectLanguage (query);
+					if (!lang.language.Equals("en")) 
+					{
+						if (Convert.ToString (Session ["liveStatus"]) == "on") {
+							var t = TranslatorGoogle.TranslateText (query, "en");
+//							Translator tr = new Translator ();	
+//							var task = tr.TranslateString (query, "en");
+							RetrieveNLData (t, lang.language, currentCulture);
+						}
+						else
+							RetrieveNLData (query, lang.language, currentCulture);
 					}
-					else
+					else 
 						RetrieveNLData (query, lang.language, currentCulture);
-				}
-				else 
-					RetrieveNLData (query, lang.language, currentCulture);
+				} else 
+					RetrieveNLData (query, "en", currentCulture);
 				
 
 			}
@@ -279,47 +283,59 @@ namespace RiskHunting
 
 		void RetrieveNLData (string query, string lang, CultureInfo currentCulture)
 		{
-			string errorMsg;
-			if(Util.ServiceExists(Constants.ANTIQUE_URI, false, out errorMsg)) {
-				RiskHunting.antiqueService.AntiqueService antique = new RiskHunting.antiqueService.AntiqueService ();
-				try
-				{
+			if (Convert.ToString (Session ["liveStatus"]) == "on") {
+				string errorMsg;
+				if(Util.ServiceExists(Constants.ANTIQUE_URI, false, out errorMsg)) {
+					RiskHunting.antiqueService.AntiqueService antique = new RiskHunting.antiqueService.AntiqueService ();
+					try
+					{
 
-					System.Net.ServicePointManager.Expect100Continue = false;
-					var output = antique.NLParser (query);
-					this.NLResponse = Util.DeserializeNLResponse (output);
+						System.Net.ServicePointManager.Expect100Continue = false;
+						var output = antique.NLParser (query);
+						this.NLResponse = Util.DeserializeNLResponse (output);
 
-					if (Sessions.CreativityPromptsState != null)
-						Session.Remove(Sessions.creativityPromptsState);
-					//			Session ["CURRENT_PAST_RISK_DESC"] = NLResponse;
+						if (Sessions.CreativityPromptsState != null)
+							Session.Remove(Sessions.creativityPromptsState);
+						//			Session ["CURRENT_PAST_RISK_DESC"] = NLResponse;
+					}
+					catch (Exception ex)
+					{
+					}
+					finally {
+						PrepareData (lang, currentCulture);
+						PopulateData ();
+					}
 				}
-				catch (Exception ex)
+				else
 				{
+					generatePrompts.Visible = false;
+					hint_box.Visible = false;
+					alert_message_success.Visible = false;
+					errorMessage.InnerText = AppResources.PastRisk_Notification_FailedGeneratePrompts;
+					alert_message_error.Visible = true;
 				}
-				finally {
-					PrepareData (lang, currentCulture);
-					PopulateData ();
-				}
-			}
-			else
-			{
-				generatePrompts.Visible = false;
-				hint_box.Visible = false;
-				alert_message_success.Visible = false;
-				errorMessage.InnerText = AppResources.PastRisk_Notification_FailedGeneratePrompts;
-				alert_message_error.Visible = true;
+			} else {
+				PrepareData (lang, currentCulture);
+				PopulateData ();
 			}
 		}
 
 		#endregion
 
-		async Task<List<string>> GenerateGenericCreativityPrompts(string lang, CultureInfo currentCulture)
+		List<string> GenerateGenericCreativityPrompts(string lang, CultureInfo currentCulture)
 		{
 			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
 			foreach(var item in NLResponse)
 			{
-				if (!item.TermValue.Equals (String.Empty))
-					NLResponseTrimmed.Add (item);
+				var regexItem = new Regex("^[a-zA-Z0-9 ]*$");
+				if (!item.TermValue.Equals (String.Empty) && regexItem.IsMatch(item.TermValue)) {
+					NLResponseToken itemNew = item;
+					if (item.Pos == "NP")
+						itemNew.TermValue = "the " + item.TermValue.Trim ();
+					else
+						itemNew.TermValue = item.TermValue.Trim ();
+					NLResponseTrimmed.Add (itemNew);
+				}
 			}
 
 			if (!currentCulture.ToString ().Contains ("en"))
@@ -335,19 +351,19 @@ namespace RiskHunting
 				}
 				if (!termValuesString.Equals(String.Empty)) {
 					var NLResponseNew = new List<NLResponseToken>();
-					Translator tr = new Translator();	
 
-					var task = await tr.TranslateString (termValuesString, lang);
-					var res = task.Trim().Split(new char[] {'.'});
+					var t = TranslatorGoogle.TranslateText (termValuesString, lang);
+//					Translator tr = new Translator();	
+//					var task = await tr.TranslateString (termValuesString, lang);
+					var res = t.Trim().Split(new char[] {'.'});
 					var c = 0;
 					for (int j = 0; j < res.Length; j++)
 					{
 						if (!res[j].Trim().Equals (String.Empty)) {
 							NLResponseToken itemNew = new NLResponseToken ();
-							itemNew.TermValue = res[j].Trim();
-							Console.WriteLine (itemNew.TermValue);
 							itemNew.ID = ids[j];
 							itemNew.Pos = pos[j];
+							itemNew.TermValue = res [j].Trim ();
 							NLResponseNew.Add (itemNew);
 						}
 					}
@@ -393,22 +409,23 @@ namespace RiskHunting
 
 		List<string> GenerateGenericCreativityPromptsStatic()
 		{
-			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
-			foreach(var item in NLResponse)
-			{
-				if (!item.TermValue.Equals (String.Empty))
-					NLResponseTrimmed.Add (item);
-			}
+//			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
+//			foreach(var item in NLResponse)
+//			{
+//				if (!item.TermValue.Equals (String.Empty))
+//					NLResponseTrimmed.Add (item);
+//			}
+//
+//			NLResponseTrimmed.Shuffle ();
 
 			int count = 0;
 			List<string> ps = new List<string> ();
-			NLResponseTrimmed.Shuffle ();
-
 			CultureInfo currentCulture = Thread.CurrentThread.CurrentCulture;
 
 
-			string[] valuesNP = new string[2] {"scatole", "corridoio"};
-			string[] valuesVP = new string[0] {};
+			string[] valuesNP1 = {"box"};
+			string[] valuesNP = {"scatole", "corridoio"};
+			string[] valuesVP = {};
 
 			foreach (var item in valuesNP) {
 				if (!item.Equals (String.Empty)) {
@@ -439,9 +456,15 @@ namespace RiskHunting
 		{
 			if (!Page.IsPostBack) {
 				if (Convert.ToString(Session["liveStatus"]) == "on")
-					CreativityPromptsFeed = GenerateGenericCreativityPrompts (lang, currentCulture).Result;
+					CreativityPromptsFeed = GenerateGenericCreativityPrompts (lang, currentCulture);
 				else
 					CreativityPromptsFeed = GenerateGenericCreativityPromptsStatic ();
+
+				Console.WriteLine ("****** PrepareData *******");
+				foreach (var item in CreativityPromptsFeed) {
+					Console.WriteLine (item);
+				}
+
 				CreativityPromptsFeed.Shuffle ();
 
 //				Random rnd = new Random();
@@ -453,10 +476,7 @@ namespace RiskHunting
 //						sw.WriteLine (String.Format ("{0}", newit));
 //					}
 
-				Console.WriteLine ("****** PrepareData *******");
-				foreach (var item in CreativityPromptsFeed) {
-					Console.WriteLine (item);
-				}
+
 				Console.WriteLine ("CreativityPromptsFeed.Count: " + CreativityPromptsFeed.Count);
 			} else {
 

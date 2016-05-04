@@ -3,7 +3,7 @@
   <FacetType>Problem</FacetType>
   <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
   <Author>Monica|1234</Author>
-  <LaunchDate>25/04/2016 12:25:15</LaunchDate>
+  <LaunchDate>28/04/2016 10:03:54</LaunchDate>
   <SourceSpecificationLastEdited>25/01/2016</SourceSpecificationLastEdited>
   <FacetSpecificationData>
     <Content>La moquetta nell'uffio A e' rotta con possibilta' di inciampo.</Content>
@@ -21,7 +21,7 @@
     <ContractorName>Max</ContractorName>
     <DateClosed />
     <DateIncidentOccurred>25/01/2016 00:00:00</DateIncidentOccurred>
-    <Miscellaneous />
+    <Miscellaneous>xmlFiles/Sources/Risk/Images/120006/120006.jpg</Miscellaneous>
     <MatchingDetails />
   </FacetSpecificationData>
 </LanguageSpecificSpecification>

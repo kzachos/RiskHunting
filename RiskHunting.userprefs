@@ -1,10 +1,13 @@
 ﻿<Properties StartupItem="RiskHunting/RiskHunting.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RiskHunting/CreateIdeas_PastRisk.aspx.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RiskHunting/Classes/GenericCreativityPrompts.cs">
     <Files>
-      <File FileName="RiskHunting/CreateIdeas_SameRisk.aspx.cs" Line="438" Column="5" />
-      <File FileName="RiskHunting/CreateIdeas_PastRisk.aspx.cs" Line="280" Column="39" />
-      <File FileName="RiskHunting/CreateIdeas_PastRisks.aspx.cs" Line="1" Column="1" />
+      <File FileName="RiskHunting/DescribeRisk.aspx" Line="1" Column="1" />
+      <File FileName="RiskHunting/Classes/LanguageDetection.cs" Line="1" Column="1" />
+      <File FileName="RiskHunting/Classes/Translator.cs" Line="1" Column="1" />
+      <File FileName="RiskHunting/Classes/GenericCreativityPrompts.cs" Line="69" Column="31" />
+      <File FileName="RiskHunting/CreateIdeas_SameRisk.aspx.cs" Line="1" Column="1" />
+      <File FileName="RiskHunting/EmptyClass.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

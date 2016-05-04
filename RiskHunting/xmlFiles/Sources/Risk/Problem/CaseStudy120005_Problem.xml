@@ -3,16 +3,16 @@
   <FacetType>Problem</FacetType>
   <FacetSpecificationLanguage>Text</FacetSpecificationLanguage>
   <Author>Monica|12345</Author>
-  <LaunchDate>26/04/2016 17:06:17</LaunchDate>
-  <SourceSpecificationLastEdited>25/01/2016</SourceSpecificationLastEdited>
+  <LaunchDate>04/05/2016 11:42:02</LaunchDate>
+  <SourceSpecificationLastEdited>28/01/2016</SourceSpecificationLastEdited>
   <FacetSpecificationData>
-    <Content> Ci sono scatole di cartone nel corridorio ostruendo il passaggio</Content>
+    <Content> Ci sono scatole di cartone nel corridoio ostruendo il passaggio</Content>
     <InjuryNature>Abrasioni/Tagli/Lacerazione</InjuryNature>
-    <LocationDetail>Linea dei pedoni|00</LocationDetail>
+    <LocationDetail>Linea dei pedoni|C4</LocationDetail>
     <BodyPart>Whole body</BodyPart>
     <InjuryCause />
     <IncidentPriority />
-    <IncidentStatus>fare il *ponti* in una forma irregolare</IncidentStatus>
+    <IncidentStatus>far il *scatole* fare un sacco di cose diverse;FORNITURA CON IMBALLO PIU RESISTENTE - enhanced</IncidentStatus>
     <RootCause />
     <RoutineWork />
     <ShiftType />
@@ -20,8 +20,8 @@
     <ClosedByOperator />
     <ContractorName>Luigi</ContractorName>
     <DateClosed />
-    <DateIncidentOccurred>25/01/2016 00:00:00</DateIncidentOccurred>
-    <Miscellaneous />
+    <DateIncidentOccurred>28/01/2016 00:00:00</DateIncidentOccurred>
+    <Miscellaneous>xmlFiles/Sources/Risk/Images/120005/120005.jpg</Miscellaneous>
     <MatchingDetails />
   </FacetSpecificationData>
 </LanguageSpecificSpecification>

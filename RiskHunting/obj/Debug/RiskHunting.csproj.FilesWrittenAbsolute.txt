@@ -28,3 +28,9 @@
 /Users/koszachos/Projects/RiskHunting/RiskHunting/bin/System.Net.Http.Primitives.dll
 /Users/koszachos/Projects/RiskHunting/RiskHunting/bin/System.Net.Http.Extensions.dll
 /Users/koszachos/Projects/RiskHunting/RiskHunting/bin/RestSharp.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/log4net.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/Google.Apis.Core.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/Zlib.Portable.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/Google.Apis.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/Google.Apis.PlatformServices.dll
+/Users/koszachos/Projects/RiskHunting/RiskHunting/bin/Google.Apis.Translate.v2.dll
