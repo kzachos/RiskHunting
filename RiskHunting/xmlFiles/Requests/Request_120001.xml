@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requestId="120002" xmlns="http://achernar.soi.city.ac.uk/xmlSchemas/Request">
+<Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requestId="120009" xmlns="http://achernar.soi.city.ac.uk/xmlSchemas/Request">
   <Registries>
     <Registry type="Sources" name="-" />
   </Registries>
@@ -8,13 +8,13 @@
     <TermExpansion synonym="0" hypernym="0" gloss="0" />
     <MaxResults>100</MaxResults>
   </Properties>
-  <DateTime>15/03/2016 17:12:38</DateTime>
+  <DateTime>05/05/2016 18:13:30</DateTime>
   <SimilarityType>Eddie</SimilarityType>
   <DataSource>
     <Type>Document</Type>
     <Uri>n/a</Uri>
   </DataSource>
   <Target>
-    <TargetDescription>[InjuryNature]:  [LocationDetail]: After Paint (APM or Medical Line)|00 [Content]: The worker lay down on a duckboard in order to move under a tractor to check for possible oil leaks, but the duckboard shifted as the worker sat down and the worker fell and received a superficial cut to the head [BodyPart]: Whole body</TargetDescription>
+    <TargetDescription>[InjuryNature]:  [LocationDetail]: Linea dei pedoni|B4 [Content]: When you block the bearings during engagement on the spindle, to extract necessary to dismantle the whole time with the risk of falling of the same [BodyPart]: Whole body</TargetDescription>
   </Target>
 </Request>

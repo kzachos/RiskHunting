@@ -328,13 +328,13 @@ namespace RiskHunting
 			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
 			foreach(var item in NLResponse)
 			{
-				var regexItem = new Regex("^[a-zA-Z]*$");
-				if (!item.TermValue.Equals (String.Empty) && !regexItem.IsMatch(item.TermValue)) {
+				var parsedTermValue = Regex.Replace(item.TermValue, @"[\[\]\(\)']+", "").Trim();
+				if (!parsedTermValue.Equals (String.Empty) && parsedTermValue.Length > 1) {
 					NLResponseToken itemNew = item;
 					if (item.Pos == "NP")
-						itemNew.TermValue = "the " + item.TermValue.Trim ();
+						itemNew.TermValue = "the " + parsedTermValue.Replace('.', ',');
 					else
-						itemNew.TermValue = item.TermValue.Trim ();
+						itemNew.TermValue = parsedTermValue.Replace('.', ',');
 					NLResponseTrimmed.Add (itemNew);
 				}
 			}
@@ -592,7 +592,7 @@ namespace RiskHunting
 		private string GenerateHtml(string idea)
 		{
 			return LiStartTagMenu +
-				aStartTag + idea + aMidTag +
+				aStartTag + Microsoft.Security.Application.AntiXss.JavaScriptEncode(idea, false) + aMidTag +
 				SpanStartTagName + idea + SpanEndTag +
 				SpanStartTagArrow + SpanEndTag + aEndTag + LiEndTag;
 		}

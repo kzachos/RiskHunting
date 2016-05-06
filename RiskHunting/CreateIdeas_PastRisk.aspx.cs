@@ -196,16 +196,20 @@ namespace RiskHunting
 			List<NLResponseToken> NLResponseTrimmed = new List<NLResponseToken> () ;
 			foreach(var item in NLResponse)
 			{
-				var regexItem = new Regex("^[a-zA-Z]*$");
-				if (!item.TermValue.Equals (String.Empty) && !regexItem.IsMatch(item.TermValue)) {
+				var parsedTermValue = Regex.Replace(item.TermValue, @"[\[\]\(\)']+", "").Trim();
+//				var regexItem = new Regex("^[a-zA-Z]*$");
+				if (!parsedTermValue.Equals (String.Empty) && parsedTermValue.Length > 1) {
 					NLResponseToken itemNew = item;
 					if (item.Pos == "NP")
-						itemNew.TermValue = "the " + item.TermValue.Trim ();
+						itemNew.TermValue = "the " + parsedTermValue.Replace('.', ',');
 					else
-						itemNew.TermValue = item.TermValue.Trim ();
+						itemNew.TermValue = parsedTermValue.Replace('.', ',');
 					NLResponseTrimmed.Add (itemNew);
+//					Response.Write (itemNew.TermValue + "<br>");
 				}
 			}
+
+//			Response.Write ("<br><br>");
 
 			if (!currentCulture.ToString ().Contains ("en"))
 			{
@@ -213,7 +217,7 @@ namespace RiskHunting
 				var pos = NLResponseTrimmed.Select(c => c.Pos).ToArray();
 				var termValues = NLResponseTrimmed.Select(c => c.TermValue).ToArray();
 
-				var termValuesString = string.Empty;
+				var termValuesString = string.Empty; 
 				for (int i = 0; i < termValues.Length; i ++)
 				{						
 					termValuesString += termValues[i] + ". ";
@@ -234,6 +238,7 @@ namespace RiskHunting
 							itemNew.Pos = pos[j];
 							itemNew.TermValue = res [j].Trim ();
 							NLResponseNew.Add (itemNew);
+//							Response.Write (itemNew.TermValue + "<br>");
 						}
 					}
 					NLResponseTrimmed.Clear();

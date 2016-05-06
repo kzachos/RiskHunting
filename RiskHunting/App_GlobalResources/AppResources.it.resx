@@ -547,7 +547,7 @@
     <value>Seleziona le idee di risoluzione che hanno contribuito verso la soluzione del rischio.</value>
   </data>
   <data name="CreativityPrompts.BaseForm" xml:space="preserve">
-    <value>Pensa a</value>
+    <value>Pensa</value>
   </data>
   <data name="ProcessGuidance.PastRisk.Default" xml:space="preserve">
     <value>Crea una soluzione nuova per il rischio. Seleziona una soluzione dalla lista qui sotto</value>

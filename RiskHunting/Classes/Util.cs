@@ -648,8 +648,23 @@ namespace RiskHunting
 					formattedText = text.Replace ("evening out", "even out");
 				break;
 			case "it-IT":
-				if (text.StartsWith ("come"))
-					formattedText = text.Replace ("come ", String.Empty);
+				if (text.StartsWith ("a come"))
+					formattedText = text.Replace ("a come ", String.Empty);
+
+				else if (text.StartsWith ("a fare"))
+					formattedText = text.Replace ("a fare ", "fare ");
+
+				else if (text.StartsWith ("a far "))
+					formattedText = text.Replace ("a far ", "far ");
+
+				else if (text.StartsWith ("a metter"))
+					formattedText = text.Replace ("a metter ", "metter ");
+
+				else if (text.StartsWith ("a disattivare"))
+					formattedText = text.Replace ("a disattivare ", "disattivare ");
+
+				else if (text.StartsWith ("a uniformare"))
+					formattedText = text.Replace ("a uniformare ", "uniformare ");
 
 				else if (text.StartsWith ("se puoi"))
 					formattedText = text.Replace ("se puoi ", String.Empty);
@@ -657,8 +672,11 @@ namespace RiskHunting
 				else if (text.StartsWith ("se è possibile"))
 					formattedText = text.Replace ("se è possibile ", String.Empty);
 
-				else if (text.StartsWith ("how you"))
-					formattedText = text.Replace ("how you ", String.Empty);
+				else if (text.StartsWith ("a rendere"))
+					formattedText = text.Replace ("a rendere ", "rendere ");
+
+				else if (text.StartsWith ("a dividere"))
+					formattedText = text.Replace ("a dividere ", "dividere ");
 
 				else if (text.StartsWith ("se è possibile"))
 					formattedText = text.Replace ("se è possibile ", String.Empty);
@@ -669,12 +687,18 @@ namespace RiskHunting
 				else if (text.StartsWith ("se potessi"))
 					formattedText = text.Replace ("se potessi ", String.Empty);
 
-				else if (text.StartsWith ("cercar di"))
-					formattedText = text.Replace ("cercar di ", String.Empty);
+				else if (text.StartsWith ("a cercar di"))
+					formattedText = text.Replace ("a cercar di ", String.Empty);
 
 				else if (text.StartsWith ("cercando di"))
 					formattedText = text.Replace ("cercando di ", String.Empty);
 				
+				else if (text.StartsWith ("a utilizzare"))
+					formattedText = text.Replace ("a utilizzare ", "utilizzare ");
+
+				else if (text.StartsWith ("a avere"))
+					formattedText = text.Replace ("a avere ", "avere ");
+
 				else 
 					formattedText = text;
 				break;

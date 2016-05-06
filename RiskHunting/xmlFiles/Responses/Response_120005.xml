@@ -1,93 +1,123 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <MatchedSources responseId="" similarityType="" dataSourceType="">
     <MatchedSource>
-        <SourceId>201297</SourceId>
-        <SourceName>17777</SourceName>
-        <Content>[Domain]: Risk[Content]: presence of a cart on pedestrian crossing (partial obstruction of the passage) [InjuryNature]: presenza di un carretto su passaggio pedonale (parziale ostruzione del passaggio) [LocationDetail]: Q4, reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale|11:00:00 [ShiftType]:  [Title]: presenza di un carretto su passaggio pedonale (parziale ostruzione del passaggio) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-05-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatori];[Notes: ];[Dates: |]</Content>
+        <SourceId>201362</SourceId>
+        <SourceName>15377</SourceName>
+        <Content>[Domain]: Risk[Content]: Presence of production material on the pedestrian path that partially blocks the passage to pedestrians [InjuryNature]: Presenza di materiale di produzione sul percorso pedonale che ostruisce parzialmente il passaggio ai pedoni [LocationDetail]: Reparto montaggio Dumper RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Presenza di materiale di produzione sul percorso pedonale che ostruisce parzialmente il passaggio ai pedoni [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-03-06 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l’operatore al osservanza dell’ordine nella postazione di lavoro / reparto];[Notes: Operatore sensibilizzato];[Dates: |]</Content>
         <OverallMatchValue>100</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200562</SourceId>
+        <SourceName>62382</SourceName>
+        <Content>[Domain]: Risk[Content]: In the hallway of the bulky warehouse burned two lamps. [InjuryNature]: Nel corridoio del magazzino ingombrante si sono bruciate due lampade. [LocationDetail]: magazzino ingombrante [BodyPart]:  [InjuryCause]: sostituzione lampadine||||| [IncidentPriority]:  [IncidentStatus]: transito con carrello [RootCause]:  [RoutineWork]: turno normale| [ShiftType]: transito con carrello [Title]: Nel corridoio del magazzino ingombrante si sono bruciate due lampade. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-02 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|68];[Action Plan: sostituzione lampadine];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>82</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200366</SourceId>
         <SourceName>32231</SourceName>
         <Content>[Domain]: Risk[Content]: The container for the delivery of the stabilizer is in heavy cardboard. In sorting and handling, the container when opening breaks down to the excessive weight of the material. The material is always a risk of colliding with the operator.  [InjuryNature]: Il contenitore per la consegna delle barre stabilizzatrici migliorabile [LocationDetail]: magazzino produzione, magazzino med e area kit  [BodyPart]:  [InjuryCause]: contenitore migliorabile||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale |00:00:00 [ShiftType]: movimentazione barre stabilizzatrici [Title]: Il contenitore per la consegna delle barre stabilizzatrici è in cartone pesante.Nelle operazioni di smistamento e movimentazione, il contenitore all'atto dell'apertura si rompe per l'eccessivo peso del materiale.Il materiale rischia sempre di urtare l'operatore. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-04 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: FORNITURA CON IMBALLO PIU RESISTENTE];[Notes: Creazione di un contenitore di contenimento in ferro per evitare problemi con il cartone o la caduta del materiale];[Dates: |]</Content>
-        <OverallMatchValue>78</OverallMatchValue>
-    </MatchedSource>
-    <MatchedSource>
-        <SourceId>201391</SourceId>
-        <SourceName>14095</SourceName>
-        <Content>[Domain]: Risk[Content]: The footpath near the subgroup pre-Assembly bridges is obstructed by a balancer for impact wrench [InjuryNature]: Il percorso pedonale in prossimità del sottogruppo premontaggio ponti risulta ostruito da un balancer per avvitatore [LocationDetail]: Percorso pedonale reparto RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Il percorso pedonale in prossimità del sottogruppo premontaggio ponti risulta ostruito da un balancer per avvitatore [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-01-31 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|23];[Action Plan: Sensibilizzare l'operatore sulla necessità di lasciare liberi i percorsi pedonali per motivi di sicurezza];[Notes: ];[Dates: 2014-02-26 00:00:00.000|2014-02-26 00:00:00.000]</Content>
-        <OverallMatchValue>55</OverallMatchValue>
-    </MatchedSource>
-    <MatchedSource>
-        <SourceId>200807</SourceId>
-        <SourceName>40827</SourceName>
-        <Content>[Domain]: Risk[Content]: A parked vehicle obstructs the footpath inside [InjuryNature]: Un veicolo parcheggiato ostruisce in parte il percorso pedonale interno [LocationDetail]: Reparto delibera [BodyPart]:  [InjuryCause]: disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Un veicolo parcheggiato ostruisce in parte il percorso pedonale interno [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
-        <OverallMatchValue>55</OverallMatchValue>
-    </MatchedSource>
-    <MatchedSource>
-        <SourceId>200692</SourceId>
-        <SourceName>61449</SourceName>
-        <Content>[Domain]: Risk[Content]: produzuone material obstructs part of the pedestrian path inside. [InjuryNature]: materiale di produzuone ostruisce in parte il percorso pedonale interno. [LocationDetail]: reparto Montaggio Militari - postazione 2 [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]: addetto Montaggio Militari  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]: addetto Montaggio Militari  [Title]: materiale di produzuone ostruisce in parte il percorso pedonale interno. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 1|11];[Action Plan: Sensibilizzare operatore ];[Notes: ];[Dates: |]</Content>
-        <OverallMatchValue>55</OverallMatchValue>
-    </MatchedSource>
-    <MatchedSource>
-        <SourceId>200624</SourceId>
-        <SourceName>61454</SourceName>
-        <Content>[Domain]: Risk[Content]: A parked vehicle obstructs part of the pedestrian path inside. [InjuryNature]: Un veicolo parcheggiato ostruisce in parte il percorso pedonale interno. [LocationDetail]: Postazione 48, reparto veicoli civili [BodyPart]:  [InjuryCause]: formazione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno |00:00:00 [ShiftType]:  [Title]: Un veicolo parcheggiato ostruisce in parte il percorso pedonale interno. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 1|11];[Action Plan: Sensibilizzare operatore ];[Notes: ];[Dates: |]</Content>
-        <OverallMatchValue>55</OverallMatchValue>
+        <OverallMatchValue>82</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>201393</SourceId>
         <SourceName>14182</SourceName>
         <Content>[Domain]: Risk[Content]: Controlled torque wrench cable bridges hinders the passage [InjuryNature]: Cavo avvitatore coppia controllata ponti intralcia il passaggio [LocationDetail]: Postazione 40, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Cavo avvitatore coppia controllata ponti intralcia il passaggio [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-02-17 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore sulla necessità di avvolgere la canna dell'aria per evitare inciampo];[Notes: ];[Dates: 2014-02-26 00:00:00.000|2014-02-26 00:00:00.000]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>201365</SourceId>
         <SourceName>14614</SourceName>
-        <Content>[Domain]: Risk[Content]: Presence of material placed side of the walkway which prevents the easy passage  [InjuryNature]: Presenza di materiale posizionato lato del percorso pedonale che impedisce il comodo passaggio  [LocationDetail]: Postazione 5, Reparto Sellatura cabine Civile [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|10:00:00 [ShiftType]:  [Title]: Presenza di materiale posizionato lato del percorso pedonale che impedisce il comodo passaggio  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore ];[Notes: ];[Dates: |]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <Content>[Domain]: Risk[Content]: Presence of material placed side of the walkway which prevents the easy passage  [InjuryNature]: Presenza di materiale posizionato lato del percorso pedonale che impedisce il comodo passaggio  [LocationDetail]: Postazione 5, Reparto Sellatura cabine Civile [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|10:00:00 [ShiftType]:  [Title]: Presenza di materiale posizionato lato del percorso pedonale che impedisce il comodo passaggio  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-01-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l’operatore ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
-        <SourceId>201362</SourceId>
-        <SourceName>15377</SourceName>
-        <Content>[Domain]: Risk[Content]: Presence of production material on the pedestrian path that partially blocks the passage to pedestrians [InjuryNature]: Presenza di materiale di produzione sul percorso pedonale che ostruisce parzialmente il passaggio ai pedoni [LocationDetail]: Reparto montaggio Dumper RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Presenza di materiale di produzione sul percorso pedonale che ostruisce parzialmente il passaggio ai pedoni [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-03-06 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare l'operatore al osservanza dell'ordine nella postazione di lavoro / reparto];[Notes: Operatore sensibilizzato];[Dates: |]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <SourceId>201297</SourceId>
+        <SourceName>17777</SourceName>
+        <Content>[Domain]: Risk[Content]: presence of a cart on pedestrian crossing (partial obstruction of the passage) [InjuryNature]: presenza di un carretto su passaggio pedonale (parziale ostruzione del passaggio) [LocationDetail]: Q4, reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale|11:00:00 [ShiftType]:  [Title]: presenza di un carretto su passaggio pedonale (parziale ostruzione del passaggio) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-05-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatori];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201192</SourceId>
+        <SourceName>22177</SourceName>
+        <Content>[Domain]: Risk[Content]: External pedestrian path blocked by material [InjuryNature]: Percorso pedonale esterno ostruito da materiale [LocationDetail]: Area scoperta dietro al magazzino produzione [BodyPart]:  [InjuryCause]: Parecchio materiale da movimentare|Spazi ristretti|Disordine|Formazione non adeguata|| [IncidentPriority]:  [IncidentStatus]: - [RootCause]:  [RoutineWork]: Mattina|12:00:00 [ShiftType]: Movimentazione materiale [Title]: Percorso pedonale esterno ostruito da materiale [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-15 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|23];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>201189</SourceId>
+        <SourceName>23060</SourceName>
+        <Content>[Domain]: Risk[Content]: The compressed air line blocking step because you don't hang (bound) correctly [InjuryNature]: La tubazione dell'aria compressa ostruisce il passaggio perchè non appesa (vincolata) correttamente [LocationDetail]: Postazione premontaggio motori, Reparto veicoli civili [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|09:00:00 [ShiftType]:  [Title]: La tubazione dell'aria compressa ostruisce il passaggio perchè non appesa (vincolata) correttamente [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-16 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>201136</SourceId>
         <SourceName>24506</SourceName>
-        <Content>[Domain]: Risk[Content]: The material/equipment storage area that is located in the new halls (B) is not easily accessible due to the excessive presence of material stored at times, among other things, even on dedicated to the passage of vehicles/pedestrians [InjuryNature]: L'area di deposito materiale / attrezzature che si trova nei nuovi capannoni (corpo B) non è facilmente raggiungibile a causa dell'eccesiva presenza di materiale stoccato a volte, tra l'altro, anche sui percorsi dedicato al passaggio dei mezzi / pedoni [LocationDetail]: / [BodyPart]:  [InjuryCause]: /|/|/|/|/| [IncidentPriority]: / [IncidentStatus]: / [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: / [Title]: L'area di deposito materiale / attrezzature che si trova nei nuovi capannoni (corpo B) non è facilmente raggiungibile a causa dell'eccesiva presenza di materiale stoccato a volte, tra l'altro, anche sui percorsi dedicato al passaggio dei mezzi / pedoni [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-09-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|21];[Action Plan: Rimuovere il materiale in eccesso e ricollocare il materiale depositato in modo disordinato ];[Notes: inviato 130 pallet di filtri in esubero al magazzino di Torino];[Dates: |]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <Content>[Domain]: Risk[Content]: The material/equipment storage area that is located in the new halls (B) is not easily accessible due to the excessive presence of material stored at times, among other things, even on dedicated to the passage of vehicles/pedestrians [InjuryNature]: L’area di deposito materiale / attrezzature che si trova nei nuovi capannoni (corpo B) non è facilmente raggiungibile a causa dell’eccesiva presenza di materiale stoccato a volte, tra l’altro, anche sui percorsi dedicato al passaggio dei mezzi / pedoni [LocationDetail]: / [BodyPart]:  [InjuryCause]: /|/|/|/|/| [IncidentPriority]: / [IncidentStatus]: / [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: / [Title]: L’area di deposito materiale / attrezzature che si trova nei nuovi capannoni (corpo B) non è facilmente raggiungibile a causa dell’eccesiva presenza di materiale stoccato a volte, tra l’altro, anche sui percorsi dedicato al passaggio dei mezzi / pedoni [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-09-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 2|21];[Action Plan: Rimuovere il materiale in eccesso e ricollocare il materiale depositato in modo disordinato ];[Notes: inviato 130 pallet di filtri in esubero al magazzino di Torino];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200805</SourceId>
+        <SourceName>40823</SourceName>
+        <Content>[Domain]: Risk[Content]: Excess scrap material stacked in blocking, among other things, the pedestrian path [InjuryNature]: Eccessiva presenza di materiale di scarto impilata nel  reparto che ostruisce, tra l’altro, il percorso pedonale  [LocationDetail]: Reparto delibera [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Eccessiva presenza di materiale di scarto impilata nel  reparto che ostruisce, tra l’altro, il percorso pedonale  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Rimuovere dal reparto il materiale di scarto impilato];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200799</SourceId>
         <SourceName>40740</SourceName>
         <Content>[Domain]: Risk[Content]: An operator walks to a location reserved exclusively to the passage of forklift   [InjuryNature]: Un operatore cammina in un percorso riservato esclusivamente  al passaggio dei carrelli elevatore   [LocationDetail]: Magazzino MAX, magazzino produzione [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Un operatore cammina in un percorso riservato esclusivamente  al passaggio dei carrelli elevatore   [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200793</SourceId>
+        <SourceName>40726</SourceName>
+        <Content>[Domain]: Risk[Content]: A vehicle parked out of the blocks in part the footpath outside. [InjuryNature]: Un veicolo uscito dalla linea parcheggiato ostruisce in parte il percorso pedonale esterno. [LocationDetail]: Postazione 48, montaggio veicoli civili [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]: Uscita veicolo da linea [Title]: Un veicolo uscito dalla linea parcheggiato ostruisce in parte il percorso pedonale esterno. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-06-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200656</SourceId>
         <SourceName>62438</SourceName>
         <Content>[Domain]: Risk[Content]: unordered station (in the area of stool passage) [InjuryNature]: postazione non ordinata (sgabello nell'area di passaggio) [LocationDetail]: Postazione 6, montaggio civili [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: postazione non ordinata (sgabello nell'area di passaggio) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-11-04 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200651</SourceId>
+        <SourceName>62417</SourceName>
+        <Content>[Domain]: Risk[Content]: Walkway blocked [InjuryNature]: Passaggio pedonale ostruito [LocationDetail]: Magazzino MED, magazzino produzione [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Passaggio pedonale ostruito [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-12-16 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200644</SourceId>
+        <SourceName>62390</SourceName>
+        <Content>[Domain]: Risk[Content]: Cart Kit blocks walkway [InjuryNature]: Carrello Kit ostruisce passaggio pedonale [LocationDetail]: Postazione 3, carpenteria telai [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Carrello Kit ostruisce passaggio pedonale [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-11-26 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare carrellista];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200594</SourceId>
+        <SourceName>65883</SourceName>
+        <Content>[Domain]: Risk[Content]: Upholstering Department operators for all cars must military fiberglass booths, to re-drilling of holes in the cabin floor to fix the seat support (because the holes in the cabin are fully blocked with fiberglass)-10 holes per cabin, carried out by the operator inside the cab, with pneumatic drill bit â€“ [InjuryNature]: Gli operatori del reparto sellatura cabine devono,  per tutte le cabine militari in vetroresina,  effettuare la                    ri-foratura dei fori presenti sul pianale cabina per il fissaggio del supporto sedile  (poiché i fori presenti nella cabina  [LocationDetail]: sellatura cabine militari - TR2 - postaz. 4 [BodyPart]:  [InjuryCause]: gestione||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: sellatura cabine militari  [Title]: Gli operatori del reparto sellatura cabine devono,  per tutte le cabine militari in vetroresina,  effettuare la                    ri-foratura dei fori presenti sul pianale cabina per il fissaggio del supporto sedile  (poiché i fori presenti nella cabina sono completamente ostruiti dalla vetroresina)  - 10 fori per cabina, effettuati  dall’operatore che si trova dentro alla cabina, con alesatore pneumatico –  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 3|40];[Action Plan: Chiedere al fornitore delle cabine militari in vetroresina che I fori per il fissaggio del supporto sedile  siano “puliti”];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
+    </MatchedSource>
+    <MatchedSource>
+        <SourceId>200589</SourceId>
+        <SourceName>66550</SourceName>
+        <Content>[Domain]: Risk[Content]: Walkway partially blocked by cartons [InjuryNature]: Passaggio pedonale parzialmente ostruito da cartoni [LocationDetail]: Postazione 2, montaggio militari [BodyPart]:  [InjuryCause]: Disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: Passaggio pedonale parzialmente ostruito da cartoni [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-29 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare operatore];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200389</SourceId>
         <SourceName>34477</SourceName>
-        <Content>[Domain]: Risk[Content]: Broken pavement in the area Holding spare parts warehouse (detachment with tiles and the crumbling of the cement created a deep hole about 10 cm diameter of 30 cm) this is a zone of passage. [InjuryNature]: Pavimentazione rotta nell'area Holding magazzino ricambi  [LocationDetail]: area Holding magazzino ricambi  [BodyPart]:  [InjuryCause]: la pavimentazione ? da rifare||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale|00:00:00 [ShiftType]: passaggio carrelli [Title]: Pavimentazione rotta nell'area Holding magazzino ricambi (il distaccamento delle piastrelle e lo sgretolamento del cemento hanno generato un buco profondo circa 10 cm del diametro di 30 cm)si tratta di una zona di passaggio carrelli. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: ];[Notes: ];[Dates: |]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <Content>[Domain]: Risk[Content]: Broken pavement in the area Holding spare parts warehouse (detachment with tiles and the crumbling of the cement created a deep hole about 10 cm diameter of 30 cm) this is a zone of passage. [InjuryNature]: Pavimentazione rotta nell'area Holding magazzino ricambi  [LocationDetail]: area Holding magazzino ricambi  [BodyPart]:  [InjuryCause]: la pavimentazione è da rifare||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: turno centrale|00:00:00 [ShiftType]: passaggio carrelli [Title]: Pavimentazione rotta nell'area Holding magazzino ricambi (il distaccamento delle piastrelle e lo sgretolamento del cemento hanno generato un buco profondo circa 10 cm del diametro di 30 cm)si tratta di una zona di passaggio carrelli. [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-03-27 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|61];[Action Plan: ];[Notes: ];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200312</SourceId>
         <SourceName>28197</SourceName>
-        <Content>[Domain]: Risk[Content]: The passage that connects the Assembly Department civilians with the warehouse production, saw that you enter suddenly on the pedestrian path civil Assembly, could result in interference from low light walls of partition. [InjuryNature]: Il passaggio che congiunge il reparto montaggio civili con il magazzino produzione, visto che si immette in modo repentino  sul precorso pedonale montaggio civili, potrebbe essere causa di interferenza dovuta dalla scarsa visibilità data dalle pareti di [LocationDetail]: / [BodyPart]:  [InjuryCause]: /|/|/|/|/| [IncidentPriority]: / [IncidentStatus]: / [RootCause]:  [RoutineWork]: /| [ShiftType]: / [Title]: Il passaggio che congiunge il reparto montaggio civili con il magazzino produzione, visto che si immette in modo repentino  sul precorso pedonale montaggio civili, potrebbe essere causa di interferenza   dovuta dalla scarsa visibilit data dalle pareti di divisorio.  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-12-18 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Valutare l'eventualit? di migliorare la visibilit? tra reparto montaggio civili e  il magazzino produzione (o altra soluzione finalizzata ad eliminare interferenza) ];[Notes: fatta richiesta di approvazione rda per due specchi parabolici il 22/01/15];[Dates: |]</Content>
-        <OverallMatchValue>47</OverallMatchValue>
+        <Content>[Domain]: Risk[Content]: The passage that connects the Assembly Department civilians with the warehouse production, saw that you enter suddenly on the pedestrian path civil Assembly, could result in interference from low light walls of partition. [InjuryNature]: Il passaggio che congiunge il reparto montaggio civili con il magazzino produzione, visto che si immette in modo repentino  sul precorso pedonale montaggio civili, potrebbe essere causa di interferenza   dovuta dalla scarsa visibilità data dalle pareti di [LocationDetail]: / [BodyPart]:  [InjuryCause]: /|/|/|/|/| [IncidentPriority]: / [IncidentStatus]: / [RootCause]:  [RoutineWork]: /| [ShiftType]: / [Title]: Il passaggio che congiunge il reparto montaggio civili con il magazzino produzione, visto che si immette in modo repentino  sul precorso pedonale montaggio civili, potrebbe essere causa di interferenza   dovuta dalla scarsa visibilità data dalle pareti di divisorio.  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-12-18 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Valutare l’eventualità di migliorare la visibilità tra reparto montaggio civili e  il magazzino produzione (o altra soluzione finalizzata ad eliminare interferenza) ];[Notes: fatta richiesta di approvazione rda per due specchi parabolici il 22/01/15];[Dates: |]</Content>
+        <OverallMatchValue>48</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>201412</SourceId>
         <SourceName>13586</SourceName>
-        <Content>[Domain]: Risk[Content]: Box L4 not closed during welding [InjuryNature]: Box L4 non chiuso durante le attivit? di saldatura [LocationDetail]: Box saldatura L4, Reparto carpenteria [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Box L4 non chiuso durante le attivit? di saldatura [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-03-14 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare addetti con registrazione sul diario prevenzionale.];[Notes: ];[Dates: |]</Content>
+        <Content>[Domain]: Risk[Content]: Box L4 not closed during welding [InjuryNature]: Box L4 non chiuso durante le attività di saldatura [LocationDetail]: Box saldatura L4, Reparto carpenteria [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|11:00:00 [ShiftType]:  [Title]: Box L4 non chiuso durante le attività di saldatura [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-03-14 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: Sensibilizzare addetti con registrazione sul diario prevenzionale.];[Notes: ];[Dates: |]</Content>
         <OverallMatchValue>42</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
@@ -105,7 +135,7 @@
     <MatchedSource>
         <SourceId>200985</SourceId>
         <SourceName>31781</SourceName>
-        <Content>[Domain]: Risk[Content]: an operator carries out processing inside a box with door not completely closed  [InjuryNature]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [LocationDetail]:  [BodyPart]:  [InjuryCause]: disattenzione ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]:  [Title]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: sensibilizzare operatore affich? durante le lavorazioni nei box i portoni vengano chiusi];[Notes: ];[Dates: |]</Content>
+        <Content>[Domain]: Risk[Content]: an operator carries out processing inside a box with door not completely closed  [InjuryNature]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [LocationDetail]:  [BodyPart]:  [InjuryCause]: disattenzione ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: inizio turno|00:00:00 [ShiftType]:  [Title]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-02-20 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: sensibilizzare operatore affichè durante le lavorazioni nei box i portoni vengano chiusi];[Notes: ];[Dates: |]</Content>
         <OverallMatchValue>42</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
@@ -117,19 +147,19 @@
     <MatchedSource>
         <SourceId>200819</SourceId>
         <SourceName>38842</SourceName>
-        <Content>[Domain]: Risk[Content]: An operator carries out processing inside a box with door not completely closed  [InjuryNature]: Un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [LocationDetail]: reparto carpenteria saldatura [BodyPart]:  [InjuryCause]: disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: addetto reparto carpenteria saldatura [Title]: Un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-05-19 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: sensibilizzare operatore affich? durante le lavorazioni nei box i portoni vengano chiusi];[Notes: ];[Dates: |]</Content>
+        <Content>[Domain]: Risk[Content]: An operator carries out processing inside a box with door not completely closed  [InjuryNature]: Un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [LocationDetail]: reparto carpenteria saldatura [BodyPart]:  [InjuryCause]: disattenzione||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: /|00:00:00 [ShiftType]: addetto reparto carpenteria saldatura [Title]: Un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-05-19 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: sensibilizzare operatore affichè durante le lavorazioni nei box i portoni vengano chiusi];[Notes: ];[Dates: |]</Content>
         <OverallMatchValue>42</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200706</SourceId>
         <SourceName>61039</SourceName>
-        <Content>[Domain]: Risk[Content]: an operator carries out processing inside a box with door not completely closed  [InjuryNature]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [LocationDetail]: reparto saldatura - box di saldatura  [BodyPart]:  [InjuryCause]: disattenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno |00:00:00 [ShiftType]: addetto reparto saldatura - box di saldatura  [Title]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-12-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: sensibilizzare operatore affich? durante le lavorazioni nei box i portoni vengano chiusi];[Notes: ];[Dates: |]</Content>
+        <Content>[Domain]: Risk[Content]: an operator carries out processing inside a box with door not completely closed  [InjuryNature]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [LocationDetail]: reparto saldatura - box di saldatura  [BodyPart]:  [InjuryCause]: disattenzione ||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: inizio turno |00:00:00 [ShiftType]: addetto reparto saldatura - box di saldatura  [Title]: un operatore effettua lavorazione all'interno di un box col portone non perfettamente chiuso  [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-12-22 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 4|41];[Action Plan: sensibilizzare operatore affichè durante le lavorazioni nei box i portoni vengano chiusi];[Notes: ];[Dates: |]</Content>
         <OverallMatchValue>42</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200583</SourceId>
         <SourceName>65899</SourceName>
-        <Content>[Domain]: Risk[Content]: The line feed button panel electrical box cabins (ordered seats if Subscriber. 7) is corrupted (taped with duct tape) [InjuryNature]: La scatola elettrica del quadro pulsante avanzamento linea cabine civile (postaz. 7) ? danneggiata (nastrata con dello scotch) [LocationDetail]: sellatura cabine civili TR1 - postazione 7 [BodyPart]:  [InjuryCause]: carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: sellatura cabine civili [Title]: La scatola elettrica del quadro pulsante avanzamento linea cabine civile (postaz. 7) ? danneggiata (nastrata con dello scotch) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Riparare la scatola elettrica del quadro pulsante avanzamento linea cabine civile (postaz. 7)];[Notes: ];[Dates: |]</Content>
+        <Content>[Domain]: Risk[Content]: The line feed button panel electrical box cabins (ordered seats if Subscriber. 7) is corrupted (taped with duct tape) [InjuryNature]: La scatola elettrica del quadro pulsante avanzamento linea cabine civile (postaz. 7) è danneggiata (nastrata con dello scotch) [LocationDetail]: sellatura cabine civili TR1 - postazione 7 [BodyPart]:  [InjuryCause]: carenza di manutenzione||||| [IncidentPriority]:  [IncidentStatus]: / [RootCause]:  [RoutineWork]: sempre|00:00:00 [ShiftType]: sellatura cabine civili [Title]: La scatola elettrica del quadro pulsante avanzamento linea cabine civile (postaz. 7) è danneggiata (nastrata con dello scotch) [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2016-02-24 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|62];[Action Plan: Riparare la scatola elettrica del quadro pulsante avanzamento linea cabine civile (postaz. 7)];[Notes: ];[Dates: |]</Content>
         <OverallMatchValue>42</OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
@@ -165,14 +195,14 @@
     <MatchedSource>
         <SourceId>200328</SourceId>
         <SourceName>29665</SourceName>
-        <Content>[Domain]: Risk[Content]:  [InjuryNature]: Quality Gate non riscaldato [LocationDetail]: Quality Gate, reparto montaggio civili [BodyPart]:  [InjuryCause]: Debolezza di progetto||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale| [ShiftType]:  [Title]: Quality Gate non riscaldato [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-01-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Fornire l'area di riscaldamento];[Notes: La struttura non ? coibentata e non ? stata progettata per essere riscaldata. I materiali non sono ignufughi e pertanto non risulta possibile l'installazione di impianti di riscaldamento come stufe/lampade a raggi infrarossi];[Dates: |]</Content>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: Quality Gate non riscaldato [LocationDetail]: Quality Gate, reparto montaggio civili [BodyPart]:  [InjuryCause]: Debolezza di progetto||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale| [ShiftType]:  [Title]: Quality Gate non riscaldato [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2015-01-23 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|63];[Action Plan: Fornire l'area di riscaldamento];[Notes: La struttura non è coibentata e non è stata progettata per essere riscaldata. I materiali non sono ignufughi e pertanto non risulta possibile l'installazione di impianti di riscaldamento come stufe/lampade a raggi infrarossi];[Dates: |]</Content>
         <OverallMatchValue>
         </OverallMatchValue>
     </MatchedSource>
     <MatchedSource>
         <SourceId>200207</SourceId>
         <SourceName>23701</SourceName>
-        <Content>[Domain]: Risk[Content]:  [InjuryNature]: doll system migliorabili [LocationDetail]: Reparto Dumper RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: doll system migliorabili [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-31 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|69];[Action Plan: Valutare modifica doll system];[Notes: Doll system verr? sostituita con attivit? wcm in reparto dumper. Per ora ok.];[Dates: |]</Content>
+        <Content>[Domain]: Risk[Content]:  [InjuryNature]: doll system migliorabili [LocationDetail]: Reparto Dumper RD [BodyPart]:  [InjuryCause]: ||||| [IncidentPriority]:  [IncidentStatus]:  [RootCause]:  [RoutineWork]: Turno centrale|00:00:00 [ShiftType]:  [Title]: doll system migliorabili [ClosedByOperator]:  [ContractorName]:  [DateClosed]:  [DateIncidentOccurred]: 2014-07-31 00:00:00.000 [Miscellaneous]:  [SolutionDescription]: [Cause: 6|69];[Action Plan: Valutare modifica doll system];[Notes: Doll system verrà sostituita con attività wcm in reparto dumper. Per ora ok.];[Dates: |]</Content>
         <OverallMatchValue>
         </OverallMatchValue>
     </MatchedSource>

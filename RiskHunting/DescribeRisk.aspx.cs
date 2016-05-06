@@ -332,7 +332,7 @@ namespace RiskHunting
 			DateIncidentOccurredYear.Items.Clear();
 
 			var dayNow = DateTime.Now.Day;
-			var monthNow = DateTime.Now.ToString("MMMM", CultureInfo.InvariantCulture);
+			var monthNow = DateTime.Now.ToString("MMMM", Thread.CurrentThread.CurrentCulture);
 			var yearNow = DateTime.Now.ToString("yyyy", CultureInfo.InvariantCulture);
 
 			int count = 0;
@@ -350,7 +350,7 @@ namespace RiskHunting
 			for (int i=0; i<monthNames.Length; i++)
 			{
 				DateIncidentOccurredMonth.Items.Add (new ListItem (monthNames[i]));
-				if (monthNow.Equals (monthNames[i]))
+				if (monthNow.ToLower().Equals (monthNames[i].ToLower()))
 					DateIncidentOccurredMonth.SelectedIndex = i;
 			}
 

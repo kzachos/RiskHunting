@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requestId="120006" xmlns="http://achernar.soi.city.ac.uk/xmlSchemas/Request">
+<Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requestId="120009" xmlns="http://achernar.soi.city.ac.uk/xmlSchemas/Request">
   <Registries>
     <Registry type="Sources" name="-" />
   </Registries>
@@ -8,13 +8,13 @@
     <TermExpansion synonym="0" hypernym="0" gloss="0" />
     <MaxResults>100</MaxResults>
   </Properties>
-  <DateTime>25/04/2016 12:20:09</DateTime>
+  <DateTime>06/05/2016 10:18:10</DateTime>
   <SimilarityType>Eddie</SimilarityType>
   <DataSource>
     <Type>Document</Type>
     <Uri>n/a</Uri>
   </DataSource>
   <Target>
-    <TargetDescription>[InjuryNature]:  [LocationDetail]: Linea dei pedoni|00 [Content]:  There are cardboard boxes in the corridor by obstructing the passage [BodyPart]: Whole body</TargetDescription>
+    <TargetDescription>[InjuryNature]:  [LocationDetail]: Linea dei pedoni|C4 [Content]: There are cardboard boxes in the hallway blocking the passage [BodyPart]: Whole body</TargetDescription>
   </Target>
 </Request>

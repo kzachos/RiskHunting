@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requestId="120004" xmlns="http://achernar.soi.city.ac.uk/xmlSchemas/Request">
+<Request xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" requestId="120009" xmlns="http://achernar.soi.city.ac.uk/xmlSchemas/Request">
   <Registries>
     <Registry type="Sources" name="-" />
   </Registries>
@@ -8,13 +8,13 @@
     <TermExpansion synonym="0" hypernym="0" gloss="0" />
     <MaxResults>100</MaxResults>
   </Properties>
-  <DateTime>22/04/2016 16:01:19</DateTime>
+  <DateTime>05/05/2016 17:58:56</DateTime>
   <SimilarityType>Eddie</SimilarityType>
   <DataSource>
     <Type>Document</Type>
     <Uri>n/a</Uri>
   </DataSource>
   <Target>
-    <TargetDescription>[InjuryNature]:  [LocationDetail]: Linea dei pedoni|00 [Content]: The retaining spring on the door for exit from the left side toward the white building is peeling, with the risk of falling of the piece with damaging consequences for the passage of people [BodyPart]: Whole body</TargetDescription>
+    <TargetDescription>[InjuryNature]:  [LocationDetail]: Pedestal Line|00 [Content]: The spring restraint on port for output from the left side beam towards the white building, it is peeled off, with the risk of fall of the piece with harmful consequences for the passage of persons [BodyPart]: Whole body</TargetDescription>
   </Target>
 </Request>

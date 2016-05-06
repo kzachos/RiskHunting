@@ -140,7 +140,7 @@ namespace RiskHunting
 				if (File.Exists (responseXmlUri))
 					File.Delete (responseXmlUri);
 				FileStream responseStream = new FileStream (responseXmlUri, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite);
-				StreamWriter responseStreamWriter = new StreamWriter (responseStream, Encoding.ASCII);
+				StreamWriter responseStreamWriter = new StreamWriter (responseStream, Encoding.UTF8);
 				responseStreamWriter.Write (responseXml);
 				responseStreamWriter.Flush ();
 				responseStreamWriter.Close ();
@@ -171,9 +171,17 @@ namespace RiskHunting
 				XmlProc.ObjectXMLSerializer<XmlProc.RequestSerialized.Request>.Save(request, requestXmlUri);
 
 				FileStream cgStream1 = new FileStream(requestXmlUri, FileMode.Open, FileAccess.Read);
-				StreamReader cgStreamReader1 = new StreamReader(cgStream1);
+				StreamReader cgStreamReader1 = new StreamReader(cgStream1, System.Text.Encoding.UTF8);
 				string requestXml = cgStreamReader1.ReadToEnd();
 				cgStreamReader1.Close();
+
+//				FileStream cgStream2 = new FileStream(requestXmlUri, FileMode.Open, FileAccess.Read);
+//				StreamReader cgStreamReader2 = new StreamReader(cgStream2, System.Text.Encoding.Unicode);
+//				string requestXml2 = cgStreamReader2.ReadToEnd();
+//				cgStreamReader2.Close();
+//
+//				Console.WriteLine ("without encoding: " + requestXml);
+//				Console.WriteLine ("WITH encoding: " + requestXml2);
 
 				//errorLabel.Text = requestXml;
 
