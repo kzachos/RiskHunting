@@ -381,7 +381,7 @@ namespace RiskHunting
 				int counter = 0;
 				if (this.total > 0)
 				{
-					content2.InnerHtml += "<br><br><span class=\"maintitle\">" + AppResources.PastRisk_Form_Label_PreviousResolutions + "</span>";
+					content2.InnerHtml += "<br><br><span class=\"maintitle\">" + AppResources.PastRisk_Form_Label_CreativeGuidance + "</span>";
 					for (int i = 0; i < this.total; i++) {
 						content2.InnerHtml += GenerateHtml (CreativityPromptsFeed [i]);
 //						GenerateHtml3 (CreativityPromptsFeed [i], String.Empty, counter++);

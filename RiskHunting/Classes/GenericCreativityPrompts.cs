@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading;
+using System.Linq;
 
 namespace RiskHunting
 {
@@ -70,155 +71,219 @@ namespace RiskHunting
 			}
 			else if (currentCulture.ToString ().Contains ("it")) {
 				if (type.Equals ("NP")) {
+	
+					char[] delim;
+					var delim1 = new char[] { ' ' };
+					var delim2 = new char[] { '\'' };
+					var c = filler [1];
+					if (c == '\'') 
+						delim = delim2;			
+					 else 
+						delim = delim1;
+
+
+					var words = filler.Split (delim, StringSplitOptions.RemoveEmptyEntries)
+						.ToList ();
+					var fillerLite = filler.Replace(words[0], "");
+
+					string f_s_n, f_s_d, f_s_a, 
+					f_p_n, f_p_d, f_p_a, 
+					m_s_n, m_s_d, m_s_a, 
+					m_p_n, m_p_d, m_p_a;
+
+					if (c == '\'') {
+						f_s_n = m_s_n = "nell";
+						f_s_d = m_s_d = "dell";
+						f_s_a = m_s_a = "all";
+						m_p_n = "negli ";
+						m_p_d = "degli ";
+						m_p_a = "agli ";
+
+					} else {
+						string consonant1 = "zxs";
+						string consonant2 = "ps";
+						string consonant3 = "pn";
+						string consonant4 = "gn";
+						string vowel = "aeiou";
+						if (
+							consonant1.Contains(fillerLite[0]) ||
+							fillerLite.StartsWith (consonant2, StringComparison.Ordinal) ||
+							fillerLite.StartsWith (consonant3, StringComparison.Ordinal) ||
+							fillerLite.StartsWith (consonant4, StringComparison.Ordinal) ||
+							("i".Contains(fillerLite[0]) && vowel.Contains(fillerLite[1]))
+							) {
+							m_s_n = "nello ";
+							m_s_d = "dello ";
+							m_s_a = "allo ";							
+							m_p_n = "negli ";
+							m_p_d = "degli ";
+							m_p_a = "agli ";
+						} else {
+							m_s_n = "nel ";
+							m_s_d = "del ";
+							m_s_a = "al ";	
+							m_p_n = "nei ";
+							m_p_d = "dei ";
+							m_p_a = "ai ";
+						}
+						f_s_n = "nella ";
+						f_s_d = "della ";
+						f_s_a = "alla ";
+
+					}
+					f_p_n = "nelle ";
+					f_p_d = "delle ";
+					f_p_a = "alle ";
+
 					if (filler.StartsWith ("la ", StringComparison.Ordinal) || 
 						(filler.StartsWith ("l'", StringComparison.Ordinal) && filler.EndsWith ("a", StringComparison.Ordinal))) { // feminine singluar Determiners
 						this.genericCPs.Add ("Pensa a come far " + filler + " muoversi e regolarsi");
 						this.genericCPs.Add ("Pensa a fare il contrario di ciò che è previsto con " + filler + "");
-						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + filler + " con qualcosa che è sensoriale");
-						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + filler + "");
+						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + f_s_n + fillerLite + " con qualcosa che è sensoriale");
+						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + f_s_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + f_s_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più flessibile");
 						this.genericCPs.Add ("Pensa a come utilizzare liquidi o aria con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile rigenerare " + filler + "");
 						this.genericCPs.Add ("Pensa a come fornire una conchiglia o copertura per " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile fare una copia " + filler + "");
+						this.genericCPs.Add ("Pensa se è possibile fare una copia " + f_s_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come si potrebbe combinare " + filler + " con qualcos'altro");
 						this.genericCPs.Add ("Pensa se potessi fare di piu' con " + filler + " o di meno con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile bilanciare " + filler + " con qualcos'altro");
-						this.genericCPs.Add ("Pensa a come far " + filler + " funzionare prima che sia necessario");
-						this.genericCPs.Add ("Pensa a come far fare  " + filler + " un sacco di cose diverse");
-						this.genericCPs.Add ("Pensa a come introdurre feedback " + filler + "");
+						this.genericCPs.Add ("Pensa a come far funzionare " + filler + " prima che sia necessario");
+						this.genericCPs.Add ("Pensa a come far fare " + f_s_a + fillerLite + " un sacco di cose diverse");
+						this.genericCPs.Add ("Pensa a come introdurre feedback " + f_s_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come far " + filler + " autosufficiente, in modo che utilizzino tutti i loro rifiuti");
-						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + filler + "");
-						this.genericCPs.Add ("Pensa a come evitare lo stress " + filler + ", e/o la situazione, prima che accada");
-						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + filler + " si muovi e si regoli da solo");
+						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + f_s_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa a come evitare lo stress " + f_s_n + fillerLite + ", e/o la situazione, prima che accada");
+						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + f_s_d + fillerLite + " si muovi e si regoli da solo");
 						this.genericCPs.Add ("Pensa a come fare vibrare " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile far in modo che " + filler + " si cambino da sole, rilascino o assorbino energia");
 						this.genericCPs.Add ("Pensa se è possibile fare " + filler + " in una forma irregolare");
 						this.genericCPs.Add ("Pensa a cercar di mettere " + filler + " all'interno di un'altra cosa");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più sferiche o circolari");
-						this.genericCPs.Add ("Pensa a rendere tutte le parti " + filler + " di una sostanza sola");
+						this.genericCPs.Add ("Pensa a rendere tutte le parti " + f_s_d + fillerLite + " di una sostanza sola");
 						this.genericCPs.Add ("Pensa a dividere " + filler + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " trasparente o di un colore diverso");
 						this.genericCPs.Add ("Pensa a come fare in modo che " + filler + " si espandano o contraggano  a seconda dell'ambiente");
-						this.genericCPs.Add ("Pensa a come mettere buchi " + filler + " o riempire i buchi " + filler + "");
+						this.genericCPs.Add ("Pensa a come mettere buchi " + f_s_n + fillerLite + " o riempire i buchi " + f_s_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " a basso costo ed usa e getta");
 						this.genericCPs.Add ("Pensa a far in modo che " + filler + " pulsino");
 						this.genericCPs.Add ("Pensa a metter " + filler + " in un aspirapolvere");
 						this.genericCPs.Add ("Pensa a disattivare " + filler + "");
-						this.genericCPs.Add ("Pensa a uniformare le forze ambientali che influenzano " + filler + "");
+						this.genericCPs.Add ("Pensa ad uniformare le forze ambientali che influenzano " + filler + "");
 					}
 					else if (filler.StartsWith ("le ", StringComparison.Ordinal)) { // feminine plural Determiners
 						this.genericCPs.Add ("Pensa a come far " + filler + " muoversi e regolarsi");
 						this.genericCPs.Add ("Pensa a fare il contrario di ciò che è previsto con " + filler + "");
-						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + filler + " con qualcosa che è sensoriale");
-						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + filler + "");
+						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + f_p_n + fillerLite + " con qualcosa che è sensoriale");
+						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + f_p_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + f_p_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più flessibile");
 						this.genericCPs.Add ("Pensa a come utilizzare liquidi o aria con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile rigenerare " + filler + "");
 						this.genericCPs.Add ("Pensa a come fornire una conchiglia o copertura per " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile fare una copia " + filler + "");
+						this.genericCPs.Add ("Pensa se è possibile fare una copia " + f_p_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come si potrebbe combinare " + filler + " con qualcos'altro");
 						this.genericCPs.Add ("Pensa se potessi fare di piu' con " + filler + " o di meno con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile bilanciare " + filler + " con qualcos'altro");
-						this.genericCPs.Add ("Pensa a come far " + filler + " funzionare prima che sia necessario");
-						this.genericCPs.Add ("Pensa a come far fare  " + filler + " un sacco di cose diverse");
-						this.genericCPs.Add ("Pensa a come introdurre feedback " + filler + "");
+						this.genericCPs.Add ("Pensa a come far funzionare " + filler + " prima che sia necessario");
+						this.genericCPs.Add ("Pensa a come far fare  " + f_p_a + fillerLite + " un sacco di cose diverse");
+						this.genericCPs.Add ("Pensa a come introdurre feedback " + f_p_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come far " + filler + " autosufficiente, in modo che utilizzino tutti i loro rifiuti");
-						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + filler + "");
-						this.genericCPs.Add ("Pensa a come evitare lo stress " + filler + ", e/o la situazione, prima che accada");
-						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + filler + " si muovi e si regoli da solo");
+						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + f_p_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa a come evitare lo stress " + f_p_n + fillerLite + ", e/o la situazione, prima che accada");
+						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + f_p_d + fillerLite + " si muovi e si regoli da solo");
 						this.genericCPs.Add ("Pensa a come fare vibrare " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile far in modo che " + filler + " si cambino da sole, rilascino o assorbino energia");
 						this.genericCPs.Add ("Pensa se è possibile fare " + filler + " in una forma irregolare");
 						this.genericCPs.Add ("Pensa a cercar di mettere " + filler + " all'interno di un'altra cosa");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più sferiche o circolari");
-						this.genericCPs.Add ("Pensa a rendere tutte le parti " + filler + " di una sostanza sola");
+						this.genericCPs.Add ("Pensa a rendere tutte le parti " + f_p_d + fillerLite + " di una sostanza sola");
 						this.genericCPs.Add ("Pensa a dividere " + filler + "");
-						this.genericCPs.Add ("Pensa a rendere " + filler + " trasparente o di un colore diverso");
+						this.genericCPs.Add ("Pensa a rendere " + filler + " trasparente o di un colore diversi");
 						this.genericCPs.Add ("Pensa a come fare in modo che " + filler + " si espandano o contraggano  a seconda dell'ambiente");
-						this.genericCPs.Add ("Pensa a come mettere buchi " + filler + " o riempire i buchi " + filler + "");
+						this.genericCPs.Add ("Pensa a come mettere buchi " + f_p_n + fillerLite + " o riempire i buchi " + f_p_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " a basso costo ed usa e getta");
 						this.genericCPs.Add ("Pensa a far in modo che " + filler + " pulsino");
 						this.genericCPs.Add ("Pensa a metter " + filler + " in un aspirapolvere");
 						this.genericCPs.Add ("Pensa a disattivare " + filler + "");
-						this.genericCPs.Add ("Pensa a uniformare le forze ambientali che influenzano " + filler + "");
+						this.genericCPs.Add ("Pensa ad uniformare le forze ambientali che influenzano " + filler + "");
 					}
 					else if (filler.StartsWith ("il ", StringComparison.Ordinal) || filler.StartsWith ("lo ", StringComparison.Ordinal) || 
 						(filler.StartsWith ("l'", StringComparison.Ordinal) && (filler.EndsWith ("e", StringComparison.Ordinal) || filler.EndsWith ("u", StringComparison.Ordinal) || filler.EndsWith ("o", StringComparison.Ordinal)))) { // masculine singluar Determiners
 						this.genericCPs.Add ("Pensa a come far " + filler + " muoversi e regolarsi");
 						this.genericCPs.Add ("Pensa a fare il contrario di ciò che è previsto con " + filler + "");
-						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + filler + " con qualcosa che è sensoriale");
-						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + filler + "");
+						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + m_s_n + fillerLite + " con qualcosa che è sensoriale");
+						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + m_s_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + m_s_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più flessibile");
 						this.genericCPs.Add ("Pensa a come utilizzare liquidi o aria con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile rigenerare " + filler + "");
 						this.genericCPs.Add ("Pensa a come fornire una conchiglia o copertura per " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile fare una copia " + filler + "");
+						this.genericCPs.Add ("Pensa se è possibile fare una copia " + m_s_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come si potrebbe combinare " + filler + " con qualcos'altro");
 						this.genericCPs.Add ("Pensa se potessi fare di piu' con " + filler + " o di meno con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile bilanciare " + filler + " con qualcos'altro");
-						this.genericCPs.Add ("Pensa a come far " + filler + " funzionare prima che sia necessario");
-						this.genericCPs.Add ("Pensa a come far fare  " + filler + " un sacco di cose diverse");
-						this.genericCPs.Add ("Pensa a come introdurre feedback " + filler + "");
+						this.genericCPs.Add ("Pensa a come far funzionare " + filler + " prima che sia necessario");
+						this.genericCPs.Add ("Pensa a come far fare  " + m_s_a + fillerLite + " un sacco di cose diverse");
+						this.genericCPs.Add ("Pensa a come introdurre feedback " + m_s_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come far " + filler + " autosufficiente, in modo che utilizzi tutti i suoi rifiuti");
-						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + filler + "");
-						this.genericCPs.Add ("Pensa a come evitare lo stress " + filler + ", e/o la situazione, prima che accada");
-						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + filler + " si muovi e si regoli da solo");
+						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + m_s_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa a come evitare lo stress " + m_s_n + fillerLite + ", e/o la situazione, prima che accada");
+						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + m_s_d + fillerLite + " si muovi e si regoli da solo");
 						this.genericCPs.Add ("Pensa a come fare vibrare " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile far in modo che " + filler + " si cambi da solo, rilasci o assorbi energia");
 						this.genericCPs.Add ("Pensa se è possibile fare " + filler + " in una forma irregolare");
 						this.genericCPs.Add ("Pensa a cercar di mettere " + filler + " all'interno di un'altra cosa");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più sferico o circolare");
-						this.genericCPs.Add ("Pensa a rendere tutte le parti " + filler + " di una sostanza sola");
+						this.genericCPs.Add ("Pensa a rendere tutte le parti " + m_s_d + fillerLite + " di una sostanza sola");
 						this.genericCPs.Add ("Pensa a dividere " + filler + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " trasparente o di un colore diverso");
 						this.genericCPs.Add ("Pensa a come fare in modo che " + filler + " si espanda o contragga  a seconda dell'ambiente");
-						this.genericCPs.Add ("Pensa a come mettere buchi " + filler + " o riempire i buchi " + filler + "");
+						this.genericCPs.Add ("Pensa a come mettere buchi " + m_s_n + fillerLite + " o riempire i buchi " + m_s_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " a basso costo ed usa e getta");
 						this.genericCPs.Add ("Pensa a far in modo che " + filler + " pulsi");
 						this.genericCPs.Add ("Pensa a metter " + filler + " in un aspirapolvere");
 						this.genericCPs.Add ("Pensa a disattivare " + filler + "");
-						this.genericCPs.Add ("Pensa a uniformare le forze ambientali che influenzano " + filler + "");
+						this.genericCPs.Add ("Pensa ad uniformare le forze ambientali che influenzano " + filler + "");
 					}
 					else if (filler.StartsWith ("i ", StringComparison.Ordinal) || filler.StartsWith ("gli ", StringComparison.Ordinal)) { // masculine plural Determiners
 						this.genericCPs.Add ("Pensa a come far " + filler + " muoversi e regolarsi");
 						this.genericCPs.Add ("Pensa a fare il contrario di ciò che è previsto con " + filler + "");
-						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + filler + " con qualcosa che è sensoriale");
-						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + filler + "");
+						this.genericCPs.Add ("Pensa se puoi sostituire qualcosa di meccanico " + m_p_n + fillerLite + " con qualcosa che è sensoriale");
+						this.genericCPs.Add ("Pensa se è possibile modificare la densità " + m_p_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa se è possibile variare la temperatura " + m_p_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più flessibile");
 						this.genericCPs.Add ("Pensa a come utilizzare liquidi o aria con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile rigenerare " + filler + "");
 						this.genericCPs.Add ("Pensa a come fornire una conchiglia o copertura per " + filler + "");
-						this.genericCPs.Add ("Pensa se è possibile fare una copia " + filler + "");
+						this.genericCPs.Add ("Pensa se è possibile fare una copia " + m_p_d + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come si potrebbe combinare " + filler + " con qualcos'altro");
 						this.genericCPs.Add ("Pensa se potessi fare di piu' con " + filler + " o di meno con " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile bilanciare " + filler + " con qualcos'altro");
-						this.genericCPs.Add ("Pensa a come far " + filler + " funzionare prima che sia necessario");
-						this.genericCPs.Add ("Pensa a come far fare  " + filler + " un sacco di cose diverse");
-						this.genericCPs.Add ("Pensa a come introdurre feedback " + filler + "");
+						this.genericCPs.Add ("Pensa a come far funzionare " + filler + " prima che sia necessario");
+						this.genericCPs.Add ("Pensa a come far fare  " + m_p_a + fillerLite + " un sacco di cose diverse");
+						this.genericCPs.Add ("Pensa a come introdurre feedback " + m_p_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a come far " + filler + " autosufficiente, in modo che utilizzino tutti i loro rifiuti");
-						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + filler + "");
-						this.genericCPs.Add ("Pensa a come evitare lo stress " + filler + ", e/o la situazione, prima che accada");
-						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + filler + " si muovi e si regoli da solo");
+						this.genericCPs.Add ("Pensa a come rimuovere qualcosa " + m_p_d + fillerLite + "");
+						this.genericCPs.Add ("Pensa a come evitare lo stress " + m_p_n + fillerLite + ", e/o la situazione, prima che accada");
+						this.genericCPs.Add ("Pensa a come far in modo che parte o tutto " + m_p_d + fillerLite + " si muovi e si regoli da solo");
 						this.genericCPs.Add ("Pensa a come fare vibrare " + filler + "");
 						this.genericCPs.Add ("Pensa se è possibile far in modo che " + filler + " si cambino da soli, rilascino o assorbino energia");
 						this.genericCPs.Add ("Pensa se è possibile fare " + filler + " in una forma irregolare");
 						this.genericCPs.Add ("Pensa a cercar di mettere " + filler + " all'interno di un'altra cosa");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " più sferici o circolari");
-						this.genericCPs.Add ("Pensa a rendere tutte le parti " + filler + " di una sostanza sola");
+						this.genericCPs.Add ("Pensa a rendere tutte le parti " + m_p_d + fillerLite + " di una sostanza sola");
 						this.genericCPs.Add ("Pensa a dividere " + filler + "");
-						this.genericCPs.Add ("Pensa a rendere " + filler + " trasparente o di un colore diverso");
+						this.genericCPs.Add ("Pensa a rendere " + filler + " trasparente o di un colore diversi");
 						this.genericCPs.Add ("Pensa a come fare in modo che " + filler + " si espandano o contraggano  a seconda dell'ambiente");
-						this.genericCPs.Add ("Pensa a come mettere buchi " + filler + " o riempire i buchi " + filler + "");
+						this.genericCPs.Add ("Pensa a come mettere buchi " + m_p_n + fillerLite + " o riempire i buchi " + m_p_n + fillerLite + "");
 						this.genericCPs.Add ("Pensa a rendere " + filler + " a basso costo ed usa e getta");
 						this.genericCPs.Add ("Pensa a far in modo che " + filler + " pulsino");
 						this.genericCPs.Add ("Pensa a metter " + filler + " in un aspirapolvere");
 						this.genericCPs.Add ("Pensa a disattivare " + filler + "");
-						this.genericCPs.Add ("Pensa a uniformare le forze ambientali che influenzano " + filler + "");
+						this.genericCPs.Add ("Pensa ad uniformare le forze ambientali che influenzano " + filler + "");
 					}
 
 				}  

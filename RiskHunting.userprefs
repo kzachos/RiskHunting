@@ -1,13 +1,40 @@
 ﻿<Properties StartupItem="RiskHunting/RiskHunting.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="RiskHunting/CreateIdeas_PastRisk.aspx.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RiskHunting/Classes/GenericCreativityPrompts.cs">
     <Files>
-      <File FileName="RiskHunting/Classes/Util.cs" Line="1" Column="1" />
-      <File FileName="RiskHunting/Classes/GenericCreativityPrompts.cs" Line="94" Column="74" />
-      <File FileName="RiskHunting/Classes/TranslatorGoogle.cs" Line="67" Column="1" />
-      <File FileName="RiskHunting/CreateIdeas_SameRisk.aspx.cs" Line="333" Column="4" />
-      <File FileName="RiskHunting/CreateIdeas_PastRisk.aspx.cs" Line="200" Column="51" />
+      <File FileName="RiskHunting/Classes/TranslatorGoogle.cs" Line="1" Column="1" />
+      <File FileName="RiskHunting/CreateIdeas_SameRisk.aspx.cs" Line="387" Column="40" />
+      <File FileName="RiskHunting/CreateIdeas_PastRisks.aspx.cs" Line="1" Column="1" />
+      <File FileName="RiskHunting/CreateIdeas_PastRisk.aspx.cs" Line="393" Column="27" />
+      <File FileName="RiskHunting/DescribeRisk.aspx.cs" Line="1" Column="1" />
+      <File FileName="RiskHunting/AddResolutionIdea.aspx.cs" Line="6" Column="31" />
+      <File FileName="RiskHunting/App_GlobalResources/AppResources.it.resx" Line="387" Column="51" />
+      <File FileName="RiskHunting/AddResolutionIdea.aspx" Line="40" Column="28" />
+      <File FileName="RiskHunting/App_GlobalResources/AppResources.resx" Line="397" Column="42" />
+      <File FileName="RiskHunting/Resources/ProcessGuidance.it.xml" Line="22" Column="82" />
+      <File FileName="RiskHunting/Classes/GenericCreativityPrompts.cs" Line="86" Column="29" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RiskHunting" expanded="True">
+            <Node name="RiskHunting" expanded="True">
+              <Node name="App_GlobalResources" expanded="True" />
+              <Node name="Classes" expanded="True">
+                <Node name="GenericCreativityPrompts.cs" selected="True" />
+              </Node>
+              <Node name="Resources" expanded="True" />
+              <Node name="AddResolutionIdea.aspx" expanded="True" />
+              <Node name="CreateIdeas_PastRisk.aspx" expanded="True" />
+              <Node name="CreateIdeas_SameRisk.aspx" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

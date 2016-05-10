@@ -17,11 +17,11 @@ namespace RiskHunting
 		const string Tag3a = "<a href=\"javascript:doLoad('";
 		const string Tag3b = "";
 		const string Tag3c = "');\" >";
-		string Tag4a = AppResources.AddIdea_NavigationBar_Left;
+//		string Tag4a = AppResources.AddIdea_NavigationBar_Left;
 		const string Tag5a = "</a>";
 		const string Tag6a = "</div>";
 		const string Tag7a = "<div id=\"multiselectionbuttons\">";
-		string Tag8a = AppResources.AddIdea_NavigationBar_Title;
+//		string Tag8a = AppResources.AddIdea_NavigationBar_Title;
 		const string Tag9a = "</div>";
 		const string Tag10a = "</div>";
 
@@ -141,8 +141,8 @@ namespace RiskHunting
 					tag += "?";
 				tag += "pb=same";
 			}
-			tag += Tag3c + Tag4a + Tag5a + 
-				Tag6a + Tag7a + Tag8a + Tag9a + Tag10a;
+			tag += Tag3c + AppResources.AddIdea_NavigationBar_Left + Tag5a + 
+				Tag6a + Tag7a + AppResources.AddIdea_NavigationBar_Title + Tag9a + Tag10a;
 			tag = tag.Replace("@","?");
 			return tag;
 		}

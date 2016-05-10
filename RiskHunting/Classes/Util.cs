@@ -699,6 +699,9 @@ namespace RiskHunting
 				else if (text.StartsWith ("a avere"))
 					formattedText = text.Replace ("a avere ", "avere ");
 
+				else if (text.StartsWith ("ad uniformare"))
+					formattedText = text.Replace ("ad uniformare ", "uniformare ");
+
 				else 
 					formattedText = text;
 				break;
